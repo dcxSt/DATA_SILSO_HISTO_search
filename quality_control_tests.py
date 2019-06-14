@@ -54,8 +54,20 @@ def incorrect_wolf_test(cursor=None,mydb=None,flag_and_comment=False):
 # flags everything with bad comments
 def flag_bad_comments():
     # define a list of bad comments
-    bad_comments=["Uncertain","Imprecise","LOW QUALITY",
-    "Incertain"]
+    bad_comments=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
+        "Incertain","XXX - Wrong Rubric and/or Observer","Nbre entre parenthése",
+        "?","val. déduites","incorrect_wolf_calculation","Change of instrument",
+        "change of instrument","*","*%","Mauvais comptage","mauvais comptage",]
+        
+    uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
+        "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
+        "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
+        "mauvais comptage"]
+    null=["None","","NULL","\t","\n"," ","  ","   "]
+    star=["*","*%"]
+    w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
+    "W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier","W = Etude faite par Waldmeier",
+    "Waldmeier"]
 
 
 
