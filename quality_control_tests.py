@@ -53,12 +53,13 @@ def incorrect_wolf_test(cursor=None,mydb=None,flag_and_comment=False):
 
 # flags everything with bad comments
 def flag_bad_comments():
-    # define a list of bad comments
+    # bad_comments = comments to flag
     bad_comments=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
         "Incertain","XXX - Wrong Rubric and/or Observer","Nbre entre parenthése",
         "?","val. déduites","incorrect_wolf_calculation","Change of instrument",
         "change of instrument","*","*%","Mauvais comptage","mauvais comptage",]
-        
+
+    # list of comments synonyme to uncertain
     uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
         "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
         "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
