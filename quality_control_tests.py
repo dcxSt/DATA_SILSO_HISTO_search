@@ -51,6 +51,12 @@ def incorrect_wolf_test(cursor=None,mydb=None,flag_and_comment=False):
 
     return incorrect_wolf_ids
 
+# flags everything with bad comments
+def flag_bad_comments():
+    # define a list of bad comments
+    bad_comments=["Uncertain","Imprecise","LOW QUALITY",
+    "Incertain"]
+
 
 
 ### testing

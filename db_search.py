@@ -24,6 +24,8 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     cursor,mydb = db_connection.get_cursor(cursor,mydb)
     # returns all the different types of comment there are and saves them to a text-file
     all_comments=[]
+    # and a dictionary with the frequency of comment, with comments as keys
+    all_comments_and_frequency={}
     
     id_number=3
     query="SELECT * FROM DATA d WHERE d.ID=%s"
@@ -33,8 +35,11 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     while id_number<=206772:
         if returned:
             comment=str(returned[0][8])
-            if str(comment) not in all_comments:
-                all_comments.append(str(comment))
+            if comment not in all_comments:
+                all_comments_and_frequency[comment]=1
+                all_comments.append(comment)
+            else:
+                all_comments_and_frequency[comment]+=1
         id_number+=1
         cursor.execute(query % (str(id_number)))
         returned=cursor.fetchall()
@@ -42,13 +47,15 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     print("\nFound a total of",len(all_comments),"distinct comments")
     text_file = open(file_name,"w")
     for i in all_comments:
-        text_file.write(i+"\n")
-        text_file.write("--------------\n")
+        text_file.write(i)
+        freq=all_comments_and_frequency[i]
+        text_file.write(" "+freq+"\n")
     text_file.close()
     print("\nThe comments have been written to the file",file_name)
     
     db_connection.close_database_connection(mydb)
 
+different_comments()
 
 
 ### tests
