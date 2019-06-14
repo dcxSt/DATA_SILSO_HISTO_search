@@ -1,0 +1,319 @@
+None
+Uncertain
+
+Uncertain
+Imprecise
+
+NULL
+LOW QUALITY
+XXX - Wrong Rubric and/or Observer
+ZUCCONI
+Nbre entre parenthése
+Incertain
+3
+w
+r
+p
+m
+	
+?
+x
+derived 10
+derived 11
+derived 16
+derived 12
+derived 15
+derived 17
+derived 13
+derived 9
+derived 7
+derived 8
+derived 21
+derived 29
+derived 24
+derived 28
+derived 26
+derived 30
+derived 33
+derived 22
+derived 31
+derived 22 
+derived 20
+derived 23
+derived 40
+derived 43
+derived 42
+derived 34
+derived 24 
+derived 25
+derived 19
+derived 47
+derived 45
+derived 38
+derived 46
+derived 35
+derived 36
+derived 14
+derived 18
+derived 5
+derived 6
+derived 4
+derived 2
+derived 27
+derived 53
+derived 50
+derived 58
+derived 51
+derived 1
+derived 3
+99
+S
+S et W
+S et W 
+2
+1/2
+0,3
+0,5
+0,2
+weber
+wolf
+schwabe
+Schwabe
+Schimdt
+wolfw
+schimdt
+Leppig
+Weber
+leppig
+staudacher
+zucconi
+schubert
+insert
+horrebow
+Gyalla
+val. déduites
+1,3
+1,5
+2,5
+0,4
+incorrect_wolf_calculation
+37
+31/1 ?
+wolfer-p
+Bender
+4.25-Bender
+3.35-Bender
+2.30-Bender
+1.15-Bender
+1.20-Bender
+2.25-Bender
+3.25-Bender
+2.20-Bender
+dellungo
+1.40-Bender
+3.10-Bender
+3.8-Bender
+2.6-Bender
+1.3-Bender
+2.4-Bender
+4.9-Bender
+5.20-Bender
+5.50-Bender
+3.20-Bender
+mascari
+Etna obs
+3.30-Bender
+4.60-Bender
+4.45-Bender
+3.45-Bender
+4.30-Bender
+2.15-Bender
+2.10-Bender
+5.25-Bender
+5.35-Bender
+5.30-Bender
+7.35-Bender
+1.1-Bender
+1.2-Bender
+6.20-Bender
+5.15-Bender
+6.15-Bender
+6.25-Bender
+7.45-Bender
+7.60-Bender
+2.5-Bender
+Change of instrument
+change of instrument
+ricco
+canizzo
+etna
+Mascari
+ewdokimow
+lewitzky
+Fauquez-p
+*
+*=Schwarzenbrunner
+ricco?
+*=schwarzenbrunner
++theodolitfernrohr
+fauquez-p
+Quimby
+ricco ?
+Zona
+skykora-j
+sykora-j
+Broger-p ?
+Broger-p
+Wolfer-P
+Ricco
+Wolfer-P*
+r=Ricco
+* = Wolfer P
+* = Broger-P
+P
+B
+* = Quimby P
+0.0?
+* = Jastremsky
+* = second instrument
+date?
+Mooser
+m?
+* = Broger P
+* = P
+** = telescope 3
+**
+* = telescope 2
+* = très mauvaise définition
+B = W. Block
+S = J. Sykora
+A = W. Abold
+* = N. Sykora
+N. Sykora  2 groups 20 sunspots
+m = Mazarella
+A
+S = Sykora
+another observation 5 groups 8 sunspots
+another observation 6 groups 11 sunspots
+another observation 3 groups 3 sunspots
+another observation 9.5 cm image 9 groups 40 sunspots
+9.5 cm image
+another observation 9.5 cm image 7 groups 38 sunspots
+another observation 3 groups 8 sunspots
+* = direct observation
+* "1.1?"
+* "1.4?"
+* = Handfernrohr
+Move to Sobolki station
+Move to St. Petersburg station
+Observations this month made with 7 & 1/4-zoellige nrefraktor
+Observations this month made with 7 & 1/4-zoelligen refraktor
+Observations from 13-29 October made with 2-zoellinger refraktor
+Observations for 30-31 October made with 6-zoellingen reflektor
+Observations from 13-29 October made with 2-Zoellinger refraktor
+Observations on 30-31 October made with 6-zoellingen reflektor
+Observations this month made with 6-zoellingen reflektor
+Observations from 1-20 December made with 6-zoellingen reflektor
+Observations from 21-31 December made with 2-zoellinger refraktor 
+Observations this month made with 7 & 1/4-zoellingen refraktor
+Observations from 13-29 October made with 2-zoelliger refraktor 
+Observations this month were made with a 7&1/4-zoelligen refraktor
+Observations this month made with 7&1/-zoelligen refraktor
+Observations from 13-29 October made with 2-zoelliger refraktor
+Observations on 30 and 31 October made with 6-zoelligen reflektor
+Observations this month made with 6-zoelligen reflektor
+Observations from 1-20 December made with 6-zoelligen reflektor
+Observations from 21-31 December made with 2-zoelliger refraktor
+4.9?
+2.4?
+* = disk 10 cm
+télescope de pouce
+Télescope de pouce
+télescope 8 cm
+Horn
+img. 20cm de diamètre
+télescope de pouce (2 1/2)
+Téles ouverture 68mm
+mauvaise déf img sol
+mauvaise déf img soleil
+mauvaise déf img soleil 
+Référence obs télescope I
+Obs M Gallissot
+Guillaume Zürich
+pores
+obs Gallisot
+Obs. Gallisot
+interruption cause maladie
+Référence obs télescope portatif
+télescope de pouce (2 1/²)
+telescope de pouce (2 1/²)
+Obs Flajolet
+Strano
+Favaro
+Fattorosi
+Di Bella
+Obs. Luizet
+teescope de poche 2 1/8
+Fattorosif
+Obs. Bodocs
+Obs. Hoffmann
+nbr de compteurs plus important
+nbr compteurs plus important
+Mauvais comptage 
+mauvais comptage
+Obs. telescope I
+Obs. Grouiller
+Obs. Gauthier
+Obs. Telescope I
+telescope deux pouces
+Obs. Bloch
+Obs. Bloch + mauvaise def img
+Obs. Bloch + mauvaise déf img
+Obs. telescope portatif
+Obs by Schwartz
+Obs by Mazarella
+Obs. by Ricco
+obs. by Parlow
+Obs. by Mazzaralla
+obs. Abold
+Obs. Obraszof
+Obs. Abold
+obs. telescope portatif
+Réflecteur de 3 pouces
+Obs. by Zanoni
+Obs by Ricco
+Obs. by Abold
+Obs. by Obraszew
+telescope portatif 2 1/8
+Obs. Lewitzky
+Obs. lewitzky
+Obs. Ljapin
+obs. by Bemporad
+Obs. by Taffara
+Obs. by Horn
+Obs. telescope portatif I
+Obs. by Bloch
+10cm diameter
+6
+? (Résultats incertains)
+* se réfère aux observations de Mlle Olga Subbotin
+? Résultat incertain
+0 0
+? Résultat incertaint
+? Résultats incertains
+2 34
+1 3
+1 4
+14 2 9
+1 1
+3 17
+W Analyse faite par Waldmeier
+W Etude faite par Waldmeier
+W
+W Etude faite pas Waldmeier
+? Etude faite pas Waldmeier
+3 19
+1 10
+W = Etude faite pas Waldmeier
+W = Etude faite par Waldmeier
+Waldmeier

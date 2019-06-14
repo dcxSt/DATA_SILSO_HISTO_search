@@ -1,0 +1,319 @@
+None 9
+Uncertain
+ 5
+Uncertain 5
+Imprecise 9
+ 190765
+NULL 6185
+LOW QUALITY 27
+XXX - Wrong Rubric and/or Observer 171
+ZUCCONI 583
+Nbre entre parenthése 2
+Incertain 40
+3 2
+w 2
+r 15
+p 1
+m 34
+	 1
+? 184
+x 5
+derived 10 17
+derived 11 15
+derived 16 7
+derived 12 10
+derived 15 10
+derived 17 4
+derived 13 11
+derived 9 20
+derived 7 22
+derived 8 22
+derived 21 12
+derived 29 3
+derived 24 3
+derived 28 4
+derived 26 4
+derived 30 5
+derived 33 2
+derived 22 3
+derived 31 4
+derived 22  1
+derived 20 5
+derived 23 4
+derived 40 2
+derived 43 2
+derived 42 1
+derived 34 3
+derived 24  1
+derived 25 4
+derived 19 3
+derived 47 2
+derived 45 1
+derived 38 3
+derived 46 1
+derived 35 2
+derived 36 1
+derived 14 8
+derived 18 7
+derived 5 8
+derived 6 14
+derived 4 8
+derived 2 4
+derived 27 1
+derived 53 1
+derived 50 1
+derived 58 1
+derived 51 1
+derived 1 1
+derived 3 1
+99 1
+S 221
+S et W 5
+S et W  1
+2 1
+1/2 14
+0,3 2
+0,5 3
+0,2 1
+weber 122
+wolf 317
+schwabe 85
+Schwabe 17
+Schimdt 1
+wolfw 1
+schimdt 1
+Leppig 1
+Weber 4
+leppig 4
+staudacher 73
+zucconi 563
+schubert 270
+insert 137
+horrebow 112
+Gyalla 2
+val. déduites 25
+1,3 1
+1,5 1
+2,5 1
+0,4 1
+incorrect_wolf_calculation 1
+37 1
+31/1 ? 1
+wolfer-p 93
+Bender 37
+4.25-Bender 5
+3.35-Bender 2
+2.30-Bender 1
+1.15-Bender 2
+1.20-Bender 1
+2.25-Bender 2
+3.25-Bender 2
+2.20-Bender 3
+dellungo 37
+1.40-Bender 1
+3.10-Bender 5
+3.8-Bender 1
+2.6-Bender 1
+1.3-Bender 1
+2.4-Bender 1
+4.9-Bender 1
+5.20-Bender 2
+5.50-Bender 1
+3.20-Bender 1
+mascari 17
+Etna obs 3
+3.30-Bender 3
+4.60-Bender 2
+4.45-Bender 1
+3.45-Bender 1
+4.30-Bender 1
+2.15-Bender 4
+2.10-Bender 2
+5.25-Bender 3
+5.35-Bender 1
+5.30-Bender 2
+7.35-Bender 1
+1.1-Bender 2
+1.2-Bender 1
+6.20-Bender 1
+5.15-Bender 2
+6.15-Bender 1
+6.25-Bender 1
+7.45-Bender 1
+7.60-Bender 2
+2.5-Bender 1
+Change of instrument 1
+change of instrument 1
+ricco 37
+canizzo 23
+etna 7
+Mascari 216
+ewdokimow 22
+lewitzky 3
+Fauquez-p 7
+* 651
+*=Schwarzenbrunner 85
+ricco? 5
+*=schwarzenbrunner 1
++theodolitfernrohr 2
+fauquez-p 34
+Quimby 49
+ricco ? 1
+Zona 87
+skykora-j 1
+sykora-j 91
+Broger-p ? 1
+Broger-p 2
+Wolfer-P 21
+Ricco 27
+Wolfer-P* 11
+r=Ricco 1
+* = Wolfer P 2
+* = Broger-P 1
+P 22
+B 30
+* = Quimby P 1
+0.0? 1
+* = Jastremsky 1
+* = second instrument 2
+date? 3
+Mooser 40
+m? 2
+* = Broger P 1
+* = P 5
+** = telescope 3 2
+** 11
+* = telescope 2 3
+* = très mauvaise définition 1
+B = W. Block 1
+S = J. Sykora 1
+A = W. Abold 2
+* = N. Sykora 1
+N. Sykora  2 groups 20 sunspots 1
+m = Mazarella 1
+A 4
+S = Sykora 1
+another observation 5 groups 8 sunspots 1
+another observation 6 groups 11 sunspots 1
+another observation 3 groups 3 sunspots 1
+another observation 9.5 cm image 9 groups 40 sunspots 1
+9.5 cm image 7
+another observation 9.5 cm image 7 groups 38 sunspots 1
+another observation 3 groups 8 sunspots 1
+* = direct observation 1
+* "1.1?" 1
+* "1.4?" 1
+* = Handfernrohr 10
+Move to Sobolki station 1
+Move to St. Petersburg station 1
+Observations this month made with 7 & 1/4-zoellige nrefraktor 1
+Observations this month made with 7 & 1/4-zoelligen refraktor 2
+Observations from 13-29 October made with 2-zoellinger refraktor 1
+Observations for 30-31 October made with 6-zoellingen reflektor 1
+Observations from 13-29 October made with 2-Zoellinger refraktor 1
+Observations on 30-31 October made with 6-zoellingen reflektor 2
+Observations this month made with 6-zoellingen reflektor 1
+Observations from 1-20 December made with 6-zoellingen reflektor 2
+Observations from 21-31 December made with 2-zoellinger refraktor  2
+Observations this month made with 7 & 1/4-zoellingen refraktor 2
+Observations from 13-29 October made with 2-zoelliger refraktor  1
+Observations this month were made with a 7&1/4-zoelligen refraktor 1
+Observations this month made with 7&1/-zoelligen refraktor 1
+Observations from 13-29 October made with 2-zoelliger refraktor 1
+Observations on 30 and 31 October made with 6-zoelligen reflektor 1
+Observations this month made with 6-zoelligen reflektor 1
+Observations from 1-20 December made with 6-zoelligen reflektor 1
+Observations from 21-31 December made with 2-zoelliger refraktor 1
+4.9? 1
+2.4? 1
+* = disk 10 cm 1
+télescope de pouce 3
+Télescope de pouce 12
+télescope 8 cm 2
+Horn 22
+img. 20cm de diamètre 18
+télescope de pouce (2 1/2) 24
+Téles ouverture 68mm 30
+mauvaise déf img sol 24
+mauvaise déf img soleil 534
+mauvaise déf img soleil  13
+Référence obs télescope I 14
+Obs M Gallissot 6
+Guillaume Zürich 1
+pores 4
+obs Gallisot 2
+Obs. Gallisot 6
+interruption cause maladie 3
+Référence obs télescope portatif 10
+télescope de pouce (2 1/²) 1
+telescope de pouce (2 1/²) 25
+Obs Flajolet 9
+Strano 72
+Favaro 12
+Fattorosi 343
+Di Bella 150
+Obs. Luizet 5
+teescope de poche 2 1/8 4
+Fattorosif 1
+Obs. Bodocs 113
+Obs. Hoffmann 6
+nbr de compteurs plus important 1
+nbr compteurs plus important 9
+Mauvais comptage  1
+mauvais comptage 2
+Obs. telescope I 23
+Obs. Grouiller 27
+Obs. Gauthier 74
+Obs. Telescope I 21
+telescope deux pouces 25
+Obs. Bloch 279
+Obs. Bloch + mauvaise def img 50
+Obs. Bloch + mauvaise déf img 1
+Obs. telescope portatif 46
+Obs by Schwartz 12
+Obs by Mazarella 24
+Obs. by Ricco 3
+obs. by Parlow 21
+Obs. by Mazzaralla 121
+obs. Abold 2
+Obs. Obraszof 16
+Obs. Abold 4
+obs. telescope portatif 7
+Réflecteur de 3 pouces 9
+Obs. by Zanoni 47
+Obs by Ricco 2
+Obs. by Abold 1
+Obs. by Obraszew 68
+telescope portatif 2 1/8 6
+Obs. Lewitzky 2
+Obs. lewitzky 5
+Obs. Ljapin 1
+obs. by Bemporad 136
+Obs. by Taffara 82
+Obs. by Horn 73
+Obs. telescope portatif I 6
+Obs. by Bloch 22
+10cm diameter 13
+6 1
+? (Résultats incertains) 16
+* se réfère aux observations de Mlle Olga Subbotin 2
+? Résultat incertain 4
+0 0 6
+? Résultat incertaint 1
+? Résultats incertains 83
+2 34 1
+1 3 1
+1 4 1
+14 2 9 1
+1 1 1
+3 17 1
+W Analyse faite par Waldmeier 2
+W Etude faite par Waldmeier 6
+W 15
+W Etude faite pas Waldmeier 2
+? Etude faite pas Waldmeier 1
+3 19 1
+1 10 1
+W = Etude faite pas Waldmeier 1
+W = Etude faite par Waldmeier 2
+Waldmeier 2
