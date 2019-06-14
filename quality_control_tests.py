@@ -58,28 +58,29 @@ def flag_bad_comments():
         "Incertain","XXX - Wrong Rubric and/or Observer","Nbre entre parenthése",
         "?","val. déduites","incorrect_wolf_calculation","Change of instrument",
         "change of instrument","*","*%","Mauvais comptage","mauvais comptage",]
+    
+    cursor,mydb=db_connection.database_connector()
+    data = db_search.select_all_data(cursor,mydb)
+    # reconnect cause data disconnects you
+    cursor,mydb=db_connection.database_connector()
+    for i in range(len(data)):
+        comment=data[i][8]
+        if comment:
+            if comment in bad_comments or comment[0]=="*":
+                id_number=data[i][0]
+                db_edit.set_flag(id_number,cursor,mydb)
+
+    db_connection.close_database_connection(mydb)
 
     
 
-    # i'm only storeing these lists here temporarily 
 
-
+    
 
 ### testing
 ##ids=incorrect_wolf_test(flag_and_comment=True)
 ##for i in ids:
 ##    print("id:",i)
-
-ain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
-    "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
-    "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
-    "mauvais comptage"]
-null=["None","","NULL","\t","\n"," ","  ","   "]
-star=["*","*%"]
-w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
-"W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier","W = Etude faite par Waldmeier",
-"Waldmeier"]
-
 
 
 # im only storing these here temporarily until i decide what to do with them
