@@ -56,10 +56,14 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     
     db_connection.close_database_connection(mydb)
 
-different_comments(file_name="gggg.txt")
+
+
 
 
 ### tests
 ##data=select_all_data()
 ##print("\n\n",len(data),"\n\n")
 ##print(data[100])
+
+
+###different_comments(file_name="gggg.txt")
