@@ -59,16 +59,9 @@ def flag_bad_comments():
         "?","val. déduites","incorrect_wolf_calculation","Change of instrument",
         "change of instrument","*","*%","Mauvais comptage","mauvais comptage",]
 
-    # list of comments synonyme to uncertain
-    uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
-        "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
-        "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
-        "mauvais comptage"]
-    null=["None","","NULL","\t","\n"," ","  ","   "]
-    star=["*","*%"]
-    w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
-    "W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier","W = Etude faite par Waldmeier",
-    "Waldmeier"]
+    
+
+    # i'm only storeing these lists here temporarily 
 
 
 
@@ -76,3 +69,28 @@ def flag_bad_comments():
 ##ids=incorrect_wolf_test(flag_and_comment=True)
 ##for i in ids:
 ##    print("id:",i)
+
+ain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
+    "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
+    "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
+    "mauvais comptage"]
+null=["None","","NULL","\t","\n"," ","  ","   "]
+star=["*","*%"]
+w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
+"W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier","W = Etude faite par Waldmeier",
+"Waldmeier"]
+
+
+
+# im only storing these here temporarily until i decide what to do with them
+# list of comments synonyme to uncertain
+uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
+    "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
+    "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
+    "mauvais comptage"]
+null=["None","","NULL","\t","\n"," ","  ","   "]
+star=["*","*%"]
+w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
+"W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier",
+"W = Etude faite par Waldmeier","Waldmeier"]
+
