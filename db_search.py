@@ -49,13 +49,13 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     for i in all_comments:
         text_file.write(i)
         freq=all_comments_and_frequency[i]
-        text_file.write(" "+freq+"\n")
+        text_file.write(" "+str(freq)+"\n")
     text_file.close()
     print("\nThe comments have been written to the file",file_name)
     
     db_connection.close_database_connection(mydb)
 
-different_comments()
+different_comments(file_name="gggg.txt")
 
 
 ### tests

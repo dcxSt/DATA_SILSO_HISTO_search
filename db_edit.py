@@ -52,8 +52,7 @@ def comment(id_number,comment,cursor=None,mydb=None,replace=False):
         print(original_comment)
         print("it was not replaced")
         return False
-        
-    
+
 
 # takes id_number cursor and database connection and adds a flag to the data
 def set_flag(id_number,cursor=None,mydb=None):
