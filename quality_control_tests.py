@@ -4,6 +4,7 @@ import db_connection
 import db_search
 import db_edit
 import file_io
+import db_homogenise_comments
 
 # not certain if necessary
 import mysql.connector
