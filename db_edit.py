@@ -11,7 +11,7 @@ import mysql.connector
 # takes cursor, id and comment, and adds the comment to the id number
 # if there is already a comment, does not replace comment unless specified
 # return boolean T if updated, F if there was already a comment
-def comment(id_number,comment,cursor=None,mydb=None,replace=False):
+def set_comment(id_number,comment,cursor=None,mydb=None,replace=False):
     
     cursor,mydb=db_connection.get_cursor()
     
@@ -69,3 +69,5 @@ def remove_flag(id_number,cursor=None,mydb=None):
     cursor.execute(query,())
     mydb.commit()
     print("ID:",id_number,"\tFLAG: 0")
+
+

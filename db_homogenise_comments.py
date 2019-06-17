@@ -6,10 +6,7 @@ import db_connection
 import db_search
 import file_io
 
-uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
-    "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
-    "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
-    "mauvais comptage"]
+
 
 null=["None","","NULL","\t","\n"," ","  ","   "]
 
@@ -25,13 +22,28 @@ for all numbers in howevery big the database is:
             comment = ...
             if comment in one of the things"""
 
+# checked or unchecked
 def homogenise_uncertain():
-    # n is the supremem of the set of ids
-    n = 100000
+    ## n is the supremem of the set of ids
+    #n = 206773
+
+    uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
+        "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
+        "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
+        "mauvais comptage","uncertain"]
     
-    # setup a connection 
+    data = db_search.select_all_data()
+    # connect to the database
     cursor,mydb = db_connection.database_connector()
+    print(data[9][8])
+    for i in data:
+        id_number=i[0]
+        comment=i[8]
+        if comment in uncertain:
+            db_edit.set_comment(id_number,"uncertain",cursor=cursor,mydb=mydb,replace=True)
+    
+    # close the connection
+    db_connection.close_database_connection(mydb=mydb)
 
 
-    # stop the connection
-
+#homogenise_uncertain()
