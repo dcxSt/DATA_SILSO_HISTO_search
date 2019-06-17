@@ -7,7 +7,7 @@ import db_connection
 import file_io
 
 
-### selects all data in columns in DATA are returns it
+### selects all data in columns in DATA are returns it in list format
 def select_all_data(cursor=None,mydb=None):
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
     query = "SELECT * FROM DATA"

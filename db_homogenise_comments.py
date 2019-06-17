@@ -27,7 +27,7 @@ for all numbers in howevery big the database is:
 
 def homogenise_uncertain():
     # n is the supremem of the set of ids
-    n = 
+    n = 100000
     
     # setup a connection 
     cursor,mydb = db_connection.database_connector()
