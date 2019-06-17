@@ -1,0 +1,752 @@
+
+4  4	3 None - 4 | Rumovski
+4  4	3 None - 4 | Rumovski
+
+7  7	3 None - 6 | Vagetius
+
+0  0	1 153 - 2 | WOLF - S - M
+0  0	1 153 - 6 | Vagetius
+0  0	1 153 - 10 | Zucconi
+0  0	1 153 - 11 | Harriot
+0  0	1 153 - 17 | Schwabe
+0  0	1 153 - 2 | WOLF - S - M
+0  0	1 153 - 3 | WOLF - P - M
+
+34  167	13 116 - 25 | Adams
+
+39  191	16 184 - 34 | Schott
+
+156  264	28 307 - 23 | Schmidt
+156  264	28 307 - 23 | Schmidt
+156  264	28 307 - 23 | Schmidt
+
+161  277	30 407 - 23 | Schmidt
+161  277	30 407 - 23 | Schmidt
+
+171  294	33 118 - 45 | Tacchini
+
+173  296	33 120 - 48 | Sachen
+
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+174  299	33 128 - 49 | Secchi
+
+175  303	35 241 - 36 | Carrington
+
+190  331	38 399 - 52 | Schmidt et Würlisch
+190  331	38 399 - 52 | Schmidt et Würlisch
+
+139  366	46 186 - 56 | Wolfer
+
+211  375	49 244 - 49 | Secchi
+
+216  389	49 257 - 59 | Ferrari
+216  389	49 257 - 59 | Ferrari
+216  389	49 257 - 59 | Ferrari
+
+218  0	24 104 - 60 | Wolf P-M Wielenmann Mayer Schwabe Weber
+218  0	24 104 - 60 | Wolf P-M Wielenmann Mayer Schwabe Weber
+218  0	24 104 - 60 | Wolf P-M Wielenmann Mayer Schwabe Weber
+
+138  0	1 154 - 61 | Wolf P-M Meyer Schwabe Weber Schimdt
+138  0	1 154 - 61 | Wolf P-M Meyer Schwabe Weber Schimdt
+138  0	1 154 - 61 | Wolf P-M Meyer Schwabe Weber Schimdt
+138  0	1 154 - 61 | Wolf P-M Meyer Schwabe Weber Schimdt
+138  0	1 154 - 61 | Wolf P-M Meyer Schwabe Weber Schimdt
+
+219  0	26 208 - 62 | Wolf P-M Meyer Weber Leppig
+219  0	26 208 - 62 | Wolf P-M Meyer Weber Leppig
+219  0	26 208 - 62 | Wolf P-M Meyer Weber Leppig
+219  0	26 208 - 62 | Wolf P-M Meyer Weber Leppig
+
+-1  undef	undef undef - 63 | Zucconi Schubert Staudacher Horrebow
+-1  undef	undef undef - 64 | Wolf P-M Meyer Weber Schimdt Leppig
+-1  undef	undef undef - 56 | Wolfer
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 140 | Baker
+-1  undef	undef undef - 132 | Guillaume
+
+232  0	27 240 - 63 | Zucconi Schubert Staudacher Horrebow
+232  0	27 240 - 63 | Zucconi Schubert Staudacher Horrebow
+232  0	27 240 - 63 | Zucconi Schubert Staudacher Horrebow
+232  0	27 240 - 63 | Zucconi Schubert Staudacher Horrebow
+232  0	27 240 - 63 | Zucconi Schubert Staudacher Horrebow
+
+241  419	50 308 - 32 | Weber
+
+242  422	50 311 - 55 | Denza
+
+244  425	50 314 - 59 | Ferrari
+244  425	50 314 - 59 | Ferrari
+244  425	50 314 - 59 | Ferrari
+244  425	50 314 - 59 | Ferrari
+244  425	50 314 - 59 | Ferrari
+
+276  465	55 172 - 67 | Ricco
+
+283  523	67 301 - 56 | Wolfer
+
+293  536	68 330 - 72 | Todd
+
+313  665	82 55 - 56 | Wolfer
+
+316  484	59 354 - 45 | Tacchini
+
+318  481	59 350 - 55 | Denza
+
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+325  482	59 351 - 72 | Todd
+
+326  676	82 67 - 101 | Catania 1 -  Ricco -  Mascari
+326  676	82 67 - 101 | Catania 1 -  Ricco -  Mascari
+326  676	82 67 - 101 | Catania 1 -  Ricco -  Mascari
+326  676	82 67 - 101 | Catania 1 -  Ricco -  Mascari
+
+332  686	84 121 - 56 | Wolfer
+
+336  566	72 20 - 69 | Winkler
+
+340  691	84 127 - 101 | Catania 1 -  Ricco -  Mascari
+340  691	84 127 - 101 | Catania 1 -  Ricco -  Mascari
+340  691	84 127 - 101 | Catania 1 -  Ricco -  Mascari
+
+342  569	71 23 - 82 | Ricco et Mascari
+
+346  696	84 135 - 84 | Lewitzky
+346  696	84 135 - 84 | Lewitzky
+
+349  702	86 215 - 56 | Wolfer
+
+353  703	86 216 - 86 | Fauquez
+
+363  587	73 113 - 69 | Winkler
+
+360  684	83 104 - 89 | Kremsmuntser-2
+360  684	83 104 - 97 | Achromaten
+
+366  706	86 219 - 77 | Quimby
+
+370  707	86 221 - 101 | Catania 1 -  Ricco -  Mascari
+370  707	86 221 - 101 | Catania 1 -  Ricco -  Mascari
+
+385  720	87 244 - 56 | Wolfer
+
+387  721	87 245 - 86 | Fauquez
+
+398  611	76 235 - 90 | Leavenworth et Gummere
+
+399  729	87 252 - 101 | Catania 1 -  Ricco -  Mascari
+399  729	87 252 - 101 | Catania 1 -  Ricco -  Mascari
+399  729	87 252 - 101 | Catania 1 -  Ricco -  Mascari
+
+400  612	76 236 - 67 | Ricco
+
+404  593	73 120 - 67 | Ricco
+404  593	73 120 - 67 | Ricco
+
+408  734	87 256 - 103 | Charkow-6foot
+408  734	87 256 - 103 | Charkow-6foot
+
+409  739	88 272 - 56 | Wolfer
+
+413  741	88 273 - 104 | Broger
+413  741	88 273 - 104 | Broger
+
+416  744	88 275 - 77 | Quimby
+
+420  625	78 297 - 56 | Wolfer
+
+424  627	78 300 - 69 | Winkler
+
+444  656	80 398 - 106 | Mascari
+444  656	80 398 - 106 | Mascari
+
+445  604	76 227 - 56 | Wolfer
+
+448  752	88 281 - 109 | Mascari, Ricco
+448  752	88 281 - 109 | Mascari, Ricco
+
+450  800	91 12 - 56 | Wolfer
+450  800	91 12 - 56 | Wolfer
+
+451  801	91 14 - 104 | Broger
+451  801	91 14 - 104 | Broger
+451  801	91 14 - 117 | Broger
+451  801	91 14 - 117 | Broger
+
+452  802	91 15 - 69 | Winkler
+452  802	91 15 - 69 | Winkler
+
+454  757	89 296 - 56 | Wolfer
+454  757	89 296 - 56 | Wolfer
+
+456  758	89 297 - 104 | Broger
+456  758	89 297 - 104 | Broger
+456  758	89 297 - 104 | Broger
+
+458  806	91 18 - 106 | Mascari
+
+460  759	89 298 - 69 | Winkler
+
+462  809	91 21 - 111 | Lewitzky
+462  809	91 21 - 111 | Lewitzky
+462  809	91 21 - 111 | Lewitzky
+462  809	91 21 - 111 | Lewitzky
+462  809	91 21 - 84 | Lewitzky
+462  809	91 21 - 84 | Lewitzky
+462  809	91 21 - 84 | Lewitzky
+462  809	91 21 - 84 | Lewitzky
+
+464  761	89 302 - 77 | Quimby
+464  761	89 302 - 77 | Quimby
+
+467  811	91 22 - 113 | Kleiner
+467  811	91 22 - 113 | Kleiner
+
+473  820	92 37 - 56 | Wolfer
+
+477  821	92 38 - 117 | Broger
+477  821	92 38 - 117 | Broger
+
+479  767	89 306 - 118 | Sykora, Jastremsky
+479  767	89 306 - 118 | Sykora, Jastremsky
+
+483  825	92 41 - 77 | Quimby
+
+484  768	89 307 - 119 | Sykora-N
+484  768	89 307 - 119 | Sykora-N
+
+485  826	92 42 - 106 | Mascari
+
+487  769	89 307 - 106 | Mascari
+
+488  828	92 44 - 107 | Konkoly
+
+491  643	80 382 - 122 | Wolfer, Mooser 
+491  643	80 382 - 122 | Wolfer, Mooser 
+491  643	80 382 - 122 | Wolfer, Mooser 
+
+449  638	78 311 - 101 | Catania 1 -  Ricco -  Mascari
+449  638	78 311 - 101 | Catania 1 -  Ricco -  Mascari
+
+504  843	93 64 - 56 | Wolfer
+
+509  844	93 65 - 104 | Broger
+509  844	93 65 - 104 | Broger
+
+511  845	93 66 - 69 | Winkler
+
+513  847	93 68 - 77 | Quimby
+
+515  849	93 70 - 106 | Mascari
+515  849	93 70 - 106 | Mascari
+515  849	93 70 - 106 | Mascari
+
+520  853	93 73 - 111 | Lewitzky
+520  853	93 73 - 111 | Lewitzky
+
+527  865	93 107 - 56 | Wolfer
+
+528  777	90 324 - 56 | Wolfer
+528  777	90 324 - 56 | Wolfer
+528  777	90 324 - 56 | Wolfer
+
+529  778	90 325 - 117 | Broger
+529  778	90 325 - 117 | Broger
+529  778	90 325 - 117 | Broger
+
+530  779	90 326 - 69 | Winkler
+
+534  783	90 330 - 77 | Quimby
+534  783	90 330 - 77 | Quimby
+
+539  787	90 332 - 106 | Mascari
+
+548  866	94 108 - 117 | Broger
+548  866	94 108 - 117 | Broger
+
+550  868	94 110 - 69 | Winkler
+550  868	94 110 - 69 | Winkler
+550  868	94 110 - 69 | Winkler
+550  868	94 110 - 69 | Winkler
+550  868	94 110 - 69 | Winkler
+
+551  869	94 111 - 77 | Quimby
+551  869	94 111 - 77 | Quimby
+
+553  871	94 113 - 128 | Gorjatschy
+553  871	94 113 - 128 | Gorjatschy
+553  871	94 113 - 128 | Gorjatschy
+553  871	94 113 - 128 | Gorjatschy
+
+556  874	94 114 - 132 | Guillaume
+556  874	94 114 - 132 | Guillaume
+556  874	94 114 - 132 | Guillaume
+
+557  875	94 115 - 133 | Scharbe
+557  875	94 115 - 133 | Scharbe
+557  875	94 115 - 133 | Scharbe
+557  875	94 115 - 133 | Scharbe
+
+561  879	94 117 - 136 | Popow, Sykora-N-6ft
+561  879	94 117 - 136 | Popow, Sykora-N-6ft
+561  879	94 117 - 136 | Popow, Sykora-N-6ft
+
+568  883	94 120 - 106 | Mascari
+568  883	94 120 - 106 | Mascari
+568  883	94 120 - 106 | Mascari
+
+569  889	95 162 - 56 | Wolfer
+569  889	95 162 - 56 | Wolfer
+569  889	95 162 - 56 | Wolfer
+
+570  890	95 163 - 117 | Broger
+570  890	95 163 - 117 | Broger
+570  890	95 163 - 117 | Broger
+
+572  892	95 164 - 69 | Winkler
+572  892	95 164 - 69 | Winkler
+572  892	95 164 - 69 | Winkler
+
+573  893	95 165 - 77 | Quimby
+573  893	95 165 - 77 | Quimby
+
+575  895	95 167 - 133 | Scharbe
+575  895	95 167 - 133 | Scharbe
+575  895	95 167 - 133 | Scharbe
+575  895	95 167 - 133 | Scharbe
+
+578  898	95 169 - 113 | Kleiner
+
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+579  889	94 124 - 26 | Galilé
+
+583  900	95 170 - 139 | Stempell
+583  900	95 170 - 139 | Stempell
+
+588  1041	101 12 - 56 | Wolfer
+588  1041	101 12 - 56 | Wolfer
+
+589  1042	101 13 - 104 | Broger
+589  1042	101 13 - 104 | Broger
+
+590  905	95 173 - 124 | Subbotin
+590  905	95 173 - 124 | Subbotin
+590  905	95 173 - 124 | Subbotin
+
+591  906	95 174 - 132 | Guillaume
+
+593  908	95 175 - 101 | Catania 1 -  Ricco -  Mascari
+
+594  1043	101 13 - 141 | Biske
+
+597  1046	101 16 - 143 | Hrase
+597  1046	101 16 - 143 | Hrase
+
+599  1048	101 17 - 77 | Quimby
+599  1048	101 17 - 77 | Quimby
+
+603  1052	101 20 - 114 | Woinoff
+
+610  1059	101 25 - 149 | Catania L.Taffara, G.Horn
+
+618  1070	102 46 - 143 | Hrase
+
+619  1071	102 46 - 77 | Quimby
+
+620  1072	102 47 - 69 | Winkler
+
+629  1081	102 53 - 113 | Kleiner
+
+633  1086	102 56 - 132 | Guillaume
+633  1086	102 56 - 132 | Guillaume
+
+634  1090	103 69 - 56 | Wolfer
+
+638  1094	103 72 - 155 | Kavan
+
+651  1108	103 85 - 132 | Guillaume
+651  1108	103 85 - 132 | Guillaume
+651  1108	103 85 - 132 | Guillaume
+651  1108	103 85 - 132 | Guillaume
+
+658  1117	104 103 - 77 | Quimby
+
+661  1120	104 106 - 155 | Kavan
+
+670  1129	104 111 - 132 | Guillaume
+670  1129	104 111 - 132 | Guillaume
+670  1129	104 111 - 132 | Guillaume
+670  1129	104 111 - 132 | Guillaume
+
+687  1149	105 136 - 132 | Guillaume
+687  1149	105 136 - 132 | Guillaume
+687  1149	105 136 - 132 | Guillaume
+
+691  1155	107 172 - 56 | Wolfer
+691  1155	107 172 - 56 | Wolfer
+
+696  1160	107 176 - 77 | Quimby
+696  1160	107 176 - 77 | Quimby
+
+701  1165	107 180 - 132 | Guillaume
+701  1165	107 180 - 132 | Guillaume
+701  1165	107 180 - 132 | Guillaume
+
+707  1171	107 184 - 163 | Catania Ricco, Strano, Favaro
+707  1171	107 184 - 163 | Catania Ricco, Strano, Favaro
+
+712  1179	108 205 - 77 | Quimby
+
+718  1185	108 210 - 165 | Catania Fattorosi, Strano, Di Bella
+718  1185	108 210 - 165 | Catania Fattorosi, Strano, Di Bella
+718  1185	108 210 - 165 | Catania Fattorosi, Strano, Di Bella
+
+720  1187	108 212 - 132 | Guillaume
+720  1187	108 212 - 132 | Guillaume
+720  1187	108 212 - 132 | Guillaume
+
+722  1189	108 213 - 166 | Heimen
+722  1189	108 213 - 166 | Heimen
+
+726  1196	109 231 - 77 | Quimby
+
+735  1205	109 237 - 168 | Catania Ricco, Fattorosi
+735  1205	109 237 - 168 | Catania Ricco, Fattorosi
+735  1205	109 237 - 168 | Catania Ricco, Fattorosi
+
+736  1206	109 238 - 166 | Heimen
+736  1206	109 238 - 166 | Heimen
+
+737  1207	109 239 - 132 | Guillaume
+737  1207	109 239 - 132 | Guillaume
+
+746  1219	110 258 - 166 | Heimen
+746  1219	110 258 - 166 | Heimen
+
+747  1220	110 259 - 170 | Tass
+747  1220	110 259 - 170 | Tass
+
+759  1234	111 18 - 139 | Stempell
+759  1234	111 18 - 139 | Stempell
+
+761  1236	111 20 - 166 | Heimen
+
+763  1238	111 21 - 171 | Voss
+
+764  1239	111 22 - 172 | Malsch
+
+770  1245	111 25 - 132 | Guillaume
+
+773  1251	112 38 - 56 | Wolfer
+
+781  1259	112 45 - 132 | Guillaume
+781  1259	112 45 - 132 | Guillaume
+781  1259	112 45 - 132 | Guillaume
+
+783  1277	112 58 - 114 | Woinoff
+
+787  1281	112 61 - 77 | Quimby
+
+790  1284	112 64 - 132 | Guillaume
+790  1284	112 64 - 132 | Guillaume
+790  1284	112 64 - 132 | Guillaume
+
+796  1324	113 84 - 77 | Quimby
+
+799  1327	113 87 - 132 | Guillaume
+799  1327	113 87 - 132 | Guillaume
+799  1327	113 87 - 132 | Guillaume
+799  1327	113 87 - 132 | Guillaume
+
+815  1406	114 126 - 132 | Guillaume
+815  1406	114 126 - 132 | Guillaume
+815  1406	114 126 - 132 | Guillaume
+815  1406	114 126 - 132 | Guillaume
+
+816  1407	114 127 - 132 | Guillaume
+816  1407	114 127 - 132 | Guillaume
+816  1407	114 127 - 132 | Guillaume
+816  1407	114 127 - 132 | Guillaume
+
+832  1493	115 168 - 132 | Guillaume
+832  1493	115 168 - 132 | Guillaume
+832  1493	115 168 - 132 | Guillaume
+832  1493	115 168 - 132 | Guillaume
+
+849  914	96 189 - 56 | Wolfer
+
+850  915	96 190 - 104 | Broger
+
+853  918	96 193 - 77 | Quimby
+
+854  919	96 194 - 78 | Schwab
+
+856  921	96 195 - 106 | Mascari
+856  921	96 195 - 106 | Mascari
+
+864  929	96 200 - 132 | Guillaume
+864  929	96 200 - 132 | Guillaume
+
+867  932	96 202 - 124 | Subbotin
+
+868  937	97 220 - 56 | Wolfer
+
+869  938	97 221 - 117 | Broger
+
+873  942	97 224 - 77 | Quimby
+
+874  943	97 225 - 180 | Mascari et Mazzaralla
+874  943	97 225 - 180 | Mascari et Mazzaralla
+
+887  956	97 232 - 132 | Guillaume
+
+889  958	97 234 - 111 | Lewitzky
+889  958	97 234 - 111 | Lewitzky
+889  958	97 234 - 111 | Lewitzky
+
+890  963	98 265 - 56 | Wolfer
+890  963	98 265 - 56 | Wolfer
+
+891  964	98 266 - 104 | Broger
+891  964	98 266 - 104 | Broger
+
+895  968	98 269 - 140 | Baker
+
+900  973	98 273 - 185 | Mascari, Ricco, Zanoni et Bemporad
+900  973	98 273 - 185 | Mascari, Ricco, Zanoni et Bemporad
+
+906  979	98 276 - 111 | Lewitzky
+906  979	98 276 - 111 | Lewitzky
+
+908  981	98 277 - 132 | Guillaume
+908  981	98 277 - 132 | Guillaume
+
+917  993	99 302 - 77 | Quimby
+
+920  996	99 305 - 111 | Lewitzky
+920  996	99 305 - 111 | Lewitzky
+920  996	99 305 - 111 | Lewitzky
+920  996	99 305 - 111 | Lewitzky
+
+921  997	99 305 - 187 | Bemporad, Taffara et Horn
+921  997	99 305 - 187 | Bemporad, Taffara et Horn
+921  997	99 305 - 187 | Bemporad, Taffara et Horn
+
+934  1014	100 343 - 56 | Wolfer
+
+935  1015	100 343 - 104 | Broger
+
+824  1445	114 148 - 132 | Guillaume
+824  1445	114 148 - 132 | Guillaume
+824  1445	114 148 - 132 | Guillaume
+
+942  1019	100 347 - 143 | Hrase
+
+944  1021	100 348 - 77 | Quimby
+
+954  1031	100 354 - 132 | Guillaume
+
+956  1033	100 356 - 124 | Subbotin
+956  1033	100 356 - 124 | Subbotin
+
+960  1037	100 359 - 101 | Catania 1 -  Ricco -  Mascari
+960  1037	100 359 - 101 | Catania 1 -  Ricco -  Mascari
+
+961  12902	129 166 - 117 | Broger
+
+963  12904	129 167 - 178 | Buser
+963  12904	129 167 - 178 | Buser
+
+964  13001	130 205 - 177 | Brunner
+964  13001	130 205 - 177 | Brunner
+
+965  13002	130 205 - 117 | Broger
+
+967  13004	130 207 - 178 | Buser
+967  13004	130 207 - 178 | Buser
+
+968  13101	131 10 - 177 | Brunner
+968  13101	131 10 - 177 | Brunner
+
+969  13102	131 11 - 104 | Broger
+969  13102	131 11 - 104 | Broger
+
+970  13103	131 12 - 177 | Brunner
+
+972  13201	132 58 - 177 | Brunner
+
+973  13202	132 59 - 117 | Broger
+973  13202	132 59 - 117 | Broger
+
+974  13203	132 60 - 177 | Brunner
+974  13203	132 60 - 177 | Brunner
+
+975  13204	132 61 - 178 | Buser
+
+976  13401	134 145 - 177 | Brunner
+
+977  13402	134 146 - 117 | Broger
+977  13402	134 146 - 117 | Broger
+
+978  13403	134 147 - 177 | Brunner
+
+979  13404	134 148 - 178 | Buser
+
+980  13501	135 201 - 177 | Brunner
+
+981  13502	135 202 - 177 | Brunner
+
+982  13503	135 202 - 189 | Waldmeier
+
+983  13504	135 203 - 178 | Buser
+
+984  13601	136 289 - 177 | Brunner
+
+985  13602	136 290 - 177 | Brunner
+
+987  13604	136 292 - 178 | Buser
+
+990  13703	137 387 - 189 | Waldmeier
+
+991  13901	139 497 - 177 | Brunner
+991  13901	139 497 - 177 | Brunner
+
+992  13902	139 498 - 177 | Brunner
+
+993  14001	140 520 - 177 | Brunner
+993  14001	140 520 - 177 | Brunner
+
+994  14002	140 521 - 177 | Brunner
+
+995  14101	141 11 - 177 | Brunner
+995  14101	141 11 - 177 | Brunner
+995  14101	141 11 - 177 | Brunner
+
+996  14102	141 12 - 177 | Brunner
+
+997  14103	141 12 - 190 | Rapp
+
+998  14201	142 48 - 177 | Brunner
+998  14201	142 48 - 177 | Brunner
+
+999  14202	142 49 - 177 | Brunner
+999  14202	142 49 - 177 | Brunner
+
+1001  14204	142 50 - 190 | Rapp
+
+1003  14302	143 75 - 177 | Brunner
+
+1005  14304	143 76 - 190 | Rapp
+1005  14304	143 76 - 190 | Rapp
+
+1006  14401	144 112 - 177 | Brunner
+1006  14401	144 112 - 177 | Brunner
+1006  14401	144 112 - 177 | Brunner
+
+1007  14402	144 113 - 177 | Brunner
+
+1009  14404	144 114 - 190 | Rapp
