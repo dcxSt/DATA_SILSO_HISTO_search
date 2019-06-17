@@ -6,7 +6,6 @@ import numpy as np
 import db_connection
 import file_io
 import pickle
-import db_edit
 
 
 ### selects all data in columns in DATA are returns it in list format
@@ -94,6 +93,7 @@ for each rubric:
     once you have done this, add this list to the bigger list
 """
 
+"""
 def sort_comments_by_rubric():
     
     # select all from DATA_SILSO_HISTO and bring it into data...
@@ -175,7 +175,7 @@ def sort_comments_by_rubric():
         else:
             print("Error, there is an empty list in greater_comments_list")
     f.close()
-
+"""
 
 def more_efficient_sort_comments_by_rubric():
     # select all from DATA_SILSO_HISTO and bring it into data...
@@ -186,23 +186,45 @@ def more_efficient_sort_comments_by_rubric():
     print(observers[0])
 
     greater_comments_list=[]
+    to_flag=[]
+    count=0
     for d in data:
+        count+=1
+        if count%25000==0: # just for display so we can see how fast it's running
+            print("count:",count)
         comment=d[8]
         if comment:
             rubrics_id=d[2]
-            # define the rubrics number
+            # define the rubrics number, mitt number, page number
             rubrics_number=None
+            mitt_number=None
+            page_number=None
             for i in rubrics:
                 if i[0]==rubrics_id:
                     rubrics_number=i[1]
+                    mitt_number=i[2]
+                    page_number=i[3]
                     break
             if not rubrics_number and rubrics_number!=0:
-                # flag it
+                # cannot set flag otherwise im importing something that imports this program
+                print("rubrics id=",rubrics_id)
+                if rubrics_id=='NULL' or rubrics_id=='None' or not rubrics_id:
+                    rubrics_id='NULL'
+                    rubrics_id=-1#
+                rubrics_number='undef'
+                mitt_number='undef'
+                page_number='undef'
+                to_flag.append(d[0])
+                print("error RUBRICS id=",d[0])
+                print("rubrics id=",rubrics_id)
+                print()
+                
+                """
                 db_edit.set_flag(d[0],cursor,mydb)
                 print(rubrics_id)
                 print("flag set")
                 db_edit.set_comment(d[0],"rubrics_id_incorrect",cursor,mydb)
-                print("comment set")
+                print("comment set")"""
             # define the observer id
             observer_id=d[3]
             # define the observer alias
@@ -211,34 +233,45 @@ def more_efficient_sort_comments_by_rubric():
                 if o[0]==observer_id:
                     observer_alias=o[1]
             if not observer_alias:
+                print("error OBSERVER id=",d[0])
+                observer_alias='undefined->check observer id'
+                to_flag.append(d[0])
+                
+                """
                 print(observer_id)
                 db_edit.set_flag(d[0],cursor,mydb)
                 print("flag set")
                 db_edit.set_comment(d[0],"rubrics_id_incorrect",cursor,mydb)
-                print("comment set")
+                print("comment set")"""
             
             # add the comment to the list in a correct position
             # remember the greater_comments_list has sublists etc.
             if greater_comments_list:
-                for i in greater_comments_list:
+                for sublist in greater_comments_list:
                     # add the comment to the list
                     # if there is already an entry for this rubrics_id
-                    if i[0][0]==rubrics_id:
-                        for j in i:
-                            if j[4]==comment and j[2]==observer_id:
-                                j[5]+=1
+                    if sublist[0][0]==rubrics_id:
+                        for j in sublist:
+                            if j[6]==comment and j[2]==observer_id:
+                                j[7]+=1
                                 break
                         else:# only executed if the for loop did NOT break
-                            j.append([rubrics_id,rubrics_number,observer_id,observer_alias,comment,1])
+                            sublist.append([rubrics_id,rubrics_number,mitt_number,page_number,observer_id,observer_alias,comment,1])
                         break
                 else: #only executed if the for loop did NOT break
-                    greater_comments_list.append([[rubrics_id,rubrics_number,observer_id,observer_alias,comment,1]])
+                    greater_comments_list.append([[rubrics_id,rubrics_number,mitt_number,page_number,observer_id,observer_alias,comment,1]])
             else:
-                greater_comments_list.append([[rubrics_id,rubrics_number,observer_id,observer_alias,comment,1]])
+                greater_comments_list=[[[rubrics_id,rubrics_number,mitt_number,page_number,observer_id,observer_alias,comment,1]]]
 
     # now that we have our greater_comments_list
+    print("\nPickling the greater comments list")
     with open("greater_comments_list2.pkl","wb") as g:
         pickle.dump(greater_comments_list,g)
+    print("pickling tht to_flag list")
+    with open("to_flag.pkl","wb") as g:
+        pickle.dump(to_flag,g)
+    
+    print("writing the greater comments list in .txt format")
     f=open("greater_comments_list2.txt","w")
     for i in greater_comments_list:
         f.write("\n")
@@ -250,6 +283,31 @@ def more_efficient_sort_comments_by_rubric():
             f.write("\t")
             f.write(observer_id)
             f.write(" ")
+            f.write(observer_alias)
+            f.write(" - ")
+            f.write(comment)
+            f.write(" | ")
+            f.write(freq)
+            f.write("\n")
+    f.close()
+
+    greater_comments_list.sort()
+    print("writing the sorted greater comments list in .txt format")
+    f=open("sorted_greater_comments_list.txt","w")
+    for i in greater_comments_list:
+        f.write("\n")
+        for j in i:
+            rubrics_id,rubrics_number,mitt_number,page_number,observer_id,observer_alias,comment,freq=str(j[0]),str(j[1]),str(j[2]),str(j[3]),str(j[4]),str(j[5]),str(j[6]),str([7])
+            f.write(rubrics_id)
+            f.write("  ")
+            f.write(rubrics_number)
+            f.write("  ")
+            f.write(mitt_number)
+            f.write("  ")
+            f.write(page_number)
+            f.write("  |  ")
+            f.write(observer_id)
+            f.write("   ")
             f.write(observer_alias)
             f.write(" - ")
             f.write(comment)

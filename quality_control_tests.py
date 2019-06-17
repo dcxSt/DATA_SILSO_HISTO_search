@@ -74,7 +74,14 @@ def flag_bad_comments():
     db_connection.close_database_connection(mydb)
 
     
-
+# flags and comments everything in data that has 
+# a rubricsid that doesn't correspond to a real rubrics id...
+"""
+i accidentally stumbled on this one when trying to compile my comments sheet
+"""
+def incorrect_rubrics_id():
+    data=db_search.select_all_data()
+    rubrics=db_search.select_all_rubrics()
 
     
 
