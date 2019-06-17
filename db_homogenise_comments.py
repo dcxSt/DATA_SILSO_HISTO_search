@@ -8,7 +8,7 @@ import file_io
 
 
 
-null=["None","","NULL","\t","\n"," ","  ","   "]
+
 
 star=["*","*%"]
 w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
@@ -44,6 +44,16 @@ def homogenise_uncertain():
     # close the connection
     db_connection.close_database_connection(mydb=mydb)
 
+def homogenise_null():
+    no_comment=["None","NULL","\t","\n"," ","  ","   "]
+    data = db_search.select_all_data()
+    cursor,mydb=db_connection.database_connector()
+    for i in data:
+        id_number=i[0]
+        comment=i[8]
+        if comment in no_comment:
+            db_edit.set_comment(id_number,comment="",cursor=cursor,mydb=mydb,replace=True)
+    db_connection.close_database_connection(mydb=mydb)
 
 def homogenise_typos():
     S_et_W=["S et W","S et W "]
@@ -75,3 +85,7 @@ def homogenise_typos():
                 db_edit.set_comment(id_number,j[0],cursor=cursor,mydb=mydb,replace=True)
     db_connection.close_database_connection(mydb=mydb)
 
+
+#homogenise_uncertain()
+#homogenise_typos()
+#homogenise_null()
