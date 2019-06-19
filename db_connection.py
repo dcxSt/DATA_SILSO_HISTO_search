@@ -26,7 +26,7 @@ the_database="DATA_SILSO_HISTO",the_password=None):
                 )
 
         cursor=mydb.cursor()
-        print("\nmysql connection successfully established...")
+        print("\nmysql connection successfully established with",the_database)
         return cursor,mydb
 
     except Exception as e:
@@ -35,13 +35,20 @@ the_database="DATA_SILSO_HISTO",the_password=None):
         #raise Exception(e)
 
 # checks if you are connected and have a cursor if not it connects you
-def get_cursor(cursor=None,mydb=None):
-    
-    if not cursor and not mydb:
-        cursor,mydb = database_connector()
-    elif not cursor:
-        cursor=mydb.cursor()
+def get_cursor(cursor=None,mydb=None,the_database=None):
+    if not the_database:
+        if not cursor and not mydb:
+            cursor,mydb = database_connector()
+        elif not cursor:
+            cursor=mydb.cursor()
+    else:
+        if not cursor and not mydb:
+            cursor,mydb = database_connector(the_database=the_database)
+        elif not cursor:
+            cursor=mydb.cursor()
+
     return cursor,mydb
+
 
 # closes the database connection
 def close_database_connection(mydb):

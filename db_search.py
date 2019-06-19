@@ -9,8 +9,8 @@ import pickle
 
 
 ### selects all data in columns in DATA are returns it in list format
-def select_all_data(cursor=None,mydb=None):
-    cursor,mydb=db_connection.get_cursor(cursor,mydb)
+def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
+    cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
     query = "SELECT * FROM DATA"
     cursor.execute(query,params=())
     data = cursor.fetchall()

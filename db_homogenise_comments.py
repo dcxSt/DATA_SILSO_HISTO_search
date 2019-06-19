@@ -23,22 +23,25 @@ for all numbers in howevery big the database is:
             if comment in one of the things"""
 
 # checked
-def homogenise_uncertain():
+def homogenise_uncertain(the_database="DATA_SILSO_HISTO"):
     ## n is the supremem of the set of ids
     #n = 206773
 
     uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
         "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
         "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
-        "mauvais comptage","uncertain"]
+        "mauvais comptage","Uncertain\n "]
     
-    data = db_search.select_all_data()
+    data = db_search.select_all_data(the_database=the_database)
     # connect to the database
-    cursor,mydb = db_connection.database_connector()
+    cursor,mydb = db_connection.database_connector(the_database=the_database)
+    count=0
     for i in data:
         id_number=i[0]
         comment=i[8]
         if comment in uncertain:
+            count+=1
+            print("count:",count)
             db_edit.set_comment(id_number,"uncertain",cursor=cursor,mydb=mydb,replace=True)
     
     # close the connection
@@ -85,6 +88,7 @@ def homogenise_typos():
                 db_edit.set_comment(id_number,j[0],cursor=cursor,mydb=mydb,replace=True)
     db_connection.close_database_connection(mydb=mydb)
 
+# homogenise_uncertain(the_database="BAD_DATA_SILSO")
 
 #homogenise_uncertain()
 #homogenise_typos()
