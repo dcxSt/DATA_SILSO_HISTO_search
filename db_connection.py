@@ -7,14 +7,23 @@ import numpy as np
 import mysql.connector
 
 # this function connects you to the database
-def database_connector(the_host="localhost",the_user="root",the_database="DATA_SILSO_HISTO",the_password=None):
+def database_connector(the_host="localhost",the_user="root",
+the_database="DATA_SILSO_HISTO",the_password=None):
     import mysql
     try:
-        mydb = mysql.connector.connect(
-            host=the_host,
-            user=the_user,
-            database=the_database
+        if the_password:
+            mydb = mysql.connector.connect(
+                host=the_host,
+                user=the_user,
+                database=the_database,
+                password=the_password
             )
+        else:
+            mydb = mysql.connector.connect(
+                host=the_host,
+                user=the_user,
+                database=the_database
+                )
 
         cursor=mydb.cursor()
         print("\nmysql connection successfully established...")
