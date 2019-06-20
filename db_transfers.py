@@ -154,6 +154,16 @@ cursor=None,mydb=None,cursor2=None,mydb2=None,close_connections=False):
         db_connection.close_database_connection(mydb=mydb2)
     
 
+def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None):
+    if cursor and mydb and cursor2 and mydb2:
+        for i in id_numbers:
+            db_transfer(id_number=i,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2)
+    else:
+        for i in id_numbers:
+            db_transfer(id_number=i,close_connections=True)
+            
+
+
 
 # call the method for debugging with say a random point...
 # forgot to take the point out of bad data

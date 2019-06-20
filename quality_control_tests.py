@@ -47,7 +47,7 @@ def incorrect_wolf_test(cursor=None,mydb=None,flag_and_comment=False):
             # flag it
             db_edit.set_flag(i,cursor,mydb)
             # comment it
-            boolean=db_edit.comment(i,"incorrect_wolf_calculation",cursor,mydb,replace=False)
+            boolean=db_edit.set_comment(i,"incorrect_wolf_calculation",cursor,mydb,replace=False)
             print(boolean)
 
     return incorrect_wolf_ids
@@ -83,7 +83,99 @@ def incorrect_rubrics_id():
     data=db_search.select_all_data()
     rubrics=db_search.select_all_rubrics()
 
+# flags all comments in BAD_DATA_SILSO that looks even mildly suspicious
+def big_flag():
+    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    data = db_search.select_all_data(cursor,mydb)
+    # reconnect cause data disconnects you
+    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+
+    flags_set=0
+
+    for i in range(len(data)):
+        # safety catch just for debuggin phase
+        if i>10:
+            break
+        
+        if i%2000==0:
+            print("count:",i)
+        # copy past from db_transfer
+        info=data[i]
+        flag = info[10]
+        if flag==1:
+            continue
+        id_number=info[0]
+        comment = info[8]
+        if comment:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            continue
+        date = info[1]
+        if not date:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            db_edit.set_comment(id_number=id_number,comment="no date",cursor=curosr,mydb=mydb)
+            continue
+        fk_rubrics = info[2]
+        if not fk_rubrics and fk_rubrics!=0:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            db_edit.set_comment(id_number=id_number,comment="no fk_rubrics",cursor=curosr,mydb=mydb)
+            continue
+        groups = info[4]
+        if not groups and groups!=0:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            db_edit.set_comment(id_number=id_number,comment="no groups",cursor=curosr,mydb=mydb)
+            continue
+        sunspots = info[5]
+        if not sunspots and sunspots!=0:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            db_edit.set_comment(id_number=id_number,comment="no sunspots",cursor=curosr,mydb=mydb)
+            continue
+        wolf = info[6]
+        if not wolf and wolf !=0:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            db_edit.set_comment(id_number=id_number,comment="no wolf",cursor=curosr,mydb=mydb)
+            continue
+        fk_observers=info[3]
+        # get the observer information
+        query="SELECT * FROM OBSERVERS o WHERE o.ID="+str(fk_observers)
+        cursor.execute(query,())
+        info = cursor.fetchall()[0]
+        obs_alias = info[1]
+        if not obs_alias:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            db_edit.set_comment(id_number=id_number,comment="no obs_alias",cursor=cursor,mydb=mydb)
+            flags_set+=1
+            continue
+        
+        # get the rubrics information
+        query="SELECT * FROM RUBRICS r WHERE r.RUBRICS_ID="+str(fk_rubrics)
+        cursor.execute(query,())
+        info = cursor.fetchall()[0]
+        rubrics_number = info[1]
+        if not rubrics_number and rubrics_number!=0:
+            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+            flags_set+=1
+            continue
+        #mitt_number = info[2]
+        #page_number = info[3]
+        #rubrics_source = info[4]
+        #rubrics_source_date = info[5]
     
+    db_connection.close_database_connection(mydb)
+
+
+
+
+
+
+big_flag()
+
+
 
 ### testing
 ##ids=incorrect_wolf_test(flag_and_comment=True)
@@ -93,12 +185,8 @@ def incorrect_rubrics_id():
 
 # im only storing these here temporarily until i decide what to do with them
 # list of comments synonyme to uncertain
-uncertain=["Uncertain","Uncertain\n","Imprecise","LOW QUALITY",
-    "Incertain","?","? (Résultats incertains)","?%","? Résultat incertain",
-    "? Résultat incertaint","? Résultats incertains","Mauvais comptage",
-    "mauvais comptage"]
-null=["None","","NULL","\t","\n"," ","  ","   "]
-star=["*","*%"]
+
+
 w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
 "W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier",
 "W = Etude faite par Waldmeier","Waldmeier"]

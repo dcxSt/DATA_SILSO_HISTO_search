@@ -55,13 +55,14 @@ def set_comment(id_number,comment,cursor=None,mydb=None,replace=False):
 
 
 # takes id_number cursor and database connection and adds a flag to the data
-def set_flag(id_number,cursor=None,mydb=None):
+def set_flag(id_number,cursor=None,mydb=None,close_connection=True):
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
     query="UPDATE DATA d SET FLAG=1 WHERE d.ID="+str(id_number)
     cursor.execute(query,())
     mydb.commit()
     print("ID:",id_number,"\tFLAG: 1")
-    db_connection.close_database_connection(cursor,mydb)
+    if close_connection:
+        db_connection.close_database_connection(mydb)
 
 # takes id_number cursor and database connection and sets flag to 0
 def remove_flag(id_number,cursor=None,mydb=None):
