@@ -84,25 +84,24 @@ def incorrect_rubrics_id():
     rubrics=db_search.select_all_rubrics()
 
 # flags all comments in BAD_DATA_SILSO that looks even mildly suspicious
-def big_flag():
-    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+def big_flag(the_database="BAD_DATA_SILSO"):
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
     data = db_search.select_all_data(cursor,mydb)
     # reconnect cause data disconnects you
-    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
 
     flags_set=0
+    already_flags=0
 
     for i in range(len(data)):
-        # safety catch just for debuggin phase
-        if i>10:
-            break
         
-        if i%2000==0:
-            print("count:",i)
+        if i%5000==0:
+            print("count ~",i)
         # copy past from db_transfer
         info=data[i]
         flag = info[10]
         if flag==1:
+            already_flags+=1
             continue
         id_number=info[0]
         comment = info[8]
@@ -114,31 +113,31 @@ def big_flag():
         if not date:
             db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
             flags_set+=1
-            db_edit.set_comment(id_number=id_number,comment="no date",cursor=curosr,mydb=mydb)
+            db_edit.set_comment(id_number=id_number,comment="no date",cursor=cursor,mydb=mydb)
             continue
         fk_rubrics = info[2]
         if not fk_rubrics and fk_rubrics!=0:
             db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
             flags_set+=1
-            db_edit.set_comment(id_number=id_number,comment="no fk_rubrics",cursor=curosr,mydb=mydb)
+            db_edit.set_comment(id_number=id_number,comment="no fk_rubrics",cursor=cursor,mydb=mydb)
             continue
         groups = info[4]
         if not groups and groups!=0:
             db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
             flags_set+=1
-            db_edit.set_comment(id_number=id_number,comment="no groups",cursor=curosr,mydb=mydb)
+            db_edit.set_comment(id_number=id_number,comment="no groups",cursor=cursor,mydb=mydb)
             continue
         sunspots = info[5]
-        if not sunspots and sunspots!=0:
-            db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
-            flags_set+=1
-            db_edit.set_comment(id_number=id_number,comment="no sunspots",cursor=curosr,mydb=mydb)
-            continue
+        #if not sunspots and sunspots!=0:
+         #   db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+          #  flags_set+=1
+           # db_edit.set_comment(id_number=id_number,comment="no sunspots",cursor=cursor,mydb=mydb)
+            #continue
         wolf = info[6]
         if not wolf and wolf !=0:
             db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
             flags_set+=1
-            db_edit.set_comment(id_number=id_number,comment="no wolf",cursor=curosr,mydb=mydb)
+            db_edit.set_comment(id_number=id_number,comment="no wolf",cursor=cursor,mydb=mydb)
             continue
         fk_observers=info[3]
         # get the observer information
@@ -171,23 +170,15 @@ def big_flag():
 
 
 
+def count_flags(the_database="DATA_SILSO_HISTO"):
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
+    data = db_search.select_all_data(cursor,mydb)
+    no_flags=0
+    for i in data:
+        if i[10]==1:
+            no_flags+=1
+    return no_flags
 
 
-big_flag()
 
-
-
-### testing
-##ids=incorrect_wolf_test(flag_and_comment=True)
-##for i in ids:
-##    print("id:",i)
-
-
-# im only storing these here temporarily until i decide what to do with them
-# list of comments synonyme to uncertain
-
-
-w_waldmeier=["W Analyse faite par Waldmeier","W Etude faite par Waldmeier",
-"W Etude faite pas Waldmeier","W = Etude faite pas Waldmeier",
-"W = Etude faite par Waldmeier","Waldmeier"]
 

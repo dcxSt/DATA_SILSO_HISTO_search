@@ -18,7 +18,11 @@ basic method for writing to a file
 
 
 ### quality_control_tests.py
-some tests to be done on the original database
+some tests to be done on the original database, notament elle contient le big_flag method which flags and comments a whole bunch of different things: 
+* Anything with a comment of any kind
+* Anything with some important data missing (one of the sunspot numbers etc.)
+When i ran it it flagged 14,582 datapoints out of ~ 200,000 --> about 7% of the data off the top of my head
+
 
 ### db_transfers.py
 methods for transfering data from old database to new one:

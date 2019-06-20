@@ -13,7 +13,7 @@ import mysql.connector
 # return boolean T if updated, F if there was already a comment
 def set_comment(id_number,comment,cursor=None,mydb=None,replace=False):
     
-    cursor,mydb=db_connection.get_cursor()
+    cursor,mydb=db_connection.get_cursor(cursor,mydb)
     
     query="SELECT COMMENT FROM DATA d WHERE d.ID="+str(id_number)
     cursor.execute(query,params=())
