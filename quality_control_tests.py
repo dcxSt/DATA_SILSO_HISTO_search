@@ -225,12 +225,3 @@ def count_data(the_database):
     sentence=the_database+" has "+str(len(data))+" datapoints"
     print(the_database,"has",len(data),"datapoints")
     return sentence
-
-s1=count_data("DATA_SILSO_HISTO")
-s2=count_data("BAD_DATA_SILSO")
-s3=count_data("GOOD_DATA_SILSO")
-
-print("\n\n\n\n")
-print(s1)
-print(s2)
-print(s3)
