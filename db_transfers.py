@@ -3,6 +3,7 @@
 
 import db_connection
 import db_search
+import db_edit
 
 """
 pseudocode for db_transfer
@@ -100,7 +101,11 @@ cursor=None,mydb=None,cursor2=None,mydb2=None,close_connections=False):
     if rubrics_source==None:
         rubrics_source='NULL'
     if rubrics_source_date==None:
-        rubrics_source_date='NULL'
+        # FLAG IT, it must have a date
+        print("set a flag for where the rubrics source was missing")
+        db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+        db_edit.set_comment(id_number=id_number,comment="missing rubrics source",cursor=cursor,mydb=mydb,replace=False)
+        return
     
 
     # write to the new database in it's own format
@@ -161,7 +166,7 @@ def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None):
     else:
         for i in id_numbers:
             db_transfer(id_number=i,close_connections=True)
-            
+
 
 
 

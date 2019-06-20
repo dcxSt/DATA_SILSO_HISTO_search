@@ -5,6 +5,11 @@ import db_search
 import db_edit
 import file_io
 import db_homogenise_comments
+import db_transfers
+
+# sound playing
+import os
+from pygame import mixer
 
 # not certain if necessary
 import mysql.connector
@@ -168,8 +173,6 @@ def big_flag(the_database="BAD_DATA_SILSO"):
     db_connection.close_database_connection(mydb)
 
 
-
-
 def count_flags(the_database="DATA_SILSO_HISTO"):
     cursor,mydb=db_connection.database_connector(the_database=the_database)
     data = db_search.select_all_data(cursor,mydb)
@@ -180,5 +183,54 @@ def count_flags(the_database="DATA_SILSO_HISTO"):
     return no_flags
 
 
+# def move unflagged from bad to good
+def move_unflagged():
+    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    data = db_search.select_all_data(cursor,mydb)
+    # db_search.sellect_all_data disconnects me
+    cursor,mydb=db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    cursor2,mydb2=db_connection.database_connector(the_database="GOOD_DATA_SILSO")
 
+    for i in data:
+        id_number=i[0]
+        flag=i[10]
+        if flag!=1:
+            db_transfers.db_transfer(id_number=id_number,sender="BAD_DATA_SILSO",
+            recipient="GOOD_DATA_SILSO",cursor=cursor,mydb=mydb,cursor2=cursor2,
+            mydb2=mydb2,close_connections=False)
+    
+    # close the connections
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
 
+    # because it takes a long time to run i'm gonna play a little bell sound at the end
+    #os.system("aplay bell_sound.wav")
+    mixer.init()
+    mixer.music.load('star-wars-cantina-song.mp3')
+    mixer.music.play()
+    input("\n\n\n\n\nFinally finnished!")
+
+"""
+try:
+    move_unflagged()
+except:
+    mixer.init()
+    mixer.music.load('plane.mp3')
+    mixer.music.play()
+    input("\n\nError!")
+"""
+
+def count_data(the_database):
+    data=db_search.select_all_data(the_database=the_database)
+    sentence=the_database+" has "+str(len(data))+" datapoints"
+    print(the_database,"has",len(data),"datapoints")
+    return sentence
+
+s1=count_data("DATA_SILSO_HISTO")
+s2=count_data("BAD_DATA_SILSO")
+s3=count_data("GOOD_DATA_SILSO")
+
+print("\n\n\n\n")
+print(s1)
+print(s2)
+print(s3)
