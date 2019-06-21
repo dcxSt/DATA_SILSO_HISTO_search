@@ -5,7 +5,7 @@ import os
 from pygame import mixer # Load the required library
 
 mixer.init()
-mixer.music.load('star-wars-cantina-song.mp3')
+mixer.music.load('sound_fx/star-wars-cantina-song.mp3')
 mixer.music.play()
 input()
 print()
