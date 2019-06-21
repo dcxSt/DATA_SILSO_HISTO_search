@@ -1,0 +1,236 @@
+%% marcel's template
+
+\documentclass[12pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,tikz,tikzsymbols}
+\usepackage[shortlabels]{enumitem}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\RA}{\Rightarrow}
+
+\newcommand{\M}{\mathbb{M}}
+
+\renewcommand\qedsymbol{$\Smiley$}
+
+\newenvironment{problem}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{DATA SILSO HISTO quality control Report}
+\author{Stephen Fay}
+\maketitle
+
+\section{Introduction}
+\subsection{Github repository and project}
+    https://github.com/dcxSt/DATA\_SILSO\_HISTO\_search \\
+    https://github.com/users/dcxSt/projects/2?fullscreen=true
+    
+\subsection{Brief History et Mise en Contexte}
+
+For centuries we have observed the sun and it's ever mysterious sunspots. The 11 year sunspot cycle has long been a subject of debate. Today we wish to have precise quantification of solar activity throughout the previous centuries. This is made possible by the sunspot series. For the past 3 to 4 hundred years people all over the Eurasian continent have been recording the number of sunspots that appear on the sun's earth facing half. 
+
+The aim of this project is to do a quality control of the data in DATA\_SILSO\_HISTO. Once the data is fixed and cleaned up, it will be stored on a new database - temporarily named GOOD\_DATA\_SILSO in a more user-friendly format to what currently exists. I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be mad to keep a closer eye on the data that still needs to be examined with more scrutiny : BAD\_DATA\_SILSO. This database will act as intermediary between DATA\_SILSO\_HISTO and GOOD\_DATA\_SILSO. We will effectively be storing 2 databases-worth of information in 3 databases. The original DATA\_SILSO\_HISTO will have the old data and will be corrected in due course. The intermediary BAD\_DATA\_SILSO will start as a copy of DATA\_SILSO\_HISTO and end up empty as the corrected data is removed from it and placed, in the new format, into GOOD\_DATA\_SILSO.
+
+
+\section{Processus de filtration / corigee du data (log) / quality control}
+
+\subsection{Everything wrong with the data}
+
+First, it's important to note that note that though I am doing a quality control I do not wish to die of boardom. I will not be verifying each of the 205003 data-points by hand in the Mittheilungen journals
+
+\subsection{Search and correct.}
+
+\subsubsection{Outline}
+
+For the first week and a half or so ~10 days, I spent the bulk of the time acquainting myself with the Mittheilungen journals, and with the software that is used to store and access the database. I also developed the tools in python to facilitate my access to them and to perform the tasks that I need to perform for the filtration process. 
+
+
+
+\subsubsection{Log}
+I started this (today) on 2019.06.21 (yes, the solstice!)
+\begin{itemize}
+    \item Friday June 21
+    \begin{itemize}
+        \item Today no-one was in the office in the morning so I didn't have access to the Mittheilungen journals and decided to start writing this instead
+        \item at 10:20 I was let into my bit with all my notes and the journals and began 'searching the manuals' part of the project documented in the Github project linked
+        \item been spending time writing in all the pink corrections, including typos
+        \item started writing 'searching\_the\_manuals.py'
+        \item wrote and executed methods : def\_correct\_typos\_for\_pink() ; pink()
+        \item searching the manuals for all comments labeled 'uncertain' so as to figure out what is this word's range of meaning (wishing I had paid attention in German class)
+    \end{itemize}
+    \item Monday June 24
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+\end{itemize}
+
+\subsubsection{Python scripts - what they contain}
+
+
+
+\section{Comparaison du data avant et apres}
+
+\subsubsection{The original sql data tables format}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE DATA}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) & No & PRI & NULL & auto\_increment \\
+        
+        DATE & date & YES && NULL & \\
+        
+        FK\_RUBRICS & int(11) & YES & MUL & NULL &  \\
+        
+        FK\_OBSERVERS & int(11) & YES & MUL & NULL &  \\
+        
+        GROUPS & int(11) & YES && NULL &  \\
+        
+        SUNSPOTS & int(11) & YES && NULL & \\
+        
+        WOLF & int(11) & YES && NULL &  \\
+        
+        QUALITY & int(11) & YES && NULL &  \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        FLAG (i added this) & tinyint(1) & YES && NULL &  \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE OBSERVERS}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) & NO & PRI & NULL & auto\_increment \\
+        
+        ALIAS & varchar(50) & YES && NULL & \\
+        
+        FIRST\_NAME & varchar(50) & YES && NULL &  \\
+        
+        LAST\_NAME & varchar(50) & YES && NULL &  \\
+        
+        COUNTRY & varchar(50) & YES && NULL &  \\
+        
+        INSTRUMENT & varchar(50) & YES && NULL & \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE RUBRICS}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        RUBRICS\_ID & int(11) & NO & PRI & NULL & auto\_increment \\
+        
+        RUBRICS\_NUMBER & int(11) unsigned & NO && NULL & \\
+        
+        MITT\_NUMBER & int(11) unsigned & NO && 0 &  \\
+        
+        PAGE\_NUMBER & int(11) unsigned & YES && NULL &  \\
+        
+        SOURCE & text & NO && NULL &  \\
+        
+        SOURCE\_DATE & date & YES && NULL & \\
+        
+        COMMENTS & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        NB\_OBS & int(11) & YES && NULL & \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\newpage{}
+
+\subsubsection{My new sql data table format}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE DATA (the only table)}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) unsigned & No & PRI & NULL & auto\_increment \\
+        
+        DATE & date & YES && NULL & \\
+        
+        GROUPS & int(11) & YES && NULL &  \\
+        
+        SUNSPOTS & int(11) & YES && NULL & \\
+        
+        WOLF & int(11) & YES && NULL &  \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        OBS\_ALIAS & varchar(50) & YES && NULL & \\
+        
+        FIRST\_NAME & varchar(50) & YES && NULL & \\
+        
+        LAST\_NAME & varchar(50) & YES && NULL & \\
+        
+        COUNTRY & varchar(50) & YES && NULL & \\
+        
+        INSTRUMENT\_NAME & varchar(50) & YES && NULL & \\
+        
+        RUBRICS\_NUMBER & int(11) & YES && NULL & \\
+        
+        MITT\_NUMBER & int(11) & YES && NULL & \\
+        
+        PAGE\_NUMBER & int(11) & YES && NULL & \\
+        
+        FLAG & tinyint(1) unsigned & YES && NULL &  \\
+        
+        RUBRICS\_SOURCE & text & YES && NULL & \\
+        
+        RUBRICS\_SOURCE\_DATE & date & YES && NULL & \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\newpage{}
+
+
+\subsubsectoin{Graphs and visual representations}
+
+\end{document}

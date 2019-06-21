@@ -1,8 +1,6 @@
 # utility methods used search the DATA_SILSO_HISTO sql database
 
 # import statements
-import mysql.connector
-import numpy as np
 import db_connection
 import file_io
 import pickle
@@ -234,16 +232,5 @@ def missing_rubric():
     print("\nlen(missing_rubric)",len(missing_rubric))
     print("len(data)",len(data))
 
-
-
-#missing_rubric()
-#more_efficient_sort_comments_by_rubric()
-
-
-### tests
-##data=select_all_data()
-##print("\n\n",len(data),"\n\n")
-##print(data[100])
-
-
-###different_comments(file_name="gggg.txt")
+### write a function to save observers and their aliases to text file 
+# for printing purposes
