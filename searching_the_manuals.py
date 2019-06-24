@@ -31,8 +31,6 @@ def correct_typos_for_pink():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
 
-
-
 def pink():
     """
     In this method I create a big list of things where we have 
@@ -85,14 +83,332 @@ def pink():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
 
-
-
-def more_synonyms():
+def more_synonyms(): # unfinished
     # this is a dictionary with keys as incorrect and values as correct
     synonyms={}
 
-pink()
 
 #def rubric_specific_corrections():
     # has a list that resembles pink but operates differently:
     # (rubric_number, correction, incorrect original comment)
+
+
+def find_duplicate_observers(cursor=None,mydb=None,
+the_database="DATA_SILSO_HISTO",close_connection=True):
+    # returns a dictionary with key = alias -- value = list (obs_ids)
+
+    cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
+    observers = db_search.select_all_observers() # this boy closes the connection
+    
+    duplicates={}
+    for i in observers:
+        alias = i[1]
+        obs_id = i[0]
+        if alias in duplicates:
+            the_ids=duplicates[alias]
+            the_ids.append(obs_id)
+            duplicates[alias]=the_ids
+        else:
+            duplicates[alias]=[obs_id]
+
+    print("Observer duplicates:")
+    for i in duplicates:
+        if len(duplicates[i])>1:
+            print(i," = ",duplicates[i])
+
+    if close_connection:
+        db_connection.close_database_connection(mydb)
+    return duplicates
+
+def find_obs_id_by_date(data):
+    # returns a dictionary with key = date -- value =
+    # [(obs_id,datapoint id),(obs_id datapoint_id),...]
+    obs_id_by_date={}
+    for i in data:
+        date = i[1]
+        datapoint_id = i[0]
+        obs_id = i[3]
+        if date in obs_id_by_date:
+            the_observers = obs_id_by_date[date]
+            the_observers.append((obs_id,datapoint_id))
+            obs_id_by_date[date]=the_observers
+        else:
+            the_observers=[(obs_id,datapoint_id)]
+            obs_id_by_date[date]=the_observers
+    return obs_id_by_date
+
+def find_observer_alias_by_id(observers):
+    # returns a dictionary : key = id -- value = alias
+    alias_by_id={}
+    for i in observers:
+        the_id = i[0]
+        the_alias = i[1]
+        alias_by_id[the_id] = the_alias
+    return alias_by_id
+
+# makes a dictionary of all the duplicated data by observer alias
+def find_duplicates_data(the_database="DATA_SILSO_HISTO"):
+    print("FINDING the duplicates...")
+    # start by finding duplicates of data, so 2 data points with the 
+    # same observer id, with the same 
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
+    data = db_search.select_all_data()
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
+    observers = db_search.select_all_observers()
+
+    # dictionary of obs_ids searchable by date of observation
+    obs_id_by_date = find_obs_id_by_date(data)
+
+    # dictionary of obs_ids with the same alias
+    duplicate_observers = find_duplicate_observers(the_database=the_database)
+
+    # key = observer id -- value  = observer alias
+    observer_alias_by_id = find_observer_alias_by_id(observers)
+
+    # dictionary key = observer_alias -- value = list of duplicates
+    # list = (id1, id2, date)
+    data_duplicates = {}
+    for date in obs_id_by_date:
+        # compare all the observer ids with each other for specified date
+        for i in range(len(obs_id_by_date[date])-1):
+            for j in range(i+1,len(obs_id_by_date[date])):
+                obs_alias1=observer_alias_by_id[obs_id_by_date[date][i][0]]
+                obs_alias2=observer_alias_by_id[obs_id_by_date[date][j][0]]
+                # if two alias are the same for the same date, add them to the duplicates list
+                if obs_alias1 == obs_alias2:
+                    id1=obs_id_by_date[date][i][1]
+                    id2=obs_id_by_date[date][j][1]
+                    try:
+                        duplicates_list=data_duplicates[obs_alias1]
+                        duplicates_list.append((id1,id2,date))
+                        data_duplicates[obs_alias1]=duplicates_list
+                    except KeyError:
+                        data_duplicates[obs_alias1]=[(id1,id2,date)]
+
+    return data_duplicates
+
+def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
+    # takes the duplicates data list and makes a better one
+    print("Creating the greater duplicates data list")
+
+    greater_duplicates_dictionary = {}
+
+    data_duplicates = find_duplicates_data()
+    cursor,mydb = db_connection.database_connector(the_database=the_database)
+    deficient_rubrics_count=0
+    for alias in data_duplicates:
+        greater_duplicates_dictionary[alias] = []
+        # for each duplicate add this to the greater list...
+        for duplicate in data_duplicates[alias]:
+            id1 = duplicate[0]
+            id2 = duplicate[1]
+            date = duplicate[2]
+
+            # fetch the data
+            query="SELECT * FROM DATA WHERE ID ="+str(id1)
+            cursor.execute(query,())
+            id1_data = cursor.fetchall()[0]
+
+            fk_rubrics = id1_data[2]
+            fk_observers = id1_data[3]
+
+            try:
+                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                cursor.execute(query,())
+                rubrics_data = cursor.fetchall()[0]
+
+                rubrics_number = rubrics_data[1]
+                mitt_number = rubrics_data[3]
+                page_number = rubrics_data[4]
+            except:
+                deficient_rubrics_count+=1
+                #print("fk_rubrics deficient, exception caught")
+                rubrics_number = "na"
+                mitt_number = "na"
+                page_number = "na"
+                fk_rubrics = "na"
+
+            try:
+                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                cursor.execute(query,())
+                observer_data = cursor.fetchall()[0]
+
+                observer_id = observer_data[0]
+                observer_alias = observer_data[1]
+                observer_instrument = observer_data[5]
+            except:
+                print("fk_observer deficient, exception caught")
+                observer_id = "na"
+                observer_alias = "na"
+                observer_instrument = "na"
+            
+
+                
+
+            groups = id1_data[4]
+            sunspots = id1_data[5]
+            wolf = id1_data[6]
+            comment = id1_data[8]
+
+            # make the new tuple
+            tuple1=(id1,fk_observers,observer_id,observer_alias,
+            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+            page_number,groups,sunspots,wolf,comment)
+
+
+            ### --------------------------- ###
+
+            query="SELECT * FROM DATA WHERE ID ="+str(id2)
+            cursor.execute(query,())
+            id2_data = cursor.fetchall()[0]
+
+            fk_rubrics = id2_data[2]
+            fk_observers = id2_data[3]
+
+            # fetch the data
+            try:
+                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                cursor.execute(query,())
+                rubrics_data = cursor.fetchall()[0]
+
+                rubrics_number = rubrics_data[1]
+                mitt_number = rubrics_data[3]
+                page_number = rubrics_data[4]
+            except:
+                deficient_rubrics_count+=1
+                #print("fk_rubrics deficient, exception caught")
+                rubrics_number = "na"
+                mitt_number = "na"
+                page_number = "na"
+
+            try:
+                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                cursor.execute(query,())
+                observer_data = cursor.fetchall()[0]
+
+                observer_id = observer_data[0]
+                observer_alias = observer_data[1]
+                observer_instrument = observer_data[5]
+            except:
+                print("fk_observer deficient, exception caught")
+                observer_id = "na"
+                observer_alias = "na"
+                observer_instrument = "na"
+            
+
+            groups = id2_data[4]
+            sunspots = id2_data[5]
+            wolf = id2_data[6]
+            comment = id2_data[8]
+
+            # make the new tuple
+            tuple2=(id2,fk_observers,observer_id,observer_alias,
+            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+            page_number,groups,sunspots,wolf,comment)
+
+            # here you can see how i structured my dictionary
+            greater_duplicates_dictionary[alias].append((date,tuple1,tuple2))
+
+    return greater_duplicates_dictionary
+
+def write_greater_duplicates_data_text(greater_duplicates_dictionary):
+    filename = "greater_duplicates_short.txt"
+    print("Writing to file",filename)
+    f = open(filename,"w")
+    for observer in greater_duplicates_dictionary:
+        f.write("Observer :   "+str(observer))
+        f.write("\n")
+        f.write("ID | fk_obs , obs_id , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment")
+        f.write("\n\n")
+        count=0
+        for i in greater_duplicates_dictionary[observer]:
+            count+=1
+            if count>5:
+                break
+            date=i[0]
+            tuple1=i[1]
+            tuple2=i[2]
+            f.write(str(date))
+            f.write("\n")
+            f.write(str(tuple1[0]))
+            f.write(" | ")
+            f.write(str(tuple1[1]))
+            f.write(" , ")
+            f.write(str(tuple1[2]))
+            f.write(" , ")
+            f.write(str(tuple1[3]))
+            f.write(" , ")
+            f.write(str(tuple1[4]))
+            f.write(" | ")
+            f.write(str(tuple1[5]))
+            f.write(" , ")
+            f.write(str(tuple1[6]))
+            f.write(" , ")
+            f.write(str(tuple1[7]))
+            f.write(" , ")
+            f.write(str(tuple1[8]))
+            f.write(" | ")
+            f.write(str(tuple1[9]))
+            f.write(" , ")
+            f.write(str(tuple1[10]))
+            f.write(" , ")
+            f.write(str(tuple1[11]))
+            f.write(" | ")
+            f.write(str(tuple1[12]))
+            f.write("\n")
+
+            f.write(str(tuple2[0]))
+            f.write(" | ")
+            f.write(str(tuple2[1]))
+            f.write(" , ")
+            f.write(str(tuple2[2]))
+            f.write(" , ")
+            f.write(str(tuple2[3]))
+            f.write(" , ")
+            f.write(str(tuple2[4]))
+            f.write(" | ")
+            f.write(str(tuple2[5]))
+            f.write(" , ")
+            f.write(str(tuple2[6]))
+            f.write(" , ")
+            f.write(str(tuple2[7]))
+            f.write(" , ")
+            f.write(str(tuple2[8]))
+            f.write(" | ")
+            f.write(str(tuple2[9]))
+            f.write(" , ")
+            f.write(str(tuple2[10]))
+            f.write(" , ")
+            f.write(str(tuple2[11]))
+            f.write(" | ")
+            f.write(str(tuple2[12]))
+            f.write("\n\n")
+
+        f.write("\n-----------------------------------------\n")
+
+    f.close()
+
+
+
+write_greater_duplicates_data_text(greater_duplicates_data())
+
+
+"""
+data_duplicates,data = find_duplicates_data()
+for i in data_duplicates:
+    print("\n",i," : ")
+    for j in data_duplicates[i]:
+        print(j)
+
+input("\n\nPress enter to exit")
+
+"""
+            
+
+
+# from the data duplicates list make a list of corroborating and 
+# contradictory duplicates
+    
+
+
+
