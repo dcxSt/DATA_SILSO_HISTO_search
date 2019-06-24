@@ -1,0 +1,869 @@
+Observer :   Wagner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1751-01-13
+6401 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 4 , 15 , 55 | 
+6402 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 4 , 15 , 55 | 
+
+1751-01-29
+6403 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 3 , 13 , 43 | 
+6404 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 3 , 13 , 43 | 
+
+1751-01-31
+6405 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 2 , 20 , 40 | 
+6406 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 2 , 20 , 40 | 
+
+
+-----------------------------------------
+Observer :   Zucconi Schubert Staudacher Horrebow
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1754-01-14
+46094 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | na , na , na , na | 0 , 0 , 0 | staudacher
+46096 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | None , na , na , na | 0 , 0 , 0 | staudacher
+
+1754-01-14
+46094 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | na , na , na , na | 0 , 0 , 0 | staudacher
+46324 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | None , na , na , na | 0 , 0 , 0 | staudacher
+
+1754-01-14
+46094 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | na , na , na , na | 0 , 0 , 0 | staudacher
+46326 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1754-01-14
+46094 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | na , na , na , na | 0 , 0 , 0 | staudacher
+47705 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | 232 , 0 , 240 , Annual table 1754 | 0 , 0 , 0 | staudacher
+
+1754-01-14
+46096 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | na , na , na , na | 0 , 0 , 0 | staudacher
+46324 | 63 , Zucconi Schubert Staudacher Horrebow , (NULL) | None , na , na , na | 0 , 0 , 0 | staudacher
+
+
+-----------------------------------------
+Observer :   Oriani
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1778-06-24
+5160 | 12 , Oriani , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 2 , 10 , 30 | 
+23150 | 12 , Oriani , (NULL) | 135 , 96 , 387 , Ephemerides Mediolan | 2 , 10 , 30 | 
+
+1778-05-02
+5119 | 12 , Oriani , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 3 , 4 , 34 | 
+23109 | 12 , Oriani , (NULL) | 135 , 96 , 387 , Ephemerides Mediolan | 3 , 4 , 34 | 
+
+1778-05-03
+5120 | 12 , Oriani , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 4 , 5 , 45 | 
+23110 | 12 , Oriani , (NULL) | 135 , 96 , 387 , Ephemerides Mediolan | 4 , 5 , 45 | 
+
+1778-05-04
+5121 | 12 , Oriani , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 4 , 5 , 45 | 
+23111 | 12 , Oriani , (NULL) | 135 , 96 , 387 , Ephemerides Mediolan | 4 , 5 , 45 | 
+
+1778-05-05
+5122 | 12 , Oriani , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 4 , 5 , 45 | 
+23112 | 12 , Oriani , (NULL) | 135 , 96 , 387 , Ephemerides Mediolan | 4 , 5 , 45 | 
+
+
+-----------------------------------------
+Observer :   Galilé
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1612-04-29
+16719 | 26 , Galilé , (NULL) | 35 , 168 , 118 , Histoire et démonstrations | 1 , None , None | no wolf
+122038 | 26 , Galilé , (NULL) | 579 , 889 , 124 , Annual table 1612 | 1 , 17 , 27 | 
+
+1612-04-30
+16720 | 26 , Galilé , (NULL) | 35 , 168 , 118 , Histoire et démonstrations | 1 , None , None | no wolf
+122039 | 26 , Galilé , (NULL) | 579 , 889 , 124 , Annual table 1612 | 1 , 20 , 30 | 
+
+1612-05-01
+16721 | 26 , Galilé , (NULL) | 35 , 168 , 118 , Histoire et démonstrations | 1 , None , None | no wolf
+122040 | 26 , Galilé , (NULL) | 579 , 889 , 124 , Annual table 1612 | 1 , 10 , 20 | 
+
+1612-05-03
+16722 | 26 , Galilé , (NULL) | 35 , 168 , 118 , Histoire et démonstrations | 1 , None , None | no wolf
+122041 | 26 , Galilé , (NULL) | 579 , 889 , 124 , Annual table 1612 | 3 , 24 , 54 | another observation 9.5 cm image 9 groups 40 sunspots
+
+
+-----------------------------------------
+Observer :   Jungius
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1612-05-30
+78162 | 85 , Jungius , (NULL) | na , na , na , na | 3 , None , None | no fk_rubrics
+78193 | 85 , Jungius , (NULL) | None , na , na , na | 3 , None , None | no fk_rubrics
+
+1612-05-30
+78162 | 85 , Jungius , (NULL) | na , na , na , na | 3 , None , None | no fk_rubrics
+83724 | 85 , Jungius , (NULL) | 351 , 573 , 29 , Table 1612 | 3 , None , None | no wolf
+
+1612-05-30
+78193 | 85 , Jungius , (NULL) | na , na , na , na | 3 , None , None | no fk_rubrics
+83724 | 85 , Jungius , (NULL) | 351 , 573 , 29 , Table 1612 | 3 , None , None | no wolf
+
+1612-05-31
+78163 | 85 , Jungius , (NULL) | na , na , na , na | 2 , None , None | no fk_rubrics
+78194 | 85 , Jungius , (NULL) | None , na , na , na | 2 , None , None | no fk_rubrics
+
+1612-05-31
+78163 | 85 , Jungius , (NULL) | na , na , na , na | 2 , None , None | no fk_rubrics
+83725 | 85 , Jungius , (NULL) | 351 , 573 , 29 , Table 1612 | 2 , None , None | no wolf
+
+
+-----------------------------------------
+Observer :   Carrington
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1859-03-31
+20617 | 36 , Carrington , (NULL) | 43 , 199 , 225 , LONDON 1863 | 4 , 33 , 73 | 
+31308 | 36 , Carrington , (NULL) | 175 , 303 , 241 , Recherches sur la physique solaire | 6 , 336 , 396 | 
+
+1859-05-05
+20622 | 36 , Carrington , (NULL) | 43 , 199 , 225 , LONDON 1863 | 6 , 23 , 83 | 
+31313 | 36 , Carrington , (NULL) | 175 , 303 , 241 , Recherches sur la physique solaire | 6 , 1043 , 1103 | 
+
+1859-05-12
+20624 | 36 , Carrington , (NULL) | 43 , 199 , 225 , LONDON 1863 | 7 , 48 , 118 | 
+31315 | 36 , Carrington , (NULL) | 175 , 303 , 241 , Recherches sur la physique solaire | 7 , 1793 , 1863 | 
+
+1859-06-26
+20632 | 36 , Carrington , (NULL) | 43 , 199 , 225 , LONDON 1863 | 6 , 17 , 77 | 
+31323 | 36 , Carrington , (NULL) | 175 , 303 , 241 , Recherches sur la physique solaire | 6 , 833 , 893 | 
+
+1859-06-30
+20633 | 36 , Carrington , (NULL) | 43 , 199 , 225 , LONDON 1863 | 6 , 14 , 74 | 
+31324 | 36 , Carrington , (NULL) | 175 , 303 , 241 , Recherches sur la physique solaire | 7 , 336 , 406 | 
+
+
+-----------------------------------------
+Observer :   Flaugergues
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1794-12-01
+14233 | 22 , Flaugergues , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 4 , 18 , 58 | 
+19928 | 22 , Flaugergues , (NULL) | 32 , 164 , 100 , Régistre observations astronomiques | 4 , 18 , 58 | 
+
+1794-12-13
+14237 | 22 , Flaugergues , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 3 , 11 , 41 | 
+19929 | 22 , Flaugergues , (NULL) | 32 , 164 , 100 , Régistre observations astronomiques | 3 , 11 , 41 | 
+
+1794-12-16
+14238 | 22 , Flaugergues , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 2 , 14 , 34 | 
+19930 | 22 , Flaugergues , (NULL) | 32 , 164 , 100 , Régistre observations astronomiques | 2 , 14 , 34 | 
+
+1794-12-18
+14239 | 22 , Flaugergues , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 2 , 21 , 41 | 
+19931 | 22 , Flaugergues , (NULL) | 32 , 164 , 100 , Régistre observations astronomiques | 2 , 21 , 41 | 
+
+1794-12-26
+14241 | 22 , Flaugergues , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 1 , 2 , 12 | 
+19932 | 22 , Flaugergues , (NULL) | 32 , 164 , 100 , Régistre observations astronomiques | 1 , 2 , 12 | 
+
+
+-----------------------------------------
+Observer :   Jenzer
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1862-10-07
+17692 | 29 , Jenzer , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 3 , 43 , 73 | 
+20569 | 29 , Jenzer , (NULL) | 42 , 197 , 221 , Différents Mittheilungen | 3 , 43 , 73 | 
+
+1862-10-31
+17693 | 29 , Jenzer , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 7 , 40 , 110 | 
+20587 | 29 , Jenzer , (NULL) | 42 , 197 , 221 , Différents Mittheilungen | 7 , 40 , 110 | 
+
+1862-12-25
+17755 | 29 , Jenzer , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 3 , 36 , 66 | 
+20594 | 29 , Jenzer , (NULL) | 42 , 197 , 221 , Différents Mittheilungen | 3 , 36 , 66 | 
+
+1862-12-28
+17756 | 29 , Jenzer , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 3 , 67 , 97 | 
+20596 | 29 , Jenzer , (NULL) | 42 , 197 , 221 , Différents Mittheilungen | 3 , 67 , 97 | 
+
+1863-03-29
+17987 | 29 , Jenzer , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 7 , 141 , 211 | 
+20520 | 29 , Jenzer , (NULL) | 42 , 197 , 221 , Différents Mittheilungen | 7 , 141 , 211 | 
+
+
+-----------------------------------------
+Observer :   Franzenau
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1863-01-08
+17930 | 31 , Franzenau , (NULL) | 0 , 0 , 153 , Mitteilungen, annual tables (Wolf and successors) | 1 , 16 , 26 | 
+19276 | 31 , Franzenau , (NULL) | 41 , 196 , 190 , Observations tâches solaires | 1 , 16 , 26 | 
+
+1863-04-17
+19304 | 31 , Franzenau , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 1 , 36 , 46 | 
+20316 | 31 , Franzenau , (NULL) | 41 , 196 , 190 , Observations tâches solaires | 1 , 36 , 46 | 
+
+1863-04-21
+19305 | 31 , Franzenau , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 1 , 26 , 36 | 
+20317 | 31 , Franzenau , (NULL) | 41 , 196 , 190 , Observations tâches solaires | 1 , 26 , 36 | 
+
+1863-04-28
+19307 | 31 , Franzenau , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 1 , 9 , 19 | 
+20318 | 31 , Franzenau , (NULL) | 41 , 196 , 190 , Observations tâches solaires | 1 , 9 , 19 | 
+
+1863-04-29
+19308 | 31 , Franzenau , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 1 , 29 , 39 | 
+20319 | 31 , Franzenau , (NULL) | 41 , 196 , 190 , Observations tâches solaires | 1 , 29 , 39 | 
+
+
+-----------------------------------------
+Observer :   Heis
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1863-02-12
+18718 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 2 , 19 , 39 | 
+18732 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 2 , 19 , 39 | 
+
+1863-02-13
+18719 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 34 , 64 | 
+18733 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 34 , 64 | 
+
+1863-02-14
+18720 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 4 , 48 , 88 | 
+18734 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 4 , 48 , 88 | 
+
+1863-02-15
+18721 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 38 , 68 | 
+18735 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 38 , 68 | 
+
+1863-02-16
+18722 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 37 , 67 | 
+18736 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 37 , 67 | 
+
+
+-----------------------------------------
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1867-01-01
+23247 | 32 , Weber , (NULL) | 137 , 246 , 148 , Pr. Heis | 0 , 0 , 0 | 
+45347 | 32 , Weber , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1867-01-03
+23248 | 32 , Weber , (NULL) | 137 , 246 , 148 , Pr. Heis | 0 , 0 , 0 | 
+45348 | 32 , Weber , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1867-01-04
+23249 | 32 , Weber , (NULL) | 137 , 246 , 148 , Pr. Heis | 0 , 0 , 0 | 
+45349 | 32 , Weber , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1867-01-05
+23250 | 32 , Weber , (NULL) | 137 , 246 , 148 , Pr. Heis | 0 , 0 , 0 | 
+45350 | 32 , Weber , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1867-01-06
+23251 | 32 , Weber , (NULL) | 137 , 246 , 148 , Pr. Heis | 0 , 0 , 0 | 
+45351 | 32 , Weber , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+
+-----------------------------------------
+Observer :   Tacchini
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1870-04-05
+27812 | 45 , Tacchini , (NULL) | 163 , 279 , 409 , Observations tâches solaires | None , 302 , None | no groups
+49848 | 45 , Tacchini , (NULL) | None , na , na , na | None , 302 , None | no fk_rubrics
+
+1870-04-06
+27813 | 45 , Tacchini , (NULL) | 163 , 279 , 409 , Observations tâches solaires | None , 290 , None | no groups
+49849 | 45 , Tacchini , (NULL) | None , na , na , na | None , 290 , None | no fk_rubrics
+
+1870-04-14
+27815 | 45 , Tacchini , (NULL) | 163 , 279 , 409 , Observations tâches solaires | None , 103 , None | no groups
+49851 | 45 , Tacchini , (NULL) | None , na , na , na | None , 103 , None | no fk_rubrics
+
+1870-04-15
+27816 | 45 , Tacchini , (NULL) | 163 , 279 , 409 , Observations tâches solaires | None , 125 , None | no groups
+49852 | 45 , Tacchini , (NULL) | None , na , na , na | None , 125 , None | no fk_rubrics
+
+1870-04-19
+27817 | 45 , Tacchini , (NULL) | 163 , 279 , 409 , Observations tâches solaires | None , 62 , None | no groups
+49853 | 45 , Tacchini , (NULL) | None , na , na , na | None , 62 , None | no fk_rubrics
+
+
+-----------------------------------------
+Observer :   Tacchini et Millosevich
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1880-01-02
+98953 | 71 , Tacchini et Millosevich , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+107765 | 71 , Tacchini et Millosevich , (NULL) | None , na , na , na | 1 , 3 , 13 | no fk_rubrics
+
+1880-01-04
+98955 | 71 , Tacchini et Millosevich , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+107767 | 71 , Tacchini et Millosevich , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1880-01-13
+98964 | 71 , Tacchini et Millosevich , (NULL) | na , na , na , na | 3 , 14 , 44 | no fk_rubrics
+107776 | 71 , Tacchini et Millosevich , (NULL) | None , na , na , na | 3 , 14 , 44 | no fk_rubrics
+
+1880-01-14
+98965 | 71 , Tacchini et Millosevich , (NULL) | na , na , na , na | 5 , 21 , 71 | no fk_rubrics
+107777 | 71 , Tacchini et Millosevich , (NULL) | None , na , na , na | 5 , 21 , 71 | no fk_rubrics
+
+1880-01-16
+98966 | 71 , Tacchini et Millosevich , (NULL) | na , na , na , na | 1 , 17 , 27 | no fk_rubrics
+107778 | 71 , Tacchini et Millosevich , (NULL) | None , na , na , na | 1 , 17 , 27 | no fk_rubrics
+
+
+-----------------------------------------
+Observer :   Ricco
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1879-10-11
+52754 | 67 , Ricco , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+52768 | 67 , Ricco , (NULL) | 243 , 423 , 312 , Mémoires société Italienne Spectroscopie. Palermo | 1 , 13 , 23 | 
+
+
+-----------------------------------------
+Observer :   Maier
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1895-01-03
+88859 | 102 , Maier , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+88901 | 102 , Maier , (NULL) | None , na , na , na | 4 , 16 , 56 | no fk_rubrics
+
+1895-01-03
+88859 | 102 , Maier , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+89835 | 102 , Maier , (NULL) | 402 , 731 , 253 , Maier, M. Observations tâches solaires (Schaufling) | 4 , 16 , 56 | 
+
+1895-01-03
+88901 | 102 , Maier , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+89835 | 102 , Maier , (NULL) | 402 , 731 , 253 , Maier, M. Observations tâches solaires (Schaufling) | 4 , 16 , 56 | 
+
+1895-01-07
+88860 | 102 , Maier , (NULL) | na , na , na , na | 4 , 30 , 70 | no fk_rubrics
+89836 | 102 , Maier , (NULL) | 402 , 731 , 253 , Maier, M. Observations tâches solaires (Schaufling) | 4 , 30 , 70 | 
+
+1895-01-13
+88861 | 102 , Maier , (NULL) | na , na , na , na | 4 , 6 , 46 | no fk_rubrics
+89837 | 102 , Maier , (NULL) | 402 , 731 , 253 , Maier, M. Observations tâches solaires (Schaufling) | 4 , 6 , 46 | 
+
+
+-----------------------------------------
+Observer :   Frost
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1889-01-08
+91573 | 105 , Frost , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+91580 | 105 , Frost , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1889-01-08
+91573 | 105 , Frost , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+99909 | 105 , Frost , (NULL) | 417 , 622 , 276 , Annual Table 1889 | 0 , 0 , 0 | 
+
+1889-01-08
+91580 | 105 , Frost , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+99909 | 105 , Frost , (NULL) | 417 , 622 , 276 , Annual Table 1889 | 0 , 0 , 0 | 
+
+1889-01-22
+91577 | 105 , Frost , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+91584 | 105 , Frost , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1889-01-22
+91577 | 105 , Frost , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+99913 | 105 , Frost , (NULL) | 417 , 622 , 276 , Annual Table 1889 | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Denza
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1891-01-02
+97971 | 55 , Denza , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+107789 | 55 , Denza , (NULL) | 443 , 655 , 397 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-01-03
+97972 | 55 , Denza , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+107788 | 55 , Denza , (NULL) | 443 , 655 , 397 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-01-04
+97973 | 55 , Denza , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+107790 | 55 , Denza , (NULL) | 443 , 655 , 397 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-01-15
+97978 | 55 , Denza , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+107795 | 55 , Denza , (NULL) | 443 , 655 , 397 , Annual Table 1891 | 1 , 3 , 13 | 
+
+1891-01-16
+97979 | 55 , Denza , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+107796 | 55 , Denza , (NULL) | 443 , 655 , 397 , Annual Table 1891 | 2 , 5 , 25 | 
+
+
+-----------------------------------------
+Observer :   Winkler
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1891-02-05
+96352 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96355 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-02-07
+96353 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96358 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-02-07
+96353 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96363 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-02-07
+96358 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96363 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+
+1891-02-08
+96354 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96360 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Wolfer
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1899-01-01
+100109 | 56 , Wolfer , (NULL) | 450 , 800 , 12 , Annual Table 1899 | 1 , 1 , 11 | *
+104559 | 56 , Wolfer , (NULL) | 473 , 820 , 37 , Annual Table 1899 | 1 , 1 , 11 | 
+
+1899-01-03
+100110 | 56 , Wolfer , (NULL) | 450 , 800 , 12 , Annual Table 1899 | 2 , 18 , 38 | 
+103006 | 56 , Wolfer , (NULL) | 461 , 808 , 20 , Annual Table 1899 | 1 , 10 , 20 | 
+
+1899-01-07
+100111 | 56 , Wolfer , (NULL) | 450 , 800 , 12 , Annual Table 1899 | 4 , 25 , 65 | 
+103009 | 56 , Wolfer , (NULL) | 461 , 808 , 20 , Annual Table 1899 | 4 , 17 , 57 | 
+
+1899-01-10
+100112 | 56 , Wolfer , (NULL) | 450 , 800 , 12 , Annual Table 1899 | 3 , 9 , 39 | uncertain
+103010 | 56 , Wolfer , (NULL) | 461 , 808 , 20 , Annual Table 1899 | 1 , 2 , 12 | 
+
+1899-01-19
+100116 | 56 , Wolfer , (NULL) | 450 , 800 , 12 , Annual Table 1899 | 1 , 5 , 15 | 
+104565 | 56 , Wolfer , (NULL) | 473 , 820 , 37 , Annual Table 1899 | 1 , 1 , 11 | 
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1899-01-01
+100401 | 104 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 12 , 32 | *
+107472 | 117 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 12 , 32 | *
+
+1899-01-03
+100402 | 104 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 7 , 27 | 
+107473 | 117 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 7 , 27 | 
+
+1899-01-07
+100403 | 104 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 3 , 25 , 55 | 
+107474 | 117 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 3 , 25 , 55 | 
+
+1899-01-10
+100404 | 104 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 1 , 8 , 18 | 
+107475 | 117 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 1 , 8 , 18 | 
+
+1899-01-16
+100406 | 104 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 10 , 30 | 
+107477 | 117 , Broger , (NULL) | 451 , 801 , 14 , Annual Table 1899 | 2 , 10 , 30 | 
+
+
+-----------------------------------------
+Observer :   Lewitzky
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1899-02-06
+103171 | 111 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 2 , 11 , 31 | S
+110230 | 84 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 2 , 11 , 31 | S
+
+1899-02-08
+103172 | 111 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 8 , 18 | S
+110231 | 84 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 8 , 18 | S
+
+1899-02-23
+103173 | 111 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 2 , 12 | S
+110232 | 84 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 2 , 12 | S
+
+1899-02-24
+103174 | 111 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 0 , 0 , 0 | S
+110233 | 84 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 0 , 0 , 0 | S
+
+1899-02-27
+103175 | 111 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 2 , 12 | S
+110234 | 84 , Lewitzky , (NULL) | 462 , 809 , 21 , Annual Table 1899 | 1 , 2 , 12 | S
+
+
+-----------------------------------------
+Observer :   Boston observatory
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1900-01-09
+109750 | 125 , Boston observatory , (NULL) | 502 , 838 , 50 , Annual Table 1900 | 0 , 0 , 0 | 
+112795 | 125 , Boston observatory , (NULL) | 518 , 851 , 72 , Annual Table 1900 | None , None , None | no groups
+
+1900-01-17
+109754 | 125 , Boston observatory , (NULL) | 502 , 838 , 50 , Annual Table 1900 | 1 , 6 , 16 | 
+112799 | 125 , Boston observatory , (NULL) | 518 , 851 , 72 , Annual Table 1900 | None , None , None | no groups
+
+1900-01-16
+109753 | 125 , Boston observatory , (NULL) | 502 , 838 , 50 , Annual Table 1900 | 2 , 14 , 34 | 
+112798 | 125 , Boston observatory , (NULL) | 518 , 851 , 72 , Annual Table 1900 | None , None , None | no groups
+
+
+-----------------------------------------
+Observer :   Schwabe
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1901-01-02
+111610 | 17 , Schwabe , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+111630 | 17 , Schwabe , (NULL) | 512 , 846 , 66 , Annual Table 1901 | 0 , 0 , 0 | 
+
+1901-01-03
+111611 | 17 , Schwabe , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+111631 | 17 , Schwabe , (NULL) | 512 , 846 , 66 , Annual Table 1901 | 0 , 0 , 0 | 
+
+1901-01-04
+111612 | 17 , Schwabe , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+111632 | 17 , Schwabe , (NULL) | 512 , 846 , 66 , Annual Table 1901 | 0 , 0 , 0 | 
+
+1901-01-05
+111613 | 17 , Schwabe , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+111633 | 17 , Schwabe , (NULL) | 512 , 846 , 66 , Annual Table 1901 | 0 , 0 , 0 | 
+
+1901-01-06
+111614 | 17 , Schwabe , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+111634 | 17 , Schwabe , (NULL) | 512 , 846 , 66 , Annual Table 1901 | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Baker
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1903-05-17
+123711 | 140 , Baker , (NULL) | na , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellige nrefraktor
+123820 | 140 , Baker , (NULL) | None , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoelligen refraktor
+
+1903-05-17
+123711 | 140 , Baker , (NULL) | na , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellige nrefraktor
+123879 | 140 , Baker , (NULL) | None , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellingen refraktor
+
+1903-05-17
+123711 | 140 , Baker , (NULL) | na , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellige nrefraktor
+124139 | 140 , Baker , (NULL) | None , na , na , na | 1 , 3 , 13 | Observations this month were made with a 7&1/4-zoelligen refraktor
+
+1903-05-17
+123711 | 140 , Baker , (NULL) | na , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellige nrefraktor
+124236 | 140 , Baker , (NULL) | 592 , 907 , 175 , Annual table 1903 | 1 , 3 , 13 | 
+
+1903-05-17
+123820 | 140 , Baker , (NULL) | na , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoelligen refraktor
+123879 | 140 , Baker , (NULL) | None , na , na , na | 1 , 3 , 13 | Observations this month made with 7 & 1/4-zoellingen refraktor
+
+
+-----------------------------------------
+Observer :   Sormano
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1909-01-02
+126661 | 148 , Sormano , (NULL) | 608 , 1057 , 23 , Annual table 1909 | 4 , 43 , 83 | 
+126971 | 148 , Sormano , (NULL) | 609 , 1058 , 24 , Annual table 1909 | 3 , 32 , 62 | 
+
+1909-01-10
+126667 | 148 , Sormano , (NULL) | 608 , 1057 , 23 , Annual table 1909 | 7 , 38 , 108 | 
+126977 | 148 , Sormano , (NULL) | 609 , 1058 , 24 , Annual table 1909 | 2 , 3 , 23 | 
+
+1909-01-17
+126673 | 148 , Sormano , (NULL) | 608 , 1057 , 23 , Annual table 1909 | 4 , 24 , 64 | 
+126978 | 148 , Sormano , (NULL) | 609 , 1058 , 24 , Annual table 1909 | 4 , 9 , 49 | 
+
+1909-01-22
+126678 | 148 , Sormano , (NULL) | 608 , 1057 , 23 , Annual table 1909 | 8 , 21 , 101 | 
+126980 | 148 , Sormano , (NULL) | 609 , 1058 , 24 , Annual table 1909 | 3 , 3 , 33 | 
+
+1909-01-27
+126682 | 148 , Sormano , (NULL) | 608 , 1057 , 23 , Annual table 1909 | 6 , 68 , 128 | 
+126982 | 148 , Sormano , (NULL) | 609 , 1058 , 24 , Annual table 1909 | 6 , 43 , 103 | 
+
+
+-----------------------------------------
+Observer :   Guillaume
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1910-01-08
+130859 | 132 , Guillaume , (NULL) | na , na , na , na | 3 , 11 , 41 | no fk_rubrics
+130873 | 132 , Guillaume , (NULL) | 633 , 1086 , 56 , Obs. tâches solaires (Leyon) | 3 , 11 , 41 | 
+
+1910-01-11
+130861 | 132 , Guillaume , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+130875 | 132 , Guillaume , (NULL) | 633 , 1086 , 56 , Obs. tâches solaires (Leyon) | 1 , 1 , 11 | 
+
+1910-01-14
+130863 | 132 , Guillaume , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+130877 | 132 , Guillaume , (NULL) | 633 , 1086 , 56 , Obs. tâches solaires (Leyon) | 1 , 2 , 12 | 
+
+1910-01-17
+130864 | 132 , Guillaume , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+130878 | 132 , Guillaume , (NULL) | 633 , 1086 , 56 , Obs. tâches solaires (Leyon) | 1 , 1 , 11 | 
+
+1910-01-25
+130869 | 132 , Guillaume , (NULL) | na , na , na , na | 3 , 4 , 34 | mauvaise déf img soleil
+130883 | 132 , Guillaume , (NULL) | 633 , 1086 , 56 , Obs. tâches solaires (Leyon) | 3 , 4 , 34 | mauvaise déf img soleil
+
+
+-----------------------------------------
+Observer :   Brunner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+None
+173918 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 35 , Obs. tâches solaires (Zürich) | 5 , 42 , 92 | no date
+200444 | 177 , Brunner , 8 cm open 64 increase | 981 , 13502 , 202 , Obs. tâches solaires (Zürich) | 19 , 122 , 312 | no date
+
+None
+173918 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 35 , Obs. tâches solaires (Zürich) | 5 , 42 , 92 | no date
+201997 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 385 , Obs. tâches solaires (Zürich) | 15 , 108 , 258 | no date
+
+None
+173918 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 35 , Obs. tâches solaires (Zürich) | 5 , 42 , 92 | no date
+202589 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 497 , Obs. tâches solaires (Zürich) | 6 , 98 , 158 | no date
+
+None
+173918 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 35 , Obs. tâches solaires (Zürich) | 5 , 42 , 92 | no date
+202698 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 498 , Obs. tâches solaires (Zürich) | 5 , 10 , 60 | no date
+
+None
+173918 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 35 , Obs. tâches solaires (Zürich) | 5 , 42 , 92 | no date
+202951 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 520 , Obs. tâches solaires (Zürich) | 5 , 40 , 90 | no date
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+None
+193713 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 3 , 6 , 36 | no date
+193714 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 5 , 25 , 75 | no date
+
+1908-01-08
+193491 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+193511 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-01-08
+193491 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+193660 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-01-08
+193491 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+193718 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 4 , 16 , 56 | 
+
+1908-01-08
+193511 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193660 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+
+-----------------------------------------
+Observer :   Buser
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+None
+199754 | 178 , Buser , 110 mm open  | 979 , 13404 , 148 , Obs. tâches solaires (Zürich) | 3 , 47 , 77 | no date
+200910 | 178 , Buser , 110 mm open  | 983 , 13504 , 203 , Obs. tâches solaires (Zürich) | 7 , 55 , 125 | no date
+
+
+-----------------------------------------
+Observer :   Bodocs
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1911-01-01
+133160 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133170 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 78 , Obs. tâches solaires (Ogyalla) | 0 , 0 , 0 | 
+
+1911-01-11
+133161 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+133171 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 78 , Obs. tâches solaires (Ogyalla) | 1 , 1 , 11 | 
+
+1911-01-12
+133162 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+133172 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 78 , Obs. tâches solaires (Ogyalla) | 1 , 1 , 11 | 
+
+1911-01-30
+133168 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133178 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 78 , Obs. tâches solaires (Ogyalla) | 0 , 0 , 0 | 
+
+1911-01-31
+133169 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133179 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 78 , Obs. tâches solaires (Ogyalla) | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Kleiner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1907-03-05
+188759 | 113 , Kleiner , (NULL) | na , na , na , na | 7 , 48 , 118 | no fk_rubrics
+188772 | 113 , Kleiner , (NULL) | 923 , 999 , 307 , Obs. tâches solaires (Zobten) | 7 , 48 , 118 | 
+
+1907-03-06
+188760 | 113 , Kleiner , (NULL) | na , na , na , na | 8 , 50 , 130 | no fk_rubrics
+188773 | 113 , Kleiner , (NULL) | 923 , 999 , 307 , Obs. tâches solaires (Zobten) | 8 , 50 , 130 | 
+
+1907-03-08
+188762 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 100 , 150 | no fk_rubrics
+188775 | 113 , Kleiner , (NULL) | 923 , 999 , 307 , Obs. tâches solaires (Zobten) | 5 , 100 , 150 | 
+
+1907-03-13
+188763 | 113 , Kleiner , (NULL) | na , na , na , na | 4 , 24 , 64 | no fk_rubrics
+188776 | 113 , Kleiner , (NULL) | 923 , 999 , 307 , Obs. tâches solaires (Zobten) | 4 , 24 , 64 | 
+
+1907-03-15
+188765 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 25 , 85 | no fk_rubrics
+188778 | 113 , Kleiner , (NULL) | 923 , 999 , 307 , Obs. tâches solaires (Zobten) | 6 , 25 , 85 | 
+
+
+-----------------------------------------
+Observer :   Buttlar
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1914-01-21
+142514 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142523 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 174 , Obs. tâches solaires (Simsdorf, Schlesien) | 0 , 0 , 0 | 
+
+1914-01-24
+142515 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142524 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 174 , Obs. tâches solaires (Simsdorf, Schlesien) | 0 , 0 , 0 | 
+
+1914-01-25
+142516 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142525 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 174 , Obs. tâches solaires (Simsdorf, Schlesien) | 0 , 0 , 0 | 
+
+1914-01-26
+142517 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142526 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 174 , Obs. tâches solaires (Simsdorf, Schlesien) | 0 , 0 , 0 | 
+
+1914-01-28
+142518 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142527 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 174 , Obs. tâches solaires (Simsdorf, Schlesien) | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Moye
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1919-01-01
+159123 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159149 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 43 , Obs. tâches solaires (Montpellier) | 1 , 2 , 12 | 
+
+1919-01-02
+159124 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159150 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 43 , Obs. tâches solaires (Montpellier) | 1 , 2 , 12 | 
+
+1919-01-09
+159128 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 4 , 14 , 54 | no fk_rubrics
+159154 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 43 , Obs. tâches solaires (Montpellier) | 4 , 14 , 54 | 
+
+1919-01-11
+159130 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
+159156 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 43 , Obs. tâches solaires (Montpellier) | 5 , 22 , 72 | 
+
+1919-01-12
+159131 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
+159157 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 43 , Obs. tâches solaires (Montpellier) | 5 , 22 , 72 | 
+
+
+-----------------------------------------
+Observer :   Young
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1919-01-07
+158148 | 150 , Young , 8 zölliger Refraktor | 775 , 1253 , 40 , Obs. tâches solaires (Williston observatoire) | 3 , 26 , 56 | 
+160623 | 150 , Young , 8 zölliger Refraktor | 785 , 1279 , 60 , Obs. tâches solaires (Williston observatoire) | 1 , 8 , 18 | 
+
+1919-01-15
+158151 | 150 , Young , 8 zölliger Refraktor | 775 , 1253 , 40 , Obs. tâches solaires (Williston observatoire) | 8 , 24 , 104 | 
+160628 | 150 , Young , 8 zölliger Refraktor | 785 , 1279 , 60 , Obs. tâches solaires (Williston observatoire) | 4 , 9 , 49 | 
+
+1919-01-20
+158154 | 150 , Young , 8 zölliger Refraktor | 775 , 1253 , 40 , Obs. tâches solaires (Williston observatoire) | 4 , 14 , 54 | 
+160630 | 150 , Young , 8 zölliger Refraktor | 785 , 1279 , 60 , Obs. tâches solaires (Williston observatoire) | 3 , 4 , 34 | 
+
+1919-01-28
+158158 | 150 , Young , 8 zölliger Refraktor | 775 , 1253 , 40 , Obs. tâches solaires (Williston observatoire) | 3 , 28 , 58 | 
+160634 | 150 , Young , 8 zölliger Refraktor | 785 , 1279 , 60 , Obs. tâches solaires (Williston observatoire) | 2 , 47 , 67 | 
+
+1919-02-03
+158162 | 150 , Young , 8 zölliger Refraktor | 775 , 1253 , 40 , Obs. tâches solaires (Williston observatoire) | 6 , 85 , 145 | 
+160637 | 150 , Young , 8 zölliger Refraktor | 785 , 1279 , 60 , Obs. tâches solaires (Williston observatoire) | 3 , 7 , 37 | 
+
+
+-----------------------------------------
+Observer :   Braak
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1925-01-03
+171067 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171575 | 144 , Braak , (NULL) | 829 , 1490 , 166 , Obs. tâches solaires météorologique magnétiques (Batavia) | 0 , 0 , 0 | 
+
+1925-01-04
+171068 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171576 | 144 , Braak , (NULL) | 829 , 1490 , 166 , Obs. tâches solaires météorologique magnétiques (Batavia) | 0 , 0 , 0 | 
+
+1925-01-05
+171069 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171577 | 144 , Braak , (NULL) | 829 , 1490 , 166 , Obs. tâches solaires météorologique magnétiques (Batavia) | 0 , 0 , 0 | 
+
+1925-01-06
+171070 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171578 | 144 , Braak , (NULL) | 829 , 1490 , 166 , Obs. tâches solaires météorologique magnétiques (Batavia) | 0 , 0 , 0 | 
+
+1925-01-07
+171071 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171579 | 144 , Braak , (NULL) | 829 , 1490 , 166 , Obs. tâches solaires météorologique magnétiques (Batavia) | 0 , 0 , 0 | 
+
+
+-----------------------------------------
+Observer :   Sykora-O-67mm
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1904-01-11
+179031 | 134 , Sykora-O-67mm , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+179059 | 134 , Sykora-O-67mm , (NULL) | 865 , 930 , 201 , Obs. tâches solaires (Charkow) | 1 , 3 , 13 | 
+
+1904-01-13
+179032 | 134 , Sykora-O-67mm , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+179060 | 134 , Sykora-O-67mm , (NULL) | 865 , 930 , 201 , Obs. tâches solaires (Charkow) | 2 , 9 , 29 | 
+
+1904-03-18
+179051 | 134 , Sykora-O-67mm , (NULL) | na , na , na , na | 2 , 11 , 31 | no fk_rubrics
+179079 | 134 , Sykora-O-67mm , (NULL) | 865 , 930 , 201 , Obs. tâches solaires (Charkow) | 2 , 11 , 31 | 
+
+1904-03-25
+179053 | 134 , Sykora-O-67mm , (NULL) | na , na , na , na | 5 , 35 , 85 | no fk_rubrics
+179081 | 134 , Sykora-O-67mm , (NULL) | 865 , 930 , 201 , Obs. tâches solaires (Charkow) | 5 , 35 , 85 | 
+
+1904-03-26
+179054 | 134 , Sykora-O-67mm , (NULL) | na , na , na , na | 6 , 33 , 93 | no fk_rubrics
+179082 | 134 , Sykora-O-67mm , (NULL) | 865 , 930 , 201 , Obs. tâches solaires (Charkow) | 6 , 33 , 93 | 
+
+
+-----------------------------------------
+Observer :   Wasnetzoff
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1908-02-15
+193429 | 146 , Wasnetzoff , (NULL) | 950 , 1027 , 352 , Obs. tâches solaires (Zürich) | 3 , 16 , 46 | 
+193549 | 146 , Wasnetzoff , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 3 , 17 , 47 | 
+
+1908-03-15
+193430 | 146 , Wasnetzoff , (NULL) | 950 , 1027 , 352 , Obs. tâches solaires (Zürich) | 5 , 20 , 70 | 
+193565 | 146 , Wasnetzoff , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 2 , 7 , 27 | 
+
+1908-03-29
+193434 | 146 , Wasnetzoff , (NULL) | 950 , 1027 , 352 , Obs. tâches solaires (Zürich) | 1 , 17 , 27 | 
+193572 | 146 , Wasnetzoff , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 3 , 4 , 34 | 
+
+1908-03-30
+193435 | 146 , Wasnetzoff , (NULL) | 950 , 1027 , 352 , Obs. tâches solaires (Zürich) | 2 , 15 , 35 | 
+193573 | 146 , Wasnetzoff , (NULL) | 951 , 1028 , 352 , Obs. tâches solaires (Zürich) | 3 , 6 , 36 | 
+
+
+-----------------------------------------

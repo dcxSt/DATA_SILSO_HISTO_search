@@ -1,0 +1,451 @@
+Duplicates which appeaer to be two exact copies of the same datapoint
+
+Observer :   Wagner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1751-01-13
+6401 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 4 , 15 , 55 | 
+6402 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 4 , 15 , 55 | 
+
+1751-01-29
+6403 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 3 , 13 , 43 | 
+6404 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 3 , 13 , 43 | 
+
+1751-01-31
+6405 | 14 , Wagner , (NULL) | 23 , 130 , 250 , Manuscrits de Hagen | 2 , 20 , 40 | 
+6406 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 2 , 20 , 40 | 
+
+
+-----------------------------------------
+Observer :   Zucconi Schubert Staudacher Horrebow
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Oriani
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Galilé
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Jungius
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Carrington
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Flaugergues
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Jenzer
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Franzenau
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Heis
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1863-02-12
+18718 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 2 , 19 , 39 | 
+18732 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 2 , 19 , 39 | 
+
+1863-02-13
+18719 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 34 , 64 | 
+18733 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 34 , 64 | 
+
+1863-02-14
+18720 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 4 , 48 , 88 | 
+18734 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 4 , 48 , 88 | 
+
+1863-02-15
+18721 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 38 , 68 | 
+18735 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 38 , 68 | 
+
+1863-02-16
+18722 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 37 , 67 | 
+18736 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
+
+1863-02-17
+18723 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 43 , 73 | 
+18737 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 43 , 73 | 
+
+1863-02-18
+18724 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 6 , 35 , 95 | 
+18738 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 35 , 95 | 
+
+1863-02-20
+18725 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 6 , 56 , 116 | 
+18739 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 56 , 116 | 
+
+1863-02-21
+18726 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 5 , 61 , 111 | 
+18740 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 61 , 111 | 
+
+1863-02-22
+18727 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 5 , 54 , 104 | 
+18741 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 54 , 104 | 
+
+1863-02-24
+18728 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 54 , 84 | 
+18742 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 54 , 84 | 
+
+1863-02-25
+18729 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 47 , 77 | 
+18743 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 47 , 77 | 
+
+1863-02-26
+18730 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 3 , 37 , 67 | 
+18744 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
+
+1863-02-28
+18731 | 35 , Heis , (NULL) | 40 , 195 , 188 , Hebdomadaire astronomique-Weber | 5 , 21 , 71 | 
+18745 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 21 , 71 | 
+
+
+-----------------------------------------
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Tacchini
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Tacchini et Millosevich
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Ricco
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Maier
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Frost
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Denza
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Winkler
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1891-02-05
+96352 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96355 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-07
+96353 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96358 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-07
+96353 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96363 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-07
+96358 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96363 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-08
+96354 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96360 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-08
+96354 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96368 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-08
+96360 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96368 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-09
+96356 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96362 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-09
+96356 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96371 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-09
+96362 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 0 , 0 , 0 | 
+96371 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
+
+1891-02-10
+96357 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 11 , 21 | 
+96365 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
+
+1891-02-10
+96357 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 11 , 21 | 
+96374 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
+
+1891-02-10
+96365 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 11 , 21 | 
+96374 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
+
+1891-02-11
+96359 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 3 , 15 , 45 | 
+96366 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
+
+1891-02-11
+96359 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 3 , 15 , 45 | 
+96377 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
+
+1891-02-11
+96366 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 3 , 15 , 45 | 
+96377 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
+
+1891-02-13
+96361 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 5 , 25 | 
+96369 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
+
+1891-02-13
+96361 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 5 , 25 | 
+96379 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
+
+1891-02-13
+96369 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 5 , 25 | 
+96379 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
+
+1891-02-14
+96364 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 8 , 28 | 
+96372 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
+
+1891-02-14
+96364 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 8 , 28 | 
+96382 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
+
+1891-02-14
+96372 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 8 , 28 | 
+96382 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
+
+1891-02-16
+96367 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 1 , 11 | 
+96376 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
+
+1891-02-16
+96367 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 1 , 11 | 
+96385 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
+
+1891-02-16
+96376 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 1 , 11 | 
+96385 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
+
+1891-02-19
+96370 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 12 , 22 | 
+96380 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
+
+1891-02-19
+96370 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 12 , 22 | 
+96388 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
+
+1891-02-19
+96380 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 12 , 22 | 
+96388 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
+
+1891-02-20
+96373 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 18 , 28 | 
+96383 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
+
+1891-02-20
+96373 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 18 , 28 | 
+96390 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
+
+1891-02-20
+96383 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 18 , 28 | 
+96390 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
+
+1891-02-24
+96375 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 4 , 13 , 53 | 
+96386 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
+
+1891-02-24
+96375 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 4 , 13 , 53 | 
+96391 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
+
+1891-02-24
+96386 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 4 , 13 , 53 | 
+96391 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
+
+1891-02-25
+96378 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 7 , 27 | 
+96389 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
+
+1891-02-25
+96378 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 7 , 27 | 
+96393 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
+
+1891-02-25
+96389 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 2 , 7 , 27 | 
+96393 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
+
+1891-02-26
+96381 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 9 , 19 | 
+96392 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
+
+1891-02-26
+96381 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 9 , 19 | 
+96395 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
+
+1891-02-26
+96392 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 9 , 19 | 
+96395 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
+
+1891-02-27
+96384 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96394 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-27
+96384 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96397 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-27
+96394 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96397 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96387 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96396 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96387 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96398 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96387 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96396 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96398 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96396 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+1891-02-28
+96398 | 69 , Winkler , (NULL) | 437 , 647 , 387 , Annual Table 1891 | 1 , 4 , 14 | 
+96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
+
+
+-----------------------------------------
+Observer :   Wolfer
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Lewitzky
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Boston observatory
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Schwabe
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Baker
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Sormano
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Guillaume
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Brunner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Buser
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Bodocs
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Kleiner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Buttlar
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Moye
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Young
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Braak
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Sykora-O-67mm
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Wasnetzoff
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------

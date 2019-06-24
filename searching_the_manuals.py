@@ -5,6 +5,7 @@
 import db_connection
 import db_edit
 import db_search
+import pickle
 
 def correct_typos_for_pink():
     # this method also partakes in the homogenisation of comments
@@ -188,143 +189,152 @@ def find_duplicates_data(the_database="DATA_SILSO_HISTO"):
     return data_duplicates
 
 def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
-    # takes the duplicates data list and makes a better one
-    print("Creating the greater duplicates data list")
+    # if there is a pickles one out there, load it, else, create a dictionary and pickle it
+    try:
+        pickle_off = open("greater_duplicates_dictionary.pickle","rb")
+        greater_duplicates_dictionary = pickle.load(pickle_off)
+        pickle_off.close()
+    except FileNotFoundError:
+        # takes the duplicates data list and makes a better one
+        print("Creating the greater duplicates data list")
 
-    greater_duplicates_dictionary = {}
+        greater_duplicates_dictionary = {}
 
-    data_duplicates = find_duplicates_data()
-    cursor,mydb = db_connection.database_connector(the_database=the_database)
-    deficient_rubrics_count=0
-    for alias in data_duplicates:
-        greater_duplicates_dictionary[alias] = []
-        # for each duplicate add this to the greater list...
-        for duplicate in data_duplicates[alias]:
-            id1 = duplicate[0]
-            id2 = duplicate[1]
-            date = duplicate[2]
+        data_duplicates = find_duplicates_data()
+        cursor,mydb = db_connection.database_connector(the_database=the_database)
+        deficient_rubrics_count=0
+        for alias in data_duplicates:
+            greater_duplicates_dictionary[alias] = []
+            # for each duplicate add this to the greater list...
+            for duplicate in data_duplicates[alias]:
+                id1 = duplicate[0]
+                id2 = duplicate[1]
+                date = duplicate[2]
 
-            # fetch the data
-            query="SELECT * FROM DATA WHERE ID ="+str(id1)
-            cursor.execute(query,())
-            id1_data = cursor.fetchall()[0]
-
-            fk_rubrics = id1_data[2]
-            fk_observers = id1_data[3]
-
-            try:
-                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                # fetch the data
+                query="SELECT * FROM DATA WHERE ID ="+str(id1)
                 cursor.execute(query,())
-                rubrics_data = cursor.fetchall()[0]
+                id1_data = cursor.fetchall()[0]
 
-                rubrics_number = rubrics_data[1]
-                mitt_number = rubrics_data[3]
-                page_number = rubrics_data[4]
-            except:
-                deficient_rubrics_count+=1
-                #print("fk_rubrics deficient, exception caught")
-                rubrics_number = "na"
-                mitt_number = "na"
-                page_number = "na"
-                fk_rubrics = "na"
+                fk_rubrics = id1_data[2]
+                fk_observers = id1_data[3]
 
-            try:
-                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
-                cursor.execute(query,())
-                observer_data = cursor.fetchall()[0]
+                try:
+                    query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                    cursor.execute(query,())
+                    rubrics_data = cursor.fetchall()[0]
 
-                observer_id = observer_data[0]
-                observer_alias = observer_data[1]
-                observer_instrument = observer_data[5]
-            except:
-                print("fk_observer deficient, exception caught")
-                observer_id = "na"
-                observer_alias = "na"
-                observer_instrument = "na"
-            
+                    rubrics_number = rubrics_data[1]
+                    mitt_number = rubrics_data[3]
+                    page_number = rubrics_data[4]
+                except:
+                    deficient_rubrics_count+=1
+                    #print("fk_rubrics deficient, exception caught")
+                    rubrics_number = "na"
+                    mitt_number = "na"
+                    page_number = "na"
+                    fk_rubrics = "na"
 
+                try:
+                    query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                    cursor.execute(query,())
+                    observer_data = cursor.fetchall()[0]
+
+                    observer_alias = observer_data[1]
+                    observer_instrument = observer_data[5]
+                except:
+                    print("fk_observer deficient, exception caught")
+                    observer_alias = "na"
+                    observer_instrument = "na"
                 
 
-            groups = id1_data[4]
-            sunspots = id1_data[5]
-            wolf = id1_data[6]
-            comment = id1_data[8]
+                    
 
-            # make the new tuple
-            tuple1=(id1,fk_observers,observer_id,observer_alias,
-            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
-            page_number,groups,sunspots,wolf,comment)
+                groups = id1_data[4]
+                sunspots = id1_data[5]
+                wolf = id1_data[6]
+                comment = id1_data[8]
+
+                # make the new tuple
+                tuple1=(id1,fk_observers,observer_alias,
+                observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+                page_number,groups,sunspots,wolf,comment)
 
 
-            ### --------------------------- ###
+                ### --------------------------- ###
 
-            query="SELECT * FROM DATA WHERE ID ="+str(id2)
-            cursor.execute(query,())
-            id2_data = cursor.fetchall()[0]
-
-            fk_rubrics = id2_data[2]
-            fk_observers = id2_data[3]
-
-            # fetch the data
-            try:
-                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                query="SELECT * FROM DATA WHERE ID ="+str(id2)
                 cursor.execute(query,())
-                rubrics_data = cursor.fetchall()[0]
+                id2_data = cursor.fetchall()[0]
 
-                rubrics_number = rubrics_data[1]
-                mitt_number = rubrics_data[3]
-                page_number = rubrics_data[4]
-            except:
-                deficient_rubrics_count+=1
-                #print("fk_rubrics deficient, exception caught")
-                rubrics_number = "na"
-                mitt_number = "na"
-                page_number = "na"
+                fk_rubrics = id2_data[2]
+                fk_observers = id2_data[3]
 
-            try:
-                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
-                cursor.execute(query,())
-                observer_data = cursor.fetchall()[0]
+                # fetch the data
+                try:
+                    query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                    cursor.execute(query,())
+                    rubrics_data = cursor.fetchall()[0]
 
-                observer_id = observer_data[0]
-                observer_alias = observer_data[1]
-                observer_instrument = observer_data[5]
-            except:
-                print("fk_observer deficient, exception caught")
-                observer_id = "na"
-                observer_alias = "na"
-                observer_instrument = "na"
-            
+                    rubrics_number = rubrics_data[1]
+                    mitt_number = rubrics_data[2]
+                    page_number = rubrics_data[3]
+                except:
+                    deficient_rubrics_count+=1
+                    #print("fk_rubrics deficient, exception caught")
+                    rubrics_number = "na"
+                    mitt_number = "na"
+                    page_number = "na"
 
-            groups = id2_data[4]
-            sunspots = id2_data[5]
-            wolf = id2_data[6]
-            comment = id2_data[8]
+                try:
+                    query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                    cursor.execute(query,())
+                    observer_data = cursor.fetchall()[0]
 
-            # make the new tuple
-            tuple2=(id2,fk_observers,observer_id,observer_alias,
-            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
-            page_number,groups,sunspots,wolf,comment)
+                    observer_alias = observer_data[1]
+                    observer_instrument = observer_data[5]
+                except:
+                    print("fk_observer deficient, exception caught")
+                    observer_alias = "na"
+                    observer_instrument = "na"
+                
 
-            # here you can see how i structured my dictionary
-            greater_duplicates_dictionary[alias].append((date,tuple1,tuple2))
+                groups = id2_data[4]
+                sunspots = id2_data[5]
+                wolf = id2_data[6]
+                comment = id2_data[8]
+
+                # make the new tuple
+                tuple2=(id2,fk_observers,observer_alias,
+                observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+                page_number,groups,sunspots,wolf,comment)
+
+                # here you can see how i structured my dictionary
+                greater_duplicates_dictionary[alias].append((date,tuple1,tuple2))
+
+        # pickle it for later use
+        pickling_on = open("greater_duplicates_dictionary.pickle","wb")
+        pickle.dump(greater_duplicates_data,pickling_on)
+        pickling_on.close()
 
     return greater_duplicates_dictionary
 
-def write_greater_duplicates_data_text(greater_duplicates_dictionary):
-    filename = "greater_duplicates_short.txt"
+def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="greater_duplicates.txt",descriptor=None):
     print("Writing to file",filename)
     f = open(filename,"w")
+    if descriptor:
+        f.write(descriptor)
+        f.write("\n\n")
     for observer in greater_duplicates_dictionary:
         f.write("Observer :   "+str(observer))
         f.write("\n")
-        f.write("ID | fk_obs , obs_id , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment")
+        f.write("ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment")
         f.write("\n\n")
         count=0
         for i in greater_duplicates_dictionary[observer]:
-            count+=1
-            if count>5:
-                break
+            #count+=1
+            #if count>5:
+            #    break
             date=i[0]
             tuple1=i[1]
             tuple2=i[2]
@@ -337,24 +347,22 @@ def write_greater_duplicates_data_text(greater_duplicates_dictionary):
             f.write(str(tuple1[2]))
             f.write(" , ")
             f.write(str(tuple1[3]))
-            f.write(" , ")
-            f.write(str(tuple1[4]))
             f.write(" | ")
+            f.write(str(tuple1[4]))
+            f.write(" , ")
             f.write(str(tuple1[5]))
             f.write(" , ")
             f.write(str(tuple1[6]))
             f.write(" , ")
             f.write(str(tuple1[7]))
-            f.write(" , ")
-            f.write(str(tuple1[8]))
             f.write(" | ")
+            f.write(str(tuple1[8]))
+            f.write(" , ")
             f.write(str(tuple1[9]))
             f.write(" , ")
             f.write(str(tuple1[10]))
-            f.write(" , ")
-            f.write(str(tuple1[11]))
             f.write(" | ")
-            f.write(str(tuple1[12]))
+            f.write(str(tuple1[11]))
             f.write("\n")
 
             f.write(str(tuple2[0]))
@@ -364,34 +372,111 @@ def write_greater_duplicates_data_text(greater_duplicates_dictionary):
             f.write(str(tuple2[2]))
             f.write(" , ")
             f.write(str(tuple2[3]))
-            f.write(" , ")
-            f.write(str(tuple2[4]))
             f.write(" | ")
+            f.write(str(tuple2[4]))
+            f.write(" , ")
             f.write(str(tuple2[5]))
             f.write(" , ")
             f.write(str(tuple2[6]))
             f.write(" , ")
             f.write(str(tuple2[7]))
-            f.write(" , ")
-            f.write(str(tuple2[8]))
             f.write(" | ")
+            f.write(str(tuple2[8]))
+            f.write(" , ")
             f.write(str(tuple2[9]))
             f.write(" , ")
             f.write(str(tuple2[10]))
-            f.write(" , ")
-            f.write(str(tuple2[11]))
             f.write(" | ")
-            f.write(str(tuple2[12]))
+            f.write(str(tuple2[11]))
             f.write("\n\n")
 
         f.write("\n-----------------------------------------\n")
 
     f.close()
 
+# deleting some of the duplicates
+def sorting_duplicates(greater_duplicates_dictionary):
+    # non mutually exclusive
+    entered_twice_duplicates={}
+    entered_differently_duplicates={}
+    different_value_duplicates={}
+    same_value_duplicates={}
+    different_obs_id_duplicates={}
+    same_obs_id_duplicates={}
+    different_rubric_duplicates={}
+    same_rubric_duplicates={}
+
+    for alias in greater_duplicates_dictionary:
+        entered_twice_duplicates[alias]=[]
+        entered_differently_duplicates[alias]=[]
+        different_value_duplicates[alias]=[]
+        different_obs_id_duplicates[alias]=[]
+        same_obs_id_duplicates[alias]=[]
+        different_rubric_duplicates[alias]=[]
+        same_rubric_duplicates[alias] = []
+        same_value_duplicates[alias] = []
+        for i in greater_duplicates_dictionary[alias]:
+            # if the groups / sunspots / wolf numbers don't agree add to differnet value
+            groups1 = i[1][8]
+            sunspots1 = i[1][9]
+            wolf1 = i[1][10]
+            obs_id1 = i[1][1]
+            fk_rubrics1 = i[1][4]
+
+            groups2 = i[2][8]
+            sunspots2 = i[2][9]
+            wolf2 = i[2][10]
+            obs_id2 = i[2][1]
+            fk_rubrics2 = i[2][4]
+
+            if groups1!=groups2 or sunspots1!=sunspots2 or wolf1!=wolf2:
+                different_value_duplicates[alias].append(i)
+            else:
+                same_value_duplicates[alias].append(i)
+
+            if obs_id1!=obs_id2:
+                different_obs_id_duplicates[alias].append(i)
+            else:
+                same_obs_id_duplicates[alias].append(i)
+
+            if fk_rubrics1!=fk_rubrics2:
+                different_rubric_duplicates[alias].append(i)
+            else:
+                same_rubric_duplicates[alias].append(i)
+            
+            if groups1==groups2 and sunspots1==sunspots2 and wolf1==wolf2 and obs_id1==obs_id2 and fk_rubrics1==fk_rubrics2:
+                entered_twice_duplicates[alias].append(i)
+            else:
+                entered_differently_duplicates[alias].append(i)
+            
+    # write the dictionaries to text files
+    descriptor = "Duplicates which appeaer to be two exact copies of the same datapoint"
+    write_greater_duplicates_data_text(entered_twice_duplicates,filename="entered_twice_duplicates.txt",descriptor=descriptor)
+    
+    descriptor = "Duplicates which are not quite the same as each other, these ones are more mysterious"
+    write_greater_duplicates_data_text(entered_differently_duplicates,filename="entered_differently_duplicates.txt",descriptor=descriptor)
+    
+    descriptor = "Duplicates which have different sunspot values"
+    write_greater_duplicates_data_text(different_value_duplicates,filename="different_value_duplicates.txt",descriptor=descriptor)
+
+    descriptor = "Duplicates which have identical sunspot values"
+    write_greater_duplicates_data_text(same_value_duplicates,filename="same_value_duplicates.txt",descriptor=descriptor)
+
+    descriptor = "Duplicates with different observer ids but same observer alias"
+    write_greater_duplicates_data_text(different_obs_id_duplicates,filename="different_obs_id_duplicates.txt",descriptor=descriptor)
+
+    descriptor = "Duplicates with same observer ids"
+    write_greater_duplicates_data_text(same_obs_id_duplicates,filename="same_obs_id_duplicates.txt",descriptor=descriptor)
+
+    descriptor = "Duplicates with differing rubircs"
+    write_greater_duplicates_data_text(different_rubric_duplicates,filename="different_rubric_duplicates.txt",descriptor=descriptor)
+
+    descriptor = "Duplicates with same rubric as each other"
+    write_greater_duplicates_data_text(different_obs_id_duplicates,filename="same_rubric_duplicates.txt",descriptor=descriptor)
 
 
-write_greater_duplicates_data_text(greater_duplicates_data())
 
+sorting_duplicates(greater_duplicates_data())
 
 """
 data_duplicates,data = find_duplicates_data()
