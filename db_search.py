@@ -18,6 +18,13 @@ def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
     db_connection.close_database_connection(mydb)
     return data
 
+def select_all_data_general(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO",table_name="DATA"):
+    cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
+    query = "SELECT * FROM "+table_name
+    cursor.execute(query,())
+    data = cursor.fetchall()
+    print("data successfully retrieved")
+
 ### selects all columns in RUBRIC
 def select_all_rubrics():
     cursor,mydb=db_connection.database_connector()

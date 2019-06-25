@@ -126,15 +126,16 @@ def find_obs_id_by_date(data):
     obs_id_by_date={}
     for i in data:
         date = i[1]
-        datapoint_id = i[0]
-        obs_id = i[3]
-        if date in obs_id_by_date:
-            the_observers = obs_id_by_date[date]
-            the_observers.append((obs_id,datapoint_id))
-            obs_id_by_date[date]=the_observers
-        else:
-            the_observers=[(obs_id,datapoint_id)]
-            obs_id_by_date[date]=the_observers
+        if date:
+            datapoint_id = i[0]
+            obs_id = i[3]
+            if date in obs_id_by_date:
+                the_observers = obs_id_by_date[date]
+                the_observers.append((obs_id,datapoint_id))
+                obs_id_by_date[date]=the_observers
+            else:
+                the_observers=[(obs_id,datapoint_id)]
+                obs_id_by_date[date]=the_observers
     return obs_id_by_date
 
 def find_observer_alias_by_id(observers):
@@ -169,27 +170,30 @@ def find_duplicates_data(the_database="DATA_SILSO_HISTO"):
     # list = (id1, id2, date)
     data_duplicates = {}
     for date in obs_id_by_date:
-        # compare all the observer ids with each other for specified date
-        for i in range(len(obs_id_by_date[date])-1):
-            for j in range(i+1,len(obs_id_by_date[date])):
-                obs_alias1=observer_alias_by_id[obs_id_by_date[date][i][0]]
-                obs_alias2=observer_alias_by_id[obs_id_by_date[date][j][0]]
-                # if two alias are the same for the same date, add them to the duplicates list
-                if obs_alias1 == obs_alias2:
-                    id1=obs_id_by_date[date][i][1]
-                    id2=obs_id_by_date[date][j][1]
-                    try:
-                        duplicates_list=data_duplicates[obs_alias1]
-                        duplicates_list.append((id1,id2,date))
-                        data_duplicates[obs_alias1]=duplicates_list
-                    except KeyError:
-                        data_duplicates[obs_alias1]=[(id1,id2,date)]
+        if date:
+            # compare all the observer ids with each other for specified date
+            for i in range(len(obs_id_by_date[date])-1):
+                for j in range(i+1,len(obs_id_by_date[date])):
+                    obs_alias1=observer_alias_by_id[obs_id_by_date[date][i][0]]
+                    obs_alias2=observer_alias_by_id[obs_id_by_date[date][j][0]]
+                    # if two alias are the same for the same date, add them to the duplicates list
+                    if obs_alias1 == obs_alias2:
+                        id1=obs_id_by_date[date][i][1]
+                        id2=obs_id_by_date[date][j][1]
+                        try:
+                            duplicates_list=data_duplicates[obs_alias1]
+                            duplicates_list.append((id1,id2,date))
+                            data_duplicates[obs_alias1]=duplicates_list
+                        except KeyError:
+                            data_duplicates[obs_alias1]=[(id1,id2,date)]
 
     return data_duplicates
 
-def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
+def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=False):
     # if there is a pickles one out there, load it, else, create a dictionary and pickle it
     try:
+        if force_recalculate==True:
+            raise FileNotFoundError
         pickle_off = open("greater_duplicates_dictionary.pickle","rb")
         greater_duplicates_dictionary = pickle.load(pickle_off)
         pickle_off.close()
@@ -482,11 +486,11 @@ def sorting_duplicates(greater_duplicates_dictionary):
     write_greater_duplicates_data_text(different_obs_id_duplicates,filename="same_rubric_duplicates.txt",descriptor=descriptor)
 
 # create and print the lists...
-"""
-greater_duplicates_dictionary = greater_duplicates_data()
+
+greater_duplicates_dictionary = greater_duplicates_data(the_database='DATA_SILSO_HISTO',force_recalculate=True)
 write_greater_duplicates_data_text(greater_duplicates_dictionary=greater_duplicates_dictionary)
 sorting_duplicates(greater_duplicates_dictionary)
-"""
+
             
 
 

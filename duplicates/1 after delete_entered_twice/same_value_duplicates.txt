@@ -1,22 +1,5 @@
 Duplicates which have identical sunspot values
 
-Observer :   Wagner
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1751-01-13
-6401 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 4 , 15 , 55 | 
-6402 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 4 , 15 , 55 | 
-
-1751-01-29
-6403 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 3 , 13 , 43 | 
-6404 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 3 , 13 , 43 | 
-
-1751-01-31
-6405 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 2 , 20 , 40 | 
-6406 | 14 , Wagner , (NULL) | 23 , 130 , 9 , 250 | 2 , 20 , 40 | 
-
-
------------------------------------------
 Observer :   Zucconi Schubert Staudacher Horrebow
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -801,67 +784,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 
 -----------------------------------------
-Observer :   Heis
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1863-02-12
-18718 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 2 , 19 , 39 | 
-18732 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 2 , 19 , 39 | 
-
-1863-02-13
-18719 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 34 , 64 | 
-18733 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 34 , 64 | 
-
-1863-02-14
-18720 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 4 , 48 , 88 | 
-18734 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 4 , 48 , 88 | 
-
-1863-02-15
-18721 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 38 , 68 | 
-18735 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 38 , 68 | 
-
-1863-02-16
-18722 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
-18736 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
-
-1863-02-17
-18723 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 43 , 73 | 
-18737 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 43 , 73 | 
-
-1863-02-18
-18724 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 35 , 95 | 
-18738 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 35 , 95 | 
-
-1863-02-20
-18725 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 56 , 116 | 
-18739 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 6 , 56 , 116 | 
-
-1863-02-21
-18726 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 61 , 111 | 
-18740 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 61 , 111 | 
-
-1863-02-22
-18727 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 54 , 104 | 
-18741 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 54 , 104 | 
-
-1863-02-24
-18728 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 54 , 84 | 
-18742 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 54 , 84 | 
-
-1863-02-25
-18729 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 47 , 77 | 
-18743 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 47 , 77 | 
-
-1863-02-26
-18730 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
-18744 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
-
-1863-02-28
-18731 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 21 , 71 | 
-18745 | 35 , Heis , (NULL) | 40 , 195 , 16 , 188 | 5 , 21 , 71 | 
-
-
------------------------------------------
 Observer :   Weber
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -1542,391 +1464,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1891-01-12
 97976 | 55 , Denza , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
 107793 | 55 , Denza , (NULL) | 443 , 655 , 80 , 397 | 0 , 0 , 0 | 
-
-
------------------------------------------
-Observer :   Winkler
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1891-02-05
-96352 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96355 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-07
-96353 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96358 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-07
-96353 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96363 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-07
-96358 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96363 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-08
-96354 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96360 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-08
-96354 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96368 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-08
-96360 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96368 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-09
-96356 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96362 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-09
-96356 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96371 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-09
-96362 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-96371 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 0 , 0 , 0 | 
-
-1891-02-10
-96357 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-96365 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-
-1891-02-10
-96357 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-96374 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-
-1891-02-10
-96365 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-96374 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 11 , 21 | 
-
-1891-02-11
-96359 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-96366 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-
-1891-02-11
-96359 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-96377 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-
-1891-02-11
-96366 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-96377 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 3 , 15 , 45 | 
-
-1891-02-13
-96361 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-96369 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-
-1891-02-13
-96361 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-96379 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-
-1891-02-13
-96369 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-96379 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 5 , 25 | 
-
-1891-02-14
-96364 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-96372 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-
-1891-02-14
-96364 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-96382 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-
-1891-02-14
-96372 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-96382 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 8 , 28 | 
-
-1891-02-16
-96367 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-96376 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-
-1891-02-16
-96367 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-96385 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-
-1891-02-16
-96376 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-96385 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 1 , 11 | 
-
-1891-02-19
-96370 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-96380 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-
-1891-02-19
-96370 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-96388 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-
-1891-02-19
-96380 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-96388 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 12 , 22 | 
-
-1891-02-20
-96373 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-96383 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-
-1891-02-20
-96373 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-96390 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-
-1891-02-20
-96383 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-96390 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 18 , 28 | 
-
-1891-02-24
-96375 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-96386 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-
-1891-02-24
-96375 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-96391 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-
-1891-02-24
-96386 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-96391 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 4 , 13 , 53 | 
-
-1891-02-25
-96378 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-96389 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-
-1891-02-25
-96378 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-96393 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-
-1891-02-25
-96389 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-96393 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 2 , 7 , 27 | 
-
-1891-02-26
-96381 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-96392 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-
-1891-02-26
-96381 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-96395 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-
-1891-02-26
-96392 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-96395 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 9 , 19 | 
-
-1891-02-27
-96384 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96394 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-27
-96384 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96397 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-27
-96394 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96397 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96387 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96396 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96387 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96398 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96387 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96396 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96398 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96396 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1891-02-28
-96398 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-96399 | 69 , Winkler , (NULL) | 437 , 647 , 80 , 387 | 1 , 4 , 14 | 
-
-1900-01-01
-105871 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-109996 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1900-01-01
-105871 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-110338 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
-
-1900-01-01
-109996 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-110338 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
-
-1900-01-02
-105872 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-109997 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-02
-105872 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110339 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-02
-109997 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110339 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-03
-105873 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-109998 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-03
-105873 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110340 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-03
-109998 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110340 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-04
-105874 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-109999 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-04
-105874 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110341 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-04
-109999 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110341 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-09
-105876 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110001 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-09
-105876 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110343 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-09
-110001 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110343 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-15
-105879 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-110004 | 69 , Winkler , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1900-01-15
-105879 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-110346 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 4 , 24 | 
-
-1900-01-15
-110004 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-110346 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 4 , 24 | 
-
-1900-01-18
-105881 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-110006 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 2 , 12 | no fk_rubrics
-
-1900-01-18
-105881 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-110348 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
-
-1900-01-18
-110006 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-110348 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
-
-1900-01-23
-105882 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-110007 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1900-01-23
-105882 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-110349 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
-
-1900-01-23
-110007 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-110349 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
-
-1900-01-26
-105884 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-110009 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 8 , 18 | no fk_rubrics
-
-1900-01-26
-105884 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-110351 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 8 , 18 | 
-
-1900-01-26
-110009 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-110351 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 8 , 18 | 
-
-1900-01-28
-105885 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-110010 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 4 , 14 | no fk_rubrics
-
-1900-01-28
-105885 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-110352 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 4 , 14 | 
-
-1900-01-28
-110010 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-110352 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 4 , 14 | 
-
-1900-02-02
-105886 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-110353 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
-
-1900-01-07
-105875 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110000 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-07
-105875 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110342 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-07
-110000 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110342 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-10
-105877 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110002 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
-
-1900-01-10
-105877 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110344 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-10
-110002 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-110344 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
-
-1900-01-13
-105878 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
-110003 | 69 , Winkler , (NULL) | None , na , na , na | 2 , 22 , 42 | no fk_rubrics
-
-1900-01-13
-105878 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
-110345 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 22 , 42 | 
-
-1900-01-13
-110003 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
-110345 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 22 , 42 | 
-
-1900-01-17
-105880 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-110005 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 6 , 16 | no fk_rubrics
-
-1900-01-17
-105880 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-110347 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 6 , 16 | 
-
-1900-01-17
-110005 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-110347 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 6 , 16 | 
-
-1900-01-25
-105883 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-110008 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 11 , 21 | no fk_rubrics
-
-1900-01-25
-105883 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-110350 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 11 , 21 | 
-
-1900-01-25
-110008 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-110350 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 11 , 21 | 
 
 
 -----------------------------------------
@@ -4349,6 +3886,195 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 
 -----------------------------------------
+Observer :   Winkler
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1900-01-01
+105871 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+109996 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1900-01-01
+105871 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+110338 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
+
+1900-01-01
+109996 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+110338 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
+
+1900-01-02
+105872 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+109997 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-02
+105872 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110339 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-02
+109997 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110339 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-03
+105873 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+109998 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-03
+105873 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110340 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-03
+109998 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110340 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-04
+105874 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+109999 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-04
+105874 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110341 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-04
+109999 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110341 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-09
+105876 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110001 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-09
+105876 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110343 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-09
+110001 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110343 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-15
+105879 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+110004 | 69 , Winkler , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1900-01-15
+105879 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+110346 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 4 , 24 | 
+
+1900-01-15
+110004 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+110346 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 4 , 24 | 
+
+1900-01-18
+105881 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+110006 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 2 , 12 | no fk_rubrics
+
+1900-01-18
+105881 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+110348 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
+
+1900-01-18
+110006 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+110348 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
+
+1900-01-23
+105882 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+110007 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1900-01-23
+105882 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+110349 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
+
+1900-01-23
+110007 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+110349 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 1 , 11 | 
+
+1900-01-26
+105884 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+110009 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 8 , 18 | no fk_rubrics
+
+1900-01-26
+105884 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+110351 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 8 , 18 | 
+
+1900-01-26
+110009 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+110351 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 8 , 18 | 
+
+1900-01-28
+105885 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+110010 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 4 , 14 | no fk_rubrics
+
+1900-01-28
+105885 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+110352 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 4 , 14 | 
+
+1900-01-28
+110010 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+110352 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 4 , 14 | 
+
+1900-02-02
+105886 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+110353 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 2 , 12 | 
+
+1900-01-07
+105875 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110000 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-07
+105875 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110342 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-07
+110000 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110342 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-10
+105877 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110002 | 69 , Winkler , (NULL) | None , na , na , na | 0 , 0 , 0 | no fk_rubrics
+
+1900-01-10
+105877 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110344 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-10
+110002 | 69 , Winkler , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+110344 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 0 , 0 , 0 | 
+
+1900-01-13
+105878 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
+110003 | 69 , Winkler , (NULL) | None , na , na , na | 2 , 22 , 42 | no fk_rubrics
+
+1900-01-13
+105878 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
+110345 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 22 , 42 | 
+
+1900-01-13
+110003 | 69 , Winkler , (NULL) | na , na , na , na | 2 , 22 , 42 | no fk_rubrics
+110345 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 2 , 22 , 42 | 
+
+1900-01-17
+105880 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+110005 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 6 , 16 | no fk_rubrics
+
+1900-01-17
+105880 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+110347 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 6 , 16 | 
+
+1900-01-17
+110005 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+110347 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 6 , 16 | 
+
+1900-01-25
+105883 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+110008 | 69 , Winkler , (NULL) | None , na , na , na | 1 , 11 , 21 | no fk_rubrics
+
+1900-01-25
+105883 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+110350 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 11 , 21 | 
+
+1900-01-25
+110008 | 69 , Winkler , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+110350 | 69 , Winkler , (NULL) | 480 , 822 , 92 , 38 | 1 , 11 , 21 | 
+
+
+-----------------------------------------
 Observer :   Boston observatory
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -6647,6 +6373,1593 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1917-01-21
 153215 | 132 , Guillaume , (NULL) | na , na , na , na | 5 , 19 , 69 | no fk_rubrics
 153231 | 132 , Guillaume , (NULL) | 749 , 1222 , 110 , 261 | 5 , 19 , 69 | 
+
+
+-----------------------------------------
+Observer :   Bodocs
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1911-01-01
+133160 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133170 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1911-01-11
+133161 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+133171 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
+
+1911-01-12
+133162 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+133172 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
+
+1911-01-30
+133168 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133178 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1911-01-31
+133169 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133179 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1911-01-24
+133167 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133177 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1911-01-14
+133163 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+133173 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
+
+1911-01-23
+133166 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133176 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1911-01-21
+133165 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+133175 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
+
+1906-01-01
+133313 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+133326 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 11 , 21 | 
+
+1906-01-03
+133314 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+133327 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 8 , 18 | 
+
+1906-01-04
+133315 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
+133328 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 5 , 15 | 
+
+1906-01-08
+133316 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+133329 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 3 , 23 | 
+
+1906-01-11
+133317 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+133330 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 6 , 16 | 
+
+1906-01-12
+133318 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 7 , 17 | no fk_rubrics
+133331 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 7 , 17 | 
+
+1906-01-15
+133319 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+133332 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 5 , 25 | 
+
+1906-01-16
+133320 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+133333 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 4 , 24 | 
+
+1906-01-21
+133321 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+133334 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 2 , 12 | 
+
+1906-01-22
+133322 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 5 , 15 , 65 | no fk_rubrics
+133335 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 5 , 15 , 65 | 
+
+1906-01-24
+133323 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 5 , 17 , 67 | no fk_rubrics
+133336 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 5 , 17 , 67 | 
+
+1906-01-28
+133324 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 6 , 14 , 74 | no fk_rubrics
+133337 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 6 , 14 , 74 | 
+
+1906-01-29
+133325 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 4 , 15 , 55 | no fk_rubrics
+133338 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 4 , 15 , 55 | 
+
+
+-----------------------------------------
+Observer :   Kleiner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1907-03-05
+188759 | 113 , Kleiner , (NULL) | na , na , na , na | 7 , 48 , 118 | no fk_rubrics
+188772 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 7 , 48 , 118 | 
+
+1907-03-06
+188760 | 113 , Kleiner , (NULL) | na , na , na , na | 8 , 50 , 130 | no fk_rubrics
+188773 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 8 , 50 , 130 | 
+
+1907-03-08
+188762 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 100 , 150 | no fk_rubrics
+188775 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 100 , 150 | 
+
+1907-03-13
+188763 | 113 , Kleiner , (NULL) | na , na , na , na | 4 , 24 , 64 | no fk_rubrics
+188776 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 4 , 24 , 64 | 
+
+1907-03-15
+188765 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 25 , 85 | no fk_rubrics
+188778 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 25 , 85 | 
+
+1907-03-18
+188767 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 16 , 76 | no fk_rubrics
+188780 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 16 , 76 | 
+
+1907-01-25
+188756 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 12 , 72 | no fk_rubrics
+188769 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 12 , 72 | 
+
+1907-02-07
+188757 | 113 , Kleiner , (NULL) | na , na , na , na | 9 , 75 , 165 | no fk_rubrics
+188770 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 9 , 75 , 165 | 
+
+1907-02-19
+188758 | 113 , Kleiner , (NULL) | na , na , na , na | 8 , 35 , 115 | no fk_rubrics
+188771 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 8 , 35 , 115 | 
+
+1907-03-07
+188761 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 47 , 97 | no fk_rubrics
+188774 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 47 , 97 | 
+
+1907-03-14
+188764 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 23 , 73 | no fk_rubrics
+188777 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 23 , 73 | 
+
+1907-03-19
+188768 | 113 , Kleiner , (NULL) | na , na , na , na | 4 , 13 , 53 | no fk_rubrics
+188781 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 4 , 13 , 53 | 
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1908-01-08
+193491 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
+193718 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 16 , 56 | 
+
+1908-01-11
+193492 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
+193719 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 16 , 66 | 
+
+1908-01-14
+193495 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 17 , 67 | no fk_rubrics
+193722 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 17 , 67 | 
+
+1908-01-15
+193496 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 11 , 51 | no fk_rubrics
+193723 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 11 , 51 | 
+
+1908-01-19
+193499 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
+193726 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 7 , 37 | 
+
+1908-01-21
+193501 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+193728 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 3 , 13 | 
+
+1908-01-31
+193506 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
+193736 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 7 , 37 | 
+
+1908-03-06
+193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193598 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193618 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
+
+1908-03-06
+193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193618 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
+
+1908-03-06
+193618 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
+
+1908-03-06
+193618 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
+
+1908-03-06
+193638 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
+
+1908-03-07
+193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193599 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193619 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
+
+1908-03-07
+193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193619 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
+
+1908-03-07
+193619 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
+
+1908-03-07
+193619 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
+
+1908-03-07
+193639 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
+
+1908-03-14
+193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193604 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193624 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
+
+1908-03-14
+193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193624 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
+
+1908-03-14
+193624 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
+
+1908-03-14
+193624 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
+
+1908-03-14
+193644 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
+193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
+
+1908-03-22
+193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193610 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193630 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
+
+1908-03-22
+193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193630 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
+
+1908-03-22
+193630 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
+
+1908-03-22
+193630 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
+
+1908-03-22
+193650 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
+193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
+
+1908-03-27
+193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193611 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193631 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
+
+1908-03-27
+193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193631 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
+
+1908-03-27
+193631 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
+
+1908-03-27
+193631 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
+
+1908-03-27
+193651 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
+
+1908-01-16
+193497 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 11 , 51 | no fk_rubrics
+193724 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 11 , 51 | 
+
+1908-01-18
+193498 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 10 , 50 | no fk_rubrics
+193725 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 10 , 50 | 
+
+1908-01-20
+193500 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193727 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-01-26
+193502 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 8 , 28 | no fk_rubrics
+193732 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 8 , 28 | 
+
+1908-01-28
+193503 | 138 , Messerschmitt , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+193733 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 0 , 0 , 0 | 
+
+1908-01-29
+193504 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193734 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-01-30
+193505 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+193735 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 2 , 12 | 
+
+1908-02-01
+193522 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+193537 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 5 , 25 | no fk_rubrics
+
+1908-03-01
+193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193595 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193615 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-01
+193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193615 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-01
+193615 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-01
+193615 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-01
+193635 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-02
+193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193596 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193616 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-02
+193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193616 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-02
+193616 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-03-02
+193616 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-02
+193636 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-03-04
+193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193597 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193617 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
+
+1908-03-04
+193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193617 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
+
+1908-03-04
+193617 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
+
+1908-03-04
+193617 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
+
+1908-03-04
+193637 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
+
+1908-03-08
+193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193600 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193620 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
+
+1908-03-08
+193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193620 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
+
+1908-03-08
+193620 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
+
+1908-03-08
+193620 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
+
+1908-03-08
+193640 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
+
+1908-03-09
+193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193601 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193621 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-09
+193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193621 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-09
+193621 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-09
+193621 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-09
+193641 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-12
+193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193603 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193623 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
+
+1908-03-12
+193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193623 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
+
+1908-03-12
+193623 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
+
+1908-03-12
+193623 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
+
+1908-03-12
+193643 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
+193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
+
+1908-03-15
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193605 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193625 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193625 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193645 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-17
+193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193606 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193626 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-17
+193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193626 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-17
+193626 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-17
+193626 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-17
+193646 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-19
+193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193607 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193627 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-19
+193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193627 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-19
+193627 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-19
+193627 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-19
+193647 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-21
+193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193609 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193629 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-21
+193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193629 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-21
+193629 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
+
+1908-03-21
+193629 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-21
+193649 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
+
+1908-03-29
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193612 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193632 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193632 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193652 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-11
+193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193602 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193622 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
+
+1908-03-11
+193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193622 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
+
+1908-03-11
+193622 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
+
+1908-03-11
+193622 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
+
+1908-03-11
+193642 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
+193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
+
+1908-03-20
+193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193608 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193628 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-20
+193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193628 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-20
+193628 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
+
+1908-03-20
+193628 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-20
+193648 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
+
+1908-03-30
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193613 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193633 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193633 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193653 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-01-03
+193488 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 18 , 68 | no fk_rubrics
+193715 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 18 , 68 | 
+
+1908-01-04
+193489 | 138 , Messerschmitt , (NULL) | na , na , na , na | 6 , 32 , 92 | no fk_rubrics
+193716 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 6 , 32 , 92 | 
+
+1908-01-05
+193490 | 138 , Messerschmitt , (NULL) | na , na , na , na | 7 , 42 , 112 | no fk_rubrics
+193717 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 7 , 42 , 112 | 
+
+1908-01-12
+193493 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 12 , 62 | no fk_rubrics
+193720 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 12 , 62 | 
+
+1908-01-13
+193494 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 10 , 60 | no fk_rubrics
+193721 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 10 , 60 | 
+
+1908-03-31
+193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193614 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193634 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
+
+1908-03-31
+193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193634 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
+
+1908-03-31
+193634 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
+
+1908-03-31
+193634 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
+
+1908-03-31
+193654 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
+193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
+
+
+-----------------------------------------
+Observer :   Buttlar
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1914-01-21
+142514 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142523 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-24
+142515 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142524 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-25
+142516 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142525 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-26
+142517 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142526 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-28
+142518 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142527 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-31
+142519 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142528 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-10
+142512 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142521 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1914-01-03
+142511 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+142520 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 1 , 3 , 13 | 
+
+1914-01-15
+142513 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+142522 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
+
+1919-01-01
+158291 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+158303 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 3 , 23 | 
+
+1919-01-09
+158296 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 4 , 39 , 79 | no fk_rubrics
+158308 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 4 , 39 , 79 | 
+
+1919-01-12
+158297 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 7 , 42 , 112 | no fk_rubrics
+158309 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 7 , 42 , 112 | 
+
+1919-01-28
+158300 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 3 , 30 , 60 | no fk_rubrics
+158312 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 3 , 30 , 60 | 
+
+1919-01-06
+158294 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+158306 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 3 , 23 | 
+
+1919-01-30
+158301 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 4 , 17 , 57 | no fk_rubrics
+158313 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 4 , 17 , 57 | 
+
+1919-01-31
+158302 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 5 , 18 , 68 | no fk_rubrics
+158314 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 5 , 18 , 68 | 
+
+1919-01-03
+158292 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+158304 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 3 , 5 , 35 | 
+
+1919-01-05
+158293 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+158305 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 2 , 22 | 
+
+1919-01-08
+158295 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 5 , 32 , 82 | no fk_rubrics
+158307 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 5 , 32 , 82 | 
+
+1919-01-23
+158299 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+158311 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 1 , 1 , 11 | 
+
+
+-----------------------------------------
+Observer :   Moye
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1919-01-01
+159123 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159149 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
+
+1919-01-02
+159124 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159150 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
+
+1919-01-09
+159128 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 4 , 14 , 54 | no fk_rubrics
+159154 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 4 , 14 , 54 | 
+
+1919-01-11
+159130 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
+159156 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
+
+1919-01-12
+159131 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
+159157 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
+
+1919-01-14
+159133 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 20 , 70 | no fk_rubrics
+159159 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 20 , 70 | 
+
+1919-01-15
+159134 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
+159160 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 16 , 66 | 
+
+1919-01-20
+159138 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+159164 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 5 , 25 | 
+
+1919-01-22
+159139 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159165 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
+
+1919-01-28
+159145 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
+159171 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
+
+1919-01-29
+159146 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
+159172 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
+
+1919-01-06
+159127 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+159153 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
+
+1919-01-10
+159129 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
+159155 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 16 , 66 | 
+
+1919-01-13
+159132 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
+159158 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
+
+1919-01-17
+159135 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+159161 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 4 , 24 | 
+
+1919-01-25
+159142 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+159168 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
+
+1919-01-27
+159144 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
+159170 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 10 , 40 | 
+
+1919-01-30
+159147 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
+159173 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
+
+1919-01-03
+159125 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159151 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
+
+1919-01-05
+159126 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+159152 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
+
+1919-01-23
+159140 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+159166 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
+
+1919-01-18
+159136 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+159162 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 3 , 23 | 
+
+1919-01-19
+159137 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+159163 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 6 , 36 | 
+
+1919-01-24
+159141 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+159167 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
+
+1919-01-26
+159143 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+159169 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 6 , 26 | 
+
+
+-----------------------------------------
+Observer :   Young
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1921-01-07
+162889 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+162938 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 11 , 21 | 
+
+1921-01-08
+162890 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+162939 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 6 , 16 | 
+
+1921-01-09
+162891 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+162940 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 3 , 13 | 
+
+1921-01-10
+162892 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
+162941 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 12 , 32 | 
+
+1921-01-11
+162893 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 20 , 40 | no fk_rubrics
+162942 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 20 , 40 | 
+
+1921-01-17
+162895 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 15 , 35 | no fk_rubrics
+162944 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 15 , 35 | 
+
+1921-01-18
+162896 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 11 , 31 | no fk_rubrics
+162945 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 11 , 31 | 
+
+1921-01-19
+162897 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+162946 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 3 , 23 | 
+
+1921-01-25
+162899 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+162948 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 3 , 23 | 
+
+1921-01-26
+162900 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+162949 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 1 , 11 | 
+
+1921-01-27
+162901 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
+162950 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 6 , 26 | 
+
+1921-01-28
+162902 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+162951 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
+
+1921-01-29
+162903 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+162952 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 1 , 11 | 
+
+1921-01-31
+162904 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+162953 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
+
+1921-02-02
+162905 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 10 , 30 | no fk_rubrics
+162954 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 10 , 30 | 
+
+1921-02-04
+162907 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 12 , 22 | no fk_rubrics
+162956 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 12 , 22 | 
+
+1921-02-12
+162910 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 3 , 33 | no fk_rubrics
+162959 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 3 , 33 | 
+
+1921-02-15
+162911 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+162960 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
+
+1921-02-17
+162913 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+162962 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 4 , 24 | 
+
+1921-02-18
+162914 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 14 , 24 | no fk_rubrics
+162963 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 14 , 24 | 
+
+1921-02-19
+162915 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
+162964 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 20 , 30 | 
+
+1921-02-21
+162916 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 15 , 25 | no fk_rubrics
+162965 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 15 , 25 | 
+
+1921-02-24
+162917 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+162966 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 9 , 29 | 
+
+1921-02-25
+162918 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+162967 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
+
+1921-03-01
+162919 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+162968 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
+
+1921-03-02
+162920 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+162969 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
+
+1921-03-04
+162921 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+162970 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 0 , 0 , 0 | 
+
+1921-03-10
+162922 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+162971 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 6 , 16 | 
+
+1921-03-11
+162923 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 21 , 51 | no fk_rubrics
+162972 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 21 , 51 | 
+
+1921-03-12
+162924 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 23 , 63 | no fk_rubrics
+162973 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 23 , 63 | 
+
+1921-03-15
+162925 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 13 , 43 | no fk_rubrics
+162974 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 13 , 43 | 
+
+1921-03-16
+162926 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+162975 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 5 , 35 | 
+
+1921-03-21
+162929 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
+162978 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 4 , 24 | 
+
+1921-03-22
+162930 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+162979 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 5 , 25 | 
+
+1921-03-23
+162931 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 7 , 17 | no fk_rubrics
+162980 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 7 , 17 | 
+
+1921-03-24
+162932 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
+162981 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 5 , 15 | 
+
+1921-03-25
+162933 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 20 , 40 | no fk_rubrics
+162982 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 20 , 40 | 
+
+1921-03-29
+162935 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 15 , 45 | no fk_rubrics
+162984 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 15 , 45 | 
+
+1921-03-30
+162936 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 7 , 47 | no fk_rubrics
+162985 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 7 , 47 | 
+
+1921-01-13
+162894 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 21 , 61 | no fk_rubrics
+162943 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 21 , 61 | 
+
+1921-01-06
+162888 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 14 , 24 | no fk_rubrics
+162937 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 14 , 24 | 
+
+1921-01-24
+162898 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+162947 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 3 , 13 | 
+
+1921-02-03
+162906 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 13 , 33 | no fk_rubrics
+162955 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 13 , 33 | 
+
+1921-02-07
+162908 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+162957 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 2 , 22 | 
+
+1921-02-08
+162909 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
+162958 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 12 , 42 | 
+
+1921-02-16
+162912 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
+162961 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 7 , 37 | 
+
+1921-03-18
+162927 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+162976 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 5 , 25 | 
+
+1921-03-19
+162928 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
+162977 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 2 , 22 | 
+
+
+-----------------------------------------
+Observer :   Braak
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1925-01-03
+171067 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171575 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-04
+171068 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171576 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-05
+171069 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171577 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-06
+171070 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171578 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-07
+171071 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171579 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-08
+171072 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171580 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-09
+171073 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171581 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-12
+171075 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171583 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-24
+171076 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171584 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-28
+171077 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171585 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-31
+171079 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171587 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-02-02
+171080 | 144 , Braak , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+171588 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 5 , 25 | 
+
+1925-02-04
+171081 | 144 , Braak , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+171589 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 1 , 11 | 
+
+1925-02-05
+171082 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171590 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-02-09
+171083 | 144 , Braak , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
+171591 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 9 , 29 | 
+
+1925-02-10
+171084 | 144 , Braak , (NULL) | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
+171592 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 3 , 23 | 
+
+1925-02-18
+171085 | 144 , Braak , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+171594 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 4 , 14 | 
+
+1925-02-20
+171086 | 144 , Braak , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
+171595 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 4 , 14 | 
+
+1925-03-05
+171087 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171596 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-08
+171089 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171598 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-09
+171090 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171599 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-10
+171091 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171600 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-11
+171092 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171601 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-12
+171093 | 144 , Braak , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+171602 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 8 , 18 | 
+
+1925-03-13
+171094 | 144 , Braak , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
+171603 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 8 , 18 | 
+
+1925-03-16
+171097 | 144 , Braak , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
+171606 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 11 , 21 | 
+
+1925-03-17
+171098 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+171607 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
+
+1925-03-18
+171099 | 144 , Braak , (NULL) | na , na , na , na | 1 , 10 , 20 | no fk_rubrics
+171608 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 10 , 20 | 
+
+1925-03-19
+171100 | 144 , Braak , (NULL) | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
+171609 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 5 , 15 | 
+
+1925-03-20
+171101 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+171610 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
+
+1925-03-21
+171102 | 144 , Braak , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
+171611 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 3 , 13 | 
+
+1925-03-28
+171106 | 144 , Braak , (NULL) | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
+171615 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 20 , 30 | 
+
+1925-03-31
+171107 | 144 , Braak , (NULL) | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
+171616 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 20 , 30 | 
+
+1925-01-11
+171074 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171582 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-01-30
+171078 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171586 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-06
+171088 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171597 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-23
+171103 | 144 , Braak , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
+171612 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 2 , 12 | 
+
+1925-03-24
+171104 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
+171613 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
+
+1925-03-25
+171105 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
+171614 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
+
+1925-03-14
+171095 | 144 , Braak , (NULL) | na , na , na , na | 1 , 9 , 19 | no fk_rubrics
+171604 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 9 , 19 | 
+
+1925-03-15
+171096 | 144 , Braak , (NULL) | na , na , na , na | 1 , 9 , 19 | no fk_rubrics
+171605 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 9 , 19 | 
 
 
 -----------------------------------------
@@ -9544,1598 +10857,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1944-12-06
 206083 | 177 , Brunner , 8 cm open 64 increase | 1006 , 14401 , 144 , 112 | 2 , 7 , 27 | 
 206275 | 177 , Brunner , 8 cm open 64 increase | 1007 , 14402 , 144 , 113 | 2 , 7 , 27 | 
-
-
------------------------------------------
-Observer :   Messerschmitt
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1908-01-08
-193491 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 16 , 56 | no fk_rubrics
-193718 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 16 , 56 | 
-
-1908-01-11
-193492 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
-193719 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 16 , 66 | 
-
-1908-01-14
-193495 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 17 , 67 | no fk_rubrics
-193722 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 17 , 67 | 
-
-1908-01-15
-193496 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 11 , 51 | no fk_rubrics
-193723 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 11 , 51 | 
-
-1908-01-19
-193499 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
-193726 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 7 , 37 | 
-
-1908-01-21
-193501 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
-193728 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 3 , 13 | 
-
-1908-01-31
-193506 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
-193736 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 7 , 37 | 
-
-1908-03-06
-193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193598 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193618 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193578 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
-
-1908-03-06
-193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193618 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193598 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
-
-1908-03-06
-193618 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193638 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 12 , 32 | no fk_rubrics
-
-1908-03-06
-193618 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
-
-1908-03-06
-193638 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-193678 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 12 , 32 | 
-
-1908-03-07
-193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193599 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193619 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193579 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
-
-1908-03-07
-193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193619 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193599 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
-
-1908-03-07
-193619 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193639 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 10 , 40 | no fk_rubrics
-
-1908-03-07
-193619 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
-
-1908-03-07
-193639 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-193679 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 10 , 40 | 
-
-1908-03-14
-193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193604 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193624 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193584 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
-
-1908-03-14
-193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193624 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193604 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
-
-1908-03-14
-193624 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193644 | 138 , Messerschmitt , (NULL) | None , na , na , na | 4 , 8 , 48 | no fk_rubrics
-
-1908-03-14
-193624 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
-
-1908-03-14
-193644 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 8 , 48 | no fk_rubrics
-193684 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 8 , 48 | 
-
-1908-03-22
-193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193610 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193630 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193590 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
-
-1908-03-22
-193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193630 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193610 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
-
-1908-03-22
-193630 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193650 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 8 , 38 | no fk_rubrics
-
-1908-03-22
-193630 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
-
-1908-03-22
-193650 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 8 , 38 | no fk_rubrics
-193690 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 8 , 38 | 
-
-1908-03-27
-193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193611 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193631 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193591 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
-
-1908-03-27
-193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193631 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193611 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
-
-1908-03-27
-193631 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193651 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 2 , 22 | no fk_rubrics
-
-1908-03-27
-193631 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
-
-1908-03-27
-193651 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-193691 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 2 , 22 | 
-
-1908-01-16
-193497 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 11 , 51 | no fk_rubrics
-193724 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 11 , 51 | 
-
-1908-01-18
-193498 | 138 , Messerschmitt , (NULL) | na , na , na , na | 4 , 10 , 50 | no fk_rubrics
-193725 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 4 , 10 , 50 | 
-
-1908-01-20
-193500 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193727 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-01-26
-193502 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 8 , 28 | no fk_rubrics
-193732 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 8 , 28 | 
-
-1908-01-28
-193503 | 138 , Messerschmitt , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-193733 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 0 , 0 , 0 | 
-
-1908-01-29
-193504 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193734 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-01-30
-193505 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-193735 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 2 , 12 | 
-
-1908-02-01
-193522 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-193537 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 5 , 25 | no fk_rubrics
-
-1908-03-01
-193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193595 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193615 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193575 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-01
-193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193615 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193595 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-01
-193615 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193635 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-01
-193615 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-01
-193635 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193676 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-02
-193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193596 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193616 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193576 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-02
-193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193616 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193596 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-02
-193616 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193636 | 138 , Messerschmitt , (NULL) | None , na , na , na | 1 , 1 , 11 | no fk_rubrics
-
-1908-03-02
-193616 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-02
-193636 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-193677 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
-
-1908-03-04
-193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193597 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193617 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193577 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
-
-1908-03-04
-193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193617 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193597 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
-
-1908-03-04
-193617 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193637 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 9 , 29 | no fk_rubrics
-
-1908-03-04
-193617 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
-
-1908-03-04
-193637 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-193675 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 9 , 29 | 
-
-1908-03-08
-193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193600 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193620 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193580 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
-
-1908-03-08
-193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193620 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193600 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
-
-1908-03-08
-193620 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193640 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 5 , 35 | no fk_rubrics
-
-1908-03-08
-193620 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
-
-1908-03-08
-193640 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-193680 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
-
-1908-03-09
-193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193601 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193621 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193581 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-09
-193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193621 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193601 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-09
-193621 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193641 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-09
-193621 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-09
-193641 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193681 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-12
-193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193603 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193623 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193583 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
-
-1908-03-12
-193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193623 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193603 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
-
-1908-03-12
-193623 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193643 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 20 , 50 | no fk_rubrics
-
-1908-03-12
-193623 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
-
-1908-03-12
-193643 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 20 , 50 | no fk_rubrics
-193683 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 20 , 50 | 
-
-1908-03-15
-193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193605 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193625 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-15
-193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193625 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-15
-193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193645 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-15
-193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-15
-193645 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-17
-193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193606 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193626 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193586 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-17
-193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193626 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193606 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-17
-193626 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193646 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-17
-193626 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-17
-193646 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193686 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-19
-193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193607 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193627 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193587 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-19
-193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193627 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193607 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-19
-193627 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193647 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 7 , 27 | no fk_rubrics
-
-1908-03-19
-193627 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-19
-193647 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
-193687 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
-
-1908-03-21
-193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193609 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193629 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193589 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-21
-193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193629 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193609 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-21
-193629 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193649 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 4 , 24 | no fk_rubrics
-
-1908-03-21
-193629 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-21
-193649 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-193689 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 4 , 24 | 
-
-1908-03-29
-193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193612 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193632 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
-
-1908-03-29
-193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193632 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
-
-1908-03-29
-193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193652 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 4 , 34 | no fk_rubrics
-
-1908-03-29
-193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
-
-1908-03-29
-193652 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
-193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
-
-1908-03-11
-193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193602 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193622 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193582 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
-
-1908-03-11
-193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193622 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193602 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
-
-1908-03-11
-193622 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193642 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 22 , 52 | no fk_rubrics
-
-1908-03-11
-193622 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
-
-1908-03-11
-193642 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 22 , 52 | no fk_rubrics
-193682 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 22 , 52 | 
-
-1908-03-20
-193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193608 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193628 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193588 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-20
-193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193628 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193608 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-20
-193628 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193648 | 138 , Messerschmitt , (NULL) | None , na , na , na | 2 , 6 , 26 | no fk_rubrics
-
-1908-03-20
-193628 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-20
-193648 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-193688 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 6 , 26 | 
-
-1908-03-30
-193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193613 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193633 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
-
-1908-03-30
-193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193633 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
-
-1908-03-30
-193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193653 | 138 , Messerschmitt , (NULL) | None , na , na , na | 3 , 6 , 36 | no fk_rubrics
-
-1908-03-30
-193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
-
-1908-03-30
-193653 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
-
-1908-01-03
-193488 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 18 , 68 | no fk_rubrics
-193715 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 18 , 68 | 
-
-1908-01-04
-193489 | 138 , Messerschmitt , (NULL) | na , na , na , na | 6 , 32 , 92 | no fk_rubrics
-193716 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 6 , 32 , 92 | 
-
-1908-01-05
-193490 | 138 , Messerschmitt , (NULL) | na , na , na , na | 7 , 42 , 112 | no fk_rubrics
-193717 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 7 , 42 , 112 | 
-
-1908-01-12
-193493 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 12 , 62 | no fk_rubrics
-193720 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 12 , 62 | 
-
-1908-01-13
-193494 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 10 , 60 | no fk_rubrics
-193721 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 10 , 60 | 
-
-1908-03-31
-193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193614 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193634 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193594 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
-
-1908-03-31
-193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193634 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193614 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
-
-1908-03-31
-193634 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193654 | 138 , Messerschmitt , (NULL) | None , na , na , na | 5 , 25 , 75 | no fk_rubrics
-
-1908-03-31
-193634 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
-
-1908-03-31
-193654 | 138 , Messerschmitt , (NULL) | na , na , na , na | 5 , 25 , 75 | no fk_rubrics
-193694 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 5 , 25 , 75 | 
-
-
------------------------------------------
-Observer :   Buser
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
-Observer :   Bodocs
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1911-01-01
-133160 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133170 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1911-01-11
-133161 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-133171 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
-
-1911-01-12
-133162 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-133172 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
-
-1911-01-30
-133168 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133178 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1911-01-31
-133169 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133179 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1911-01-24
-133167 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133177 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1911-01-14
-133163 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-133173 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 1 , 1 , 11 | 
-
-1911-01-23
-133166 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133176 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1911-01-21
-133165 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-133175 | 157 , Bodocs , 130 mm open 2 m distance | 646 , 1102 , 103 , 78 | 0 , 0 , 0 | 
-
-1906-01-01
-133313 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-133326 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 11 , 21 | 
-
-1906-01-03
-133314 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-133327 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 8 , 18 | 
-
-1906-01-04
-133315 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
-133328 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 5 , 15 | 
-
-1906-01-08
-133316 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-133329 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 3 , 23 | 
-
-1906-01-11
-133317 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-133330 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 6 , 16 | 
-
-1906-01-12
-133318 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 7 , 17 | no fk_rubrics
-133331 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 7 , 17 | 
-
-1906-01-15
-133319 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-133332 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 5 , 25 | 
-
-1906-01-16
-133320 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-133333 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 2 , 4 , 24 | 
-
-1906-01-21
-133321 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-133334 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 1 , 2 , 12 | 
-
-1906-01-22
-133322 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 5 , 15 , 65 | no fk_rubrics
-133335 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 5 , 15 , 65 | 
-
-1906-01-24
-133323 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 5 , 17 , 67 | no fk_rubrics
-133336 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 5 , 17 , 67 | 
-
-1906-01-28
-133324 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 6 , 14 , 74 | no fk_rubrics
-133337 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 6 , 14 , 74 | 
-
-1906-01-29
-133325 | 157 , Bodocs , 130 mm open 2 m distance | na , na , na , na | 4 , 15 , 55 | no fk_rubrics
-133338 | 157 , Bodocs , 130 mm open 2 m distance | 647 , 1103 , 103 , 78 | 4 , 15 , 55 | 
-
-
------------------------------------------
-Observer :   Kleiner
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1907-03-05
-188759 | 113 , Kleiner , (NULL) | na , na , na , na | 7 , 48 , 118 | no fk_rubrics
-188772 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 7 , 48 , 118 | 
-
-1907-03-06
-188760 | 113 , Kleiner , (NULL) | na , na , na , na | 8 , 50 , 130 | no fk_rubrics
-188773 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 8 , 50 , 130 | 
-
-1907-03-08
-188762 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 100 , 150 | no fk_rubrics
-188775 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 100 , 150 | 
-
-1907-03-13
-188763 | 113 , Kleiner , (NULL) | na , na , na , na | 4 , 24 , 64 | no fk_rubrics
-188776 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 4 , 24 , 64 | 
-
-1907-03-15
-188765 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 25 , 85 | no fk_rubrics
-188778 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 25 , 85 | 
-
-1907-03-18
-188767 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 16 , 76 | no fk_rubrics
-188780 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 16 , 76 | 
-
-1907-01-25
-188756 | 113 , Kleiner , (NULL) | na , na , na , na | 6 , 12 , 72 | no fk_rubrics
-188769 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 6 , 12 , 72 | 
-
-1907-02-07
-188757 | 113 , Kleiner , (NULL) | na , na , na , na | 9 , 75 , 165 | no fk_rubrics
-188770 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 9 , 75 , 165 | 
-
-1907-02-19
-188758 | 113 , Kleiner , (NULL) | na , na , na , na | 8 , 35 , 115 | no fk_rubrics
-188771 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 8 , 35 , 115 | 
-
-1907-03-07
-188761 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 47 , 97 | no fk_rubrics
-188774 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 47 , 97 | 
-
-1907-03-14
-188764 | 113 , Kleiner , (NULL) | na , na , na , na | 5 , 23 , 73 | no fk_rubrics
-188777 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 5 , 23 , 73 | 
-
-1907-03-19
-188768 | 113 , Kleiner , (NULL) | na , na , na , na | 4 , 13 , 53 | no fk_rubrics
-188781 | 113 , Kleiner , (NULL) | 923 , 999 , 99 , 307 | 4 , 13 , 53 | 
-
-
------------------------------------------
-Observer :   Buttlar
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1914-01-21
-142514 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142523 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-24
-142515 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142524 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-25
-142516 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142525 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-26
-142517 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142526 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-28
-142518 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142527 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-31
-142519 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142528 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-10
-142512 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142521 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1914-01-03
-142511 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
-142520 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 1 , 3 , 13 | 
-
-1914-01-15
-142513 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-142522 | 162 , Buttlar , 72 increase 17 cm diameter | 694 , 1158 , 107 , 174 | 0 , 0 , 0 | 
-
-1919-01-01
-158291 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-158303 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 3 , 23 | 
-
-1919-01-09
-158296 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 4 , 39 , 79 | no fk_rubrics
-158308 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 4 , 39 , 79 | 
-
-1919-01-12
-158297 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 7 , 42 , 112 | no fk_rubrics
-158309 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 7 , 42 , 112 | 
-
-1919-01-28
-158300 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 3 , 30 , 60 | no fk_rubrics
-158312 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 3 , 30 , 60 | 
-
-1919-01-06
-158294 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-158306 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 3 , 23 | 
-
-1919-01-30
-158301 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 4 , 17 , 57 | no fk_rubrics
-158313 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 4 , 17 , 57 | 
-
-1919-01-31
-158302 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 5 , 18 , 68 | no fk_rubrics
-158314 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 5 , 18 , 68 | 
-
-1919-01-03
-158292 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-158304 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 3 , 5 , 35 | 
-
-1919-01-05
-158293 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-158305 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 2 , 2 , 22 | 
-
-1919-01-08
-158295 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 5 , 32 , 82 | no fk_rubrics
-158307 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 5 , 32 , 82 | 
-
-1919-01-23
-158299 | 162 , Buttlar , 72 increase 17 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-158311 | 162 , Buttlar , 72 increase 17 cm diameter | 776 , 1254 , 112 , 41 | 1 , 1 , 11 | 
-
-
------------------------------------------
-Observer :   Moye
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1919-01-01
-159123 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-159149 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
-
-1919-01-02
-159124 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-159150 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
-
-1919-01-09
-159128 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 4 , 14 , 54 | no fk_rubrics
-159154 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 4 , 14 , 54 | 
-
-1919-01-11
-159130 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
-159156 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
-
-1919-01-12
-159131 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
-159157 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
-
-1919-01-14
-159133 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 20 , 70 | no fk_rubrics
-159159 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 20 , 70 | 
-
-1919-01-15
-159134 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
-159160 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 16 , 66 | 
-
-1919-01-20
-159138 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-159164 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 5 , 25 | 
-
-1919-01-22
-159139 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-159165 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
-
-1919-01-28
-159145 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
-159171 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
-
-1919-01-29
-159146 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
-159172 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
-
-1919-01-06
-159127 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-159153 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
-
-1919-01-10
-159129 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 16 , 66 | no fk_rubrics
-159155 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 16 , 66 | 
-
-1919-01-13
-159132 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 5 , 22 , 72 | no fk_rubrics
-159158 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 5 , 22 , 72 | 
-
-1919-01-17
-159135 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-159161 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 4 , 24 | 
-
-1919-01-25
-159142 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-159168 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
-
-1919-01-27
-159144 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 10 , 40 | no fk_rubrics
-159170 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 10 , 40 | 
-
-1919-01-30
-159147 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
-159173 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 12 , 42 | 
-
-1919-01-03
-159125 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-159151 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
-
-1919-01-05
-159126 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-159152 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
-
-1919-01-23
-159140 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-159166 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 2 , 12 | 
-
-1919-01-18
-159136 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-159162 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 3 , 23 | 
-
-1919-01-19
-159137 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
-159163 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 3 , 6 , 36 | 
-
-1919-01-24
-159141 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-159167 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 1 , 1 , 11 | 
-
-1919-01-26
-159143 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-159169 | 158 , Moye , 50 mm goal 60 magnification 10 cm diameter | 779 , 1257 , 112 , 43 | 2 , 6 , 26 | 
-
-
------------------------------------------
-Observer :   Young
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1921-01-07
-162889 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-162938 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 11 , 21 | 
-
-1921-01-08
-162890 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-162939 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 6 , 16 | 
-
-1921-01-09
-162891 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
-162940 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 3 , 13 | 
-
-1921-01-10
-162892 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 12 , 32 | no fk_rubrics
-162941 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 12 , 32 | 
-
-1921-01-11
-162893 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 20 , 40 | no fk_rubrics
-162942 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 20 , 40 | 
-
-1921-01-17
-162895 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 15 , 35 | no fk_rubrics
-162944 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 15 , 35 | 
-
-1921-01-18
-162896 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 11 , 31 | no fk_rubrics
-162945 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 11 , 31 | 
-
-1921-01-19
-162897 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-162946 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 3 , 23 | 
-
-1921-01-25
-162899 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-162948 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 3 , 23 | 
-
-1921-01-26
-162900 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-162949 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 1 , 11 | 
-
-1921-01-27
-162901 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 6 , 26 | no fk_rubrics
-162950 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 6 , 26 | 
-
-1921-01-28
-162902 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-162951 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
-
-1921-01-29
-162903 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-162952 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 1 , 11 | 
-
-1921-01-31
-162904 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-162953 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
-
-1921-02-02
-162905 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 10 , 30 | no fk_rubrics
-162954 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 10 , 30 | 
-
-1921-02-04
-162907 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 12 , 22 | no fk_rubrics
-162956 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 12 , 22 | 
-
-1921-02-12
-162910 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 3 , 33 | no fk_rubrics
-162959 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 3 , 33 | 
-
-1921-02-15
-162911 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-162960 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
-
-1921-02-17
-162913 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-162962 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 4 , 24 | 
-
-1921-02-18
-162914 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 14 , 24 | no fk_rubrics
-162963 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 14 , 24 | 
-
-1921-02-19
-162915 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
-162964 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 20 , 30 | 
-
-1921-02-21
-162916 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 15 , 25 | no fk_rubrics
-162965 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 15 , 25 | 
-
-1921-02-24
-162917 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-162966 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 9 , 29 | 
-
-1921-02-25
-162918 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-162967 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
-
-1921-03-01
-162919 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-162968 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 4 , 14 | 
-
-1921-03-02
-162920 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-162969 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 2 , 12 | 
-
-1921-03-04
-162921 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-162970 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 0 , 0 , 0 | 
-
-1921-03-10
-162922 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-162971 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 6 , 16 | 
-
-1921-03-11
-162923 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 21 , 51 | no fk_rubrics
-162972 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 21 , 51 | 
-
-1921-03-12
-162924 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 23 , 63 | no fk_rubrics
-162973 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 23 , 63 | 
-
-1921-03-15
-162925 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 13 , 43 | no fk_rubrics
-162974 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 13 , 43 | 
-
-1921-03-16
-162926 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
-162975 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 5 , 35 | 
-
-1921-03-21
-162929 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 4 , 24 | no fk_rubrics
-162978 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 4 , 24 | 
-
-1921-03-22
-162930 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-162979 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 5 , 25 | 
-
-1921-03-23
-162931 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 7 , 17 | no fk_rubrics
-162980 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 7 , 17 | 
-
-1921-03-24
-162932 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
-162981 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 5 , 15 | 
-
-1921-03-25
-162933 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 20 , 40 | no fk_rubrics
-162982 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 20 , 40 | 
-
-1921-03-29
-162935 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 15 , 45 | no fk_rubrics
-162984 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 15 , 45 | 
-
-1921-03-30
-162936 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 7 , 47 | no fk_rubrics
-162985 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 7 , 47 | 
-
-1921-01-13
-162894 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 4 , 21 , 61 | no fk_rubrics
-162943 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 4 , 21 , 61 | 
-
-1921-01-06
-162888 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 14 , 24 | no fk_rubrics
-162937 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 14 , 24 | 
-
-1921-01-24
-162898 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
-162947 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 1 , 3 , 13 | 
-
-1921-02-03
-162906 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 13 , 33 | no fk_rubrics
-162955 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 13 , 33 | 
-
-1921-02-07
-162908 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-162957 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 2 , 22 | 
-
-1921-02-08
-162909 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 12 , 42 | no fk_rubrics
-162958 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 12 , 42 | 
-
-1921-02-16
-162912 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 3 , 7 , 37 | no fk_rubrics
-162961 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 3 , 7 , 37 | 
-
-1921-03-18
-162927 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-162976 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 5 , 25 | 
-
-1921-03-19
-162928 | 150 , Young , 8 zölliger Refraktor | na , na , na , na | 2 , 2 , 22 | no fk_rubrics
-162977 | 150 , Young , 8 zölliger Refraktor | 794 , 1322 , 113 , 83 | 2 , 2 , 22 | 
-
-
------------------------------------------
-Observer :   Braak
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-1925-01-03
-171067 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171575 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-04
-171068 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171576 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-05
-171069 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171577 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-06
-171070 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171578 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-07
-171071 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171579 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-08
-171072 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171580 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-09
-171073 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171581 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-12
-171075 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171583 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-24
-171076 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171584 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-28
-171077 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171585 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-31
-171079 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171587 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-02-02
-171080 | 144 , Braak , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
-171588 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 5 , 25 | 
-
-1925-02-04
-171081 | 144 , Braak , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
-171589 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 1 , 11 | 
-
-1925-02-05
-171082 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171590 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-02-09
-171083 | 144 , Braak , (NULL) | na , na , na , na | 2 , 9 , 29 | no fk_rubrics
-171591 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 9 , 29 | 
-
-1925-02-10
-171084 | 144 , Braak , (NULL) | na , na , na , na | 2 , 3 , 23 | no fk_rubrics
-171592 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 2 , 3 , 23 | 
-
-1925-02-18
-171085 | 144 , Braak , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-171594 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 4 , 14 | 
-
-1925-02-20
-171086 | 144 , Braak , (NULL) | na , na , na , na | 1 , 4 , 14 | no fk_rubrics
-171595 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 4 , 14 | 
-
-1925-03-05
-171087 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171596 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-08
-171089 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171598 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-09
-171090 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171599 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-10
-171091 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171600 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-11
-171092 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171601 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-12
-171093 | 144 , Braak , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-171602 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 8 , 18 | 
-
-1925-03-13
-171094 | 144 , Braak , (NULL) | na , na , na , na | 1 , 8 , 18 | no fk_rubrics
-171603 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 8 , 18 | 
-
-1925-03-16
-171097 | 144 , Braak , (NULL) | na , na , na , na | 1 , 11 , 21 | no fk_rubrics
-171606 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 11 , 21 | 
-
-1925-03-17
-171098 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-171607 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
-
-1925-03-18
-171099 | 144 , Braak , (NULL) | na , na , na , na | 1 , 10 , 20 | no fk_rubrics
-171608 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 10 , 20 | 
-
-1925-03-19
-171100 | 144 , Braak , (NULL) | na , na , na , na | 1 , 5 , 15 | no fk_rubrics
-171609 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 5 , 15 | 
-
-1925-03-20
-171101 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-171610 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
-
-1925-03-21
-171102 | 144 , Braak , (NULL) | na , na , na , na | 1 , 3 , 13 | no fk_rubrics
-171611 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 3 , 13 | 
-
-1925-03-28
-171106 | 144 , Braak , (NULL) | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
-171615 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 20 , 30 | 
-
-1925-03-31
-171107 | 144 , Braak , (NULL) | na , na , na , na | 1 , 20 , 30 | no fk_rubrics
-171616 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 20 , 30 | 
-
-1925-01-11
-171074 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171582 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-01-30
-171078 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171586 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-06
-171088 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171597 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-23
-171103 | 144 , Braak , (NULL) | na , na , na , na | 1 , 2 , 12 | no fk_rubrics
-171612 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 2 , 12 | 
-
-1925-03-24
-171104 | 144 , Braak , (NULL) | na , na , na , na | 0 , 0 , 0 | no fk_rubrics
-171613 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 0 , 0 , 0 | 
-
-1925-03-25
-171105 | 144 , Braak , (NULL) | na , na , na , na | 1 , 6 , 16 | no fk_rubrics
-171614 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 6 , 16 | 
-
-1925-03-14
-171095 | 144 , Braak , (NULL) | na , na , na , na | 1 , 9 , 19 | no fk_rubrics
-171604 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 9 , 19 | 
-
-1925-03-15
-171096 | 144 , Braak , (NULL) | na , na , na , na | 1 , 9 , 19 | no fk_rubrics
-171605 | 144 , Braak , (NULL) | 829 , 1490 , 115 , 166 | 1 , 9 , 19 | 
 
 
 -----------------------------------------

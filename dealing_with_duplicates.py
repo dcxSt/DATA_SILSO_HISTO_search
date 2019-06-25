@@ -7,10 +7,10 @@ import searching_the_manuals
 
 
 ### this method is the backbone of this script, who's sole purpouse is to scrap the
-### redundant duplicates. It takes and id, in DATA_SILSO_HISTO it moves it into 
+### redundant duplicates. It takes and id_number. In DATA_SILSO_HISTO it moves it into 
 ### the rubbish bin that i made. With the same id it sees if this id can be found in
-### BAD_DATA_SILSO, if so it moves it removes it entirely from the database. 
-### Then checks if the data is in GOOD_DATA_SILSO, if so it moves it into the bin.
+### GOOD_DATA_SILSO, if so it moves it into the bin. Then checks if the data is in 
+### BAD_DATA_SILSO if so it moves it removes it entirely from the database.
 def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cursor3=None,mydb3=None,close_databases=True):
     # DATA_SILSO_HISTO
     # establish connection with DATA_SILSO_HISTO if there isn't one already
@@ -18,31 +18,34 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
     # add it to the bin first
     query = "SELECT * FROM DATA d WHERE d.ID="+str(id_number)
     cursor.execute(query,())
-    info = cursor.fetchall()[0]
-    id_number,date,fk_rubrics,fk_observers,groups,sunspots,wolf,quality,comment,date_insert,flag=transcribe_info_old(info)
-    
-    query = "INSERT INTO RUBBISH_DATA SET "
-    query += "ID = "+str(id_number)+","
-    query += "DATE = '"+str(date)+"',"
-    query += "FK_RUBRICS = "+str(fk_rubrics)+","
-    query += "FK_OBSERVERS ="+str(fk_observers)+","
-    query += "GROUPS ="+str(groups)+","
-    query += "SUNSPOTS ="+str(sunspots)+","
-    query += "WOLF ="+str(wolf)+","
-    query += "QUALITY = NULL,"
-    query += "COMMENT ='"+str(comment)+"',"
-    query += "DATE_INSERT ='"+str(date_insert)+"',"
-    query += "FLAG ="+str(flag)+";"
-    cursor.execute(query,())
-    mydb.commit()
-    print("copied into rubbish bin")#trace
+    # the try block is because sometimes there are 3 identical datapoints, this circumnavigates the problem
+    try:
+        info = cursor.fetchall()[0]
+        id_number,date,fk_rubrics,fk_observers,groups,sunspots,wolf,quality,comment,date_insert,flag=transcribe_info_old(info)
+        
+        query = "INSERT INTO RUBBISH_DATA SET "
+        query += "ID = "+str(id_number)+","
+        query += "DATE = '"+str(date)+"',"
+        query += "FK_RUBRICS = "+str(fk_rubrics)+","
+        query += "FK_OBSERVERS ="+str(fk_observers)+","
+        query += "GROUPS ="+str(groups)+","
+        query += "SUNSPOTS ="+str(sunspots)+","
+        query += "WOLF ="+str(wolf)+","
+        query += "QUALITY = NULL,"
+        query += "COMMENT ='"+str(comment)+"',"
+        query += "DATE_INSERT ='"+str(date_insert)+"',"
+        query += "FLAG ="+str(flag)+";"
+        cursor.execute(query,())
+        mydb.commit()
+        print("copied into rubbish bin")#trace
 
-    # remove it from the database
-    query = "DELETE FROM DATA WHERE ID="+str(id_number)
-    cursor.execute(query,())
-    mydb.commit()
-    print("deleted from original")#trace
-
+        # remove it from the database
+        query = "DELETE FROM DATA WHERE ID="+str(id_number)
+        cursor.execute(query,())
+        mydb.commit()
+        print("deleted from original")#trace
+    except:
+        pass
 
     # GOOD_DATA_SILSO
     # if the data is here we move it as in the above, 
@@ -56,11 +59,8 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
     cursor2.execute(query)
     # if there is nothing don't do anything
     try:
-        info2=cursor.fetchall()[0]
-        #id_number,date,groups,sunspots,wolf,comment,date_insert,obs_alias,first_name,last_name,country,
-        
-        instrument,rubrics_number,mitt_number,page_number,flag,rubrics_source,rubrics_source_date
-        #=transcribe_info_new(info2)
+        info2=cursor2.fetchall()[0]
+        id_number,date,groups,sunspots,wolf,comment,date_insert,obs_alias,first_name,last_name,country,instrument,rubrics_number,mitt_number,page_number,flag,rubrics_source,rubrics_source_date=transcribe_info_new(info2)
 
         query = "INSERT INTO RUBBISH_DATA SET "
         query += "ID = "+str(id_number)+","
@@ -92,6 +92,7 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
         query = "DELETE FROM DATA WHERE ID="+str(id_number)
         cursor2.execute(query,())
         mydb2.commit()
+        print("deleted from original")#trace
 
     except IndexError:
         #print("there does not exist any data with the id_number "+str(id_number)+" in the database GOOD_DATA_SILSO")#trace
@@ -102,7 +103,7 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
     # make sure you are connected
     cursor3,mydb3 = db_connection.get_cursor(cursor=cursor3,mydb=mydb3,the_database="BAD_DATA_SILSO")
     # if the data is here we simply scrap it, this is much simpler
-    query = "DELET FROM DATA WHERE ID="+str(id_number)
+    query = "DELETE FROM DATA WHERE ID="+str(id_number)
     cursor3.execute(query,())
     mydb3.commit()
 
@@ -195,7 +196,40 @@ def transcribe_info_new(info):
 
 # method takes the greater duplicates dictionary and deletes the first of each pair that has been entered twice
 def delete_entered_twice_duplicates(greater_duplicates_dictionary):
-    pass
+    # establish 3 connections
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    for alias in greater_duplicates_dictionary:
+        for i in greater_duplicates_dictionary[alias]:
+            id_number1 = i[1][0]
+            groups1 = i[1][8]
+            sunspots1 = i[1][9]
+            wolf1 = i[1][10]
+            obs_id1 = i[1][1]
+            fk_rubrics1 = i[1][4]
+
+            groups2 = i[2][8]
+            sunspots2 = i[2][9]
+            wolf2 = i[2][10]
+            obs_id2 = i[2][1]
+            fk_rubrics2 = i[2][4]
+
+            # select only the ones that have very similar stuff
+            if groups1==groups2 and sunspots1==sunspots2 and wolf1==wolf2 and obs_id1==obs_id2 and fk_rubrics1==fk_rubrics2:
+                # remove only the first one
+                move_data_to_bin(id_number=id_number1,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2,cursor3=cursor3,mydb3=mydb3,close_databases=False)
+
+    # close the connections 
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
+
+# delete the entered twice duplicates
+"""
+greater_duplicates_dictionary = searching_the_manuals.greater_duplicates_data(force_recalculate=True)
+delete_entered_twice_duplicates(greater_duplicates_dictionary)
+"""
 
 
 

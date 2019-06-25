@@ -1,10 +1,5 @@
-Duplicates with different observer ids but same observer alias
+Duplicates with same rubric as each other
 
-Observer :   Wagner
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
 Observer :   Zucconi Schubert Staudacher Horrebow
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -45,11 +40,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 
 -----------------------------------------
-Observer :   Heis
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
 Observer :   Weber
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -81,11 +71,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 -----------------------------------------
 Observer :   Denza
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
-Observer :   Winkler
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
 
@@ -2429,6 +2414,11 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 
 -----------------------------------------
+Observer :   Winkler
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
 Observer :   Boston observatory
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
@@ -2454,27 +2444,17 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 
 -----------------------------------------
-Observer :   Brunner
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
-Observer :   Messerschmitt
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
-Observer :   Buser
-ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
-
-
------------------------------------------
 Observer :   Bodocs
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
 
 -----------------------------------------
 Observer :   Kleiner
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
 
@@ -2495,6 +2475,11 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 
 -----------------------------------------
 Observer :   Braak
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Brunner
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
 
