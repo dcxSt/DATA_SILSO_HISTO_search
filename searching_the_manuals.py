@@ -225,8 +225,9 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
                     rubrics_data = cursor.fetchall()[0]
 
                     rubrics_number = rubrics_data[1]
-                    mitt_number = rubrics_data[3]
-                    page_number = rubrics_data[4]
+                    mitt_number = rubrics_data[2]
+                    page_number = rubrics_data[3]
+                    source = rubrics_data[4]
                 except:
                     deficient_rubrics_count+=1
                     #print("fk_rubrics deficient, exception caught")
@@ -234,6 +235,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
                     mitt_number = "na"
                     page_number = "na"
                     fk_rubrics = "na"
+                    source = "na"
 
                 try:
                     query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
@@ -255,7 +257,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
                 wolf = id1_data[6]
                 comment = id1_data[8]
 
-                # make the new tuple
+                # make the new tuple (without source)
                 tuple1=(id1,fk_observers,observer_alias,
                 observer_instrument,fk_rubrics,rubrics_number,mitt_number,
                 page_number,groups,sunspots,wolf,comment)
@@ -279,12 +281,14 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
                     rubrics_number = rubrics_data[1]
                     mitt_number = rubrics_data[2]
                     page_number = rubrics_data[3]
+                    source = rubrics_data[4]
                 except:
                     deficient_rubrics_count+=1
                     #print("fk_rubrics deficient, exception caught")
                     rubrics_number = "na"
                     mitt_number = "na"
                     page_number = "na"
+                    source = "na"
 
                 try:
                     query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
@@ -304,7 +308,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
                 wolf = id2_data[6]
                 comment = id2_data[8]
 
-                # make the new tuple
+                # make the new tuple (without source)
                 tuple2=(id2,fk_observers,observer_alias,
                 observer_instrument,fk_rubrics,rubrics_number,mitt_number,
                 page_number,groups,sunspots,wolf,comment)
@@ -319,6 +323,8 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
 
     return greater_duplicates_dictionary
 
+### this method takes as it's argument the list created by the last one
+### and turns it into human readable format
 def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="greater_duplicates.txt",descriptor=None):
     print("Writing to file",filename)
     f = open(filename,"w")
@@ -394,7 +400,7 @@ def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="g
 
     f.close()
 
-# deleting some of the duplicates
+### deleting some of the duplicates
 def sorting_duplicates(greater_duplicates_dictionary):
     # non mutually exclusive
     entered_twice_duplicates={}
