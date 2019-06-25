@@ -32,6 +32,9 @@ def correct_typos_for_pink():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
 
+### pink is the colour for data with comments that have * = something and 
+### the rest of the comments in the rubric are just marked *, so here we 
+### homogenise them
 def pink():
     """
     In this method I create a big list of things where we have 
@@ -83,10 +86,6 @@ def pink():
     # disconnect
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
-
-def more_synonyms(): # unfinished
-    # this is a dictionary with keys as incorrect and values as correct
-    synonyms={}
 
 
 #def rubric_specific_corrections():
@@ -325,7 +324,8 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO"):
 
 ### this method takes as it's argument the list created by the last one
 ### and turns it into human readable format
-def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="greater_duplicates.txt",descriptor=None):
+def write_greater_duplicates_data_text(greater_duplicates_dictionary,
+filename="greater_duplicates.txt",descriptor=None):
     print("Writing to file",filename)
     f = open(filename,"w")
     if descriptor:
@@ -344,6 +344,7 @@ def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="g
             date=i[0]
             tuple1=i[1]
             tuple2=i[2]
+
             f.write(str(date))
             f.write("\n")
             f.write(str(tuple1[0]))
@@ -400,7 +401,7 @@ def write_greater_duplicates_data_text(greater_duplicates_dictionary,filename="g
 
     f.close()
 
-### deleting some of the duplicates
+### sorting the duplicates so that human can get better idea of what's going on
 def sorting_duplicates(greater_duplicates_dictionary):
     # non mutually exclusive
     entered_twice_duplicates={}
@@ -480,19 +481,11 @@ def sorting_duplicates(greater_duplicates_dictionary):
     descriptor = "Duplicates with same rubric as each other"
     write_greater_duplicates_data_text(different_obs_id_duplicates,filename="same_rubric_duplicates.txt",descriptor=descriptor)
 
-
-
-sorting_duplicates(greater_duplicates_data())
-
+# create and print the lists...
 """
-data_duplicates,data = find_duplicates_data()
-for i in data_duplicates:
-    print("\n",i," : ")
-    for j in data_duplicates[i]:
-        print(j)
-
-input("\n\nPress enter to exit")
-
+greater_duplicates_dictionary = greater_duplicates_data()
+write_greater_duplicates_data_text(greater_duplicates_dictionary=greater_duplicates_dictionary)
+sorting_duplicates(greater_duplicates_dictionary)
 """
             
 

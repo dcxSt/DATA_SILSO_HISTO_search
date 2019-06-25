@@ -34,6 +34,13 @@ when executed, this script finds all the data that is marked with a comment 'der
 ### db_homogenise_comments.py
 there are many comments in this database which either mean exactly the same thing or are typos, this homogenises some of them. (turns 'uncertain','incertain','Uncertain' into 'uncertain')
 
+### searching_the_manuals.py
+    pink() # helper = correct_typos_for_pink()
+> Method which takes a look at some of the comments where the user has entered into the database '* = some cryptic message' and for the rest of the rubric has just written '\*', which is really annoying for me because there are loaads of these, find all the '\*' / '+' / 'r=' / 'm=' and corrects them
+
+    greater_duplicates_data(the_database)
+> Method which makes a big list of duplicates and arranges them into a dictionary where each key is an observers and each value is a list of tuples : (date , data1 , data2). So these are two different observations made by the same alias on the same day and sometimes they differ. This is worrying to say the least )': 
+
 
 ## useful resources
 *Basics of sql* (open in private browsing or annoying messages) includes how to-s on: [https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql)

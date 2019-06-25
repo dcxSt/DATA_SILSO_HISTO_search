@@ -1,6 +1,6 @@
 ### red uncertain
 
-import 
+import db_connection
 
 def question_mark():
     # (rubrics_id,rubrics_number,obs_id,obs_alias,'uncertain')
