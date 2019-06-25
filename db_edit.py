@@ -11,26 +11,30 @@ import mysql.connector
 # takes cursor, id and comment, and adds the comment to the id number
 # if there is already a comment, does not replace comment unless specified
 # return boolean T if updated, F if there was already a comment
-def set_comment(id_number,comment,cursor=None,mydb=None,replace=False):
+def set_comment(id_number,comment,cursor=None,mydb=None,replace=False,table_name="DATA"):
     
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
     
-    query="SELECT COMMENT FROM DATA d WHERE d.ID="+str(id_number)
-    cursor.execute(query,params=())
-    original_comment=cursor.fetchall()[0][0]
-    print("\noriginal_comment:",end="")
-    print(original_comment)
-    print("replacing comment:",comment)
-    print()
+    # try to get the original comment
+    try:
+        query="SELECT COMMENT FROM "+table_name+" d WHERE d.ID="+str(id_number)
+        cursor.execute(query,params=())
+        original_comment=cursor.fetchall()[0][0]
+        print("\noriginal_comment:",end="")
+        print(original_comment)
+        print("replacing comment:",comment)
+        print()
+    except:
+        original_comment=''
     
     
     if original_comment=='' or replace==True:
-        # update DATA and then show the update to user
-        query="UPDATE DATA d SET COMMENT='%s' WHERE d.ID=%s"
+        # update table_name and then show the update to user
+        query="UPDATE "+table_name+" d SET COMMENT='%s' WHERE d.ID=%s"
         cursor.execute(query % (comment,str(id_number)))
         
         # check that you have properly updated it
-        query="SELECT COMMENT FROM DATA d WHERE d.ID="+str(id_number)
+        query="SELECT COMMENT FROM "+table_name+" d WHERE d.ID="+str(id_number)
         cursor.execute(query,())
         new_comment = cursor.fetchall()[0][0]
         if new_comment==comment:

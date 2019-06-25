@@ -55,13 +55,32 @@ The aim of this project is to do a quality control of the data in DATA\_SILSO\_H
 
 \subsection{Everything wrong with the data}
 
-First, it's important to note that note that though I am doing a quality control I do not wish to die of boardom. I will not be verifying each of the 205003 data-points by hand in the Mittheilungen journals
+First, it's important to note that note that though I am doing a quality control I do not wish to die of boardom. I will not be verifying each of the 205003 data-points by hand in the Mittheilungen journals, in any case this if I went about it this way I would probably miss most of the errors.
+
+\subsection{Annotation keys}
+
+\subsubsection{What do the flags mean?}
+\newpage% idk how to make tables behave!
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c}
+        0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        
+        \hline
+        
+        same as Null & Erroneous data & Comment in journal = ? &  &  &  &  
+         
+    \end{tabular}
+    \caption{Flags key}
+    \label{tab:my_label}
+\end{table}
+
 
 \subsection{Search and correct.}
 
 \subsubsection{Outline}
 
-For the first week and a half or so ~10 days, I spent the bulk of the time acquainting myself with the Mittheilungen journals, and with the software that is used to store and access the database. I also developed the tools in python to facilitate my access to them and to perform the tasks that I need to perform for the filtration process. 
+For the first week and a half or so, I spent the bulk of the time acquainting myself with the Mittheilungen journals, and with the software that is used to store and access the database. I also developed the tools in python to facilitate my access to them and to perform the tasks that I need to perform for the filtration process. 
 
 
 
@@ -78,6 +97,25 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item searching the manuals for all comments labeled 'uncertain' so as to figure out what is this word's range of meaning (wishing I had paid attention in German class)
     \end{itemize}
     \item Monday June 24
+    \begin{itemize}
+        \item 9.15 picking up from where I left off, I am currently scouring the manuals for any 'uncertain' data
+        \item 10.40 came across some duplicate data, and mysterious comments... there are some stars '*' that signify a change of instrument but nothing is written. The annoying thing about the duplicate data is that it is coming from 
+        \item spent the morning making that duplicate finding and sorting algorithm, now I need to analyse the nature of the problem further. For each of the duplicates identify what kind it is, weather it's the same observer with the same instrument; if the duplicated data has for example the same rubrics numbers as each other ; if they record the same information (sunspot groups, sunspots, wolf number) ; if check to see if any clues are hidden in the comments of these duplicated data
+        \item in searching\_the\_manuals i wrote : find\_duplicate\_observers() ; find\_obs\_id\_by\_date() ; find\_observer\_alias\_by\_id() ; find\_duplicates\_data() ; write\_greater\_duplicates\_data\_text()
+        \item i'm gonna go and delete some of the data so i will log everything in order to be very careful
+    \end{itemize}
+    \item Tuesday June 25
+    \begin{itemize}
+        \item 9.45 I have decided to start making modifications to the database, this is risky business - I don't want to have the blood of Galileo's data on my hands, in a few seconds I can destroy hours upon hours of one of my predecessors' work. Which would be a shame. This is why I am creating a new table in both the old and the new database that will serve as a rubbish bin, so that I simultaneously copy and delete some data. The data will be copied and destroyed in the same script but the coping will come \textit{before} so if there are bugs nothing will be lost. First I will back up the databases as they are.
+        \item While making the rubbish bids for DATA\_SILSO\_HISTO if found that DATA\_DEV was non-empty, it contains data which claims to be observations made by the grandfather of this series - Rudolf Wolf. Only the observations are dated January 1600 - Galileo's time, 216 years before Wolf's birth! And so I renamed the DATA\_DEV to RUBBISH\_DATA and added the flag column, leaving those four observations inside where they probably belong...
+        \item Wrote a new script to deal uniquely with deleting the duplicates
+        \begin{itemize}
+            \item finished writing move\_data\_to\_bin and delete\_entered\_twice\_duplicates
+            \item executing delete\_entered\_twice\_duplicates()... done
+            \item finished commenting these data points in rubbish data in both databases
+        \end{itemize}
+    \end{itemize}
+    \item Wednesday June 26
     \begin{itemize}
         \item 
     \end{itemize}

@@ -225,3 +225,6 @@ def count_data(the_database):
     sentence=the_database+" has "+str(len(data))+" datapoints"
     print(the_database,"has",len(data),"datapoints")
     return sentence
+
+# method that flags  and commentsall the data in both databases 
+# which has unreasonable sunspot numbers (>200 or more...)
