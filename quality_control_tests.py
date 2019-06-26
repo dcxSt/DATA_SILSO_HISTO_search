@@ -228,3 +228,44 @@ def count_data(the_database):
 
 # method that flags  and commentsall the data in both databases 
 # which has unreasonable sunspot numbers (>200 or more...)
+
+def unreasonable_sn_flag():
+    # for all 3 databases flags unreasonable sunspot numbers
+    for database in ["DATA_SILSO_HISTO","BAD_DATA_SILSO","GOOD_DATA_SILSO"]:
+        data = db_search.select_all_data(the_database=database)
+        cursor,mydb=db_connection.database_connector(the_database=database)
+        for i in data:
+            groups = i[4]
+            sunspots = i[5]
+            if database == "GOOD_DATA_SILSO":
+                groups=i[2]
+                sunspots=i[3]
+            if not groups:
+                groups=0
+            if not sunspots:
+                sunspots=0
+
+            # flag and comment the strange groups
+            if groups>60:
+                id_number=i[0]
+                db_edit.set_alternative_flag(id_number=id_number,flag_number=5,cursor=cursor,mydb=mydb,close_connection=False,the_database=database)
+                db_edit.add_to_comment(id_number=id_number,comment="suspicious_groups",cursor=cursor,mydb=mydb)
+            elif groups>30:
+                id_number=i[0]
+                db_edit.set_alternative_flag(id_number=id_number,flag_number=4,cursor=cursor,mydb=mydb,close_connection=False,the_database=database)
+                db_edit.add_to_comment(id_number=id_number,comment="suspicious_groups",cursor=cursor,mydb=mydb)
+
+            # flag and comment the strange sunspots
+            if sunspots>250:
+                id_number=i[0]
+                db_edit.set_alternative_flag(id_number,5,cursor,mydb,close_connection=False,the_database=database)
+                db_edit.add_to_comment(id_number,comment="suspicious_sunspots",cursor=cursor,mydb=mydb)
+            elif sunspots>100:
+                id_number=i[0]
+                db_edit.set_alternative_flag(id_number,4,cursor,mydb,close_connection=False,the_database=database)
+                db_edit.add_to_comment(id_number,comment="suspicious_sunspots",cursor=cursor,mydb=mydb)
+
+        db_connection.close_database_connection(mydb)
+
+
+

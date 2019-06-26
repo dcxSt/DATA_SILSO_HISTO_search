@@ -225,12 +225,16 @@ def delete_entered_twice_duplicates(greater_duplicates_dictionary):
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
-# delete the entered twice duplicates
+# delete the entered twice duplicates (just running the method)
 """
 greater_duplicates_dictionary = searching_the_manuals.greater_duplicates_data(force_recalculate=True)
 delete_entered_twice_duplicates(greater_duplicates_dictionary)
 """
 
+# method to delete the duplicate that is missing values (sunspots / wolf == na or none or something)
+
+
+# method that deletes the duplicate which has an unreasonable sunspot number (>100, there are some in the 2000's)
 
 
 

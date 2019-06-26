@@ -44,8 +44,6 @@ def set_comment(id_number,comment,cursor=None,mydb=None,replace=False,table_name
             print("added")
         else:
             print("over-written")
-        # the all important last line, without this nothing is written to the database
-        print("commit")
         mydb.commit()
         return True
         
@@ -57,6 +55,45 @@ def set_comment(id_number,comment,cursor=None,mydb=None,replace=False,table_name
         print("it was not replaced")
         return False
 
+# if there is no comment it sets the comment, if there is it adds to it
+def add_to_comment(id_number,comment,cursor=None,mydb=None,table_name="DATA"):
+    cursor,mydb=db_connection.get_cursor(cursor,mydb)
+    
+    # try to get the original comment
+    try:
+        query="SELECT COMMENT FROM "+table_name+" d WHERE d.ID="+str(id_number)
+        cursor.execute(query,params=())
+        original_comment=cursor.fetchall()[0][0]
+        print("\noriginal_comment:",end="")
+        print(original_comment)
+        print("adding to comment:",comment)
+    except:
+        original_comment=''
+
+    if original_comment:
+        new_comment = original_comment+" ; "+comment
+    else:
+        new_comment = comment
+    if original_comment==" ; suspicious_sunspots" or original_comment==" ; suspicious_groups":
+        new_comment = comment
+    
+    # update table_name and then show the update to user
+    query="UPDATE "+table_name+" d SET COMMENT='%s' WHERE d.ID=%s"
+    cursor.execute(query % (new_comment,str(id_number)))
+    
+    # check that you have properly updated it
+    query="SELECT COMMENT FROM "+table_name+" d WHERE d.ID="+str(id_number)
+    cursor.execute(query,())
+    the_comment = cursor.fetchall()[0][0]
+    if new_comment==the_comment:
+        print("successfully updated the comment ")
+    print("the comment for ID="+str(id_number)+" has been",end=" ")
+    if original_comment=='':
+        print("added")
+    else:
+        print("updated")
+    # the all important last line, without this nothing is written to the database
+    mydb.commit()
 
 # takes id_number cursor and database connection and adds a flag to the data
 def set_flag(id_number,cursor=None,mydb=None,close_connection=True):
@@ -65,6 +102,18 @@ def set_flag(id_number,cursor=None,mydb=None,close_connection=True):
     cursor.execute(query,())
     mydb.commit()
     print("ID:",id_number,"\tFLAG: 1")
+    if close_connection:
+        db_connection.close_database_connection(mydb)
+
+# sets a flag with a number from 0 to 9 (inclusive)
+def set_alternative_flag(id_number,flag_number,cursor=None,mydb=None,close_connection=True,the_database="DATA_SILSO_HISTO"):
+    cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
+    if flag_number>9 or flag_number<0:
+        raise Exception
+    query="UPDATE DATA d SET FLAG="+str(flag_number)+" WHERE d.ID="+str(id_number)
+    cursor.execute(query,())
+    mydb.commit()
+    print("\nID:",id_number,"\tFLAG:",flag_number)
     if close_connection:
         db_connection.close_database_connection(mydb)
 
