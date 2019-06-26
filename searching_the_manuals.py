@@ -189,6 +189,8 @@ def find_duplicates_data(the_database="DATA_SILSO_HISTO"):
 
     return data_duplicates
 
+# makes a dictionary of all the duplicates by observer alias
+# the following method is poorly written, slightly better version with it's successor
 def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=False):
     # if there is a pickles one out there, load it, else, create a dictionary and pickle it
     try:
@@ -259,6 +261,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=Fa
                 sunspots = id1_data[5]
                 wolf = id1_data[6]
                 comment = id1_data[8]
+                
 
                 # make the new tuple (without source)
                 tuple1=(id1,fk_observers,observer_alias,
@@ -325,6 +328,133 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=Fa
         pickling_on.close()
 
     return greater_duplicates_dictionary
+
+# duplicates by date dictionary is a better dictionary, returns the dictionary
+# mostly copy pasted from greater_duplicates_data
+def duplicates_by_date(the_database="DATA_SILSO_HISTO"):
+    # takes the duplicates data list and makes a better one
+    print("Creating the duplicates dictionary by date")
+
+    duplicates_dictionary_by_date = {}
+
+    data_duplicates = find_duplicates_data()
+    cursor,mydb = db_connection.database_connector(the_database=the_database)
+    for alias in data_duplicates:
+        for duplicate in data_duplicates[alias]:
+            id1 = duplicate[0]
+            id2 = duplicate[1]
+            date = duplicate[2]
+            if not date:
+                continue
+
+            # fetch the data
+            query="SELECT * FROM DATA WHERE ID ="+str(id1)
+            cursor.execute(query,())
+            id1_data = cursor.fetchall()[0]
+
+            fk_rubrics = id1_data[2]
+            fk_observers = id1_data[3]
+
+            try:
+                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                cursor.execute(query,())
+                rubrics_data = cursor.fetchall()[0]
+
+                rubrics_number = rubrics_data[1]
+                mitt_number = rubrics_data[2]
+                page_number = rubrics_data[3]
+                source = rubrics_data[4]
+            except:
+                fk_rubrics = "na"
+                rubrics_number = "na"
+                mitt_number = "na"
+                page_number = "na"
+                source = "na"
+
+            try:
+                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                cursor.execute(query,())
+                observer_data = cursor.fetchall()[0]
+
+                observer_alias = observer_data[1]
+                observer_instrument = observer_data[5]
+            except:
+                fk_observers = "na"
+                observer_alias = "na"
+                observer_instrument = "na"
+            
+
+                
+
+            groups = id1_data[4]
+            sunspots = id1_data[5]
+            wolf = id1_data[6]
+            comment = id1_data[8]
+            date_insert = id1_data[9]
+            flag = id1_data[10]
+            
+
+            # make the new tuple (without source)
+            tuple1=(id1,fk_observers,observer_alias,
+            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+            page_number,source,groups,sunspots,wolf,comment,date_insert,flag)
+
+
+            ### --------------------------- ###
+
+            query="SELECT * FROM DATA WHERE ID ="+str(id2)
+            cursor.execute(query,())
+            id2_data = cursor.fetchall()[0]
+
+            fk_rubrics = id2_data[2]
+            fk_observers = id2_data[3]
+
+            # fetch the data
+            try:
+                query="SELECT * FROM RUBRICS WHERE RUBRICS_ID="+str(fk_rubrics)
+                cursor.execute(query,())
+                rubrics_data = cursor.fetchall()[0]
+
+                rubrics_number = rubrics_data[1]
+                mitt_number = rubrics_data[2]
+                page_number = rubrics_data[3]
+                source = rubrics_data[4]
+            except:
+                fk_rubrics = "na"
+                rubrics_number = "na"
+                mitt_number = "na"
+                page_number = "na"
+                source = "na"
+
+            try:
+                query="SELECT * FROM OBSERVERS WHERE ID="+str(fk_observers)
+                cursor.execute(query,())
+                observer_data = cursor.fetchall()[0]
+
+                observer_alias = observer_data[1]
+                observer_instrument = observer_data[5]
+            except:
+                fk_observers = "na"
+                observer_alias = "na"
+                observer_instrument = "na"
+            
+
+            groups = id2_data[4]
+            sunspots = id2_data[5]
+            wolf = id2_data[6]
+            comment = id2_data[8]
+            date_insert = id1_data[9]
+            flag = id1_data[10]
+
+            # make the new tuple (without source)
+            tuple2=(id2,fk_observers,observer_alias,
+            observer_instrument,fk_rubrics,rubrics_number,mitt_number,
+            page_number,source,groups,sunspots,wolf,comment,date_insert,flag)
+
+            # here you can see how i structured my dictionary
+            duplicates_dictionary_by_date[str(date)]=(tuple1,tuple2)
+
+    return duplicates_dictionary_by_date
 
 ### this method takes as it's argument the list created by the last one
 ### and turns it into human readable format
@@ -486,11 +616,11 @@ def sorting_duplicates(greater_duplicates_dictionary):
     write_greater_duplicates_data_text(different_obs_id_duplicates,filename="same_rubric_duplicates.txt",descriptor=descriptor)
 
 # create and print the lists...
-
+"""
 greater_duplicates_dictionary = greater_duplicates_data(the_database='DATA_SILSO_HISTO',force_recalculate=True)
 write_greater_duplicates_data_text(greater_duplicates_dictionary=greater_duplicates_dictionary)
 sorting_duplicates(greater_duplicates_dictionary)
-
+"""
             
 
 

@@ -7,7 +7,7 @@ import searching_the_manuals
 
 
 ### this method is the backbone of this script, who's sole purpouse is to scrap the
-### redundant duplicates. It takes and id_number. In DATA_SILSO_HISTO it moves it into 
+### redundant duplicates. It takes an id_number only! In DATA_SILSO_HISTO it moves it into 
 ### the rubbish bin that i made. With the same id it sees if this id can be found in
 ### GOOD_DATA_SILSO, if so it moves it into the bin. Then checks if the data is in 
 ### BAD_DATA_SILSO if so it moves it removes it entirely from the database.
@@ -231,12 +231,100 @@ greater_duplicates_dictionary = searching_the_manuals.greater_duplicates_data(fo
 delete_entered_twice_duplicates(greater_duplicates_dictionary)
 """
 
-# method to delete the duplicate that is missing values (sunspots / wolf == na or none or something)
+# method to flag the duplicate that is missing values (sunspots / wolf == na or none or something)
+def flag_many_duplicates():
+    # get the proper duplicates dictionary
+    duplicates_dictionary_by_date = searching_the_manuals.duplicates_by_date(the_database="DATA_SILSO_HISTO")
 
+    # keep track of the counts
+    single_deficient_count=0
+    both_deficient_count=0
+    both_clean_count=0
+
+    # establish 3 connections
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+
+    for date in duplicates_dictionary_by_date:
+        tuple1 = duplicates_dictionary_by_date[date][0]
+        tuple2 = duplicates_dictionary_by_date[date][1]
+        
+        id1=tuple1[0]
+        id2=tuple2[0]
+
+        # determine if one or both are deficient, so identical tests on both
+        deficient1=False
+        fk_observer,fk_rubrics = tuple1[1],tuple1[4]
+        groups,sunspots,wolf = tuple1[9],tuple1[10],tuple1[11]
+        flag = tuple1[14]
+        if fk_observer=="na" or fk_rubrics=="na":
+            deficient1=True
+        elif flag==5:
+            deficient2=True
+
+        # determine if one or both are deficient, so identical tests on both
+        deficient2=False
+        fk_observer,fk_rubrics = tuple2[1],tuple2[4]
+        groups,sunspots,wolf = tuple2[9],tuple2[10],tuple2[11]
+        flag = tuple2[14]
+        if fk_observer=="na" or fk_rubrics=="na":
+            deficient2=True
+        elif flag==5:
+            deficient2=True
+
+        # flag the bad datapoints, so-long as the other one is good
+        if deficient1 and not deficient2:
+            single_deficient_count+=1
+            db_edit.set_alternative_flags_multiple(id_number=id1,flag_number=3)
+            
+        elif deficient2 and not deficient1:
+            single_deficient_count+=1
+            db_edit.set_alternative_flags_multiple(id_number=id2,flag_number=3)
+
+        elif deficient1 and deficient2:
+            both_deficient_count+=1
+
+        else:
+            both_clean_count+=1
+
+                
+
+        # flag the bad one with FLAG=3
+
+    
+    # close the connections 
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
+
+    print("\n\n\nSingle deficient count =",single_deficient_count)
+    print("both_deficient_count =",both_deficient_count)
+    print("both clean count =",both_clean_count)
+
+    input("\n\npress enter to exit")
+
+#flag_many_duplicates()
 
 # method that deletes the duplicate which has an unreasonable sunspot number (>100, there are some in the 2000's)
 
 
+# from all databases unflag anything that looks fine
 
+
+def unflag():
+    for i in "DATA_SILSO_HISTO","BAD_DATA_SILSO","GOOD_DATA_SILSO":
+        cursor,mydb = db_connection.database_connector(the_database=i)
+        query="SELECT * FROM DATA WHERE FLAG=3 AND FK_RUBRICS!='NULL' AND FK_OBSERVERS!='NULL' AND GROUPS<60 AND SUNSPOTS<250"
+        cursor.execute(query,())
+        data=cursor.fetchall()
+        ids=[]
+        for j in data:
+            ids.append(j[0])
+        for j in ids:
+            query="UPDATE DATA SET FLAG=1 WHERE ID="+str(j)
+            cursor.execute()
+            mydb.commit()
+        db_connection.close_database_connection(mydb)
 
 

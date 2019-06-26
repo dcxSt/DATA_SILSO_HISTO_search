@@ -178,7 +178,7 @@ def count_flags(the_database="DATA_SILSO_HISTO"):
     data = db_search.select_all_data(cursor,mydb)
     no_flags=0
     for i in data:
-        if i[10]==1:
+        if i[10]:
             no_flags+=1
     return no_flags
 
@@ -210,16 +210,8 @@ def move_unflagged():
     mixer.music.play()
     input("\n\n\n\n\nFinally finnished!")
 
-"""
-try:
-    move_unflagged()
-except:
-    mixer.init()
-    mixer.music.load('plane.mp3')
-    mixer.music.play()
-    input("\n\nError!")
-"""
 
+# tells you how big the database is, used to verify i transfered everything correctly when moving the data to new format
 def count_data(the_database):
     data=db_search.select_all_data(the_database=the_database)
     sentence=the_database+" has "+str(len(data))+" datapoints"
@@ -231,7 +223,7 @@ def count_data(the_database):
 
 def unreasonable_sn_flag():
     # for all 3 databases flags unreasonable sunspot numbers
-    for database in ["DATA_SILSO_HISTO","BAD_DATA_SILSO","GOOD_DATA_SILSO"]:
+    for database in "DATA_SILSO_HISTO","BAD_DATA_SILSO","GOOD_DATA_SILSO":
         data = db_search.select_all_data(the_database=database)
         cursor,mydb=db_connection.database_connector(the_database=database)
         for i in data:
@@ -249,7 +241,7 @@ def unreasonable_sn_flag():
             if groups>60:
                 id_number=i[0]
                 db_edit.set_alternative_flag(id_number=id_number,flag_number=5,cursor=cursor,mydb=mydb,close_connection=False,the_database=database)
-                db_edit.add_to_comment(id_number=id_number,comment="suspicious_groups",cursor=cursor,mydb=mydb)
+                db_edit.set_comment(id_number=id_number,comment="suspicious_groups",cursor=cursor,mydb=mydb,replace=True)
             elif groups>30:
                 id_number=i[0]
                 db_edit.set_alternative_flag(id_number=id_number,flag_number=4,cursor=cursor,mydb=mydb,close_connection=False,the_database=database)
@@ -259,13 +251,11 @@ def unreasonable_sn_flag():
             if sunspots>250:
                 id_number=i[0]
                 db_edit.set_alternative_flag(id_number,5,cursor,mydb,close_connection=False,the_database=database)
-                db_edit.add_to_comment(id_number,comment="suspicious_sunspots",cursor=cursor,mydb=mydb)
+                db_edit.set_comment(id_number,comment="suspicious_sunspots",cursor=cursor,mydb=mydb,replace=True)
             elif sunspots>100:
                 id_number=i[0]
                 db_edit.set_alternative_flag(id_number,4,cursor,mydb,close_connection=False,the_database=database)
                 db_edit.add_to_comment(id_number,comment="suspicious_sunspots",cursor=cursor,mydb=mydb)
 
         db_connection.close_database_connection(mydb)
-
-
 

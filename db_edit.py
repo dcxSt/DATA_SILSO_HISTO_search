@@ -70,10 +70,17 @@ def add_to_comment(id_number,comment,cursor=None,mydb=None,table_name="DATA"):
     except:
         original_comment=''
 
-    if original_comment:
+    if original_comment == comment:
+        new_comment = comment
+    elif original_comment:
         new_comment = original_comment+" ; "+comment
     else:
         new_comment = comment
+    try:
+        if original_comment[-22:] == " ; suspicious_sunspots" or original_comment[-22:]==" ; suspicious_groups":
+            new_comment = original_comment
+    except:
+        pass
     if original_comment==" ; suspicious_sunspots" or original_comment==" ; suspicious_groups":
         new_comment = comment
     
@@ -115,6 +122,28 @@ def set_alternative_flag(id_number,flag_number,cursor=None,mydb=None,close_conne
     mydb.commit()
     print("\nID:",id_number,"\tFLAG:",flag_number)
     if close_connection:
+        db_connection.close_database_connection(mydb)
+
+# same as set_alternative_flag but looks at each database and adds flag if there is a matching id_number
+def set_alternative_flags_multiple(id_number,flag_number):
+    for i in "DATA_SILSO_HISTO","GOOD_DATA_SILSO","BAD_DATA_SILSO":
+        cursor,mydb=db_connection.database_connector(the_database=i)
+        # if data with this id exists replace it
+        try:
+            query="SELECT * FROM DATA WHERE ID="+str(id_number)
+            cursor.execute(query,())
+            current_id = cursor.fetchall()[0][0]
+            # if there is nothing the above raises an exception, which is caught
+            
+            query = "UPDATE DATA SET FLAG="+str(flag_number)+" WHERE ID="+str(id_number)
+            cursor.execute(query,())
+            mydb.commit()
+            print("flag set in",i)
+                
+        except:
+            print("flag not set in",i)
+            pass
+
         db_connection.close_database_connection(mydb)
 
 # takes id_number cursor and database connection and sets flag to 0
