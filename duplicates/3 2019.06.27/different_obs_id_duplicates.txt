@@ -1283,10 +1283,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 190294 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 7 , 88 , 158 | 
 195489 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 1 , 7 , 17 | 
 
-1908-06-02
-190295 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 7 , 97 , 167 | 
-195490 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 3 , 17 , 47 | 
-
 1908-06-03
 190296 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 6 , 106 , 166 | suspicious_sunspots
 195491 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 3 , 26 , 56 | 

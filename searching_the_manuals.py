@@ -800,11 +800,11 @@ def sorting_duplicates(greater_duplicates_dictionary):
     write_greater_duplicates_data_text(different_obs_id_duplicates,filename="same_rubric_duplicates.txt",descriptor=descriptor)
 
 # create and print the lists...
-"""
+
 greater_duplicates_dictionary = greater_duplicates_data(the_database='DATA_SILSO_HISTO',force_recalculate=True)
 write_greater_duplicates_data_text(greater_duplicates_dictionary=greater_duplicates_dictionary)
 sorting_duplicates(greater_duplicates_dictionary)
-"""
+
 
 # method moves everything flagged 3 into the bid
 def move_flag3_to_bin():

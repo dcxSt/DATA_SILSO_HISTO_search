@@ -1,0 +1,13 @@
+Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
+
+All observations in rubric number = 808 with fk_rubrics = 461 were made by Konkoly not Wolfer
+
+All observations in rubric number = 820 were made by Wolfer in the year 1900 and not 1899, many observations are written correctly except for the year of the date, I found that the months and days correspond perfectly with what is written in the journals but not the year!
+
+The Broger duplicates for 1899-03-17 and 1899-04-18 make very little sense, they are broger under two different aliases but in the same rubrics 801. There are only two of them so they can be done by hand. My guess is that they were punched in twice by different people and my identical duplicates algorythem has already dealt with the ones that were exactly the same, so these are the 2 instances where one of the people got it wrong.
+
+The mysterious rubrics number 12902 is infact the rubrics number 02 in the mittheilungen number 129 which has data for Broger's observations of sunspots in the year 1931, it appears that they were incorrectly typed into the year 1908, other than that they appear to be accurate.
+
+
+
+

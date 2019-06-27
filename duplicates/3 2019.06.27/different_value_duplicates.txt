@@ -3,10 +3,6 @@ Duplicates which have different sunspot values
 Observer :   Carrington
 ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
 
-1859-05-22
-20625 | 36 , Carrington , (NULL) | 43 , 199 , 17 , 225 | 3 , 5 , 35 | 
-31316 | 36 , Carrington , (NULL) | 175 , 303 , 35 , 241 | 3 , 91 , 121 | 
-
 1860-07-30
 20769 | 36 , Carrington , (NULL) | 43 , 199 , 17 , 225 | 9 , 103 , 193 | suspicious_sunspots
 31460 | 36 , Carrington , (NULL) | 175 , 303 , 35 , 241 | 10 , 2420 , 2520 | suspicious_sunspots
@@ -1439,10 +1435,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 190294 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 7 , 88 , 158 | 
 195489 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 1 , 7 , 17 | 
 
-1908-06-02
-190295 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 7 , 97 , 167 | 
-195490 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 3 , 17 , 47 | 
-
 1908-06-03
 190296 | 104 , Broger , (NULL) | 935 , 1015 , 100 , 343 | 6 , 106 , 166 | suspicious_sunspots
 195491 | 117 , Broger , (NULL) | 961 , 12902 , 129 , 166 | 3 , 26 , 56 | 
@@ -1921,10 +1913,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 126683 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 7 , 74 , 144 | 
 126983 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 6 , 38 , 98 | 
 
-1909-01-29
-126684 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 7 , 92 , 162 | 
-126984 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 7 , 51 , 121 | 
-
 1909-02-02
 126687 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 6 , 35 , 95 | 
 126987 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 5 , 42 , 92 | 
@@ -1996,10 +1984,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1909-03-28
 126729 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 9 , 85 , 175 | 
 127012 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 7 , 53 , 123 | 
-
-1909-03-29
-126730 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 9 , 92 , 182 | 
-127013 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 9 , 58 , 148 | 
 
 1909-04-16
 126733 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 1 , 1 , 11 | 
@@ -2481,10 +2465,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 126908 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 5 , 61 , 111 | 
 127173 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 4 , 60 , 100 | 
 
-1909-10-13
-126909 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 6 , 86 , 146 | 
-127174 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 6 , 91 , 151 | 
-
 1909-10-16
 126912 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 6 , 62 , 122 | 
 127176 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 6 , 47 , 107 | 
@@ -2516,10 +2496,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1909-11-28
 126936 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 5 , 71 , 121 | 
 127195 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 5 , 59 , 109 | 
-
-1909-11-29
-126937 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 6 , 97 , 157 | 
-127196 | 148 , Sormano , (NULL) | 609 , 1058 , 101 , 24 | 6 , 81 , 141 | 
 
 1909-12-04
 126942 | 148 , Sormano , (NULL) | 608 , 1057 , 101 , 23 | 7 , 61 , 131 | 
@@ -2983,10 +2959,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 173926 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 4 , 69 , 109 | 
 174364 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 4 , 76 , 116 | 
 
-1929-05-02
-173927 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 96 , 156 | 
-174365 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 88 , 138 | 
-
 1929-05-03
 173928 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 7 , 87 , 157 | 
 174366 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 8 , 89 , 169 | 
@@ -3103,14 +3075,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 173969 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 56 , 116 | 
 174395 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 6 , 65 , 125 | 
 
-1929-06-20
-173970 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 82 , 142 | 
-174396 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 6 , 99 , 159 | 
-
-1929-06-21
-173971 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 8 , 88 , 168 | 
-174397 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 8 , 99 , 179 | 
-
 1929-06-25
 173975 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 74 , 134 | 
 174400 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 6 , 73 , 133 | 
@@ -3134,10 +3098,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1929-07-01
 173981 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 7 , 48 , 118 | 
 174405 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 8 , 37 , 117 | 
-
-1929-07-02
-173982 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 8 , 57 , 137 | 
-174406 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 8 , 92 , 172 | 
 
 1929-07-03
 173983 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 7 , 73 , 143 | 
@@ -3371,18 +3331,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 174061 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 5 , 76 , 126 | 
 174480 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 70 , 120 | 
 
-1929-10-10
-174062 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 5 , 90 , 140 | 
-174481 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 92 , 142 | 
-
-1929-10-11
-174063 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 4 , 89 , 129 | 
-174482 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 4 , 93 , 133 | 
-
-1929-10-12
-174064 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 4 , 92 , 132 | 
-174483 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 4 , 88 , 128 | 
-
 1929-10-15
 174066 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 3 , 63 , 93 | 
 174486 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 3 , 60 , 90 | 
@@ -3423,10 +3371,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 174079 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 5 , 77 , 127 | 
 174497 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 90 , 140 | 
 
-1929-10-31
-174080 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 4 , 75 , 115 | 
-174498 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 4 , 92 , 132 | 
-
 1929-11-06
 174082 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 107 , 167 | suspicious_sunspots
 174499 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 6 , 115 , 175 | suspicious_sunspots
@@ -3458,10 +3402,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1929-11-25
 174099 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 5 , 85 , 135 | 
 174508 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 77 , 127 | 
-
-1929-11-26
-174100 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 6 , 90 , 150 | 
-174509 | 177 , Brunner , 8 cm open 64 increase | 842 , 1675 , 122 , 37 | 5 , 100 , 150 | 
 
 1929-11-29
 174103 | 177 , Brunner , 8 cm open 64 increase | 840 , 1673 , 122 , 35 | 8 , 163 , 243 | suspicious_sunspots
@@ -5815,10 +5755,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 200000 | 177 , Brunner , 8 cm open 64 increase | 980 , 13501 , 135 , 201 | 5 , 82 , 132 | 
 200251 | 177 , Brunner , 8 cm open 64 increase | 981 , 13502 , 135 , 202 | 5 , 84 , 134 | 
 
-1936-01-20
-200001 | 177 , Brunner , 8 cm open 64 increase | 980 , 13501 , 135 , 201 | 6 , 85 , 145 | 
-200252 | 177 , Brunner , 8 cm open 64 increase | 981 , 13502 , 135 , 202 | 6 , 94 , 154 | 
-
 1936-01-21
 200002 | 177 , Brunner , 8 cm open 64 increase | 980 , 13501 , 135 , 201 | 8 , 85 , 165 | 
 200253 | 177 , Brunner , 8 cm open 64 increase | 981 , 13502 , 135 , 202 | 7 , 81 , 151 | 
@@ -6515,10 +6451,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201014 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 7 , 135 , 205 | suspicious_sunspots
 201239 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 9 , 86 , 176 | 
 
-1937-04-30
-201015 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 7 , 86 , 156 | 
-201240 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 13 , 99 , 229 | 
-
 1937-05-01
 201016 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 7 , 78 , 148 | 
 201241 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 7 , 84 , 154 | 
@@ -6554,10 +6486,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1937-05-14
 201028 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 14 , 65 , 205 | 
 201249 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 15 , 65 , 215 | 
-
-1937-05-15
-201029 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 15 , 83 , 233 | 
-201250 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 15 , 91 , 241 | 
 
 1937-05-16
 201030 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 17 , 135 , 305 | suspicious_sunspots
@@ -6610,10 +6538,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1937-06-01
 201045 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 5 , 81 , 131 | 
 201264 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 5 , 90 , 140 | 
-
-1937-06-02
-201046 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 6 , 89 , 149 | 
-201265 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 7 , 93 , 163 | 
 
 1937-06-04
 201048 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 9 , 103 , 193 | suspicious_sunspots
@@ -6795,10 +6719,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201114 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 9 , 78 , 168 | 
 201331 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 9 , 89 , 179 | 
 
-1937-09-08
-201115 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 9 , 84 , 174 | 
-201332 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 9 , 94 , 184 | 
-
 1937-09-09
 201116 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 8 , 118 , 198 | suspicious_sunspots
 201333 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 7 , 112 , 182 | suspicious_sunspots
@@ -6834,10 +6754,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1937-09-24
 201126 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 12 , 80 , 200 | 
 201341 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 12 , 69 , 189 | 
-
-1937-09-25
-201127 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 12 , 92 , 212 | 
-201342 | 177 , Brunner , 8 cm open 64 increase | 985 , 13602 , 136 , 290 | 12 , 70 , 190 | 
 
 1937-09-27
 201128 | 177 , Brunner , 8 cm open 64 increase | 984 , 13601 , 136 , 289 | 8 , 53 , 133 | 
@@ -7015,17 +6931,9 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201793 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 8 , 53 , 133 | 
 202061 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 8 , 55 , 135 | 
 
-1938-01-10
-201795 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 6 , 93 , 153 | 
-202062 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 6 , 85 , 145 | 
-
 1938-01-11
 201796 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 93 , 163 | 
 202063 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 99 , 169 | 
-
-1938-01-13
-201797 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 8 , 97 , 177 | 
-202064 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 90 , 160 | 
 
 1938-01-14
 201798 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 115 , 185 | suspicious_sunspots
@@ -7087,10 +6995,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201824 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 11 , 180 , 290 | suspicious_sunspots
 202079 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 11 , 154 , 264 | suspicious_sunspots
 
-1938-02-21
-201825 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 9 , 91 , 181 | 
-202082 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 9 , 82 , 172 | 
-
 1938-02-22
 201826 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 9 , 61 , 151 | 
 202083 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 10 , 87 , 187 | 
@@ -7102,10 +7006,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1938-02-24
 201828 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 8 , 76 , 156 | 
 202085 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 77 , 147 | 
-
-1938-02-25
-201829 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 69 , 139 | 
-202086 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 8 , 91 , 171 | 
 
 1938-02-28
 201831 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 72 , 142 | 
@@ -7287,10 +7187,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201896 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 75 , 145 | 
 202148 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 76 , 146 | 
 
-1938-05-19
-201897 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 89 , 159 | 
-202149 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 91 , 161 | 
-
 1938-05-26
 201901 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 13 , 123 , 253 | suspicious_sunspots
 202150 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 13 , 145 , 275 | suspicious_sunspots
@@ -7315,10 +7211,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 201910 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 6 , 66 , 126 | 
 202165 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 6 , 73 , 133 | 
 
-1938-06-21
-201911 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 8 , 91 , 171 | 
-202166 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 8 , 86 , 166 | 
-
 1938-06-23
 201913 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 93 , 163 | 
 202168 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 97 , 167 | 
@@ -7334,10 +7226,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1938-06-27
 201916 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 10 , 80 , 180 | 
 202172 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 10 , 84 , 184 | 
-
-1938-06-28
-201917 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 10 , 77 , 177 | 
-202173 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 10 , 94 , 194 | 
 
 1938-06-30
 201919 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 129 , 199 | suspicious_sunspots
@@ -7446,10 +7334,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1938-08-30
 201974 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 11 , 109 , 219 | suspicious_sunspots
 202209 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 10 , 71 , 171 | 
-
-1938-09-03
-201976 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 5 , 41 , 91 | 
-202212 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 8 , 92 , 172 | 
 
 1938-09-08
 201980 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 100 , 170 | 
@@ -7615,10 +7499,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202055 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 12 , 131 , 251 | suspicious_sunspots
 202269 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 12 , 140 , 260 | suspicious_sunspots
 
-1938-12-22
-202056 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 5 , 96 , 146 | 
-202270 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 4 , 90 , 130 | 
-
 1938-12-24
 202057 | 177 , Brunner , 8 cm open 64 increase | 988 , 13701 , 137 , 385 | 7 , 76 , 146 | 
 202271 | 177 , Brunner , 8 cm open 64 increase | 989 , 13702 , 137 , 386 | 7 , 75 , 145 | 
@@ -7662,10 +7542,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1939-01-23
 202409 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 7 , 59 , 129 | 
 202646 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 7 , 76 , 146 | 
-
-1939-01-25
-202410 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 90 , 170 | 
-202647 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 98 , 178 | 
 
 1939-01-28
 202412 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 72 , 172 | 
@@ -7775,21 +7651,9 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202461 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 12 , 66 , 186 | 
 206762 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 12 , 74 , 194 | 
 
-1939-04-17
-202465 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 81 , 181 | 
-206763 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 10 , 96 , 196 | 
-
-1939-04-18
-202466 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 80 , 170 | 
-206764 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 91 , 181 | 
-
 1939-04-19
 202467 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 66 , 156 | 
 206765 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 52 , 132 | 
-
-1939-04-20
-202468 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 12 , 88 , 208 | 
-202691 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 12 , 92 , 212 | 
 
 1939-04-22
 202470 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 111 , 191 | suspicious_sunspots
@@ -7839,14 +7703,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202487 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 41 , 131 | 
 202706 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 69 , 159 | 
 
-1939-05-24
-202493 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 76 , 176 | 
-202707 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 99 , 189 | 
-
-1939-05-26
-202495 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 72 , 162 | 
-202708 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 100 , 190 | 
-
 1939-06-02
 202498 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 62 , 142 | 
 202711 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 11 , 85 , 195 | 
@@ -7855,25 +7711,9 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202501 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 6 , 64 , 124 | 
 202713 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 85 , 175 | 
 
-1939-06-16
-202506 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 82 , 162 | 
-202721 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 99 , 189 | 
-
-1939-06-17
-202507 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 81 , 181 | 
-206769 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 10 , 96 , 196 | 
-
-1939-06-18
-202508 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 71 , 151 | 
-206770 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 91 , 181 | 
-
 1939-06-19
 202509 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 68 , 148 | 
 202722 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 52 , 132 | 
-
-1939-06-20
-202510 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 12 , 88 , 208 | 
-206771 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 12 , 92 , 212 | 
 
 1939-06-22
 202512 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 111 , 191 | suspicious_sunspots
@@ -7979,10 +7819,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202550 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 114 , 214 | suspicious_sunspots
 202766 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 11 , 104 , 214 | suspicious_sunspots
 
-1939-08-21
-202554 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 7 , 87 , 157 | 
-202769 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 7 , 96 , 166 | 
-
 1939-08-26
 202559 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 6 , 55 , 115 | 
 202771 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 57 , 117 | 
@@ -8039,25 +7875,9 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202573 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 150 , 230 | suspicious_sunspots
 202786 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 110 , 190 | suspicious_sunspots
 
-1939-09-18
-202576 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 95 , 185 | 
-202787 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 58 , 118 | 
-
-1939-09-19
-202577 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 94 , 184 | 
-202788 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 72 , 152 | 
-
 1939-09-22
 202580 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 5 , 94 , 144 | 
 202790 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 98 , 158 | 
-
-1939-09-23
-202581 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 5 , 70 , 120 | 
-202791 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 5 , 92 , 142 | 
-
-1939-09-26
-202584 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 6 , 55 , 115 | 
-202794 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 100 , 160 | 
 
 1939-10-02
 202591 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 13 , 108 , 238 | suspicious_sunspots
@@ -8083,10 +7903,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202600 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 7 , 84 , 154 | 
 202803 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 82 , 142 | 
 
-1939-10-20
-202601 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 7 , 88 , 158 | 
-202804 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 7 , 91 , 161 | 
-
 1939-10-24
 202603 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 107 , 187 | suspicious_sunspots
 202805 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 106 , 186 | suspicious_sunspots
@@ -8102,10 +7918,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1939-11-10
 202611 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 6 , 51 , 111 | 
 202809 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 5 , 30 , 80 | 
-
-1939-11-15
-202614 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 6 , 62 , 122 | 
-202810 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 5 , 98 , 148 | 
 
 1939-11-24
 202620 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 107 , 187 | suspicious_sunspots
@@ -8131,10 +7943,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202653 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 62 , 152 | 
 206741 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 51 , 141 | 
 
-1939-02-18
-202662 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 6 , 91 , 151 | 
-206743 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 5 , 52 , 102 | 
-
 1939-02-24
 202666 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 9 , 85 , 175 | 
 206744 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 9 , 65 , 155 | 
@@ -8158,14 +7966,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1939-06-08
 202716 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 10 , 115 , 215 | suspicious_sunspots
 206754 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 89 , 189 | 
-
-1939-06-09
-202717 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 10 , 77 , 177 | 
-206755 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 10 , 93 , 193 | 
-
-1939-06-10
-202718 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 8 , 88 , 168 | 
-206756 | 177 , Brunner , 8 cm open 64 increase | 991 , 13901 , 139 , 497 | 8 , 93 , 173 | 
 
 1939-06-11
 202719 | 177 , Brunner , 8 cm open 64 increase | 992 , 13902 , 139 , 498 | 10 , 93 , 193 | 
@@ -8407,17 +8207,9 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202912 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 4 , 63 , 103 | 
 203148 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 4 , 64 , 104 | 
 
-1940-05-15
-202914 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 92 , 152 | 
-203149 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 5 , 79 , 129 | 
-
 1940-05-20
 202918 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 5 , 52 , 102 | 
 203151 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 5 , 60 , 110 | 
-
-1940-05-21
-202919 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 4 , 79 , 119 | 
-203152 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 4 , 91 , 131 | 
 
 1940-05-22
 202920 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 7 , 73 , 143 | 
@@ -8455,26 +8247,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202931 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 1 , 25 , 35 | 
 203163 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 77 , 147 | 
 
-1940-06-07
-202932 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 1 , 27 , 37 | 
-203164 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 8 , 93 , 173 | 
-
-1940-06-08
-202933 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 3 , 24 , 54 | 
-203165 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 97 , 167 | 
-
-1940-06-13
-202937 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 4 , 63 , 103 | 
-203170 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 97 , 167 | 
-
-1940-06-14
-202938 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 95 , 155 | 
-203171 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 5 , 70 , 120 | 
-
-1940-06-15
-202939 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 92 , 152 | 
-203172 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 79 , 149 | 
-
 1940-06-18
 202941 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 5 , 55 , 105 | 
 203173 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 4 , 35 , 75 | 
@@ -8498,10 +8270,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1940-06-23
 202946 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 61 , 141 | 
 203178 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 5 , 89 , 139 | 
-
-1940-06-24
-202947 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 51 , 111 | 
-203179 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 10 , 91 , 191 | 
 
 1940-07-01
 202952 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 71 , 151 | 
@@ -8535,10 +8303,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202959 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 53 , 113 | 
 203191 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 6 , 58 , 118 | 
 
-1940-07-09
-202960 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 81 , 161 | 
-203192 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 8 , 91 , 171 | 
-
 1940-07-10
 202961 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 123 , 203 | suspicious_sunspots
 203193 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 8 , 133 , 213 | suspicious_sunspots
@@ -8550,10 +8314,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1940-07-12
 202963 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 9 , 120 , 210 | suspicious_sunspots
 203195 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 9 , 126 , 216 | suspicious_sunspots
-
-1940-07-13
-202964 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 88 , 168 | 
-203196 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 8 , 96 , 176 | 
 
 1940-07-15
 202966 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 43 , 103 | 
@@ -8603,14 +8363,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 202986 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 8 , 101 , 181 | suspicious_sunspots
 203222 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 104 , 174 | suspicious_sunspots
 
-1940-08-19
-202988 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 7 , 92 , 162 | 
-203223 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 86 , 156 | 
-
-1940-08-23
-202991 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 11 , 84 , 194 | 
-203226 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 11 , 98 , 208 | 
-
 1940-08-24
 202992 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 9 , 67 , 157 | 
 203227 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 9 , 73 , 163 | 
@@ -8630,10 +8382,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1940-08-29
 202997 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 7 , 79 , 149 | 
 203231 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 7 , 78 , 148 | 
-
-1940-08-30
-202998 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 88 , 148 | 
-203232 | 177 , Brunner , 8 cm open 64 increase | 994 , 14002 , 140 , 521 | 6 , 93 , 153 | 
 
 1940-08-31
 202999 | 177 , Brunner , 8 cm open 64 increase | 993 , 14001 , 140 , 520 | 6 , 105 , 165 | suspicious_sunspots
@@ -9282,22 +9030,6 @@ ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num ,
 1942-04-18
 204073 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 7 , 70 , 140 | 
 204324 | 177 , Brunner , 8 cm open 64 increase | 999 , 14202 , 142 , 49 | 7 , 77 , 147 | 
-
-1942-04-20
-204075 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 9 , 85 , 175 | 
-204325 | 177 , Brunner , 8 cm open 64 increase | 999 , 14202 , 142 , 49 | 8 , 100 , 180 | 
-
-1942-04-22
-204077 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 8 , 76 , 156 | 
-204327 | 177 , Brunner , 8 cm open 64 increase | 999 , 14202 , 142 , 49 | 8 , 97 , 177 | 
-
-1942-04-23
-204078 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 5 , 87 , 137 | 
-204328 | 177 , Brunner , 8 cm open 64 increase | 999 , 14202 , 142 , 49 | 5 , 96 , 146 | 
-
-1942-04-24
-204079 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 5 , 91 , 141 | 
-204329 | 177 , Brunner , 8 cm open 64 increase | 999 , 14202 , 142 , 49 | 5 , 84 , 134 | 
 
 1942-04-27
 204082 | 177 , Brunner , 8 cm open 64 increase | 998 , 14201 , 142 , 48 | 8 , 68 , 148 | 

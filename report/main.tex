@@ -5,6 +5,8 @@
 \usepackage{amsmath,amsthm,amssymb,amsfonts,tikz,tikzsymbols}
 \usepackage[shortlabels]{enumitem}
 
+\usepackage{hyperref}
+
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\right\rbrace}
@@ -59,21 +61,30 @@ First, it's important to note that note that though I am doing a quality control
 
 \subsection{Annotation keys}
 
-\subsubsection{What do the flags mean?}
+\subsubsection{What do the flags mean?}\label{flags section}
 \newpage% idk how to make tables behave!
 \begin{table}[h!]
     \centering
-    \begin{tabular}{c|c|c|c|c|c|c}
-        0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-        
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+        0 & 1 & 2 & 3 & 4 \\
+        same as Null & suspicious & Comment in journal = ? & move to bin & slightly suspicious\\
         \hline
-        
-        same as Null & Erroneous data & Comment in journal = ? &  &  &  &  
+        5 & 6 & 7 & 8 & 9\\
+        definitely erroneous & na & probs ok, to be investigated & na & na
          
     \end{tabular}
     \caption{Flags key}
-    \label{tab:my_label}
+    \label{tab:flag}
 \end{table}
+\begin{enumerate}[start=0]
+    \item The default for the flag is NULL, when is estimate that the datapoint is perfect and there is nothing wrong with it, I can put it to zero 0.
+    \item If the data looks fishy but I'm not quite sure either what is wrong with it or how wrong it is this is flagged with a 1 - the default.
+    \item If in the Mitteilungen journals there is written a ? next to one of the data points, I will mark it with a 2, this means that the observer is not quite confident in his/her result.
+    \item A flag that signifies that this data point is definitely going into the bin
+    \item For data that is very dodgy but it is ambiguous as to weather or not it is correct, to determine its validity closer examination is required
+    \item For data that is definitely wrong, the difference between 5 and 4 is illustrated by example: if i find that a datapoint has a groups number of 30 I will mark it with a 4 and comment it, because this is suspicious, if a datapoint has a groups number over 60 or above, it will be marked with a 5 (trust me there are some in the hundreds).
+\end{enumerate}
+  
 
 
 \subsection{Search and correct.}
@@ -117,7 +128,26 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
     \end{itemize}
     \item Wednesday June 26
     \begin{itemize}
-        \item 
+        \item wrote a new method in db\_edit for appending comments rather than replacing them
+        \item wrote \textit{unreasonable\_sn\_flag()} a method that takes a look at the groups number and the sunspots number of each entry and determines if it's realistic or not. I decided somewhat arbitrarily that if the groups number was higher than 30 it would be flagged with flag 4, if the groups number was higher than 60 it would be marked with a 5 this is beyond unreasonable. I did something similar for the sunspots number $sunspots>100\Rightarrow flag:=4$ and $sunspots>250\Rightarrow flag:=5$ (see the flags section \ref{flags section}). The method was executed and ran without a hitch (after a bit of debugging)
+        \item just set another 212 flags for putting things in the bin. There are still 4000 pairs of duplicates that need attending to but considering i started with 14000 that's not bad... Some of the duplicates may be left as they are. Also i figured out that i had flagged some which just had a 0 sunspot number and so i went and unflagged them.
+        \item i spent alot of time scrutinising what i had flagged, rereading my scripts, seeing that I've been using really inefficient algorithms, checking things are in the right place. And wondering how on earth many things ended up with the flags they ended up with.
+        \item something that has been annoying me in this search is I can't seem to be able to determine what is an unreasonable number of sunspots that can appear on the sun, because many many observer record having over 250. This is why I will start using graphical tools to help me figure all of this out. I will make the graphs in a jupyter notebook.
+    \end{itemize}
+    \item Thursday June 27
+    \begin{itemize}
+        \item first thing i did today is to go though and look at lots of the flagged data from yesterday on the mysql databases
+        \item Panic! While searching I came across a big problem. Many of the datapoints are labelled '*' in the comments, this corresponds to when there is an asterix in the Mitteilungen journals, but here's the twist: the star is usually a reference to the fact that there is a change in the observer's telescope to his/her secondary lunette. This is written nowhere is many cases in the digital database! This is a new task I must take on am I to accomplish my mission here:
+        \begin{enumerate}
+            \item Correct all the comments so that they display useful information i.e. '*' --- '* = 8 cm Oeffnung mit 64-facher Vergrosserung und Polarisationshelioscop'
+            \item When you tackle the 'Creating New Aliases' part of the project (see my Github - username = dcxSt - project sun)
+        \end{enumerate}
+        \item I found there I had flagged all the mysterious '*' comment 1 and that none of them have found their way into my pristine database GOOD\_DATA\_SILSO and so I went through each of them individually and wrote the changes that I implemented in the python method 'correct\_asterix\_comments()' in script 'db\_homogenise\_comments.py'. This took quite some time and included translating German with my good friend google-translate. This corrected about 250 data-points' comments (i didn't bother to count)
+        \item after a long search of the data in GOOD\_DATA\_SILSO with FLAG=3 which have no superior duplicates I found that these were infact correctly flag and that their double had not yet made it into my new database because there were commented (usually with an asterisk *) so i moved them into the bin
+        \item Found a bug in move\_flag3\_to\_bin() which may have been causing some of the perplexing problems I had earlier
+        \item I ran the method 'flag\_many\_duplicates()' many times using the duplicates text files I'd made earlier for inspiration to change it subtly so as to catch those sneaky no good duplicates!
+        \item IMPORTANT: I just found some data which has been written in in the wrong year. In rubrics 820 students have mistakenly typed in the data for Wolfer in the year 1900 and written it in the year 1899.
+        \item In the folder duplicates/3 2019.06.27 I am writing the file corrections\_needed\_handwritten.txt which outlines the corrections which are to be made to the data if we want to solve some of these duplicates.
     \end{itemize}
     
 \end{itemize}
@@ -126,7 +156,7 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
 
 
 
-\section{Comparaison du data avant et apres}
+\section{Comparaison du data avant et apres + visualisations}
 
 \subsubsection{The original sql data tables format}
 
@@ -266,9 +296,28 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
     \label{tab:data-og}
 \end{table}
 
+
+
+
+
 \newpage{}
 
+\subsubsection{Graphs and visual representations}
 
-\subsubsectoin{Graphs and visual representations}
+As you can see, there are some famous legends in solar science such as Carrington and Kew who were able to see over 4000 sunspots at once on a single face of the sun with their crappy telescopes that they had in the 19th century!
+\begin{figure}
+  \includegraphics[width=\linewidth]{CarringtonHasGoodEyesight.png}
+  \caption{Carrington has great eyesight!}
+  \label{fig:boat1}
+\end{figure}
+
+\subsubsection{Thought repository - ideas that may or may not come into fluition depending on how efficiently I work and get things that need to be done done}
+\begin{itemize}
+    \item make some data visualisations to compare each observer's primary and secondary observing equipment
+    \item for each day / month / year find the highest observation and the lowest observations and add it to the graph so that we have like an upper bound and a lower bound. 
+    \item figure out how to smooth graphs with matplotlib and make something nice out off the big mess i currently have
+    \item pie chart of observers with their number of observations
+    \item in the final sunspots number graph cut it into 3 or 4 sections that mark changes in the theory behind sunspots: before wolf ; time where plato's ideas of the sun being a perfect sphere still were around ; 1908 George Ellery Hale discovers the magnetic link (p14 of nature's 3rd cycle) ; 1955 eugene parker's theory (p19 of nature's 3rd cycle) ; Nasa send their probe to near the sun
+\end{itemize}
 
 \end{document}

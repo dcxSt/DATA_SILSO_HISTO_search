@@ -336,7 +336,7 @@ def unflag():
             mydb.commit()
         db_connection.close_database_connection(mydb)
 
-flag_many_duplicates()
+#flag_many_duplicates()
 
 # from the data duplicates list make a list of corroborating and 
 # contradictory duplicates
