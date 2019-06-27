@@ -93,3 +93,42 @@ def homogenise_typos():
 #homogenise_uncertain()
 #homogenise_typos()
 #homogenise_null()
+
+# here are method i am writing much later on 27 June right now
+
+# for this one i make a list of * comments and their rubrics which 
+# need correcting and correct them
+def correct_asterix_comments():
+    # [fk_rubrics,rubrics_numbeR,'proper comment']
+    corrections = [(363,587,"* = secondary telescope"),
+    (416,744,"* = hand telescope"),
+    (424,627,"* = secondary telescope"),
+    (450,800,"* = hand telescope"),
+    (451,801,"* = hand telescope"),
+    (462,809,"* = observation based on photograph"),
+    (473,280,"* = hand telescope"),
+    (477,281,"* = hand telescope"),
+    (483,825,"* = hand telescope"),
+    (504,843,"* = hand telescope"),
+    (509,844,"* = hand telescope"),
+    (511,845,"* = secondary telescope"),
+    (513,847,"* = hand telescope"),
+    (527,865,"* = hand telescope"),
+    (591,906,"* = bad definition of the sun picture")]
+    # last one is transliterated from german, i thought their
+    # grammer was more concise so i didn't correct it
+
+    cursor,mydb = db_connection.database_connector(the_database='DATA_SILSO_HISTO')
+    cursor2,mydb2 = db_connection.database_connector(the_database='BAD_DATA_SILSO')
+
+    for i in corrections:
+        query = "UPDATE DATA SET COMMENT='"+i[2]+"' WHERE FK_RUBRICS="+str(i[0])+" AND COMMENT='*'"
+        cursor.execute(query,())
+        cursor2.execute(query,())
+        mydb.commit()
+        mydb2.commit()
+
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+
+

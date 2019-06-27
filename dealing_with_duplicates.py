@@ -261,7 +261,7 @@ def flag_many_duplicates():
         if fk_observer=="na" or fk_rubrics=="na":
             deficient1=True
         elif flag==5:
-            deficient2=True
+            deficient1=True
 
         # determine if one or both are deficient, so identical tests on both
         deficient2=False
@@ -306,12 +306,10 @@ def flag_many_duplicates():
 
 #flag_many_duplicates()
 
-# method that deletes the duplicate which has an unreasonable sunspot number (>100, there are some in the 2000's)
-
 
 # from all databases unflag anything that looks fine
 
-
+# UNFLAGS CERTAIN THINGS WHICH SHOULD BE UNFLAGED
 def unflag():
     for i in "DATA_SILSO_HISTO","BAD_DATA_SILSO","GOOD_DATA_SILSO":
         cursor,mydb = db_connection.database_connector(the_database=i)
@@ -327,4 +325,8 @@ def unflag():
             mydb.commit()
         db_connection.close_database_connection(mydb)
 
+
+
+# from the data duplicates list make a list of corroborating and 
+# contradictory duplicates
 
