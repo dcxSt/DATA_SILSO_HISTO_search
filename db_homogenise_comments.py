@@ -96,7 +96,7 @@ def homogenise_typos():
 
 # here are method i am writing much later on 27 June right now
 
-# for this one i make a list of * comments and their rubrics which 
+# for this one i make a list of '*' comments and their rubrics which 
 # need correcting and correct them
 def correct_asterix_comments():
     # [fk_rubrics,rubrics_numbeR,'proper comment']
@@ -130,5 +130,7 @@ def correct_asterix_comments():
 
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
+
+
 
 

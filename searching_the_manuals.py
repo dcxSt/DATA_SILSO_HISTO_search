@@ -35,7 +35,7 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
         query += "FLAG ="+str(flag)+";"
         cursor.execute(query,())
         mydb.commit()
-        print("copied into rubbish bin")#trace
+        print("in DATA_SILSO_HISTO copied into rubbish bin")#trace
 
         # remove it from the database
         query = "DELETE FROM DATA WHERE ID="+str(id_number)
@@ -53,8 +53,8 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
     # establish a connection
     cursor2,mydb2 = db_connection.get_cursor(cursor=cursor2,mydb=mydb2,the_database="GOOD_DATA_SILSO")
     # add it to the bin first
-    query = "SELECT * FROM DATA d WHERE d.ID="+str(id_number)
-    cursor2.execute(query)
+    query = "SELECT * FROM DATA WHERE ID="+str(id_number)
+    cursor2.execute(query,())
     # if there is nothing don't do anything
     try:
         info2=cursor2.fetchall()[0]
@@ -84,7 +84,7 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
         
         cursor2.execute(query,())
         mydb2.commit()
-        print("copied into rubbish bin")#trace
+        print("in GOOD_DATA_SILSO copied into rubbish bin")#trace
 
         # delete the data
         query = "DELETE FROM DATA WHERE ID="+str(id_number)
@@ -474,7 +474,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=Fa
                     source = rubrics_data[4]
                 except:
                     deficient_rubrics_count+=1
-                    #print("fk_rubrics deficient, exception caught")
+                    fk_rubrics = "na"
                     rubrics_number = "na"
                     mitt_number = "na"
                     page_number = "na"
@@ -488,7 +488,7 @@ def greater_duplicates_data(the_database="DATA_SILSO_HISTO",force_recalculate=Fa
                     observer_alias = observer_data[1]
                     observer_instrument = observer_data[5]
                 except:
-                    print("fk_observer deficient, exception caught")
+                    fk_observers = "na"
                     observer_alias = "na"
                     observer_instrument = "na"
                 
@@ -823,7 +823,5 @@ def move_flag3_to_bin():
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
-move_flag3_to_bin()
-
-
+#move_flag3_to_bin()
 

@@ -246,6 +246,7 @@ def flag_many_duplicates():
     cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
     cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
 
+    # for each duplicate
     for date in duplicates_dictionary_by_date:
         tuple1 = duplicates_dictionary_by_date[date][0]
         tuple2 = duplicates_dictionary_by_date[date][1]
@@ -258,9 +259,14 @@ def flag_many_duplicates():
         fk_observer,fk_rubrics = tuple1[1],tuple1[4]
         groups,sunspots,wolf = tuple1[9],tuple1[10],tuple1[11]
         flag = tuple1[14]
-        if fk_observer=="na" or fk_rubrics=="na":
+        # if observers or rubrics are missing...
+        if fk_observer=="na" or fk_rubrics=="na" or fk_rubrics==0:
             deficient1=True
-        elif flag==5:
+        elif flag==4 or flag==5:
+            deficient1=True
+        elif sunspots==None or groups==None:
+            deficient1=True
+        elif sunspots>150 or groups>30:
             deficient1=True
 
         # determine if one or both are deficient, so identical tests on both
@@ -268,12 +274,19 @@ def flag_many_duplicates():
         fk_observer,fk_rubrics = tuple2[1],tuple2[4]
         groups,sunspots,wolf = tuple2[9],tuple2[10],tuple2[11]
         flag = tuple2[14]
-        if fk_observer=="na" or fk_rubrics=="na":
+        if fk_observer==36 and sunspots>100:
+            print("flag:",flag)
+        # if observers or rubrics are missing...
+        if fk_observer=="na" or fk_rubrics=="na" or fk_rubrics==0:
             deficient2=True
-        elif flag==5:
+        elif flag==4 or flag==5:
+            deficient2=True
+        elif groups==None or sunspots==None:
+            deficient2=True
+        elif sunspots>150 or groups>30:
             deficient2=True
 
-        # flag the bad datapoints, so-long as the other one is good
+
         if deficient1 and not deficient2:
             single_deficient_count+=1
             db_edit.set_alternative_flags_multiple(id_number=id1,flag_number=3)
@@ -302,9 +315,7 @@ def flag_many_duplicates():
     print("both_deficient_count =",both_deficient_count)
     print("both clean count =",both_clean_count)
 
-    input("\n\npress enter to exit")
-
-#flag_many_duplicates()
+    
 
 
 # from all databases unflag anything that looks fine
@@ -325,7 +336,7 @@ def unflag():
             mydb.commit()
         db_connection.close_database_connection(mydb)
 
-
+flag_many_duplicates()
 
 # from the data duplicates list make a list of corroborating and 
 # contradictory duplicates
