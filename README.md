@@ -41,6 +41,8 @@ there are many comments in this database which either mean exactly the same thin
     greater_duplicates_data(the_database)
 > Method which makes a big list of duplicates and arranges them into a dictionary where each key is an observers and each value is a list of tuples : (date , data1 , data2). So these are two different observations made by the same alias on the same day and sometimes they differ. This is worrying to say the least )': 
 
+## Links
+* [the github project where i try to keep things organised (ish)](https://github.com/users/dcxSt/projects/2?fullscreen=true)
 
 ## useful resources
 *Basics of sql* (open in private browsing or annoying messages) includes how to-s on: [https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql)
