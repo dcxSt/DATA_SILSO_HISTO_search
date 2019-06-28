@@ -1,3 +1,5 @@
+THIS FILE WAS WRITTEN WITH THE HELP OF 'different_value_duplicates.txt'
+
 Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
 
 All observations in rubric number = 808 with fk_rubrics = 461 were made by Konkoly not Wolfer
@@ -6,7 +8,26 @@ All observations in rubric number = 820 were made by Wolfer in the year 1900 and
 
 The Broger duplicates for 1899-03-17 and 1899-04-18 make very little sense, they are broger under two different aliases but in the same rubrics 801. There are only two of them so they can be done by hand. My guess is that they were punched in twice by different people and my identical duplicates algorythem has already dealt with the ones that were exactly the same, so these are the 2 instances where one of the people got it wrong.
 
-The mysterious rubrics number 12902 is infact the rubrics number 02 in the mittheilungen number 129 which has data for Broger's observations of sunspots in the year 1931, it appears that they were incorrectly typed into the year 1908, other than that they appear to be accurate.
+Observations in mitt 129 rubrics number 02 (or 12902) were all made by Broger in 1931. Manny if not all of them were typed in wrong, it says they were made in 1908. Thankfully everything else about them seems correct.
+
+For Rubrics 1057 and 1058 there is a serious problem - Both are labled with the wrong observer! 
+Rubrics number 1057, the observations are made in the Capodimonte Observatory by Dr. E. Guerrieri,
+Rubrics number 1058, the observations are made in Floreze by Robert Lucchini
+I checked and both of these boyz are real observers with aliases, so this needs to be corrected.
+The reason there is confusion about these two is because Herrn J. Sormano in Turin is mentioned since the observations come from letters of correspondence between Sormano and the two observers mentioned above. It is quite possible that this has been going on in other places under the radar. The only reason these two were detected was because they just so happened to be attributed to the same guy for observations on the same date. What I propose is that we have someone (perhaps me, Asside: maybe an AI could do this if we scanned every page of the journals and then trained a neural net to read the rubrics descriptors and figure the observer based on that... This might be hard for this task but I can see how some machine learning could come in handy for error detection and quality control) go through each rubrics number and make a list where every rubrics number is ascribed to an observer, specially for the rubrics descriptors that include the names of severy people, come to think of it a German person would proably do a much better job at this then me.
+To speculate further it is possible that this issue runs deep and that many of the holes in the data are infact a concequence of the kind of error described above (by the way I can cut out alot of my rambling from the final draght of the report, or make a condensed version, I'm just in the habit of writing everything down so that future me can follow the thought process, sometimes it helps ok!)
+
+Observations from rubrics number 1279 were incorrectly labled as comming from 1919 when infact they are from 1920. The observer (Prof. Anne Young) and all other info is correct.
+
+Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
+
+Same thing happens in rubrics 12501 (fk=844) this is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
+
+Same again in 1931. Rubrics 12901 (fk=848) this is the real Brunner, and rubrics 12903 (fk=962), this is Brunner Assistent (orange page marker)
+
+Same again in 1932. Rubrics 13001 (fk=964) this is the real Brunner, and rubrics 13003 (fk=933), this is Brunner Assistent (fk=966)
+
+
 
 
 
