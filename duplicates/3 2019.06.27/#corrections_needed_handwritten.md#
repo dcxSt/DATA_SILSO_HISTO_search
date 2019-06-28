@@ -1,8 +1,8 @@
-THIS FILE WAS WRITTEN WITH THE HELP OF 'different_value_duplicates.txt'
+# THIS FILE WAS WRITTEN WITH THE HELP OF 'different_value_duplicates.txt'
 
-Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
+- [ ] Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
 
-All observations in rubric number = 808 with fk_rubrics = 461 were made by Konkoly not Wolfer
+allllllll observations in rubric number = 808 with fk_rubrics = 461 were made by Konkoly not Wolfer
 
 All observations in rubric number = 820 were made by Wolfer in the year 1900 and not 1899, many observations are written correctly except for the year of the date, I found that the months and days correspond perfectly with what is written in the journals but not the year!
 
@@ -19,7 +19,7 @@ To speculate further it is possible that this issue runs deep and that many of t
 
 Observations from rubrics number 1279 were incorrectly labled as comming from 1919 when infact they are from 1920. The observer (Prof. Anne Young) and all other info is correct.
 
-Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time [BOTH OF THEM ARE DENOTED WITH THE ALIAS 'Brunner'] with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
+Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time (BOTH OF THEM ARE DENOTED WITH THE ALIAS 'Brunner') with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
 
 Same thing happens in rubrics 12501 (fk=844) is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
 
@@ -33,7 +33,7 @@ Same again in 1934. Rubrics 13201 (fk=972) is the real Brunner, and rubrics 1320
 
 And in 1935. Rubrics 13401 (fk=976) is the real Brunner, and rubrics 13403 (fk=978), this is Brunner Assistent
 
-And in 1936. Rubrics 13501 (fk=980) is the real Brunner, and rubrics 13502 [yes that's a 2, no mistake] (fk=981), this is Brunner Assistent (dull pink pagemarker). The reason that it went from 01-03 to 01-02 was because prior to 1936 Boser was sandwitched between Brunner and his assistnet, he seems to have dissapeared.
+And in 1936. Rubrics 13501 (fk=980) is the real Brunner, and rubrics 13502 (yes that's a 2, no mistake) (fk=981), this is Brunner Assistent (dull pink pagemarker). The reason that it went from 01-03 to 01-02 was because prior to 1936 Boser was sandwitched between Brunner and his assistnet, he seems to have dissapeared.
 
 And in 1937. Rubrics 13601 (fk=984) is the real Brunner, and rubrics 13602 (fk=985) is Brunner Assistent. (orange pagemarker)
 
