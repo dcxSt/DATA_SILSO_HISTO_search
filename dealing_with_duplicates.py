@@ -315,10 +315,81 @@ def flag_many_duplicates():
     print("both_deficient_count =",both_deficient_count)
     print("both clean count =",both_clean_count)
 
-    
+# method that flags errors highlighted in corrections_needed.md
+def flag3_from_correction_txt():
+    # list of id's where penumbra is written and needs to go into the rubbish bin database
+    penumbra = [31460]
 
 
-# from all databases unflag anything that looks fine
+# method that takes a cursor, a database, a rubrics_number and a year
+# and changes every date from this rubrics_number to the year specified
+# while leaving the rest of the date unchanged
+def change_date_rubric(rubrics_number,new_year,old_year,cursor,mydb,new_format=True):
+    # I can use this for all databases cause DATE is in DATA regardless of format
+    # there is just a slight ajustment in initial query for new format vs old format
+    if new_format==True:
+        query = "SELECT ID,DATE FROM DATA WHERE RUBRICS_NUMBER="+str(rubrics_number)
+        cursor.execute(query,())
+        data = cursor.fetchall()
+        print()
+        
+    else:
+        # i think this works but ought to check, sometimes python is dodgy
+        query = "SELECT ID,DATE FROM DATA WHERE FK_RUBRICS IN (SELECT RUBRICS_ID FROM RUBRICS WHERE RUBRICS_NUMBER="+str(rubrics_number)+")"
+        cursor.execute(query,())
+        data = cursor.fetchall()
+
+    # arrange all the dates into a dictionary so I can sort them well
+    old_date_dictionary_by_id = {}
+    for i in data:
+        id_number = i[0]
+        date = str(i[1]) # string representation of the date
+        old_date_dictionary_by_id[id_number] = date
+
+    new_date_dictionary_by_id = {}
+    # make a dictionary with corrected version
+    for id_number in old_date_dictionary_by_id:
+        old_date = old_date_dictionary_by_id[id_number]
+        if old_date[:4] != str(old_year):
+            print("\nfor the id number",id_number)
+            print("date found = ",old_date)
+            print("old_year should be : ",old_year)
+            print("something fishy is goin on")
+            input("(enter to continue anyway)")
+        new_date = str(new_year)+old_date[4:]
+        new_date_dictionary_by_id[id_number] = new_date
+
+    # make the change to the database
+    for id_number in new_date_dictionary_by_id:
+        new_date = new_date_dictionary_by_id[id_number]
+        query = "UPDATE DATA SET DATE='"+str(new_date)+"' WHERE ID="+str(id_number)
+        cursor.execute(query,())
+        mydb.commit()
+
+
+# calls change_date_rubrics alot
+def change_dates():
+    # open the connections
+    cursor,mydb = db_connection.database_connector(the_database='DATA_SILSO_HISTO')
+    cursor2,mydb2 = db_connection.database_connector(the_database='GOOD_DATA_SILSO')
+    cursor3,mydb3 = db_connection.database_connector(the_database='BAD_DATA_SILSO')
+
+    change_date_rubric(rubrics_number=12902,new_year=1931,old_year=1908,cursor=cursor,mydb=mydb,new_format=False)
+    change_date_rubric(rubrics_number=12902,new_year=1931,old_year=1908,cursor=cursor2,mydb=mydb2,new_format=True)
+    change_date_rubric(rubrics_number=12902,new_year=1931,old_year=1908,cursor=cursor3,mydb=mydb3,new_format=False)
+
+    change_date_rubric(rubrics_number=1279,new_year=1920,old_year=1919,cursor=cursor,mydb=mydb,new_format=False)
+    change_date_rubric(rubrics_number=1279,new_year=1920,old_year=1919,cursor=cursor2,mydb=mydb2,new_format=True)
+    change_date_rubric(rubrics_number=1279,new_year=1920,old_year=1919,cursor=cursor3,mydb=mydb3,new_format=False)
+
+    change_date_rubric(rubrics_number=820,new_year=1900,old_year=1899,curosr=cursor,mydb=mydb,new_format=False)
+    change_date_rubric(rubrics_number=820,new_year=1900,old_year=1899,curosr=cursor2,mydb=mydb2,new_format=True)
+    change_date_rubric(rubrics_number=820,new_year=1900,old_year=1899,curosr=cursor3,mydb=mydb3,new_format=False)
+
+    # close the connections
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
 
 # UNFLAGS CERTAIN THINGS WHICH SHOULD BE UNFLAGED
 def unflag():
@@ -337,7 +408,4 @@ def unflag():
         db_connection.close_database_connection(mydb)
 
 #flag_many_duplicates()
-
-# from the data duplicates list make a list of corroborating and 
-# contradictory duplicates
 

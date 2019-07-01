@@ -21,35 +21,35 @@ To speculate further it is possible that this issue runs deep and that many of t
 
 - [ ] Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time (BOTH OF THEM ARE DENOTED WITH THE ALIAS 'Brunner') with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
 
-Same thing happens in rubrics 12501 (fk=844) is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
+- [ ] Same thing happens in rubrics 12501 (fk=844) is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
 
-Same again in 1931. Rubrics 12901 (fk=848) is the real Brunner, and rubrics 12903 (fk=962), this is Brunner Assistent (orange page marker)
+- [ ] Same again in 1931. Rubrics 12901 (fk=848) is the real Brunner, and rubrics 12903 (fk=962), this is Brunner Assistent (orange page marker)
 
-Same again in 1932. Rubrics 13001 (fk=964) is the real Brunner, and rubrics 13003 (fk=933), this is Brunner Assistent. also (fk=966)++
+- [ ] Same again in 1932. Rubrics 13001 (fk=964) is the real Brunner, and rubrics 13003 (fk=933), this is Brunner Assistent. also (fk=966)++
 
-Same again in 1933. Rubrics 13101 (fk=968) this is the real Brunner, and rubrics 13103 (fk=970), this is Brunner Assistent. Crap! I just noticed that the rubrics numbers in the Mittheilungen here are associated with several fk_rubrics each. So be aware of this, the fk=xxx i provided may not be everything!
+- [ ] Same again in 1933. Rubrics 13101 (fk=968) this is the real Brunner, and rubrics 13103 (fk=970), this is Brunner Assistent. Crap! I just noticed that the rubrics numbers in the Mittheilungen here are associated with several fk_rubrics each. So be aware of this, the fk=xxx i provided may not be everything!
 
-Same again in 1934. Rubrics 13201 (fk=972) is the real Brunner, and rubrics 13203 (fk=974), this is Brunner Assistent
+- [ ] Same again in 1934. Rubrics 13201 (fk=972) is the real Brunner, and rubrics 13203 (fk=974), this is Brunner Assistent
 
-And in 1935. Rubrics 13401 (fk=976) is the real Brunner, and rubrics 13403 (fk=978), this is Brunner Assistent
+- [ ] And in 1935. Rubrics 13401 (fk=976) is the real Brunner, and rubrics 13403 (fk=978), this is Brunner Assistent
 
-And in 1936. Rubrics 13501 (fk=980) is the real Brunner, and rubrics 13502 (yes that's a 2, no mistake) (fk=981), this is Brunner Assistent (dull pink pagemarker). The reason that it went from 01-03 to 01-02 was because prior to 1936 Boser was sandwitched between Brunner and his assistnet, he seems to have dissapeared.
+- [ ] And in 1936. Rubrics 13501 (fk=980) is the real Brunner, and rubrics 13502 (yes that's a 2, no mistake) (fk=981), this is Brunner Assistent (dull pink pagemarker). The reason that it went from 01-03 to 01-02 was because prior to 1936 Boser was sandwitched between Brunner and his assistnet, he seems to have dissapeared.
 
-And in 1937. Rubrics 13601 (fk=984) is the real Brunner, and rubrics 13602 (fk=985) is Brunner Assistent. (orange pagemarker)
+- [ ] And in 1937. Rubrics 13601 (fk=984) is the real Brunner, and rubrics 13602 (fk=985) is Brunner Assistent. (orange pagemarker)
 
-And again in 1938 (I'm starting to notice a pattern can you see it?). Rubrics 13701 (fk=988) is the real Brunner, and rubrics 13702 (fk=989) is Brunner Assistent. (green pagemarker, page 385)
+- [ ] And again in 1938 (I'm starting to notice a pattern can you see it?). Rubrics 13701 (fk=988) is the real Brunner, and rubrics 13702 (fk=989) is Brunner Assistent. (green pagemarker, page 385)
 
-And in 1939. Rubrics 13901 (fk=991) is the real Brunner, and rubrics 13902 (fk=991) is Brunner Assistent. (yellow pagemarker p498, and yes i got the rubrics number right they jumped 138)
+- [ ] And in 1939. Rubrics 13901 (fk=991) is the real Brunner, and rubrics 13902 (fk=991) is Brunner Assistent. (yellow pagemarker p498, and yes i got the rubrics number right they jumped 138)
 
-And in 1940. Rubrics 14001 (fk=993) is the real Brunner, and rubrics 14002 (fk=994) is Brunner Assistent. (bright pink pagemarker, p520)
+- [ ] And in 1940. Rubrics 14001 (fk=993) is the real Brunner, and rubrics 14002 (fk=994) is Brunner Assistent. (bright pink pagemarker, p520)
 
-And in 1941. Rubrics 14101 (fk=995) is the real Brunner, and rubrics 14102 (fk=996) is Brunner Assistent. (dull pink page-marker on p11)
+- [ ] And in 1941. Rubrics 14101 (fk=995) is the real Brunner, and rubrics 14102 (fk=996) is Brunner Assistent. (dull pink page-marker on p11)
 
-And in 1942. Rubrics 14201 (fk=998) is the real Brunner, and rubrics 14202 (fk=999) is Brunner Assistent. (orange page-marker on p49)
+- [ ] And in 1942. Rubrics 14201 (fk=998) is the real Brunner, and rubrics 14202 (fk=999) is Brunner Assistent. (orange page-marker on p49)
 
-And in 1943. Rurbrics 14301 (fk=1002) is the real Brunner, and rubrics 14302 (fk=1003) is Brunner Assistent. (yellow page-marker on p74)
+- [ ] And in 1943. Rurbrics 14301 (fk=1002) is the real Brunner, and rubrics 14302 (fk=1003) is Brunner Assistent. (yellow page-marker on p74)
 
-And in 1944. Rubrics 14401 (fk=1006) is the real Brunner, and rubrics 14402 (fk=1007) is Brunner Assistent. (green page-marker on page 112)
+- [ ] And in 1944. Rubrics 14401 (fk=1006) is the real Brunner, and rubrics 14402 (fk=1007) is Brunner Assistent. (green page-marker on page 112)
 
 - [ ] Comments on Brunner: I'm annoyed that the assistant(s) doesn't have a name because we now have no idea how many there where. Also (s)he deserves credit for those 10 odd years of commited observation! Because this assistent has been observing with Brunner from 1929 to 1944 he at least deserves an alias. I propose 
 
