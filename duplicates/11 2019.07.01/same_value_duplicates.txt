@@ -1,0 +1,33 @@
+Duplicates which have identical sunspot values
+
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1908-02-15
+193531 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 17 , 47 | no fk_rubrics
+193549 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 17 , 47 | 
+
+1908-03-15
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-29
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-30
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+
+-----------------------------------------

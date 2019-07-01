@@ -1,6 +1,6 @@
 # THIS FILE WAS WRITTEN WITH THE HELP OF 'different_value_duplicates.txt'
 
-- [ ] Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
+- [X] Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
 
 - [X] All observations in rubric number = 808 with fk_rubrics = 461 were made by Konkoly not Wolfer
 

@@ -1,0 +1,236 @@
+Duplicates with differing rubircs
+
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1863-03-08
+17985 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 7 , 65 , 135 | 
+18753 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 7 , 65 , 135 | 
+
+1863-03-18
+17986 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 5 , 58 , 108 | 
+18761 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 5 , 58 , 108 | 
+
+1863-04-11
+18017 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 13 , 33 | 
+18781 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 13 , 33 | 
+
+1863-06-20
+18078 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 3 , 5 , 35 | 
+18848 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 3 , 5 , 35 | 
+
+1863-08-18
+18140 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 5 , 33 , 83 | 
+18905 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 5 , 33 , 83 | 
+
+1863-09-05
+18168 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 1 , 3 , 13 | 
+18922 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 1 , 3 , 13 | 
+
+1863-09-21
+18169 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 4 , 24 | 
+18936 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 4 , 24 | 
+
+1863-09-22
+18170 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 4 , 24 | 
+18937 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 4 , 24 | 
+
+1863-10-17
+18194 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 3 , 23 | 
+18961 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 3 , 23 | 
+
+1863-11-01
+18202 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 3 , 13 , 43 | 
+18975 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 3 , 13 , 43 | 
+
+1863-11-16
+18203 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 3 , 37 , 67 | 
+18985 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 3 , 37 , 67 | 
+
+1863-11-25
+18204 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 3 , 6 , 36 | 
+18992 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 3 , 6 , 36 | 
+
+1863-12-04
+18231 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 3 , 11 , 41 | 
+19001 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 3 , 11 , 41 | 
+
+1863-12-05
+18232 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 9 , 29 | 
+19002 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 9 , 29 | 
+
+1863-12-06
+18233 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 2 , 6 , 26 | 
+19003 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 2 , 6 , 26 | 
+
+1863-12-21
+18234 | 32 , Weber , (NULL) | 0 , 0 , 1 , 153 | 7 , 69 , 139 | 
+19010 | 32 , Weber , (NULL) | 40 , 195 , 16 , 188 | 7 , 69 , 139 | 
+
+
+-----------------------------------------
+Observer :   Tacchini et Millosevich
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Konkoly
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Lewitzky
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1908-02-26
+193536 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 29 , 59 | no fk_rubrics
+193554 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 29 , 59 | 
+
+1908-02-03
+193524 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193542 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-02-13
+193529 | 138 , Messerschmitt , (NULL) | na , na , na , na | 6 , 22 , 82 | no fk_rubrics
+193547 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 6 , 22 , 82 | 
+
+1908-02-15
+193531 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 17 , 47 | no fk_rubrics
+193549 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 17 , 47 | 
+
+1908-02-15
+193531 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 17 , 47 | no fk_rubrics
+193705 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-02-24
+193535 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 10 , 30 | no fk_rubrics
+193553 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 10 , 30 | 
+
+1908-03-15
+193565 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193565 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193565 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193565 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+193645 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+
+1908-03-15
+193585 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193605 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-15
+193645 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-29
+193572 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193572 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193572 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193572 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+193652 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+
+1908-03-29
+193592 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193612 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-29
+193652 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-02-23
+193534 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 5 , 35 | no fk_rubrics
+193552 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 5 , 35 | 
+
+1908-03-30
+193573 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193573 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193573 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193573 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+193653 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+
+1908-03-30
+193593 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193613 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-03-30
+193653 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+1908-01-01
+193507 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+193538 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-01-01
+193538 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+193655 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+1908-01-02
+193508 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 5 , 25 | no fk_rubrics
+193539 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+
+1908-01-02
+193539 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 1 , 1 , 11 | 
+193656 | 138 , Messerschmitt , (NULL) | na , na , na , na | 1 , 1 , 11 | no fk_rubrics
+
+
+-----------------------------------------

@@ -1,0 +1,17 @@
+Duplicates which appeaer to be two exact copies of the same datapoint
+
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------

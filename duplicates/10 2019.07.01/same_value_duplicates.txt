@@ -1,0 +1,490 @@
+Duplicates which have identical sunspot values
+
+Observer :   Weber
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Lewitzky
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1899-02-06
+103171 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 11 , 31 | S
+110230 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 11 , 31 | S
+
+1899-02-08
+103172 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 8 , 18 | S
+110231 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 8 , 18 | S
+
+1899-02-23
+103173 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+110232 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+
+1899-02-24
+103174 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110233 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-02-27
+103175 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+110234 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+
+1899-03-01
+103176 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 10 , 20 | S
+110235 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 10 , 20 | S
+
+1899-03-05
+103177 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110236 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-03-09
+103179 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110238 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-03-10
+103180 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110239 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-03-14
+103181 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 5 , 15 | S
+110240 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 5 , 15 | S
+
+1899-03-16
+103182 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 12 , 22 | S
+110241 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 12 , 22 | S
+
+1899-03-24
+103183 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 4 , 34 | S
+110242 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 4 , 34 | S
+
+1899-03-25
+103184 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | S
+110243 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | S
+
+1899-03-26
+103185 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 6 , 36 | S
+110244 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 6 , 36 | S
+
+1899-03-28
+103186 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | S
+110245 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | S
+
+1899-04-03
+103187 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 5 , 25 | S
+110246 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 5 , 25 | S
+
+1899-04-18
+103189 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 5 , 35 | S
+110248 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 5 , 35 | S
+
+1899-04-29
+103192 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | S
+110251 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | S
+
+1899-04-30
+103193 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | S
+110252 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | S
+
+1899-05-05
+103194 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110253 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-06
+103195 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110254 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-07
+103196 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110255 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-08
+103197 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110256 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-09
+103198 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110257 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-10
+103199 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110258 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-15
+103201 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110260 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-17
+103202 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110261 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-20
+103204 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 9 , 29 | S
+110263 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 9 , 29 | S
+
+1899-05-23
+103205 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 4 , 14 | S
+110264 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 4 , 14 | S
+
+1899-05-30
+103206 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+110265 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+
+1899-06-04
+103207 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+110266 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+
+1899-06-08
+103208 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | S
+110267 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | S
+
+1899-06-16
+103209 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 20 , 50 | P
+110268 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 20 , 50 | P
+
+1899-06-17
+103210 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 14 , 44 | P
+110269 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 3 , 14 , 44 | P
+
+1899-06-27
+103211 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 21 , 31 | P
+110270 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 21 , 31 | P
+
+1899-06-28
+103212 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 21 , 31 | P
+110271 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 21 , 31 | P
+
+1899-07-01
+103393 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | B
+110272 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | B
+
+1899-07-02
+103394 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 11 , 31 | * = observation based on photograph
+110273 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 11 , 31 | * = observation based on photograph
+
+1899-07-03
+103395 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 24 , 44 | * = observation based on photograph
+110274 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 24 , 44 | * = observation based on photograph
+
+1899-07-07
+103398 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 6 , 26 | * = observation based on photograph
+110277 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 6 , 26 | * = observation based on photograph
+
+1899-07-08
+103399 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 7 , 17 | * = observation based on photograph
+110278 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 7 , 17 | * = observation based on photograph
+
+1899-07-09
+103400 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | * = observation based on photograph
+110279 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | * = observation based on photograph
+
+1899-07-11
+103401 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 13 , 33 | * = observation based on photograph
+110280 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 13 , 33 | * = observation based on photograph
+
+1899-07-12
+103402 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 13 , 33 | * = observation based on photograph
+110281 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 13 , 33 | * = observation based on photograph
+
+1899-07-13
+103403 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | * = observation based on photograph
+110282 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | * = observation based on photograph
+
+1899-07-14
+103404 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 7 , 27 | * = observation based on photograph
+110283 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 7 , 27 | * = observation based on photograph
+
+1899-07-15
+103405 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 5 , 25 | * = observation based on photograph
+110284 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 5 , 25 | * = observation based on photograph
+
+1899-07-16
+103406 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | * = observation based on photograph
+110285 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | * = observation based on photograph
+
+1899-07-17
+103407 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | P
+110286 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | P
+
+1899-07-18
+103408 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110287 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-07-20
+103409 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110288 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-07-22
+103410 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110289 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-07-23
+103411 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110290 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-07-25
+103412 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110291 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-07-26
+103413 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | * = observation based on photograph
+110292 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | * = observation based on photograph
+
+1899-07-27
+103414 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | * = observation based on photograph
+110293 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | * = observation based on photograph
+
+1899-07-29
+103415 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110294 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-08-01
+103608 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110296 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-08-02
+103609 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110297 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-08-03
+103610 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110298 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-08-04
+103611 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110299 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-05
+103612 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110300 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-08-06
+103613 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110301 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-07
+103614 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110302 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-08
+103615 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110303 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-13
+103617 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110305 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-14
+103618 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110306 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-15
+103619 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110307 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-19
+103620 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110308 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-20
+103621 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110309 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-08-21
+103622 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110310 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-22
+103623 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+110311 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | B
+
+1899-08-24
+103624 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110312 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-31
+103625 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110313 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-09-05
+103881 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110314 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-09-07
+103882 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110315 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-09-08
+103883 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110316 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-09-19
+103884 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | S
+110317 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | S
+
+1899-09-22
+103885 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110318 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-09-26
+103886 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 17 , 37 | S
+110319 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 17 , 37 | S
+
+1899-09-28
+103887 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 29 , 49 | S
+110320 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 29 , 49 | S
+
+1899-09-29
+103888 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 22 , 42 | S
+110321 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 22 , 42 | S
+
+1899-10-01
+103880 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 6 , 26 | S
+110322 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 6 , 26 | S
+
+1899-10-09
+103890 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110324 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-10-11
+103891 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | S
+110325 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 6 , 16 | S
+
+1899-10-21
+103892 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110326 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-10-22
+103893 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110327 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-11-03
+103895 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110329 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-11-18
+103896 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | S
+110330 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 10 , 30 | S
+
+1899-11-22
+103898 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110332 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-11-23
+103899 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110333 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-12-04
+103900 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 4 , 24 | S
+110334 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 4 , 24 | S
+
+1899-12-20
+103902 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | S
+110336 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 2 , 22 | S
+
+1899-12-29
+103903 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | B
+110337 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 3 , 13 | B
+
+1899-01-28
+103168 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 9 , 19 | S
+110227 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 9 , 19 | S
+
+1899-01-31
+103169 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 15 , 35 | S
+110228 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 15 , 35 | S
+
+1899-02-03
+103170 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 17 , 37 | S
+110229 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 17 , 37 | S
+
+1899-05-14
+103200 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110259 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-05-19
+103203 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 13 , 23 | S
+110262 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 13 , 23 | S
+
+1899-07-06
+103397 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | * = observation based on photograph
+110276 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 8 , 28 | * = observation based on photograph
+
+1899-10-06
+103889 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110323 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-10-31
+103894 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 13 , 23 | S
+110328 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 13 , 23 | S
+
+1899-11-21
+103897 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110331 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-03-08
+103178 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110237 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-08-11
+103616 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110304 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-01-24
+103166 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110225 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-01-25
+103167 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 8 , 18 | S
+110226 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 8 , 18 | S
+
+1899-04-09
+103188 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+110247 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 2 , 12 | S
+
+1899-04-19
+103190 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 3 , 23 | S
+110249 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 3 , 23 | S
+
+1899-04-20
+103191 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+110250 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 1 , 1 , 11 | S
+
+1899-07-05
+103396 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 4 , 24 | * = observation based on photograph
+110275 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 4 , 24 | * = observation based on photograph
+
+1899-07-31
+103416 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+110295 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 0 , 0 , 0 | S
+
+1899-12-08
+103901 | 111 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 7 , 27 | S
+110335 | 84 , Lewitzky , (NULL) | 462 , 809 , 91 , 21 | 2 , 7 , 27 | S
+
+
+-----------------------------------------
+Observer :   Broger
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+
+-----------------------------------------
+Observer :   Messerschmitt
+ID | fk_obs , obs_alias , obs_instrument | fk_rubrics , rubrics_num , mitt_num , page_num | groups , sunspots , wolf | comment
+
+1908-02-15
+193531 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 17 , 47 | no fk_rubrics
+193549 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 17 , 47 | 
+
+1908-03-15
+193625 | 138 , Messerschmitt , (NULL) | na , na , na , na | 2 , 7 , 27 | no fk_rubrics
+193685 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 2 , 7 , 27 | 
+
+1908-03-29
+193632 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 4 , 34 | no fk_rubrics
+193692 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 4 , 34 | 
+
+1908-03-30
+193633 | 138 , Messerschmitt , (NULL) | na , na , na , na | 3 , 6 , 36 | no fk_rubrics
+193693 | 138 , Messerschmitt , (NULL) | 951 , 1028 , 100 , 352 | 3 , 6 , 36 | 
+
+
+-----------------------------------------

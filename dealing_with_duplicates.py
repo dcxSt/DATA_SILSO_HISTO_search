@@ -209,6 +209,7 @@ def delete_entered_twice_duplicates(greater_duplicates_dictionary):
             obs_id1 = i[1][1]
             fk_rubrics1 = i[1][4]
 
+            id_number2 = i[2][0]
             groups2 = i[2][8]
             sunspots2 = i[2][9]
             wolf2 = i[2][10]
@@ -220,16 +221,35 @@ def delete_entered_twice_duplicates(greater_duplicates_dictionary):
                 # remove only the first one
                 move_data_to_bin(id_number=id_number1,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2,cursor3=cursor3,mydb3=mydb3,close_databases=False)
 
+            elif groups1==groups2 and sunspots1==sunspots2 and wolf1==wolf2 and fk_rubrics1==fk_rubrics2:
+                # this elif clause deals with Broger duplicate id
+                # 117 is superior because it tells us the country
+                if obs_id1==104 or obs_id2==104:
+                    if obs_id1==104:
+                        id_number=id_number1
+                    else:
+                        id_number=id_number2
+                    print("broger")
+                    move_data_to_bin(id_number=id_number,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2,cursor3=cursor3,mydb3=mydb3,close_databases=False)
+                # same thing happens with Lewitzky
+                # 84 is superior because it tells us the country
+                if obs_id1 == 111 or obs_id2==111:
+                    if obs_id1==111:
+                        id_number=id_number1
+                    else:
+                        id_number=id_number2
+                    print("lewitzki")
+                    move_data_to_bin(id_number=id_number,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2,cursor3=cursor3,mydb3=mydb3,close_databases=False)
+                    
+
     # close the connections 
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
 # delete the entered twice duplicates (just running the method)
-"""
-greater_duplicates_dictionary = searching_the_manuals.greater_duplicates_data(force_recalculate=True)
-delete_entered_twice_duplicates(greater_duplicates_dictionary)
-"""
+
+
 
 # method to flag the duplicate that is missing values (sunspots / wolf == na or none or something)
 def flag_many_duplicates():
@@ -433,3 +453,8 @@ def change_alias_to_brunner_assistent():
 
 
 #flag_many_duplicates()
+
+"""
+greater_duplicates_dictionary = searching_the_manuals.greater_duplicates_data(force_recalculate=True)
+delete_entered_twice_duplicates(greater_duplicates_dictionary)
+"""
