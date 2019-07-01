@@ -366,7 +366,6 @@ def change_date_rubric(rubrics_number,new_year,old_year,cursor,mydb,new_format=T
         cursor.execute(query,())
         mydb.commit()
 
-
 # calls change_date_rubrics alot
 def change_dates():
     # open the connections
@@ -407,5 +406,30 @@ def unflag():
             mydb.commit()
         db_connection.close_database_connection(mydb)
 
-#flag_many_duplicates()
+# ALIAS to 'Brunner Assistent'
+def change_alias_to_brunner_assistent():
+    brunner_assistent_rubrics=[1675,12503,12903,13003,13103,13203,
+    13403,13502,13602,13702,13902,14002,14102,14202,14302,14402]
+    # first do the old database
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    for rubrics_number in brunner_assistent_rubrics:
+        query = "UPDATE DATA SET FK_OBSERVERS=191 WHERE FK_RUBRICS IN (SELECT RUBRICS_ID FROM RUBRICS WHERE RUBRICS_NUMBER="+str(rubrics_number)+")"
+        cursor.execute(query,())
+        mydb.commit()
+        cursor3.execute(query,())
+        mydb3.commit()
+    # close these two databases
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb3)
 
+    # now do something a little more complicated for the new database
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    for rubrics_number in brunner_assistent_rubrics:
+        query = "UPDATE DATA SET OBS_ALIAS='Brunner Assistent',FIRST_NAME='XXX',LAST_NAME='Brunner Assistent',COUNTRY='XXX',INSTRUMENT='8 cm open 64 increase' WHERE RUBRICS_NUMBER="+str(rubrics_number)
+        cursor2.execute(query,())
+        mydb2.commit()
+    db_connection.close_database_connection(mydb2)
+
+
+#flag_many_duplicates()
