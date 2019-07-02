@@ -18,6 +18,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\RA}{\Rightarrow}
+\newcommand\defeq{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
 
 \newcommand{\M}{\mathbb{M}}
 
@@ -67,10 +68,10 @@ First, it's important to note that note that though I am doing a quality control
     \centering
     \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
         0 & 1 & 2 & 3 & 4 \\
-        same as Null & suspicious & Comment in journal = ? & move to bin & slightly suspicious\\
+        same as Null & suspicious & Comment in journal = ? & move to bin & suspiciously high\\
         \hline
         5 & 6 & 7 & 8 & 9\\
-        definitely erroneous & na & probs ok, to be investigated & na & na
+        very suspicious & misc see comment & probs ok, to be investigated & null groups & null sunspots
          
     \end{tabular}
     \caption{Flags key}
@@ -149,6 +150,71 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item IMPORTANT: I just found some data which has been written in in the wrong year. In rubrics 820 students have mistakenly typed in the data for Wolfer in the year 1900 and written it in the year 1899.
         \item In the folder duplicates/3 2019.06.27 I am writing the file corrections\_needed\_handwritten.txt which outlines the corrections which are to be made to the data if we want to solve some of these duplicates.
     \end{itemize}
+    \item Friday June 28 
+    \begin{itemize}
+        \item Continued what I was writing yesterday, looking through the manuals and identifying. The notes I took about the duplicates can be found in different\_value\_duplicates.txt, some things I found interesting so I decided to copy most of the file into this report
+        \item Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
+        \item All observations in rubric number = 808 with fk\_rubrics = 461 were made by Konkoly not Wolfer
+        \item All observations in rubric number = 820 were made by Wolfer in the year 1900 and not 1899, many observations are written correctly except for the year of the date, I found that the months and days correspond perfectly with what is written in the journals but not the year!
+        \item The Broger duplicates for 1899-03-17 and 1899-04-18 make very little sense, they are broger under two different aliases but in the same rubrics 801. There are only two of them so they can be done by hand. My guess is that they were punched in twice by different people and my identical duplicates algorythem has already dealt with the ones that were exactly the same, so these are the 2 instances where one of the people got it wrong.
+        \item Observations in mitt 129 rubrics number 02 (or 12902) were all made by Broger in 1931. Manny if not all of them were typed in wrong, it says they were made in 1908. Thankfully everything else about them seems correct.
+        \item For Rubrics 1057 and 1058 there is a serious problem - Both are labled with the wrong observer! 
+        \begin{itemize}
+            \item Rubrics number 1057, the observations are made in the Capodimonte Observatory by Dr. E. Guerrieri,
+            \item Rubrics number 1058, the observations are made in Floreze by Robert Lucchini. I checked and both of these boyz are real observers with aliases, so this needs to be corrected.
+            \item The reason there is confusion about these two is because Herrn J. Sormano in Turin is mentioned since the observations come from letters of correspondence between Sormano and the two observers mentioned above. It is quite possible that this has been going on in other places under the radar. The only reason these two were detected was because they just so happened to be attributed to the same guy for observations on the same date. What I propose is that we have someone (perhaps me, Asside: maybe an AI could do this if we scanned every page of the journals and then trained a neural net to read the rubrics descriptors and figure the observer based on that... This might be hard for this task but I can see how some machine learning could come in handy for error detection and quality control) go through each rubrics number and make a list where every rubrics number is ascribed to an observer, specially for the rubrics descriptors that include the names of several people, come to think of it a German person would proably do a much better job at this then me.
+            \item To speculate further it is possible that this issue runs deep and that many of the holes in the data are infact a concequence of the kind of error described above (by the way I can cut out alot of my rambling from the final draght of the report, or make a condensed version, I'm just in the habit of writing everything down so that future me can follow the thought process, sometimes it helps ok!)
+    \end{itemize}
+    \item Observations from rubrics number 1279 were incorrectly labled as comming from 1919 when infact they are from 1920. The observer (Prof. Anne Young) and all other info is correct.
+    \item Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time [BOTH OF THEM ARE DENOTED WITH THE ALIAS 'Brunner'] with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk\_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk\_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
+    \begin{itemize}
+        \item Same thing happens in rubrics 12501 (fk=844) is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
+        \item Same again in 1931. Rubrics 12901 (fk=848) is the real Brunner, and rubrics 12903 (fk=962), this is Brunner Assistent (orange page marker)
+        \item ...This goes on until (see the file for details)...
+        \item And in 1944. Rubrics 14401 (fk=1006) is the real Brunner, and rubrics 14402 (fk=1007) is Brunner Assistent. (green page-marker on page 112)
+        \item Comments on Brunner: I'm annoyed that the assistant(s) doesn't have a name because we now have no idea how many there where. Also (s)he deserves credit for those 10 odd years of commited observation! Because this assistent has been observing with Brunner from 1929 to 1944 he at least deserves an alias. 
+    \end{itemize}
+    \item Messerschmitt and Wasnetzoff
+    \begin{itemize}
+        \item Something strange happens with Messerschmitt, there are two different sunspots values written in for 1908-02-15, one of them has no rubrics number and values 3,17,47 The other has a rubrics number 1028 and values 2,7,27. So I looked in the journals under rubrics 1027 and for this date I found the values 3,17,47 which are the values written in where no rubric is specified. Very strange. There are a total of 4 duplicates for Messerschmitt and this is the only one that has a rubrics number. I find this very strange... I don't really know what to do. 
+    \end{itemize}
+    \end{itemize}
+    
+    \item Monday July 1
+    \begin{itemize}
+        \item Using what I did on Friday (wrote that list of things that were wrong with specific duplicates) to bin some data and modify other data
+        \item Started writing methods flag3\_from\_correction\_txt() and change\_rubric\_observer() and change\_date\_rubric() in dealing\_with\_duplicates.py, and then I realised that all this was much simpler and could be done faster and less error prone if I just punched in the queries to through mysql directly, so this is what I did.
+        \item With care and delicacy I changed the observer aliases / and for the old and bad database I changed the FK\_OBSERVERS with the terminal. Now I move onto changing all the faulty dates, this requires a bit of coding because I need to loop through the dates and change each date individually.
+        \item Wrote change\_dates() and it's helper change\_date\_rubric() (in dealing\_with\_duplicates.py) and executed them in more time than it should have taken. My head is not clear today, but I was rigourouse, there should not be a mistake.
+        \item I am changing the databases quite a bit so I saved a new backup file
+        \item made a new alias in DATA\_SILSO\_HISTO (and BAD\_DATA\_SILSO) called `Brunner Assistent'. I know the name lacks imagination but hey (I couldn't find who it might be online - future me : this is a reminder to ask Frederic if he might know, be ready with dates...).
+        \item I just realised that when I was changing some of the data in GOOD\_DATA\_SILSO I only changed the aliases, to correct this I will either write now or once everything is finished a method that goes through each data-point finds the alias and corrects the observer data (things such as the country of observation, the observer comments and the instrument etc.)
+        \item wrote and executed the command in dealing\_with\_duplicates.py change\_alias\_to\_brunner\_assistent(), this corrected the brunner assistent problem we had
+        \item backed up the the databases to sql files
+        \item I realised that I had missed correcting the alias for rubrics 195 from Franzenau to Weber so I did that just now
+        \item Ran the method that shows me what is wrong with the duplicates to see how effective my cleanup has been : interesting, the duplicates that were Weber's but marked Franzenau had already been entered under Weber but with rubrics\_number=0 and no references in the Mittheilungen, so I reran the flag\_many\_duplicates.
+        \item Some of the 'Tacchini and Milesovich' are missing sources but the duplicates are identical, so I moved one from each to the rubbish bit by calling the method delete\_entered\_twice\_duplicates() from dealing\_with\_duplicates.py. There was also the issue that Broger had some identical data typed in for him in two using two different observer ids that both refer to him... so i added an elif statement into the delete entered twice duplicates method to deal specifically with this.
+        \item Most of this data has been cleaned up, the rest can be done by hand
+    \end{itemize}
+    
+    \item Tuesday July 2
+    \begin{itemize}
+        \item exploring ways of creating visualisations that will help me catch some of the suspicious data-points. Right not my task is hunting down those ones which I labelled 'suspicious sunspots'
+        \item made some pretty plots which you can find in \textit{suspicious sunspots plots.ipynb} in the root directory
+        \item Using the plot I was able to check some of Weber's suspicious sunspots in the Mittheilungen. And strangely enough Weber's observations are correct! It seems he really did see 476 sunspots on the sun on the 25th of september 1870. I mean the patter fits it's just unsusually large. And you need to be dedicated to count hundreds of spots every day.
+        \item Made a method in the jupyter notebook mentioned above that plots an observer's stuff and color codes the flags. I investigated Tacchini's green (flag=4) datapoints and they are infact correct, they appear in the journals. There is one datapoint from Tacchini which I corrected by hand, this one had a wolf number of 61, I found it in the journals, the correct value was 6 - typo. I corrected it manually.
+        \item In the rubric 279 mitt 30 page 409 Tacchini observes a bunch of sunspots without observing any groups. This is annoying because it means we have no wolf! Other than that they seem to have been entered in correctly, I have not yet transfered these to the GOOD DATA SILSO database, they are still only in DATA SILSO HISTO and BAD DATA SILSO
+        \item I have an idea that we could do some stats and deduce a wolf number even without the groups, and give it a special flag, based on some probability we estimate a wolf number. There might be some complications with this tactic, here are 3 possible ways of doing it and their weaknesses:
+        \begin{enumerate}
+            \item For each sunspots number possible \{1,2,3...\} find the corresponding most likely wolf number by going though each data point with that number and doing a distribution (probs normal) to find which is the most likely wolf number associated with this sunspots number. Essentially we define a function term-by term $f \defeq{} \N \to \R$. The weakness : if we sample everything we might find that Tacchini has his own idiosyncratic way of doing sunspots and wolf, and so the data we add to his entriee would not fit well with his methods of observation.
+            \item For each sunspots number do the same as above but go through the groups number! Again for each sunspots number find sift through all the data of everyone to find the best groups number $g\in \R$, i.e. the $g$ s.t. it sits on top of the fitted normal distribution.
+            \item For each sunspots number, methods 1) and 2) above but fitted with only Tacchini's previous and future data. The weakness of this method is that there is not much data to go on... (relative to the first two)
+            \item One thing that worries me in the case of Tacchini is that this guy observers a lot of sunspots. I am looking at his entries right now and in 1870 he regularly observers over 200 sunspots, on $5^{th}$ of April 1870 he sees 302 sunspots. That said cross-referencing his data with other observers' from the same time seems to support this hypothesis. But the more sunspots he observers, the less data we have to make a nice normal distribution for each sunspots number, there may be sunspots numbers that only appear like 3 times in the whole database, how are we to do any stats on those. The answer is the following method for tying sunspots to groups and wolf number: for each sunspots number we link it to a wolf number by finding the best fit normal distribution for the likeliest wolf number to be associated with it. Then we give this value an error bar which is bigger the less data we have. Then we do a plot x-axis = sunspots number, y-axis = wolf numbers with vertical error bars. Then we do a line of best fit through the whole lot, try several models and do a chi-squared test. It might be worth getting rid of the small ones and only look at data where $s>20$. Again we could do this for wolf directly and for groups then wolf.
+        \end{enumerate}
+    \item Before embarking on this adventure I will first endeavour to plug both of Tacchini's hole's that appear in the plots I made: 3 entire years are missing From Tacchini's data 1877, 1878 and 1881
+    \item In 1881 the rubrics number 465 contains two data sets, one of them is entirely Ricco's and the second is from Tacchini and G. Millosevich. Nowhere int the data set is it indicated who saw what, so I looked and found that there was no Alias for Millosevich. This makes me think that he must be Tacchini's assistant or observing partner. Anyway we have a big gap in Tacchini's observations, what I will do is comment all of these observations ``Tacchini and Millosevich". I did that and gave them a flag, then regenerated the Tacchini graphs and there is no more gap in 1881, what's more the data looks almost identical. There is one only slightly worrying difference and maybe I'm inventing patterns where I am trying to see them but the 1881 observations are on average a tiny tiny bit higher than the surroundings. Actually I will put a picture \textbf{here (put link to picture I will include in this report)}, I think this is infact a seasonal effect, there is more atmosphere...
+    \end{itemize}
+    \item I improved the jupyter notebook ``suspiciou sunspots plots.ipynb", made a cool colour scheme for the various flags, and you should definitely \textbf{check this out (link of tacchini pink patches with flag=6)}
     
 \end{itemize}
 
