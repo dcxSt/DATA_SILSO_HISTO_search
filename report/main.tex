@@ -6,6 +6,12 @@
 \usepackage[shortlabels]{enumitem}
 
 \usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true,    % Colours links instead of ugly boxes
+  urlcolor     = blue,    % Colour for external hyperlinks
+  linkcolor    = blue,    % Colour of internal links
+  citecolor    = red      % Colour of citations
+}
 
 \newenvironment{rcases}
   {\left.\begin{aligned}}
@@ -80,7 +86,7 @@ First, it's important to note that note that though I am doing a quality control
 \begin{enumerate}[start=0]
     \item The default for the flag is NULL, when is estimate that the datapoint is perfect and there is nothing wrong with it, I can put it to zero 0.
     \item If the data looks fishy but I'm not quite sure either what is wrong with it or how wrong it is this is flagged with a 1 - the default.
-    \item If in the Mitteilungen journals there is written a ? next to one of the data points, I will mark it with a 2, this means that the observer is not quite confident in his/her result.
+    \item If in the Mitteilungen journals there is written a `?' next to one of the data points, I will mark it with a 2, this means that the observer is not quite confident in his/her result. See \ref{what is flag 2 question mark} - July 3 for speculation on what I think comment `?' means.
     \item A flag that signifies that this data point is definitely going into the bin
     \item For data that is very dodgy but it is ambiguous as to weather or not it is correct, to determine its validity closer examination is required
     \item For data that is definitely wrong, the difference between 5 and 4 is illustrated by example: if i find that a datapoint has a groups number of 30 I will mark it with a 4 and comment it, because this is suspicious, if a datapoint has a groups number over 60 or above, it will be marked with a 5 (trust me there are some in the hundreds).
@@ -220,9 +226,33 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
     \begin{itemize}
         \item Precisely the same thing happens to Tacchini in 1877 and 1878 but this time it is ``Tacchini und G. De Lisa". I did the same as yesterday: changed the information so that it was no longer in the observer and alias but commented instead, and flagged it with flag 6
         \item Found outlier for Tacchini, ID=46145, Mitt 30 Page 410 Rubrics 279 date 1871-04-12. Error type = typo. For groups wrote 112 instead of 12. Okay I'll admit, I found it cause I was playing around with the graphs I was generating. 
-        \item I wrote some methods in \txtit{graphs\_helper.py} mainly for helping me to display data in jupyter notebooks while avoiding over-saturating my jupyter notebooks.
-        \item The reason I've gone off track from the github project objectives is frankly because I was getting board of scouring the manuals for ages, but my enthusiasm for this task has regenerated now and this is what I will do. Once the errors from the \textit{sorted\_greater\_comments\_list3} have been fully dealt with I'll throw myself back into hunting for errors via graphic visualisation. And perhaps implement that idea I had yesterday about doing some stats on the relationships between sunspots, wolf and groups numbers (if I do this I estimate it will take around 4 days, which is quite a lot considering I usually underestimate these things, since it is not crucial to what I am doing I am considering doing this in my free time on the weekend perhaps...)
-        \item 
+        \item I wrote some methods in \txttt{graphs\_helper.py} mainly for helping me to display data in jupyter notebooks while avoiding over-saturating my jupyter notebooks.
+        \item The reason I've gone off track from the github project objectives is frankly because I was getting board of scouring the manuals for ages, but my enthusiasm for this task has regenerated now and this is what I will do. Once the errors from the \texttt{sorted\_greater\_comments\_list3} have been fully dealt with I'll throw myself back into hunting for errors via graphic visualisation. And perhaps implement that idea I had yesterday about doing some stats on the relationships between sunspots, wolf and groups numbers (if I do this I estimate it will take around 4 days, which is quite a lot considering I usually underestimate these things, since it is not crucial to what I am doing I am considering doing this in my free time on the weekend perhaps...)
+        \item Modified some Quimby comments, there was two stars int the rubrics 706 which had no explanation, I modified these two comments '*=secondary telescope' and flagged them with flag 6. There is no point in making a new alias because so few of his measurements are made with his secondary telescope, perhaps we should just get rid of them...
+        \item Realising that I was making inefficient use of my time, I am now going through all the data with COMMENTS='uncertain' where I have manually checked in the Mittheilungen manuals and changing them with the following query: \texttt{UPDATE DATA SET COMMENT='?',FLAG=2 WHERE FK\_RUBRICS=XXX AND COMMENT='uncertain';}. Since all of these were flagged initially because I didn't know what to do with them, they all find themselves in the BAD\_DATA\_SILSO so I also execute \texttt{UPDATE BAD\_DATA\_SILSO.DATA SET COMMENT='?',FLAG=2 WHERE FK\_RUBRICS=XXX AND COMMENT='uncertain';}. Once I have finished with these they will all be moved to the good database that selects things that have flag=2 and moves them.
+        \item It may well be written at the beginning of one of the Mittheilungen, but I have not yet found what the `?' comment means. I have two theories.\label{what is flag 2 question mark}
+        \begin{enumerate}
+            \item I noticed the question-marks appear in Mittheilungen where there are several observers, in-fact I have not yet found a rubric where there are question-marks but no second observer / telescope. So I suspect it might be that Mr Wolf (or whoever wrote the journals de Mittheilungen) is unsure as to who took the measurement. CORRECTION: I found one where there is no secondary telescope or observer - rubrics 779, observer = Winkler, mitt 90, page 326. There is only one telescope and one observer, yet there are still question marks.
+            \item My initial suspicion before I noticed 1. is that the question-marks denoted observations that were made on a cloudy day - or the measurement was somehow obfuscated. Oooh! I think this is right, but still not sure for every observer... There is written rubrics 1081 Herm. Kleiner writes ``? bedeutet schlechte Definition des Sonnenbildes" - \textit{? signifie mauvaise définition de l'image du soleil}.
+        \end{enumerate}
+        \item On second thoughts there are alot of red comments, I think it will take the rest of today (the next 4 hours) to verify every one of them in the journals and take note of them. I will do this and then write a script that changes their comments and flags all at once.
+        \item I updated DATA in all databases with \texttt{UPDATE DATA SET COMMENT=`bad definition of sun image',FLAG=2 WHERE COMMENT LIKE `mauvaise d\%';}
+        \item Found some comments where there is both an observer and a question mark at the same time, for these ones I left the comments as they are and changed only the flag from 1 to 2.
+        \item In rubrics 1037 mitt 100 page 359, observer `Ricco - Mascari', there are two data-points with comment `0 0'. I checked the values in the journal and they were wrong! There are corrections I made
+        \begin{enumerate}
+            \item 1908-10-17 groups 0, sunspots 18, wolf 18 (impossible) $\to$ groups=0, sunspots=0, wolf=0, comment='', flag=0
+            \item 1908-11-17 groups 0, sunspots 18, wolf 18 (impossible) $\to$ Deleted - there is no observation made on this date in this rubric
+        \end{enumerate}
+        \item I spotted a missing value in rubrics 12904 observer Buser for the observation on 1931-03-10 whilst I was correction the previous day's which was incorrect, so I entered it in. There may be more here in this rubrics.
+        \item Now I finished looking at the red comments (I still need to change them and move them all with python, that should only take about 30 mins to copy down all the rubrics numbers into a list and write the algorythem that changes them appropriately, I will do it tomorow.) Right now I am looking through the last two pages of the comments sheet I printed and there are alot of blue ones where the comments are just numbers, these require my attention.
+        \item I looked up all the blue comments on those last two pages in the journals here is a summary of my findings:
+        \begin{enumerate}
+            \item Some of the numbers actually pointed to the real values of the data i.e. the data had incorrect sunspot values and the comments had the correct ones. I modified these appropriately. In these cases often there was no groups but there were sunspots.
+            \item some of the number were the correct values but the data was also already correct, here I just deleted the comment and removed the flag.
+            \item some of the numbers were very perplexing and I have no idea what they were doing there. I just removed the flag here.
+        \end{enumerate}
+        \item I am going home now but I leave on a cliff hanger: the blues are almost done and I am currently investigating the mystery of `x' which appears in the data section in the journals of mitt 33 page 120 rubric 296. It was called to my attention by a comment also denoted `x'
+        
         
         \end{itemize}
     

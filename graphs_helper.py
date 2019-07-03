@@ -102,7 +102,7 @@ def display_seperate_flags_all(observer,interval=None):
         low=time.strftime(interval[0])
         high=time.strftime(interval[1])
 
-    plt.figure(figsize=(12,18))
+    plt.figure(figsize=(12,12))
     plt.title(observer)
     
     x=[[],[],[],[],[],[],[],[],[],[]]
