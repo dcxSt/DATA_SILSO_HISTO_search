@@ -39,7 +39,7 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
         mydb.commit()
         print("copied into rubbish bin")#trace
 
-        # remove it from the database
+        # remove it from the table DATA
         query = "DELETE FROM DATA WHERE ID="+str(id_number)
         cursor.execute(query,())
         mydb.commit()
@@ -247,9 +247,6 @@ def delete_entered_twice_duplicates(greater_duplicates_dictionary):
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
-# delete the entered twice duplicates (just running the method)
-
-
 
 # method to flag the duplicate that is missing values (sunspots / wolf == na or none or something)
 def flag_many_duplicates():
@@ -334,11 +331,6 @@ def flag_many_duplicates():
     print("\n\n\nSingle deficient count =",single_deficient_count)
     print("both_deficient_count =",both_deficient_count)
     print("both clean count =",both_clean_count)
-
-# method that flags errors highlighted in corrections_needed.md
-def flag3_from_correction_txt():
-    # list of id's where penumbra is written and needs to go into the rubbish bin database
-    penumbra = [31460]
 
 
 # method that takes a cursor, a database, a rubrics_number and a year
