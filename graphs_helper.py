@@ -50,6 +50,7 @@ def get_data_by_obs_seperate_flags():
                 data_by_obs_seperate_flags[observer][0].append(i)
     return data_by_obs_seperate_flags
 
+# shows figure of some observer's observations seperated by flag
 def display_seperate_flags(observer,interval=None,yaxis="Sunspots"):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags()
     if yaxis.lower()=="sunspots":
@@ -143,7 +144,7 @@ def display_seperate_flags_all(observer,interval=None):
     plt.xlabel("Date")
     plt.ylabel("Sunspots Number")
     for flag_index in range(len(x)):
-        # only plot if flag section non-empty so that legend isnt too big
+        # only plot if flag section non-empty so that legend isn't too big
         if len(x[flag_index])>0:
             plt.plot(x[flag_index],ysunspots[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
     plt.grid()
@@ -151,9 +152,9 @@ def display_seperate_flags_all(observer,interval=None):
 
     plt.subplot(313)
     plt.xlabel("Date")
-    plt.xlabel("Groups Number")
+    plt.ylabel("Groups Number")
     for flag_index in range(len(x)):
-        # only plot if flag section non-empty so that legend isnt too big
+        # only plot if flag section non-empty so that legend isn't too big
         if len(x[flag_index])>0:
             plt.plot(x[flag_index],ygroups[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
     plt.grid()
@@ -162,8 +163,67 @@ def display_seperate_flags_all(observer,interval=None):
     plt.show()
 
 
+# to help out with the Carrington investigation
+def get_full_carrington_dictionaries():
+    # get the big dictionary
+    obs_alias_dictionary = data_by_obs_alias_good()
+
+    # dictionaries with key=date : value=[groups,sunspots,wolf]
+    carrington303_dic = {}
+    carrington199_dic = {}
+
+    for i in obs_alias_dictionary["Carrington"]:
+        date_string = str(i[1])
+        rubrics_number = i[12]
+        
+        actual_date = i[1]
+        groups = i[2]
+        sunspots = i[3]
+        wolf = i[4]
+        
+        
+        if rubrics_number == 303:
+            #if date_string[:4] == "1859" or date_string[:4] == "1860":
+            carrington303_dic[actual_date] = [groups,sunspots,wolf]
+        elif rubrics_number == 199:
+            carrington199_dic[actual_date] = [groups,sunspots,wolf]
+    return carrington303_dic,carrington199_dic
+
+# helper for get_carrington_dictionaries_59to60
+# originally this was to figure out if there are discrepancies in date
+# but now I allowed carrington303 to have data from before 1859 so it's to filter those too
+def blacklist_dates(carrington303_dic,carrington199_dic):
+    blacklist = []
+    for date in carrington199_dic:
+        try:
+            if carrington303_dic[date]:
+                pass
+        except:
+            #print("199",date,":",carrington199_dic[date],"has no corresponding 303...")#trace
+            blacklist.append(date)
+
+    for date in carrington303_dic:
+        try:
+            if carrington199_dic[date]:
+                pass
+        except:
+            #print("303",date,":",carrington303_dic[date],"has not corresponding 199...")#trace
+            blacklist.append(date)
+    return blacklist
 
 
+def get_carringdon_dictionaries_59to60():
+    carrington303_dic,carrington199_dic = get_full_carrington_dictionaries()
+    blacklist = blacklist_dates(carrington303_dic,carrington199_dic)
+
+    # generate the intersection versions, shorter versions
+    new_303_dic = {}
+    new_199_dic = {}
+    for date in carrington199_dic:
+        if date not in blacklist:
+            new_303_dic[date] = carrington303_dic[date]
+            new_199_dic[date] = carrington199_dic[date]
+    return new_303_dic, new_199_dic
 
 
 

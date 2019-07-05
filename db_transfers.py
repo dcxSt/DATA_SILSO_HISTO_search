@@ -178,8 +178,6 @@ def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None):
             db_transfer(id_number=i,close_connections=True)
 
 
-
-
 # the following method and its 2 helpers were copied here from 
 # 'dealing_with_duplicates.py', this is a better place for them
 
@@ -466,5 +464,5 @@ def move_data_out_of_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None
         db_connection.close_database_connection(mydb)
         db_connection.close_database_connection(mydb2)
 
-
-
+for id_number in range(206774,206778):
+    db_transfer(id_number,sender="DATA_SILSO_HISTO",close_connections=True,dont_delete=True)

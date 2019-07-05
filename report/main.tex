@@ -77,7 +77,7 @@ First, it's important to note that note that though I am doing a quality control
         same as Null & suspicious & Comment in journal = ? & move to bin & suspiciously high\\
         \hline
         5 & 6 & 7 & 8 & 9\\
-        very suspicious & misc see comment & probs ok, to be investigated & null groups & null sunspots
+        very suspicious & misc see comment & derived from area-measurements & null groups & null sunspots
          
     \end{tabular}
     \caption{Flags key}
@@ -98,14 +98,20 @@ First, it's important to note that note that though I am doing a quality control
 
 \subsubsection{Outline}
 
-For the first week and a half or so, I spent the bulk of the time acquainting myself with the Mittheilungen journals, and with the software that is used to store and access the database. I also developed the tools in python to facilitate my access to them and to perform the tasks that I need to perform for the filtration process. 
+For the first week and a half or so, I spent the bulk of the time acquainting myself with the Mittheilungen journals, and with the software that is used to store and access the database. I also developed the tools in python to facilitate my access to them and to perform the tasks that I need to perform for the filtration process.
+
+\subsubsection{Equations}
+
+\begin{equation}
+    
+\end{equation}
 
 
 
 \subsubsection{Log}
 I started this (today) on 2019.06.21 (yes, the solstice!)
 \begin{itemize}
-    \item Friday June 21
+\item Friday June 21
     \begin{itemize}
         \item Today no-one was in the office in the morning so I didn't have access to the Mittheilungen journals and decided to start writing this instead
         \item at 10:20 I was let into my bit with all my notes and the journals and began 'searching the manuals' part of the project documented in the Github project linked
@@ -114,7 +120,8 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item wrote and executed methods : def\_correct\_typos\_for\_pink() ; pink()
         \item searching the manuals for all comments labeled 'uncertain' so as to figure out what is this word's range of meaning (wishing I had paid attention in German class)
     \end{itemize}
-    \item Monday June 24
+    
+\item Monday June 24
     \begin{itemize}
         \item 9.15 picking up from where I left off, I am currently scouring the manuals for any 'uncertain' data
         \item 10.40 came across some duplicate data, and mysterious comments... there are some stars '*' that signify a change of instrument but nothing is written. The annoying thing about the duplicate data is that it is coming from 
@@ -122,7 +129,8 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item in searching\_the\_manuals i wrote : find\_duplicate\_observers() ; find\_obs\_id\_by\_date() ; find\_observer\_alias\_by\_id() ; find\_duplicates\_data() ; write\_greater\_duplicates\_data\_text()
         \item i'm gonna go and delete some of the data so i will log everything in order to be very careful
     \end{itemize}
-    \item Tuesday June 25
+    
+\item Tuesday June 25
     \begin{itemize}
         \item 9.45 I have decided to start making modifications to the database, this is risky business - I don't want to have the blood of Galileo's data on my hands, in a few seconds I can destroy hours upon hours of one of my predecessors' work. Which would be a shame. This is why I am creating a new table in both the old and the new database that will serve as a rubbish bin, so that I simultaneously copy and delete some data. The data will be copied and destroyed in the same script but the coping will come \textit{before} so if there are bugs nothing will be lost. First I will back up the databases as they are.
         \item While making the rubbish bids for DATA\_SILSO\_HISTO if found that DATA\_DEV was non-empty, it contains data which claims to be observations made by the grandfather of this series - Rudolf Wolf. Only the observations are dated January 1600 - Galileo's time, 216 years before Wolf's birth! And so I renamed the DATA\_DEV to RUBBISH\_DATA and added the flag column, leaving those four observations inside where they probably belong...
@@ -133,7 +141,8 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
             \item finished commenting these data points in rubbish data in both databases
         \end{itemize}
     \end{itemize}
-    \item Wednesday June 26
+    
+\item Wednesday June 26
     \begin{itemize}
         \item wrote a new method in db\_edit for appending comments rather than replacing them
         \item wrote \textit{unreasonable\_sn\_flag()} a method that takes a look at the groups number and the sunspots number of each entry and determines if it's realistic or not. I decided somewhat arbitrarily that if the groups number was higher than 30 it would be flagged with flag 4, if the groups number was higher than 60 it would be marked with a 5 this is beyond unreasonable. I did something similar for the sunspots number $sunspots>100\Rightarrow flag:=4$ and $sunspots>250\Rightarrow flag:=5$ (see the flags section \ref{flags section}). The method was executed and ran without a hitch (after a bit of debugging)
@@ -141,7 +150,8 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item i spent alot of time scrutinising what i had flagged, rereading my scripts, seeing that I've been using really inefficient algorithms, checking things are in the right place. And wondering how on earth many things ended up with the flags they ended up with.
         \item something that has been annoying me in this search is I can't seem to be able to determine what is an unreasonable number of sunspots that can appear on the sun, because many many observer record having over 250. This is why I will start using graphical tools to help me figure all of this out. I will make the graphs in a jupyter notebook.
     \end{itemize}
-    \item Thursday June 27
+    
+\item Thursday June 27
     \begin{itemize}
         \item first thing i did today is to go though and look at lots of the flagged data from yesterday on the mysql databases
         \item Panic! While searching I came across a big problem. Many of the datapoints are labelled '*' in the comments, this corresponds to when there is an asterix in the Mitteilungen journals, but here's the twist: the star is usually a reference to the fact that there is a change in the observer's telescope to his/her secondary lunette. This is written nowhere is many cases in the digital database! This is a new task I must take on am I to accomplish my mission here:
@@ -156,7 +166,8 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item IMPORTANT: I just found some data which has been written in in the wrong year. In rubrics 820 students have mistakenly typed in the data for Wolfer in the year 1900 and written it in the year 1899.
         \item In the folder duplicates/3 2019.06.27 I am writing the file corrections\_needed\_handwritten.txt which outlines the corrections which are to be made to the data if we want to solve some of these duplicates.
     \end{itemize}
-    \item Friday June 28 
+    
+\item Friday June 28 
     \begin{itemize}
         \item Continued what I was writing yesterday, looking through the manuals and identifying. The notes I took about the duplicates can be found in different\_value\_duplicates.txt, some things I found interesting so I decided to copy most of the file into this report
         \item Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
@@ -186,7 +197,7 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
     \end{itemize}
     \end{itemize}
     
-    \item Monday July 1
+\item Monday July 1
     \begin{itemize}
         \item Using what I did on Friday (wrote that list of things that were wrong with specific duplicates) to bin some data and modify other data
         \item Started writing methods flag3\_from\_correction\_txt() and change\_rubric\_observer() and change\_date\_rubric() in dealing\_with\_duplicates.py, and then I realised that all this was much simpler and could be done faster and less error prone if I just punched in the queries to through mysql directly, so this is what I did.
@@ -203,7 +214,7 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
         \item Most of this data has been cleaned up, the rest can be done by hand
     \end{itemize}
     
-    \item Tuesday July 2
+\item Tuesday July 2
     \begin{itemize}
         \item exploring ways of creating visualisations that will help me catch some of the suspicious data-points. Right not my task is hunting down those ones which I labelled 'suspicious sunspots'
         \item made some pretty plots which you can find in \textit{suspicious sunspots plots.ipynb} in the root directory
@@ -218,11 +229,11 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
             \item One thing that worries me in the case of Tacchini is that this guy observers a lot of sunspots. I am looking at his entries right now and in 1870 he regularly observers over 200 sunspots, on $5^{th}$ of April 1870 he sees 302 sunspots. That said cross-referencing his data with other observers' from the same time seems to support this hypothesis. But the more sunspots he observers, the less data we have to make a nice normal distribution for each sunspots number, there may be sunspots numbers that only appear like 3 times in the whole database, how are we to do any stats on those. The answer is the following method for tying sunspots to groups and wolf number: for each sunspots number we link it to a wolf number by finding the best fit normal distribution for the likeliest wolf number to be associated with it. Then we give this value an error bar which is bigger the less data we have. Then we do a plot x-axis = sunspots number, y-axis = wolf numbers with vertical error bars. Then we do a line of best fit through the whole lot, try several models and do a chi-squared test. It might be worth getting rid of the small ones and only look at data where $s>20$. Again we could do this for wolf directly and for groups then wolf.
         \end{enumerate}
     \item Before embarking on this adventure I will first endeavour to plug both of Tacchini's hole's that appear in the plots I made: 3 entire years are missing From Tacchini's data 1877, 1878 and 1881
-    \item In 1881 the rubrics number 465 contains two data sets, one of them is entirely Ricco's and the second is from Tacchini and G. Millosevich. Nowhere int the data set is it indicated who saw what, so I looked and found that there was no Alias for Millosevich. This makes me think that he must be Tacchini's assistant or observing partner. Anyway we have a big gap in Tacchini's observations, what I will do is comment all of these observations ``Tacchini and Millosevich". I did that and gave them a flag, then regenerated the Tacchini graphs and there is no more gap in 1881, what's more the data looks almost identical. There is one only slightly worrying difference and maybe I'm inventing patterns where I am trying to see them but the 1881 observations are on average a tiny tiny bit higher than the surroundings. Actually I will put a picture \textbf{here (put link to picture I will include in this report)}, I think this is infact a seasonal effect, there is more atmosphere...
+    \item In 1881 the rubrics number 465 contains two data sets, one of them is entirely Ricco's and the second is from Tacchini and G. Millosevich. Nowhere int the data set is it indicated who saw what, so I looked and found that there was no Alias for Millosevich. This makes me think that he must be Tacchini's assistant or observing partner. Anyway we have a big gap in Tacchini's observations, what I will do is comment all of these observations ``Tacchini and Millosevich". I did that and gave them a flag, then regenerated the Tacchini graphs and there is no more gap in 1881, what's more the data looks almost identical. There is one only slightly worrying difference and maybe I'm inventing patterns where I am trying to see them but the 1881 observations are on average a tiny tiny bit higher than the surroundings. Actually I will put a picture \texthttps://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/add-images-to-your-websitebf{here (put link to picture I will include in this report)}, I think this is infact a seasonal effect, there is more atmosphere...
     \item I improved the jupyter notebook ``suspiciou sunspots plots.ipynb", made a cool colour scheme for the various flags, and you should definitely \textbf{check this out (link of tacchini pink patches with flag=6)}
     \end{itemize}
     
-    \item Wednesday July 3
+\item Wednesday July 3
     \begin{itemize}
         \item Precisely the same thing happens to Tacchini in 1877 and 1878 but this time it is ``Tacchini und G. De Lisa". I did the same as yesterday: changed the information so that it was no longer in the observer and alias but commented instead, and flagged it with flag 6
         \item Found outlier for Tacchini, ID=46145, Mitt 30 Page 410 Rubrics 279 date 1871-04-12. Error type = typo. For groups wrote 112 instead of 12. Okay I'll admit, I found it cause I was playing around with the graphs I was generating. 
@@ -252,9 +263,24 @@ I started this (today) on 2019.06.21 (yes, the solstice!)
             \item some of the numbers were very perplexing and I have no idea what they were doing there. I just removed the flag here.
         \end{enumerate}
         \item I am going home now but I leave on a cliff hanger: the blues are almost done and I am currently investigating the mystery of `x' which appears in the data section in the journals of mitt 33 page 120 rubric 296. It was called to my attention by a comment also denoted `x'
-        
-        
+        \item Actually I will save a new backup of the sql databases before I leave since I edited them quite a lot today.
         \end{itemize}
+        
+\item Thursday July 4
+    \begin{itemize}
+        \item I did not find an explication for the mysterious `x'... Sachen has really got me here. I translated all the text surrounding it and nowhere do they explain why there is an x. Fow now I will leave it. It will probably stay in the \texttt{BAD\_DATA\_SILSO} database
+        \item I have been looking into Carrington's case and here is what I found. Everything from rubrics 303 is the total area of either ther penumbra or the umbra. I will investigate further.
+        \item I updated the flag 7 to ``derived from area-measurement" and flagged all of Secchi's sunspot values that were derived from the penumbra and / or umbra.
+        \item Moved Secchi's derived from \texttt{BAD\_DATA\_SILSO} to \texttt{GOOD\_DATA\_SILSO} using the method \texttt{derived.move_7_to_good()}
+        \item There was a typo in some of Carrington's data which I corrected, I then transferred it into \texttt{GOOD\_DATA\_SILSO} so that it could be with it's friends
+        \item For some reason the script \texttt{dealing\_with\_duplicates.py} has in it a bunch of method that are really more general that just dealing with duplicates. Because other methods inside the script depend on these I don't want to delete them, so I copied the tree following methods into \texttt{db\_transfers.py} : \texttt{mod\_data\_to\_bin()} with helpers \texttt{transcribe\_info\_old()} and \texttt{transcribe\_info\_new()}
+        \item I modified \texttt{db\_transfer} so that you have the option to copy instead of swap
+        \item Spoke to F. Clette about the possible conversion from the `aire' to a sunspots number. Told me to look in the mitt.
+        \item Excitement! I found on page 131 of Mitt 31-40 written after rubrics 299 a description of how the author (I think R. Wolf himself) derived a formula for turning Secchi's `aire' into a sunspots number
+        \item \ref{converting the `aire'} here what is written in German and Italian, with a translation in English.
+        \item Tomorow I will fix Carrington's data, but before doing that investigate all of these : \texttt{SELECT * FROM RUBRICS WHERE RUBRICS_ID IN (SELECT FK_RUBRICS FROM DATA WHERE FK_OBSERVERS IN (36,49));}
+        \item Made a new backup of databases.
+    \end{itemize}
     
     
 \end{itemize}
@@ -426,5 +452,66 @@ As you can see, there are some famous legends in solar science such as Carringto
     \item pie chart of observers with their number of observations
     \item in the final sunspots number graph cut it into 3 or 4 sections that mark changes in the theory behind sunspots: before wolf ; time where plato's ideas of the sun being a perfect sphere still were around ; 1908 George Ellery Hale discovers the magnetic link (p14 of nature's 3rd cycle) ; 1955 eugene parker's theory (p19 of nature's 3rd cycle) ; Nasa send their probe to near the sun
 \end{itemize}
+
+\section{Miscellaneous}
+
+\subsection{Converting the $f$ (`aire')}\label{converting the `aire'}
+
+\textbf{The original text and a translation from mitt 33, rubrics 299, observer Secchi}\\
+
+\textbf{German}
+p128) Als Anhang ist ein ``[It] Registro della macchie solarie osservate alla specola del Collegio Romano durante l'anno 1871" gegeben, welches die an einer Reihe von Tagen von Rom. Remiddi gezahlten Gruppen, anstatt der Anzahlder Flecken aber Zahlen enthalt, welche die von ihnen eingenomene Flache in Quadrat-Millimeter angenommen. Ich gebe dieselben in der gewohnten Weise, d. h so, dass die erste Zahl wie immer der Anzahl der Gruppen, die zweite aber jener Flachenzahl entspricht, - die der letztern gleichgesetzte Zahl endlish eine aus ihr nach untenstehender Formel berechnete, der Fleckenzahl moglichst entsprechende Zahl.\\
+
+\textit{Secchi's Data from rubrics 299}\\
+
+p 130) Meine Relativzahlen basiren bekanntlich auf der Annahme, dass die Fleckenthatigkeit zunachst in der Anzahl der Gruppen, in untergeordneter Weise aber auch in der Grosse derselben ein Maass finde, und es wurde dieser Grosse von mir nur darum die Gesammtanzahl der Flecken substituirt, weil ich einerseits durch viele betreffend Vergleichungen gefunden hatte, das mit der Grosse der Hauptflecken meistens auch die Anzahl ihre Begleiter zunehem, also die Anzahl der Flecken annahernd jener Grosse proportional sei, - und es anderseits nicht nur zu zeitraubend fand diese Grosse fortwahrend zu messen, und (was bei den obigen Beobachtungen, welche nur die scheinbaren Flachen geben, wenigstens vorlaufig unterlassen wurde) auf ihr wahres Mass zu reduciren, sondern namentlich auch ein fur altere Beobachtungsreihen (denen sich gewohnlich die Anzahl der Flecken mit ziemlicher Sicherheit, die Grosse dagegen selten auch nur irgendwie annahernd entnehmen lasst) ebenfalls brauchbares Verfahren einfuhren musste. - Die in der obigen Reihe fur viele Tage, and welchen ich selbst Fleckenzahlungen gemacht, und daraus die Relativzahlen $r$ berechnet hatte, gegebenen Flachen haben mir nun die Moglichkeit verschafft die Richtigkeit meines Verfahrens neuerdings zu prufen, und zugleich eine bestimmte Regel aufzustellen, um zur Erganzung meiner Register fur einzeln Tage ause den bestimmten Flachen die fur mich nothigen Fleckenzahlen annahernd zu berchnen: Bezeichne ich namlich die Anzahl der in Rom gezahlten Gruppen mit $g$, die bestimmte Flache aber mit $f$, so muss unter Voraussetzung der Richtigkeit meiner Annahme annahernd fur jeden gemeinschaftlichen Beobachtungstag eine Gleichung
+$$r = a\cdot (10 g + b \cdot f) = 10 a \cdot g + c \cdot f$$
+bestehen, wo a, b und c constante Factoren sind. Ich bildete nun 120 solcher Gleichungen, ordnete dieselben nach r, nahm je aus 20 das Mittel, und erhielt so die 6 Normalgleichungen \\
+
+{\centering
+    \begin{tabular}{c|c|c|c}
+    
+         & $r = 10 a \cdot g + c\codt f$ & $r'$ & $r - r'$ \\
+         \hline
+         1 & $60 = a \cdot 37 + c \codt 46$ & $62$ & $-2$ \\
+         2 & $80 = a\cdot 46 + c\cdot 61$ & $78$ & $+2$ \\
+         3 & $100 = a\cdot 60 + c\cdot 112$ & $109$ & $-9$ \\
+         4 & $120 = a\cdot 63 + c\cdot 117$ & $114$ & $+6$ \\
+         5 & $140 = a\cdot 78 + c\cdot 155$ & $143$ & $-3$ \\
+         6 & $160 = a\cdot 85 + c\cdot 187$ & $159$ & $+1$ \\
+         \hline
+         & Mittlere Abweichung && \pm{5}
+    \end{tabular}
+\par}
+aus welchen ich nach der Methode der kleinsten Quadrate 
+$$a=1.41 \quad c=0.21 \quad \text{sodann}\ b=0.15$$
+und somit fur die romischen Beobachtungen die Reductionsgleichung
+$$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
+fand. Setze man in die Normalgleichungen diese Werthe fur a und c ein, so erhalt man die ihnen beigeschriebenen r', deren Vergleichung mit den r eine unerwartet gute Uebereinstimmung zeigt. Es hat also diese kleine Untersuchung die Berechtigung des von mir fur die Berechnung der Relativzahlen aufgestellten Principes in schonster Weise bestatigt, und mich anderseits ermuthigt in der obigen Beobachtungsreihe jeder Flache die nach der eben aufgefuhrten Formel berechnete Fleckenzahl beizuschreiben, - wobei ich naturlich in den paar Fallen, wo eine ganz geringe Flache eine Fleckenzahl ergab, welche kleiner als die Gruppenzahl war fur sie diese Gruppenzahl substituirte.
+
+
+\\
+
+\textbf{English}
+p128) As appendix is given a ``Register of sunspots observed in the mirror of the Roman College during the year 1871", which is the one on a series of days of Rome. Remiddi paid groups, instead of number spots but contains numbers which assume the area in square millimeters inscribed by them. I give them in the usual way, i.e. in such a way that the first number corresponds, as always, to the number of groups, the second, however, to that number of flats, - which endlessly calculates from the latter equated number a number which corresponds as closely as possible to the number of spots, according to the formula below.\\
+
+\textit{Secchi's Data from rubrics 299}\\
+
+p 130) As is well known, my relative numbers are based on the assumption that the number of spots finds a measure first of all in the number of groups, but in a subordinate way also in the size of the same, and this size was only substituted by me for the total number of spots, because on the one hand I had found by many comparisons that with the size of the main spots mostly also the number of their companions increases, so the number of spots is approximately proportional to that size, - and on the other hand not only too time-consuming was it found to measure these large ones continuously, and (what was at least temporarily omitted in the above observations, which only give the apparent flat ones) to reduce them to their true measure, but especially also to introduce a procedure useful for older series of observations (from which usually the number of spots is quite certain, but the large ones, on the other hand, can seldom be taken out even approximatively) likewise. - The surfaces given in the above series for many days, on which I had made spot payments myself, and had calculated the relative numbers $r$ from them, have now given me the possibility to check the correctness of my method recently, and at the same time to establish a certain rule in order to approximate the numbers of spots necessary for me to supplement my registers for individual days from the certain surfaces: If, for example, I designate the number of groups paid in Rome with $g$, but the certain area with $f$, then, assuming my assumption is correct, an approximate equation must be given for each common observation day
+$$r = a\cdot (10 g + b \cdot f) = 10 a \cdot g + c \cdot f$$
+where a, b and c are constant factors. I now formed 120 such equations, arranged them according to r, took the mean from each 20, and thus obtained the 6 normal equations \\
+
+% table here
+
+from which I can draw the least squares 
+$$a=1.41 \quad c=0.21 \quad \text{sodann}\ b=0.15$$
+and therefore for the Roman observations the reduction equation
+$$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
+found. If one enters this value for a and c in the normal equations, one obtains the r' attributed to them, whose comparison with the r shows an unexpectedly good agreement. So this small examination confirmed in the best way the validity of the principle I had established for the calculation of the relative numbers, and on the other hand it encouraged me in the above series of observations to attribute to each surface the number of spots calculated according to the just listed formula, - whereby I naturally substituted this group number in the few cases where a very small surface resulted in a number of spots which was smaller than the group number for it.
+
+
+
+
+
 
 \end{document}
