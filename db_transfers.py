@@ -292,16 +292,33 @@ def move_data_to_bin_only_good(id_number,cursor2=None,mydb2=None,close_databases
 
     # establish a connection
     cursor2,mydb2 = db_connection.get_cursor(cursor=cursor2,mydb=mydb2,the_database="GOOD_DATA_SILSO")
+    
+    # first check to see if it's already in the bin
+    try:
+        no_duplicate_in_bin = True
+        query = "SELECT * FROM RUBBISH_DATA d WHERE d.ID="+str(id_number)
+        cursor2.execute(query,())
+        rubbish_info2=cursor2.fetchall()[0]
+        if rubbish_info2[0]==id_number:
+            no_duplicate_in_bin = False
+    except:
+        pass
+    
     # add it to the bin first
     query = "SELECT * FROM DATA d WHERE d.ID="+str(id_number)
-    cursor2.execute(query)
+    cursor2.execute(query,())
     # if there is nothing don't do anything
     try:
         info2=cursor2.fetchall()[0]
         id_number,date,groups,sunspots,wolf,comment,date_insert,obs_alias,first_name,last_name,country,instrument,rubrics_number,mitt_number,page_number,flag,rubrics_source,rubrics_source_date=transcribe_info_new(info2)
 
-        query = "INSERT INTO RUBBISH_DATA SET "
-        query += "ID = "+str(id_number)+","
+        # if it's already in the bin use update
+        if no_duplicate_in_bin==False:
+            query = "UPDATE RUBBISH_DATA SET "
+        # otherwise insert
+        else:
+            query = "INSERT INTO RUBBISH_DATA SET "
+            query += "ID = "+str(id_number)+","
         query += "DATE = '"+str(date)+"',"
         query += "GROUPS ="+str(groups)+","
         query += "SUNSPOTS ="+str(sunspots)+","
@@ -320,7 +337,12 @@ def move_data_to_bin_only_good(id_number,cursor2=None,mydb2=None,close_databases
         query += "PAGE_NUMBER="+str(page_number)+","
         query += "FLAG ="+str(flag)+","
         query += "RUBRICS_SOURCE ='"+str(rubrics_source)+"',"
-        query += "RUBRICS_SOURCE_DATE='"+str(rubrics_source_date)+"';"
+        query += "RUBRICS_SOURCE_DATE='"+str(rubrics_source_date)+"'"
+
+        # if it's already in the bin use update
+        if no_duplicate_in_bin==False:
+            query += " WHERE ID="+str(id_number)
+
         
         cursor2.execute(query,())
         mydb2.commit()
@@ -517,4 +539,19 @@ def move_data_out_of_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None
     if close_databases:
         db_connection.close_database_connection(mydb)
         db_connection.close_database_connection(mydb2)
+
+# move carrington's data to rubbish from good data silso
+def move_carrington303_good_to_rubbish():
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    query = "SELECT * FROM DATA WHERE FLAG=7 AND RUBRICS_NUMBER=303"
+    cursor2.execute(query,())
+    data = cursor2.fetchall()
+    for i in data:
+        id_number = i[0]
+        move_data_to_bin_only_good(id_number,cursor2,mydb2,close_databases=False)
+    db_connection.close_database_connection(mydb2)
+    
+
+
+
 

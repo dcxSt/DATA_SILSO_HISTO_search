@@ -3,9 +3,10 @@
 
 # import statements
 import db_search
-
-# not sure if needed
 import db_connection
+import pickle
+
+# not sure what this does
 import mysql.connector
 
 # takes cursor, id and comment, and adds the comment to the id number
@@ -174,7 +175,6 @@ def set_wolf(id_number,new_wolf,replace=False,cursor=None,mydb=None):
     else:
         print("There is already a wolf number, did not replace it")
 
-
 ### sets the number of sunspots : SUNSPOTS
 def set_sunspots(id_number,new_sunspots,replace=False,cursor=None,mydb=None):
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
@@ -194,7 +194,6 @@ def set_sunspots(id_number,new_sunspots,replace=False,cursor=None,mydb=None):
         print("ID:",id_number,"\told_sunspots",old_sunspots,"\tnew_sunspots",new_sunspots)
     else:
         print("There is already a SUNSPOTS number, did not replace it")
-
 
 ### sets the group number : GROUPS
 def set_groups(id_number,new_groups,replace=False,cursor=None,mydb=None):
@@ -217,6 +216,25 @@ def set_groups(id_number,new_groups,replace=False,cursor=None,mydb=None):
         print("There is already a GROUPS number, did not replace it")
 
 
+def insert_old_format(date,fk_rubrics,fk_observers,groups,sunspots,wolf,comment,date_insert,flag,close_connection=False,the_database="DATA_SILSO_HISTO",id_number=None,):
 
+    cursor,mydb = db_connection.database_connector(the_database=the_database)
+    query = "INSERT INTO DATA SET "
+    if id_number:
+        query += "ID="+str(id_number)+","
+    query += "DATE='"+str(date)+"',"
+    query += "FK_RUBRICS="+str(fk_rubrics)+","
+    query += "FK_OBSERVERS="+str(fk_observers)+","
+    query += "GROUPS="+str(groups)+","
+    query += "SUNSPOTS="+str(sunspots)+","
+    query += "WOLF="+str(wolf)+","
+    query += "COMMENT='"+str(comment)+"',"
+    query += "DATE_INSERT='"+str(date_insert)+"',"
+    query += "FLAG="+str(flag)
+
+    cursor.execute(query,())
+    mydb.commit()
+    if close_connection:
+        db_connection.close_database_connection(mydb)
 
 

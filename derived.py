@@ -76,6 +76,3 @@ def move_carrington_to_good():
     db_connection.close_database_connection(mydb2)
 
 
-
-
-

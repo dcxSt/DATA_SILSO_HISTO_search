@@ -36,5 +36,4 @@ def secchi_derived_fix():
         wolf=true_sunspots[i]+10*groups_number[i]
         db_edit.set_wolf(i,wolf,replace=True,cursor=cursor,mydb=mydb)
     
-        
-secchi_derived_fix()
+    

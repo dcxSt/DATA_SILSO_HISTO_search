@@ -19,6 +19,12 @@ def data_by_obs_alias_good():
             obs_alias_dictionary[obs_alias]=[i]
     return obs_alias_dictionary
 
+def data_by_obs_alias_histo():
+    data = db_search.select_all_data(the_database="DATA_SILSO_HISTO")
+    obs_alias_dictionary = {}
+    for i in data:
+        obs_alias = i[7]
+
 # returns data by observer where each observer has a list of 10 sublists (1/flag)
 def get_data_by_obs_seperate_flags():
     data_by_obs = data_by_obs_alias_good()
