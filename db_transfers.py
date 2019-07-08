@@ -285,6 +285,60 @@ def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cur
         db_connection.close_database_connection(mydb2)
         db_connection.close_database_connection(mydb3)
 
+# same as above but only affects GOOD_DATA_SILSO, doesn't touch the rest
+def move_data_to_bin_only_good(id_number,cursor2=None,mydb2=None,close_databases=True):
+    # GOOD_DATA_SILSO
+    # if the data is here we move it to RUBBISH_DATA 
+
+    # establish a connection
+    cursor2,mydb2 = db_connection.get_cursor(cursor=cursor2,mydb=mydb2,the_database="GOOD_DATA_SILSO")
+    # add it to the bin first
+    query = "SELECT * FROM DATA d WHERE d.ID="+str(id_number)
+    cursor2.execute(query)
+    # if there is nothing don't do anything
+    try:
+        info2=cursor2.fetchall()[0]
+        id_number,date,groups,sunspots,wolf,comment,date_insert,obs_alias,first_name,last_name,country,instrument,rubrics_number,mitt_number,page_number,flag,rubrics_source,rubrics_source_date=transcribe_info_new(info2)
+
+        query = "INSERT INTO RUBBISH_DATA SET "
+        query += "ID = "+str(id_number)+","
+        query += "DATE = '"+str(date)+"',"
+        query += "GROUPS ="+str(groups)+","
+        query += "SUNSPOTS ="+str(sunspots)+","
+        query += "WOLF ="+str(wolf)+","
+        query += "COMMENT ='"+str(comment)+"',"
+        query += "DATE_INSERT ='"+str(date_insert)+"',"
+
+        query += "OBS_ALIAS='"+str(obs_alias)+"',"
+        query += "FIRST_NAME='"+str(first_name)+"',"
+        query += "LAST_NAME='"+str(last_name)+"',"
+        query += "COUNTRY='"+str(country)+"',"
+        query += "INSTRUMENT='"+str(instrument)+"',"
+
+        query += "RUBRICS_NUMBER="+str(rubrics_number)+","
+        query += "MITT_NUMBER="+str(mitt_number)+","
+        query += "PAGE_NUMBER="+str(page_number)+","
+        query += "FLAG ="+str(flag)+","
+        query += "RUBRICS_SOURCE ='"+str(rubrics_source)+"',"
+        query += "RUBRICS_SOURCE_DATE='"+str(rubrics_source_date)+"';"
+        
+        cursor2.execute(query,())
+        mydb2.commit()
+        print("copied into rubbish bin")#trace
+
+        # delete the data
+        query = "DELETE FROM DATA WHERE ID="+str(id_number)
+        cursor2.execute(query,())
+        mydb2.commit()
+        print("deleted from original")#trace
+
+    except IndexError:
+        print("there does not exist any data with the id_number "+str(id_number)+" in the database GOOD_DATA_SILSO")#trace
+        pass
+
+    if close_databases:
+        db_connection.close_database_connection(mydb2)
+
 
 # helper method for move_data_to_bin()
 def transcribe_info_old(info):
@@ -464,5 +518,3 @@ def move_data_out_of_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None
         db_connection.close_database_connection(mydb)
         db_connection.close_database_connection(mydb2)
 
-for id_number in range(206774,206778):
-    db_transfer(id_number,sender="DATA_SILSO_HISTO",close_connections=True,dont_delete=True)

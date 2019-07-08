@@ -211,7 +211,7 @@ def blacklist_dates(carrington303_dic,carrington199_dic):
             blacklist.append(date)
     return blacklist
 
-
+# makes searchable dictionary for carrington
 def get_carringdon_dictionaries_59to60():
     carrington303_dic,carrington199_dic = get_full_carrington_dictionaries()
     blacklist = blacklist_dates(carrington303_dic,carrington199_dic)
@@ -225,9 +225,25 @@ def get_carringdon_dictionaries_59to60():
             new_199_dic[date] = carrington199_dic[date]
     return new_303_dic, new_199_dic
 
+# rounds each element in list to nearset int
+def round_to_int(wolf):# can be wolf or sunspots
+    new_wolf=[]
+    for i in wolf:
+        new_wolf.append(int(i+0.5))
+    return new_wolf
 
-
-
+# returns sunspots numbers, for derived carrington
+def get_sunspots(groups,wolf):
+    sunspots=[]
+    if len(groups)!=len(wolf):
+        raise Exception
+    for i in range(len(groups)):
+        # r = 10 g + s
+        s = int(wolf[i] -10*groups[i])
+        if s<0:
+            s=1
+        sunspots.append(s)
+    return sunspots
 
 
 
