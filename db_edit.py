@@ -216,9 +216,10 @@ def set_groups(id_number,new_groups,replace=False,cursor=None,mydb=None):
         print("There is already a GROUPS number, did not replace it")
 
 
-def insert_old_format(date,fk_rubrics,fk_observers,groups,sunspots,wolf,comment,date_insert,flag,close_connection=False,the_database="DATA_SILSO_HISTO",id_number=None,):
+def insert_old_format(date,fk_rubrics,fk_observers,groups,sunspots,wolf,comment,date_insert,flag,close_connection=False,the_database="DATA_SILSO_HISTO",id_number=None):
 
     cursor,mydb = db_connection.database_connector(the_database=the_database)
+
     query = "INSERT INTO DATA SET "
     if id_number:
         query += "ID="+str(id_number)+","
@@ -232,8 +233,19 @@ def insert_old_format(date,fk_rubrics,fk_observers,groups,sunspots,wolf,comment,
     query += "DATE_INSERT='"+str(date_insert)+"',"
     query += "FLAG="+str(flag)
 
-    cursor.execute(query,())
-    mydb.commit()
+    try:
+        cursor.execute(query,())
+        mydb.commit()
+        print("data-point inserted")#trace
+    except:
+        print("date",date,
+        "\nfk_rubrics",fk_rubrics,
+            "\nfk_obs",fk_observers,
+                "\ngroups, sunspots, wolf:",groups,sunspots,wolf,
+                    "\ncomment",comment,
+                        "\ndate_insert",date_insert,
+                            "\nflag",flag)
+        raise Exception
     if close_connection:
         db_connection.close_database_connection(mydb)
 
