@@ -64,7 +64,7 @@ def write_body(readme):
     for script in body_dictionary:
         readme.write("### "+script+"\n\n")
         for m in body_dictionary[script]:
-            readme.write("##### "+m[0]+"()\n")
+            readme.write("##### "+m[0]+"():\t")
             readme.write(m[1]+"\n\n")
 
 # write the links section
