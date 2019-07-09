@@ -5,6 +5,8 @@
 \usepackage{amsmath,amsthm,amssymb,amsfonts,tikz,tikzsymbols}
 \usepackage[shortlabels]{enumitem}
 
+\usepackage{float}% for making figures behave with H
+
 \usepackage{hyperref}
 \hypersetup{
   colorlinks   = true,    % Colours links instead of ugly boxes
@@ -44,7 +46,7 @@
 %General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
 %Or just google stuff
  
-\title{Log\\\texttt{DATA\_SILSO\_HISTO}\\Quality Control Report}
+\title{\texttt{DATA\_SILSO\_HISTO}\\Quality Control Report}
 \author{Stephen Fay}
 \maketitle
 
@@ -54,222 +56,366 @@
 \subsection{Github repository and project}
     https://github.com/dcxSt/DATA\_SILSO\_HISTO\_search \\
     https://github.com/users/dcxSt/projects/2?fullscreen=true
+    
+\subsection{Brief History et Mise en Contexte}
 
-\section{Log}
+For centuries we have observed the sun and it's ever mysterious sunspots. The 11 year sunspot cycle has long been a subject of debate. Today we wish to have precise quantification of solar activity throughout the previous centuries. This is made possible by the sunspot series. For the past 3 to 4 hundred years people all over the Eurasian continent have been recording the number of sunspots that appear on the sun's earth facing half. 
 
-\subsection{Before The Solstice}
+The aim of this project is to do a quality control of the data in DATA\_SILSO\_HISTO. Once the data is fixed and cleaned up, it will be stored on a new database - temporarily named GOOD\_DATA\_SILSO in a more user-friendly format to what currently exists. I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be mad to keep a closer eye on the data that still needs to be examined with more scrutiny : BAD\_DATA\_SILSO. This database will act as intermediary between DATA\_SILSO\_HISTO and GOOD\_DATA\_SILSO. We will effectively be storing 2 databases-worth of information in 3 databases. The original DATA\_SILSO\_HISTO will have the old data and will be corrected in due course. The intermediary BAD\_DATA\_SILSO will start as a copy of DATA\_SILSO\_HISTO and end up empty as the corrected data is removed from it and placed, in the new format, into GOOD\_DATA\_SILSO.
+
+
+\section{Setup}
+
+\subsection{What do the flags mean?}\label{flags section}
+\newpage% idk how to make tables behave!
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+        0 & 1 & 2 & 3 & 4 \\
+        same as Null & suspicious & Comment in journal = ? & move to bin & suspiciously high\\
+        \hline
+        5 & 6 & 7 & 8 & 9\\
+        very suspicious & misc see comment & derived from area-measurements & null groups & null sunspots
+         
+    \end{tabular}
+    \caption{Flags key}
+    \label{tab:flag}
+\end{table}
+\begin{enumerate}[start=0]
+    \item The default for the flag is NULL, when is estimate that the datapoint is perfect and there is nothing wrong with it, I can put it to zero 0.
+    \item If the data looks fishy but I'm not quite sure either what is wrong with it or how wrong it is this is flagged with a 1 - the default.
+    \item If in the Mitteilungen journals there is written a `?' next to one of the data points, I will mark it with a 2, this means that the observer is not quite confident in his/her result. See \ref{what is flag 2 question mark} - July 3 for speculation on what I think comment `?' means.
+    \item A flag that signifies that this data point is definitely going into the bin
+    \item For data that is very dodgy but it is ambiguous as to weather or not it is correct, to determine its validity closer examination is required
+    \item For data that is definitely wrong, the difference between 5 and 4 is illustrated by example: if i find that a datapoint has a groups number of 30 I will mark it with a 4 and comment it, because this is suspicious, if a datapoint has a groups number over 60 or above, it will be marked with a 5 (trust me there are some in the hundreds).
+\end{enumerate}
+
+
+\subsection{Equations}
+
+\begin{equation}\label{derivde equation}
+    r = a\cdot(10 g + b\cdot f) = 10 a\cdot g + c\cdot f
+\end{equation}
+
+\begin{equation}\label{standard deviation equation}
+    \sigma = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}}  \quad \quad \quad \quad 
+    var = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}
+\end{equation}
+
+Since we have models where $\bar{x}$ is not the mean but a linear model
+\begin{equation}\label{standard deviation percentage equation}
+    \sigma\% = 100\cdot \sqrt{\frac{\sum_{i=1}^{n}\big(\frac{x_i-\bar{x}}{\bar{x}}\big)^2}{n-1}}
+\end{equation}
+
+
+\subsection{Python scripts - what they contain}
+
+See README.md
+
+
+\section{Condensed Log}
+
+\subsubsection{Before The Solstice}
 I only started the log on the solstice so I forgot the details of what I was doing before then. The time was spent learning the basics of \texttt{SQL} and how to interface with an \texttt{SQL} database through the mysql terminal; acquainting myself with the data and with what it is I ought to be doing. This is the period where I wrote some of the basic methods that I now use every day for accessing and connecting with the Mittheilungen.
 
-
-\subsection{Friday June 21}
+\subsubsection{Friday June 21}
 \begin{itemize}
-    \item Today no-one was in the office in the morning so I didn't have access to the Mittheilungen journals and decided to start writing this instead
-    \item at 10:20 I was let into my bit with all my notes and the journals and began 'searching the manuals' part of the project documented in the Github project linked
-    \item been spending time writing in all the pink corrections, including typos
-    \item started writing 'searching\_the\_manuals.py'
-    \item wrote and executed methods : def\_correct\_typos\_for\_pink() ; pink()
-    \item searching the manuals for all comments labeled 'uncertain' so as to figure out what is this word's range of meaning (wishing I had paid attention in German class)
+    \item Started writing the log
+    \item Made `searching\_the\_manuals.py'
+    \item Searching database for `uncertain' comments
 \end{itemize}
     
-\subsection{Monday June 24}
+\subsubsection{Monday June 24}
 \begin{itemize}
-    \item 9.15 picking up from where I left off, I am currently scouring the manuals for any 'uncertain' data
-    \item 10.40 came across some duplicate data, and mysterious comments... there are some stars '*' that signify a change of instrument but nothing is written. The annoying thing about the duplicate data is that it is coming from 
-    \item spent the morning making that duplicate finding and sorting algorithm, now I need to analyse the nature of the problem further. For each of the duplicates identify what kind it is, weather it's the same observer with the same instrument; if the duplicated data has for example the same rubrics numbers as each other ; if they record the same information (sunspot groups, sunspots, wolf number) ; if check to see if any clues are hidden in the comments of these duplicated data
-    \item in searching\_the\_manuals i wrote : find\_duplicate\_observers() ; find\_obs\_id\_by\_date() ; find\_observer\_alias\_by\_id() ; find\_duplicates\_data() ; write\_greater\_duplicates\_data\_text()
-    \item i'm gonna go and delete some of the data so i will log everything in order to be very careful
+    \item Discovered and sorted a bunch of duplicate data, two data-points for one date and one observer
+    \item Methods used can be found in \texttt{searching\_the\_manuals.py}
 \end{itemize}
     
-\subsection{Tuesday June 25}
+\subsubsection{Tuesday June 25}
 \begin{itemize}
-    \item 9.45 I have decided to start making modifications to the database, this is risky business - I don't want to have the blood of Galileo's data on my hands, in a few seconds I can destroy hours upon hours of one of my predecessors' work. Which would be a shame. This is why I am creating a new table in both the old and the new database that will serve as a rubbish bin, so that I simultaneously copy and delete some data. The data will be copied and destroyed in the same script but the coping will come \textit{before} so if there are bugs nothing will be lost. First I will back up the databases as they are.
-    \item While making the rubbish bids for DATA\_SILSO\_HISTO if found that DATA\_DEV was non-empty, it contains data which claims to be observations made by the grandfather of this series - Rudolf Wolf. Only the observations are dated January 1600 - Galileo's time, 216 years before Wolf's birth! And so I renamed the DATA\_DEV to RUBBISH\_DATA and added the flag column, leaving those four observations inside where they probably belong...
-    \item Wrote a new script to deal uniquely with deleting the duplicates
-    \begin{itemize}
-        \item finished writing move\_data\_to\_bin and delete\_entered\_twice\_duplicates
-        \item executing delete\_entered\_twice\_duplicates()... done
-        \item finished commenting these data points in rubbish data in both databases
-    \end{itemize}
+    \item Backed up the databases and started flagging for the moving process.
+    \item Wrote a new script to deal uniquely with deleting the duplicates (and putting them into `\texttt{RUBBISH\_DATA}')
+    \item Commented the rubbished duplicate data points
 \end{itemize}
     
-\subsection{Wednesday June 26}
+\subsubsection{Wednesday June 26}
 \begin{itemize}
-    \item wrote a new method in db\_edit for appending comments rather than replacing them
-    \item wrote \textit{unreasonable\_sn\_flag()} a method that takes a look at the groups number and the sunspots number of each entry and determines if it's realistic or not. I decided somewhat arbitrarily that if the groups number was higher than 30 it would be flagged with flag 4, if the groups number was higher than 60 it would be marked with a 5 this is beyond unreasonable. I did something similar for the sunspots number $sunspots>100\Rightarrow flag:=4$ and $sunspots>250\Rightarrow flag:=5$ (see the flags section \ref{flags section}). The method was executed and ran without a hitch (after a bit of debugging)
-    \item just set another 212 flags for putting things in the bin. There are still 4000 pairs of duplicates that need attending to but considering i started with 14000 that's not bad... Some of the duplicates may be left as they are. Also i figured out that i had flagged some which just had a 0 sunspot number and so i went and unflagged them.
-    \item i spent alot of time scrutinising what i had flagged, rereading my scripts, seeing that I've been using really inefficient algorithms, checking things are in the right place. And wondering how on earth many things ended up with the flags they ended up with.
-    \item something that has been annoying me in this search is I can't seem to be able to determine what is an unreasonable number of sunspots that can appear on the sun, because many many observer record having over 250. This is why I will start using graphical tools to help me figure all of this out. I will make the graphs in a jupyter notebook.
+    \item Wrote methods for finer mass commenting (in \texttt{db\_edit.py})
+    \item Flagged data with abnormally large groups and or sunspots numbers. (FLAG=4 WHERE $>$ 100 ; FLAG=5 WHERE $>$ 250)
+    \item Set 212 flags 3 for putting things in the bin. There are still 4000 pairs of duplicates that need attending to, originally there where 14000
+    \item Scrutinised what I had flagged, reread my scripts, checked that things are in the right place.
+    \item Having doubts about what is reasonable / unreasonable sunspots number.
 \end{itemize}
     
-\subsection{Thursday June 27}
+\subsubsection{Thursday June 27}
 \begin{itemize}
-    \item first thing i did today is to go though and look at lots of the flagged data from yesterday on the mysql databases
-    \item Panic! While searching I came across a big problem. Many of the datapoints are labelled '*' in the comments, this corresponds to when there is an asterix in the Mitteilungen journals, but here's the twist: the star is usually a reference to the fact that there is a change in the observer's telescope to his/her secondary lunette. This is written nowhere is many cases in the digital database! This is a new task I must take on am I to accomplish my mission here:
-    \begin{enumerate}
-        \item Correct all the comments so that they display useful information i.e. '*' --- '* = 8 cm Oeffnung mit 64-facher Vergrosserung und Polarisationshelioscop'
-        \item When you tackle the 'Creating New Aliases' part of the project (see my Github - username = dcxSt - project sun)
-    \end{enumerate}
-    \item I found there I had flagged all the mysterious '*' comment 1 and that none of them have found their way into my pristine database GOOD\_DATA\_SILSO and so I went through each of them individually and wrote the changes that I implemented in the python method 'correct\_asterix\_comments()' in script 'db\_homogenise\_comments.py'. This took quite some time and included translating German with my good friend google-translate. This corrected about 250 data-points' comments (i didn't bother to count)
-    \item after a long search of the data in GOOD\_DATA\_SILSO with FLAG=3 which have no superior duplicates I found that these were infact correctly flag and that their double had not yet made it into my new database because there were commented (usually with an asterisk *) so i moved them into the bin
-    \item Found a bug in move\_flag3\_to\_bin() which may have been causing some of the perplexing problems I had earlier
-    \item I ran the method 'flag\_many\_duplicates()' many times using the duplicates text files I'd made earlier for inspiration to change it subtly so as to catch those sneaky no good duplicates!
-    \item IMPORTANT: I just found some data which has been written in in the wrong year. In rubrics 820 students have mistakenly typed in the data for Wolfer in the year 1900 and written it in the year 1899.
-    \item In the folder duplicates/3 2019.06.27 I am writing the file corrections\_needed\_handwritten.txt which outlines the corrections which are to be made to the data if we want to solve some of these duplicates.
+    \item Scrutinised flagged data from yesterday
+    \item Turned my attention to the data labeled `*' in the comments
+    \item Moved the flagged duplicates to \texttt{RUBBISH\_DATA}
+    \item Found many instances of data written in wrong year
+    \item Started writing \texttt{corrections\_needed\_handwritten.txt}, to make clear all my tasks.
 \end{itemize}
     
-\subsection{Friday June 28} 
+\subsubsection{Friday June 28} 
 \begin{itemize}
-    \item Continued what I was writing yesterday, looking through the manuals and identifying. The notes I took about the duplicates can be found in different\_value\_duplicates.txt, some things I found interesting so I decided to copy most of the file into this report
-    \item Carrington datapoint id=31460 needs to go in the bin this is clearly a penumbra
-    \item All observations in rubric number = 808 with fk\_rubrics = 461 were made by Konkoly not Wolfer
-    \item All observations in rubric number = 820 were made by Wolfer in the year 1900 and not 1899, many observations are written correctly except for the year of the date, I found that the months and days correspond perfectly with what is written in the journals but not the year!
-    \item The Broger duplicates for 1899-03-17 and 1899-04-18 make very little sense, they are broger under two different aliases but in the same rubrics 801. There are only two of them so they can be done by hand. My guess is that they were punched in twice by different people and my identical duplicates algorythem has already dealt with the ones that were exactly the same, so these are the 2 instances where one of the people got it wrong.
-    \item Observations in mitt 129 rubrics number 02 (or 12902) were all made by Broger in 1931. Manny if not all of them were typed in wrong, it says they were made in 1908. Thankfully everything else about them seems correct.
-    \item For Rubrics 1057 and 1058 there is a serious problem - Both are labled with the wrong observer! 
-    \begin{itemize}
-        \item Rubrics number 1057, the observations are made in the Capodimonte Observatory by Dr. E. Guerrieri,
-        \item Rubrics number 1058, the observations are made in Floreze by Robert Lucchini. I checked and both of these boyz are real observers with aliases, so this needs to be corrected.
-        \item The reason there is confusion about these two is because Herrn J. Sormano in Turin is mentioned since the observations come from letters of correspondence between Sormano and the two observers mentioned above. It is quite possible that this has been going on in other places under the radar. The only reason these two were detected was because they just so happened to be attributed to the same guy for observations on the same date. What I propose is that we have someone (perhaps me, Asside: maybe an AI could do this if we scanned every page of the journals and then trained a neural net to read the rubrics descriptors and figure the observer based on that... This might be hard for this task but I can see how some machine learning could come in handy for error detection and quality control) go through each rubrics number and make a list where every rubrics number is ascribed to an observer, specially for the rubrics descriptors that include the names of several people, come to think of it a German person would proably do a much better job at this then me.
-        \item To speculate further it is possible that this issue runs deep and that many of the holes in the data are infact a concequence of the kind of error described above (by the way I can cut out alot of my rambling from the final draght of the report, or make a condensed version, I'm just in the habit of writing everything down so that future me can follow the thought process, sometimes it helps ok!)
-\end{itemize}
-\item Observations from rubrics number 1279 were incorrectly labled as comming from 1919 when infact they are from 1920. The observer (Prof. Anne Young) and all other info is correct.
-\item Something annoying happens in 1929, Both Brunner - 'Wm. Brunner'  and his assistant - 'W. Brunner, Assistent' seem to be observing at the same time [BOTH OF THEM ARE DENOTED WITH THE ALIAS 'Brunner'] with the same 8 cm aperture 64x magnification polarised helio-telescope. Rubrics 1624 (fk\_rubrics=840) is Brunner and his assistent's observations are from Rubrics 1675 (fk\_rubrics=842). I don't know what we should do, perhaps create another alias 'Brunner Assistent' (pink page marker)
-\begin{itemize}
-    \item Same thing happens in rubrics 12501 (fk=844) is the real Brunner, and rubrics 12503 (fk=846), this is Brunner Assistent (yellow page marker).
-    \item Same again in 1931. Rubrics 12901 (fk=848) is the real Brunner, and rubrics 12903 (fk=962), this is Brunner Assistent (orange page marker)
-    \item ...This goes on until (see the file for details)...
-    \item And in 1944. Rubrics 14401 (fk=1006) is the real Brunner, and rubrics 14402 (fk=1007) is Brunner Assistent. (green page-marker on page 112)
-    \item Comments on Brunner: I'm annoyed that the assistant(s) doesn't have a name because we now have no idea how many there where. Also (s)he deserves credit for those 10 odd years of commited observation! Because this assistent has been observing with Brunner from 1929 to 1944 he at least deserves an alias. 
-\end{itemize}
-\item Messerschmitt and Wasnetzoff
-\begin{itemize}
-    \item Something strange happens with Messerschmitt, there are two different sunspots values written in for 1908-02-15, one of them has no rubrics number and values 3,17,47 The other has a rubrics number 1028 and values 2,7,27. So I looked in the journals under rubrics 1027 and for this date I found the values 3,17,47 which are the values written in where no rubric is specified. Very strange. There are a total of 4 duplicates for Messerschmitt and this is the only one that has a rubrics number. I find this very strange... I don't really know what to do. 
-\end{itemize}
+    \item The notes I took about the duplicates can be found in different\_value\_duplicates.txt, some things I found interesting so I decided to copy most of the file into this report (see long log)
 \end{itemize}
     
-\subsection{Monday July 1}
+\subsubsection{Monday July 1}
 \begin{itemize}
-    \item Using what I did on Friday (wrote that list of things that were wrong with specific duplicates) to bin some data and modify other data
-    \item Started writing methods flag3\_from\_correction\_txt() and change\_rubric\_observer() and change\_date\_rubric() in dealing\_with\_duplicates.py, and then I realised that all this was much simpler and could be done faster and less error prone if I just punched in the queries to through mysql directly, so this is what I did.
-    \item With care and delicacy I changed the observer aliases / and for the old and bad database I changed the FK\_OBSERVERS with the terminal. Now I move onto changing all the faulty dates, this requires a bit of coding because I need to loop through the dates and change each date individually.
-    \item Wrote change\_dates() and it's helper change\_date\_rubric() (in dealing\_with\_duplicates.py) and executed them in more time than it should have taken. My head is not clear today, but I was rigourouse, there should not be a mistake.
-    \item I am changing the databases quite a bit so I saved a new backup file
-    \item made a new alias in DATA\_SILSO\_HISTO (and BAD\_DATA\_SILSO) called `Brunner Assistent'. I know the name lacks imagination but hey (I couldn't find who it might be online - future me : this is a reminder to ask Frederic if he might know, be ready with dates...).
-    \item I just realised that when I was changing some of the data in GOOD\_DATA\_SILSO I only changed the aliases, to correct this I will either write now or once everything is finished a method that goes through each data-point finds the alias and corrects the observer data (things such as the country of observation, the observer comments and the instrument etc.)
-    \item wrote and executed the command in dealing\_with\_duplicates.py change\_alias\_to\_brunner\_assistent(), this corrected the brunner assistent problem we had
-    \item backed up the the databases to sql files
-    \item I realised that I had missed correcting the alias for rubrics 195 from Franzenau to Weber so I did that just now
-    \item Ran the method that shows me what is wrong with the duplicates to see how effective my cleanup has been : interesting, the duplicates that were Weber's but marked Franzenau had already been entered under Weber but with rubrics\_number=0 and no references in the Mittheilungen, so I reran the flag\_many\_duplicates.
-    \item Some of the 'Tacchini and Milesovich' are missing sources but the duplicates are identical, so I moved one from each to the rubbish bit by calling the method delete\_entered\_twice\_duplicates() from dealing\_with\_duplicates.py. There was also the issue that Broger had some identical data typed in for him in two using two different observer ids that both refer to him... so i added an elif statement into the delete entered twice duplicates method to deal specifically with this.
+    \item Using what I did on Friday to bin some duplicated data and modify some other data
+    \item Made a new alias in \texttt{DATA\_SILSO\_HISTO} (and \texttt{BAD\_DATA\_SILSO}) called `Brunner Assistent'.
+    \item Backed up the the databases to sql files
     \item Most of this data has been cleaned up, the rest can be done by hand
 \end{itemize}
     
-\subsection{Tuesday July 2}
+\subsubsection{Tuesday July 2}
 \begin{itemize}
-    \item exploring ways of creating visualisations that will help me catch some of the suspicious data-points. Right not my task is hunting down those ones which I labelled 'suspicious sunspots'
-    \item made some pretty plots which you can find in \textit{suspicious sunspots plots.ipynb} in the root directory
-    \item Using the plot I was able to check some of Weber's suspicious sunspots in the Mittheilungen. And strangely enough Weber's observations are correct! It seems he really did see 476 sunspots on the sun on the 25th of september 1870. I mean the patter fits it's just unsusually large. And you need to be dedicated to count hundreds of spots every day.
-    \item Made a method in the jupyter notebook mentioned above that plots an observer's stuff and color codes the flags. I investigated Tacchini's green (flag=4) datapoints and they are infact correct, they appear in the journals. There is one datapoint from Tacchini which I corrected by hand, this one had a wolf number of 61, I found it in the journals, the correct value was 6 - typo. I corrected it manually.
-    \item In the rubric 279 mitt 30 page 409 Tacchini observes a bunch of sunspots without observing any groups. This is annoying because it means we have no wolf! Other than that they seem to have been entered in correctly, I have not yet transfered these to the GOOD DATA SILSO database, they are still only in DATA SILSO HISTO and BAD DATA SILSO
-    \item I have an idea that we could do some stats and deduce a wolf number even without the groups, and give it a special flag, based on some probability we estimate a wolf number. There might be some complications with this tactic, here are 3 possible ways of doing it and their weaknesses:
-    \begin{enumerate}
-        \item For each sunspots number possible \{1,2,3...\} find the corresponding most likely wolf number by going though each data point with that number and doing a distribution (probs normal) to find which is the most likely wolf number associated with this sunspots number. Essentially we define a function term-by term $f \defeq{} \N \to \R$. The weakness : if we sample everything we might find that Tacchini has his own idiosyncratic way of doing sunspots and wolf, and so the data we add to his entriee would not fit well with his methods of observation.
-        \item For each sunspots number do the same as above but go through the groups number! Again for each sunspots number find sift through all the data of everyone to find the best groups number $g\in \R$, i.e. the $g$ s.t. it sits on top of the fitted normal distribution.
-        \item For each sunspots number, methods 1) and 2) above but fitted with only Tacchini's previous and future data. The weakness of this method is that there is not much data to go on... (relative to the first two)
-        \item One thing that worries me in the case of Tacchini is that this guy observers a lot of sunspots. I am looking at his entries right now and in 1870 he regularly observers over 200 sunspots, on $5^{th}$ of April 1870 he sees 302 sunspots. That said cross-referencing his data with other observers' from the same time seems to support this hypothesis. But the more sunspots he observers, the less data we have to make a nice normal distribution for each sunspots number, there may be sunspots numbers that only appear like 3 times in the whole database, how are we to do any stats on those. The answer is the following method for tying sunspots to groups and wolf number: for each sunspots number we link it to a wolf number by finding the best fit normal distribution for the likeliest wolf number to be associated with it. Then we give this value an error bar which is bigger the less data we have. Then we do a plot x-axis = sunspots number, y-axis = wolf numbers with vertical error bars. Then we do a line of best fit through the whole lot, try several models and do a chi-squared test. It might be worth getting rid of the small ones and only look at data where $s>20$. Again we could do this for wolf directly and for groups then wolf.
-    \end{enumerate}
-\item Before embarking on this adventure I will first endeavour to plug both of Tacchini's hole's that appear in the plots I made: 3 entire years are missing From Tacchini's data 1877, 1878 and 1881
-\item In 1881 the rubrics number 465 contains two data sets, one of them is entirely Ricco's and the second is from Tacchini and G. Millosevich. Nowhere int the data set is it indicated who saw what, so I looked and found that there was no Alias for Millosevich. This makes me think that he must be Tacchini's assistant or observing partner. Anyway we have a big gap in Tacchini's observations, what I will do is comment all of these observations ``Tacchini and Millosevich". I did that and gave them a flag, then regenerated the Tacchini graphs and there is no more gap in 1881, what's more the data looks almost identical. There is one only slightly worrying difference and maybe I'm inventing patterns where I am trying to see them but the 1881 observations are on average a tiny tiny bit higher than the surroundings. Actually I will put a picture \texthttps://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/add-images-to-your-websitebf{here (put link to picture I will include in this report)}, I think this is infact a seasonal effect, there is more atmosphere...
-\item I improved the jupyter notebook ``suspiciou sunspots plots.ipynb", made a cool colour scheme for the various flags, and you should definitely \textbf{check this out (link of tacchini pink patches with flag=6)}
+    \item Made some pretty plots in \textit{suspicious sunspots plots.ipynb} in the root directory
+    \item Made a method in the jupyter notebook mentioned above that plots an observer's stuff and color codes the flags.
+    \item Checked some of them in the journals
+    \item Started patching Tacchini's missing holes
+\end{itemize}
     
-    
-\subsection{Wednesday July 3}
+\subsubsection{Wednesday July 3}\label{what is flag 2 question mark}
 \begin{itemize}
-    \item Precisely the same thing happens to Tacchini in 1877 and 1878 but this time it is ``Tacchini und G. De Lisa". I did the same as yesterday: changed the information so that it was no longer in the observer and alias but commented instead, and flagged it with flag 6
-    \item Found outlier for Tacchini, ID=46145, Mitt 30 Page 410 Rubrics 279 date 1871-04-12. Error type = typo. For groups wrote 112 instead of 12. Okay I'll admit, I found it cause I was playing around with the graphs I was generating. 
-    \item I wrote some methods in \txttt{graphs\_helper.py} mainly for helping me to display data in jupyter notebooks while avoiding over-saturating my jupyter notebooks.
-    \item The reason I've gone off track from the github project objectives is frankly because I was getting board of scouring the manuals for ages, but my enthusiasm for this task has regenerated now and this is what I will do. Once the errors from the \texttt{sorted\_greater\_comments\_list3} have been fully dealt with I'll throw myself back into hunting for errors via graphic visualisation. And perhaps implement that idea I had yesterday about doing some stats on the relationships between sunspots, wolf and groups numbers (if I do this I estimate it will take around 4 days, which is quite a lot considering I usually underestimate these things, since it is not crucial to what I am doing I am considering doing this in my free time on the weekend perhaps...)
-    \item Modified some Quimby comments, there was two stars int the rubrics 706 which had no explanation, I modified these two comments '*=secondary telescope' and flagged them with flag 6. There is no point in making a new alias because so few of his measurements are made with his secondary telescope, perhaps we should just get rid of them...
-    \item Realising that I was making inefficient use of my time, I am now going through all the data with COMMENTS='uncertain' where I have manually checked in the Mittheilungen manuals and changing them with the following query: \texttt{UPDATE DATA SET COMMENT='?',FLAG=2 WHERE FK\_RUBRICS=XXX AND COMMENT='uncertain';}. Since all of these were flagged initially because I didn't know what to do with them, they all find themselves in the BAD\_DATA\_SILSO so I also execute \texttt{UPDATE BAD\_DATA\_SILSO.DATA SET COMMENT='?',FLAG=2 WHERE FK\_RUBRICS=XXX AND COMMENT='uncertain';}. Once I have finished with these they will all be moved to the good database that selects things that have flag=2 and moves them.
-    \item It may well be written at the beginning of one of the Mittheilungen, but I have not yet found what the `?' comment means. I have two theories.\label{what is flag 2 question mark}
-    \begin{enumerate}
-        \item I noticed the question-marks appear in Mittheilungen where there are several observers, in-fact I have not yet found a rubric where there are question-marks but no second observer / telescope. So I suspect it might be that Mr Wolf (or whoever wrote the journals de Mittheilungen) is unsure as to who took the measurement. CORRECTION: I found one where there is no secondary telescope or observer - rubrics 779, observer = Winkler, mitt 90, page 326. There is only one telescope and one observer, yet there are still question marks.
-        \item My initial suspicion before I noticed 1. is that the question-marks denoted observations that were made on a cloudy day - or the measurement was somehow obfuscated. Oooh! I think this is right, but still not sure for every observer... There is written rubrics 1081 Herm. Kleiner writes ``? bedeutet schlechte Definition des Sonnenbildes" - \textit{? signifie mauvaise définition de l'image du soleil}.
-    \end{enumerate}
-    \item On second thoughts there are alot of red comments, I think it will take the rest of today (the next 4 hours) to verify every one of them in the journals and take note of them. I will do this and then write a script that changes their comments and flags all at once.
-    \item I updated DATA in all databases with \texttt{UPDATE DATA SET COMMENT=`bad definition of sun image',FLAG=2 WHERE COMMENT LIKE `mauvaise d\%';}
+    \item Continued fixing Tacchini (see figure \ref{fig:tacchini})
+    \item Went back to searching the manuals for errors from error sheet. 
+    \item Looking through for `uncertain' comments
+    \item Figured out what COMMENT=`?' means; blurry image / bad definition of img
     \item Found some comments where there is both an observer and a question mark at the same time, for these ones I left the comments as they are and changed only the flag from 1 to 2.
-    \item In rubrics 1037 mitt 100 page 359, observer `Ricco - Mascari', there are two data-points with comment `0 0'. I checked the values in the journal and they were wrong! There are corrections I made
-    \begin{enumerate}
-        \item 1908-10-17 groups 0, sunspots 18, wolf 18 (impossible) $\to$ groups=0, sunspots=0, wolf=0, comment='', flag=0
-        \item 1908-11-17 groups 0, sunspots 18, wolf 18 (impossible) $\to$ Deleted - there is no observation made on this date in this rubric
-    \end{enumerate}
-    \item I spotted a missing value in rubrics 12904 observer Buser for the observation on 1931-03-10 whilst I was correction the previous day's which was incorrect, so I entered it in. There may be more here in this rubrics.
-    \item Now I finished looking at the red comments (I still need to change them and move them all with python, that should only take about 30 mins to copy down all the rubrics numbers into a list and write the algorythem that changes them appropriately, I will do it tomorow.) Right now I am looking through the last two pages of the comments sheet I printed and there are alot of blue ones where the comments are just numbers, these require my attention.
-    \item I looked up all the blue comments on those last two pages in the journals here is a summary of my findings:
-    \begin{enumerate}
-        \item Some of the numbers actually pointed to the real values of the data i.e. the data had incorrect sunspot values and the comments had the correct ones. I modified these appropriately. In these cases often there was no groups but there were sunspots.
-        \item some of the number were the correct values but the data was also already correct, here I just deleted the comment and removed the flag.
-        \item some of the numbers were very perplexing and I have no idea what they were doing there. I just removed the flag here.
-    \end{enumerate}
-    \item I am going home now but I leave on a cliff hanger: the blues are almost done and I am currently investigating the mystery of `x' which appears in the data section in the journals of mitt 33 page 120 rubric 296. It was called to my attention by a comment also denoted `x'
-    \item Actually I will save a new backup of the sql databases before I leave since I edited them quite a lot today.
+    \item Finished looking at red comments (I still need to change them and move them all with python, I will do it tomorrow.) 
+    \item Looking at blue comments (the ones where comments are just numbers)
+    \item Backed up databases
     \end{itemize}
             
-\subsection{Thursday July 4}
+\subsubsection{Thursday July 4}
 \begin{itemize}
-    \item I did not find an explication for the mysterious `x'... Sachen has really got me here. I translated all the text surrounding it and nowhere do they explain why there is an x. Fow now I will leave it. It will probably stay in the \texttt{BAD\_DATA\_SILSO} database
-    \item I have been looking into Carrington's case and here is what I found. Everything from rubrics 303 is the total area of either ther penumbra or the umbra. I will investigate further.
+    \item Looking into Carrington's case.
     \item I updated the flag 7 to ``derived from area-measurement" and flagged all of Secchi's sunspot values that were derived from the penumbra and / or umbra.
-    \item Moved Secchi's derived from \texttt{BAD\_DATA\_SILSO} to \texttt{GOOD\_DATA\_SILSO} using the method \texttt{derived.move_7_to_good()}
-    \item There was a typo in some of Carrington's data which I corrected, I then transferred it into \texttt{GOOD\_DATA\_SILSO} so that it could be with it's friends
-    \item For some reason the script \texttt{dealing\_with\_duplicates.py} has in it a bunch of method that are really more general that just dealing with duplicates. Because other methods inside the script depend on these I don't want to delete them, so I copied the tree following methods into \texttt{db\_transfers.py} : \texttt{mod\_data\_to\_bin()} with helpers \texttt{transcribe\_info\_old()} and \texttt{transcribe\_info\_new()}
-    \item I modified \texttt{db\_transfer} so that you have the option to copy instead of swap
-    \item Spoke to F. Clette about the possible conversion from the `aire' to a sunspots number. Told me to look in the mitt.
+    \item Dealt with Secchi
+    \item Spoke to F. Clette about the possible conversion from the `aire' to a sunspots number. He gave me some clues as to where to look in the mitt.
     \item Excitement! I found on page 131 of Mitt 31-40 written after rubrics 299 a description of how the author (I think R. Wolf himself) derived a formula for turning Secchi's `aire' into a sunspots number
-    \item \ref{converting the `aire'} here what is written in German and Italian, with a translation in English.
-    \item Tomorow I will fix Carrington's data, but before doing that investigate all of these : \texttt{SELECT * FROM RUBRICS WHERE RUBRICS\_ID IN (SELECT FK\_RUBRICS FROM DATA WHERE FK\_OBSERVERS IN (36,49));}
-    \item Made a new backup of databases.
+    \item \ref{converting the `aire'} here is what is written in German and Italian, with a translation in English.
+    \item Backed up databases
 \end{itemize}
         
-\subsection{Friday July 5}
+\subsubsection{Friday July 5}
 \begin{itemize}
-    \item I was searching all of Carrington's data from different rubrics in order to see if I could find an overlap in time from data where there is recorded the `air' and data where there is recorded the sunspots number. Some of the groups number seem to conflict...
-    \item This is very perturbing, the groups number for rubrics 199 (Carrington) does not seem to agree with the groups number for rubrics 303 (also Carrington), however they are very similar. The only explanation I can think of is that in 303 Carrington writes number\_of\_big\_spots.surface\_area and in rubrics 199 he simply write groups.sunspots. I am still hunting for clues in the text \ref{rubrics 303, carrington}. This theory is evidenced by the fact that the number of big spots is always bigger than the number of groups which you would expect were it true.
-    \item The thing to do now is graphs. I will make graphs to try and figure it out.
-    \item Found one typo in the data id=31372 and corrected it
-    \item Made the notebook \texttt{carrington\_investigation\_groups.ipynb}
-    \item Missing data: while trying to analyse carrington's strange behaviour I cross reference every date from rubrics 199 with dates in 1859 and 1860 from 303 and found 7 missing data-points which I looked up in the journals and 4 of them were in there. So I hand-typed them into \texttt{DATA\_SILSO\_HISTO} and then copied them over into \texttt{GOOD\_DATA\_SILSO} with the method \texttt{db\_transfers.db\_transfer(dont\_delete=True)}. They are :
-    \begin{itemize}
-        \item rub 303 1860-08-07, ID = 206774
-        \item for 1860-10-07 and 1860-11-16 there is nothing in rubrics 303, perhaps Carrington only did the sunspots number those days
-        \item rub 199 1860-09-15, ID = 206775
-        \item for 1860-10-08 there is nothing in rubrics 199, perhaps Carrington only did the penumbra for this day
-        \item rub 199 1860-10-28, ID = 206776
-        \item rub 199 1860-12-10, ID = 206777
-    \end{itemize}
-    \item I did a comparison of the groups number from rubrics 199
-\end{itemize}
-\item I have a problem, in order to implement the modifications I would like to make to Carrington's rubrics 303 data I need the groups, sunspots and wolf all to be floating point numbers, right now in the database they are integers and I cannot modify them as such.
-\item I found a relationship between what is labelled groups and the actual groups number for rubrics 303, see \texttt{carrington\_investigation\_groups.ipynb}
-\item These are my suggested modifications : do as the author of rubrics 299 did for Secchi (\ref{rubrics 299, secchi}). However I can do better, he did not have the power of computers and he makes many approximations that are not needed today. For instance, he takes the mean from each 20 equations out of his set of 120, there is no need for this today. I will on the other hand draw inspiration from him on his model:
-$$r = a\cdot(10 g + b\cdot f) = 10 a\cdot g + c\cdot f$$
-according to him it fits quite well.
-\item In order not to disrupt the database I have decided to sacrifice a smidgen of accuracy in order to keep using integers for the $r$, $g$ and $s$ (wolf, groups, sunspots). ($f$ is the `aire'). I will do the following things (see \texttt{carrington\_investigation\_wolf.ipynb}):
-\begin{enumerate}
-    \item Basing myself off of the relationship described by equation (\ref{derivde equation}) I will do a least squares fitting as I did for the groups, to find values for $a$ and $b$
-    \item I will then do the same least squares fitting using a modified $g$ which I have multiplied by a factor of $\frac{1}{1.0915}$ to see if the standard deviation is at all better for this group
-    \item If the fit is not as good as hoped I will try several other models to see if I can find an equation (with maximum 3 or 4 degrees of freedom) which fits the data well
-    \item From my model I will the deduce $s$, the corresponding sunspots number which, when combined with $g$ gives $r$
-    \item Using my newly found equations and constants I will then apply modifications onto the rest of rubrics 303
-    \item I will then round $g$, $s$ and $r$ to the nearest integer and enter these into the database.
-\end{enumerate}
-\item Something Sabrina brought to my attention was that my training group is only 2 years long, during a maximum, this might mess with the results a little bit.
+    \item Continued working on Carrington
 \end{itemize}
 
-\section{Converting the $f$ (`aire')}\label{converting the `aire'}
+\subsubsection{Monday July 8}
+\begin{itemize}
+    \item Finished deriving Carrington
+    \item Backed up databases
+\end{itemize}
 
-\subsection{Rubrics 299, Mitt 33, p 128, Observer Secchi}\label{rubrics 299, secchi}\\
+\subsubsection{Tuesday July 9}
+\begin{itemize}
+    \item Derived Kew's misbehaving data
+    \item Made a new `README.md' that auto-generates based on what is inside my python scripts
+    \item Tidied the report and added some figures
+\end{itemize}
+
+
+
+\section{Tables & Figures}
+
+\subsubsection{The original sql data tables format}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE DATA}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) & No & PRI & NULL & auto\_increment \\
+        
+        DATE & date & YES && NULL & \\
+        
+        FK\_RUBRICS & int(11) & YES & MUL & NULL &  \\
+        
+        FK\_OBSERVERS & int(11) & YES & MUL & NULL &  \\
+        
+        GROUPS & int(11) & YES && NULL &  \\
+        
+        SUNSPOTS & int(11) & YES && NULL & \\
+        
+        WOLF & int(11) & YES && NULL &  \\
+        
+        QUALITY & int(11) & YES && NULL &  \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        FLAG (i added this) & tinyint(1) & YES && NULL &  \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE OBSERVERS}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) & NO & PRI & NULL & auto\_increment \\
+        
+        ALIAS & varchar(50) & YES && NULL & \\
+        
+        FIRST\_NAME & varchar(50) & YES && NULL &  \\
+        
+        LAST\_NAME & varchar(50) & YES && NULL &  \\
+        
+        COUNTRY & varchar(50) & YES && NULL &  \\
+        
+        INSTRUMENT & varchar(50) & YES && NULL & \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE RUBRICS}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        RUBRICS\_ID & int(11) & NO & PRI & NULL & auto\_increment \\
+        
+        RUBRICS\_NUMBER & int(11) unsigned & NO && NULL & \\
+        
+        MITT\_NUMBER & int(11) unsigned & NO && 0 &  \\
+        
+        PAGE\_NUMBER & int(11) unsigned & YES && NULL &  \\
+        
+        SOURCE & text & NO && NULL &  \\
+        
+        SOURCE\_DATE & date & YES && NULL & \\
+        
+        COMMENTS & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        NB\_OBS & int(11) & YES && NULL & \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+\newpage{}
+
+\subsubsection{My new sql data table format}
+
+\begin{table}[h!]
+    \centering
+    \caption{DESCRIBE DATA (the only table)}
+    \begin{tabular}{c|c|c|c|c|c}% l c r = Left Centre Right
+        \textbf{Field} & \textbf{Type} & \textbf{Null} & \textbf{Key} & \textbf{Default} & \textbf{Extra}  \\
+        \hline
+        ID & int(11) unsigned & No & PRI & NULL & auto\_increment \\
+        
+        DATE & date & YES && NULL & \\
+        
+        GROUPS & int(11) & YES && NULL &  \\
+        
+        SUNSPOTS & int(11) & YES && NULL & \\
+        
+        WOLF & int(11) & YES && NULL &  \\
+        
+        COMMENT & text & YES && NULL &  \\
+        
+        DATE\_INSERT & datetime & YES && NULL &  \\
+        
+        OBS\_ALIAS & varchar(50) & YES && NULL & \\
+        
+        FIRST\_NAME & varchar(50) & YES && NULL & \\
+        
+        LAST\_NAME & varchar(50) & YES && NULL & \\
+        
+        COUNTRY & varchar(50) & YES && NULL & \\
+        
+        INSTRUMENT\_NAME & varchar(50) & YES && NULL & \\
+        
+        RUBRICS\_NUMBER & int(11) & YES && NULL & \\
+        
+        MITT\_NUMBER & int(11) & YES && NULL & \\
+        
+        PAGE\_NUMBER & int(11) & YES && NULL & \\
+        
+        FLAG & tinyint(1) unsigned & YES && NULL &  \\
+        
+        RUBRICS\_SOURCE & text & YES && NULL & \\
+        
+        RUBRICS\_SOURCE\_DATE & date & YES && NULL & \\
+        
+    \end{tabular}
+    \label{tab:data-og}
+\end{table}
+
+
+
+
+
+\newpage{}
+
+\subsubsection{Figures - plots and graphs}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\linewidth]{tacchini1877_patch.png}
+    \includegraphics[width=0.5\linewidth]{tacchini1881_patch.png}
+    \includegraphics[width=\linewidth]{tacchini_pached.png}
+    \caption{Tacchini}
+    \label{fig:tacchini}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{CarringtonHasGoodEyesight.png}
+  \caption{Carrington and Kew - input penumbras instead of sunspots}
+  \label{fig:carrington-kew-penumbras}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{carrington_derived.png}
+    \caption{Carrington derived}
+    \label{fig:carrington_derived}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{carrington_fit_wolf.png}
+    \caption{Carrington wolf fit}
+    \label{fig:carrington_fit_wolf}
+\end{figure}
+
+\section{Conclusions}
+
+\subsection{Before and After - outline of the modifications I made to the database}
+
+\subsection{Problems that remain with the database}
+
+This idea will probably never come to fluition - in the spirit of Herr Wolf who was the first one to estimate $\pi$ by monte-carlo approximation, find the frequency of random errors in the Mittheilungen by Monte-Carlo approximation (should take about 1 day). Pick 1000 to 2000 datapoints at random using some algorythem, and find each one in the mittheilungen to see if it is entered correctly, do some stats on this and calculate a student error factor. (better to look up if there are known numbers for this kind of task)
+
+\section{Miscellaneous}
+
+\subsubsection{Thought repository - ideas that may or may not come into fluition depending on how efficiently I work and get things that need to be done done}
+\begin{itemize}
+    \item make some data visualisations to compare each observer's primary and secondary observing equipment
+    \item for each day / month / year find the highest observation and the lowest observations and add it to the graph so that we have like an upper bound and a lower bound. 
+    \item figure out how to smooth graphs with matplotlib and make something nice out off the big mess i currently have
+    \item pie chart of observers with their number of observations
+    \item in the final sunspots number graph cut it into 3 or 4 sections that mark changes in the theory behind sunspots: before wolf ; time where plato's ideas of the sun being a perfect sphere still were around ; 1908 George Ellery Hale discovers the magnetic link (p14 of nature's 3rd cycle) ; 1955 eugene parker's theory (p19 of nature's 3rd cycle) ; Nasa send their probe to near the sun
+\end{itemize}
+
+\subsection{Converting the $f$ (`aire')}\label{converting the `aire'}
+
+\subsubsection{rubrics 299, mitt 33, p 128 observer Secchi}\label{rubrics 299, secchi}\\
 
 \textbf{German}
 p128) Als Anhang ist ein ``[It] Registro della macchie solarie osservate alla specola del Collegio Romano durante l'anno 1871" gegeben, welches die an einer Reihe von Tagen von Rom. Remiddi gezahlten Gruppen, anstatt der Anzahlder Flecken aber Zahlen enthalt, welche die von ihnen eingenomene Flache in Quadrat-Millimeter angenommen. Ich gebe dieselben in der gewohnten Weise, d. h so, dass die erste Zahl wie immer der Anzahl der Gruppen, die zweite aber jener Flachenzahl entspricht, - die der letztern gleichgesetzte Zahl endlish eine aus ihr nach untenstehender Formel berechnete, der Fleckenzahl moglichst entsprechende Zahl.\\
@@ -301,7 +447,7 @@ und somit fur die romischen Beobachtungen die Reductionsgleichung
 $$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
 fand. Setze man in die Normalgleichungen diese Werthe fur a und c ein, so erhalt man die ihnen beigeschriebenen r', deren Vergleichung mit den r eine unerwartet gute Uebereinstimmung zeigt. Es hat also diese kleine Untersuchung die Berechtigung des von mir fur die Berechnung der Relativzahlen aufgestellten Principes in schonster Weise bestatigt, und mich anderseits ermuthigt in der obigen Beobachtungsreihe jeder Flache die nach der eben aufgefuhrten Formel berechnete Fleckenzahl beizuschreiben, - wobei ich naturlich in den paar Fallen, wo eine ganz geringe Flache eine Fleckenzahl ergab, welche kleiner als die Gruppenzahl war fur sie diese Gruppenzahl substituirte.\\
 
-\textbf{English}
+\textbf{English} (using \href{http://deepl.com/}{deepl translator})
 p128) As appendix is given a ``Register of sunspots observed in the mirror of the Roman College during the year 1871", which is the one on a series of days of Rome. Remiddi paid groups, instead of number spots but contains numbers which assume the area in square millimeters inscribed by them. I give them in the usual way, i.e. in such a way that the first number corresponds, as always, to the number of groups, the second, however, to that number of flats, - which endlessly calculates from the latter equated number a number which corresponds as closely as possible to the number of spots, according to the formula below.\\
 
 \textit{Secchi's Data from rubrics 299}\\
@@ -332,7 +478,7 @@ and therefore for the Roman observations the reduction equation
 $$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
 found. If one enters this value for a and c in the normal equations, one obtains the r' attributed to them, whose comparison with the r shows an unexpectedly good agreement. So this small examination confirmed in the best way the validity of the principle I had established for the calculation of the relative numbers, and on the other hand it encouraged me in the above series of observations to attribute to each surface the number of spots calculated according to the just listed formula, - whereby I naturally substituted this group number in the few cases where a very small surface resulted in a number of spots which was smaller than the group number for it.
 
-\subsection{Rubrics 303, mitt 35, p 241 observer Carrington}\label{rubrics 303, carrington}\\
+\subsubsection{rubrics 303, mitt 35, p 241 observer Carrington}\label{rubrics 303, carrington}\\
 
 303) Warren De La Rue, Balfour Stewart and Benjamin Loewy, Researches on Solar Physics. Second Series: Area measurements of the Sun-Spots observed by Carrington during the seven Years from 1854 - 1860 inclusive, and deductions therefrom. London 1866 in 4.\\
 
@@ -348,7 +494,7 @@ What follows is observations made by Carrington for the years specified with `ai
 
 By comparing the surface numbers given for 1859 and 1860 with the spot numbers given in No. 199 by Carrington himself for the same years and days, one obtains that on average 1000 surface units correspond to 24 spots, and this relationship may be used without decency to convert the surfaces into spots for the few days when the spot register can be supplemented by Carrington's observations.
 
-\subsection{Rubrics 199, mitt 11-20, p224}
+\subsubsection{Rubrics 199, mitt 11-20, p224}
 
 Observations of the Spots on the Sun from 1853 XI 9 to 1861 III 24 made ad Redhill by R. Chr. Carrington. London 1863 (248 Pag., 166 Plat.) in 4.\\
 
@@ -359,4 +505,9 @@ Dieses Ausgezeichnete, erst kurzlich nach Verdienen von der Pariser-Academie mit
 This excellent work of my esteemed friend, which was awarded the Lalande Prize by the Paris Academy only shortly after it had been earned, hardly permits an excerpt by its nature, but is first to be regarded as an inexhaustible treasure trove in which those astronomers who are particularly concerned with the distribution of sunspots, their changes of place, etc., can be found. As already above a study based on it has been shared by Mr. Fritz, while a work of mine concerning the 'Concluding Section' will follow in one of the next communications. On the other hand, to supplement the No. 129 of the Litteratur, the stain payments in the years 1859 and 1860, which Mr. Carrington informed me of his time and which I recently used in the determination of the repeatedly mentioned 5-day means, may be added here as an appendix. They are the following:
 
 
-\end{document} 
+\end{document}
+
+
+
+
+

@@ -19,6 +19,7 @@ def data_by_obs_alias_good():
             obs_alias_dictionary[obs_alias]=[i]
     return obs_alias_dictionary
 
+# same as above but for different database format
 def data_by_obs_alias_histo():
     data = db_search.select_all_data(the_database="DATA_SILSO_HISTO")
     obs_alias_dictionary = {}
@@ -57,7 +58,7 @@ def get_data_by_obs_seperate_flags():
     return data_by_obs_seperate_flags
 
 # shows figure of some observer's observations seperated by flag
-def display_seperate_flags(observer,interval=None,yaxis="Sunspots"):
+def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags()
     if yaxis.lower()=="sunspots":
         yindex=3
@@ -101,6 +102,8 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots"):
         
     plt.grid()
     plt.legend()
+    if save_as:
+        plt.savefig(save_as)
     plt.show()
 
 def display_seperate_flags_all(observer,interval=None):
