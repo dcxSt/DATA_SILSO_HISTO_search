@@ -6,11 +6,11 @@ import db_search
 import searching_the_manuals
 
 
-### this method is the backbone of this script, who's sole purpouse is to scrap the
-### redundant duplicates. It takes an id_number only! In DATA_SILSO_HISTO it moves it into 
-### the rubbish bin that i made. With the same id it sees if this id can be found in
-### GOOD_DATA_SILSO, if so it moves it into the bin. Then checks if the data is in 
-### BAD_DATA_SILSO if so it moves it removes it entirely from the database.
+# this method is the backbone of this script, who's sole purpouse is to scrap the
+# redundant duplicates. It takes an id_number only! In DATA_SILSO_HISTO it moves it into 
+# the rubbish bin that i made. With the same id it sees if this id can be found in
+# GOOD_DATA_SILSO, if so it moves it into the bin. Then checks if the data is in 
+# BAD_DATA_SILSO if so it moves it removes it entirely from the database.
 def move_data_to_bin(id_number,cursor=None,mydb=None,cursor2=None,mydb2=None,cursor3=None,mydb3=None,close_databases=True):
     # DATA_SILSO_HISTO
     # establish connection with DATA_SILSO_HISTO if there isn't one already

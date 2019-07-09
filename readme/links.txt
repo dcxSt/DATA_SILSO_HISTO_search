@@ -1,0 +1,7 @@
+[the github project where i try to keep things organised (ish)](https://github.com/users/dcxSt/projects/2?fullscreen=true)
+
+*Basics of sql* (open in private browsing or annoying messages) includes how to-s on: [https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql)
+
+[saving a database](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql/1961762-supprimez-et-modifiez-des-donnees)
+
+[import an sql into a database](https://stackoverflow.com/questions/17666249/how-to-import-an-sql-file-using-the-command-line-in-mysql#17666279)

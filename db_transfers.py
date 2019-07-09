@@ -17,6 +17,7 @@ delete the data from the old database
 
 # cursor,mydb is the sender's cursor and mydb
 # cursor2,mydb2 is the recipient's cursor and mydb
+# method for transfering and copyting data from old format to new format
 def db_transfer(id_number,sender="BAD_DATA_SILSO",recipient="GOOD_DATA_SILSO",
 cursor=None,mydb=None,cursor2=None,mydb2=None,close_connections=False,
 dont_delete=False):
@@ -168,14 +169,17 @@ dont_delete=False):
         db_connection.close_database_connection(mydb=mydb2)
 
 
-# takes list of id number
-def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None):
+# takes list of id numbers
+def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None,sender=None):
     if cursor and mydb and cursor2 and mydb2:
         for i in id_numbers:
             db_transfer(id_number=i,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2)
-    else:
+    elif not sender:
         for i in id_numbers:
             db_transfer(id_number=i,close_connections=True)
+    else:
+        for i in id_numbers:
+            db_transfer(id_number=i,close_connections=True,sender=sender)
 
 
 # the following method and its 2 helpers were copied here from 

@@ -175,7 +175,7 @@ def set_wolf(id_number,new_wolf,replace=False,cursor=None,mydb=None):
     else:
         print("There is already a wolf number, did not replace it")
 
-### sets the number of sunspots : SUNSPOTS
+# sets the number of sunspots : SUNSPOTS
 def set_sunspots(id_number,new_sunspots,replace=False,cursor=None,mydb=None):
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
     query="SELECT SUNSPOTS FROM DATA d WHERE d.ID="+str(id_number)
@@ -195,7 +195,7 @@ def set_sunspots(id_number,new_sunspots,replace=False,cursor=None,mydb=None):
     else:
         print("There is already a SUNSPOTS number, did not replace it")
 
-### sets the group number : GROUPS
+# sets the group number : GROUPS
 def set_groups(id_number,new_groups,replace=False,cursor=None,mydb=None):
     cursor,mydb=db_connection.get_cursor(cursor,mydb)
     query="SELECT GROUPS FROM DATA d WHERE d.ID="+str(id_number)
@@ -215,7 +215,7 @@ def set_groups(id_number,new_groups,replace=False,cursor=None,mydb=None):
     else:
         print("There is already a GROUPS number, did not replace it")
 
-
+# inserts data into the database in the format of DATA_SILSO_HISTO
 def insert_old_format(date,fk_rubrics,fk_observers,groups,sunspots,wolf,comment,date_insert,flag,close_connection=False,the_database="DATA_SILSO_HISTO",id_number=None):
 
     cursor,mydb = db_connection.database_connector(the_database=the_database)

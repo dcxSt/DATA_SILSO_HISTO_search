@@ -6,7 +6,7 @@ import file_io
 import pickle
 
 
-### selects all data in columns in DATA are returns it in list format
+# selects all data in columns in DATA are returns it in list format
 def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
     cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
     query = "SELECT * FROM DATA"
@@ -18,6 +18,7 @@ def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
     db_connection.close_database_connection(mydb)
     return data
 
+# selects all data in columns from any table from any database
 def select_all_data_general(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO",table_name="DATA",end_connection=True):
     cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
     query = "SELECT * FROM "+table_name
@@ -30,7 +31,7 @@ def select_all_data_general(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO
         db_connection.close_database_connection(mydb)
     return data
 
-### selects all columns in RUBRIC
+# selects all columns in RUBRIC
 def select_all_rubrics():
     cursor,mydb=db_connection.database_connector()
     query = "SELECT * FROM RUBRICS"
@@ -42,7 +43,7 @@ def select_all_rubrics():
     db_connection.close_database_connection(mydb=mydb)
     return rubrics
 
-### selects all columns in OBSERVERS
+# selects all columns in OBSERVERS
 def select_all_observers():
     cursor,mydb=db_connection.database_connector()
     query = "SELECT * FROM OBSERVERS"
@@ -54,7 +55,7 @@ def select_all_observers():
     db_connection.close_database_connection(mydb=mydb)
     return observers
 
-### searches database for comments and saves them all into a text file
+# searches database for comments and saves them all into a text file
 def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     cursor,mydb = db_connection.get_cursor(cursor,mydb)
     ### returns all the different types of comment there are and saves them to a text-file
@@ -91,8 +92,8 @@ def different_comments(cursor=None,mydb=None,file_name="comments.txt"):
     
     db_connection.close_database_connection(mydb)
 
-### sorts the comments by rubric and saves it into human-readable files
-### it also picles some dodgy data
+# sorts the comments by rubric and saves it into human-readable files
+# it also picles some dodgy data
 def more_efficient_sort_comments_by_rubric():
     # select all from DATA_SILSO_HISTO and bring it into data...
     data = select_all_data()
@@ -232,7 +233,7 @@ def more_efficient_sort_comments_by_rubric():
             f.write("\n")
     f.close()
 
-### finds all the data with missing rubrics
+# finds all the data with missing rubrics
 def missing_rubric():
     data = select_all_data()
     missing_rubric=[]
@@ -244,5 +245,5 @@ def missing_rubric():
     print("\nlen(missing_rubric)",len(missing_rubric))
     print("len(data)",len(data))
 
-### write a function to save observers and their aliases to text file 
+# write a function to save observers and their aliases to text file 
 # for printing purposes

@@ -216,9 +216,9 @@ def correct_typos_for_pink():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
 
-### pink is the colour for data with comments that have * = something and 
-### the rest of the comments in the rubric are just marked *, so here we 
-### homogenise them
+# pink is the colour for data with comments that have * = something and 
+# the rest of the comments in the rubric are just marked *, so here we 
+# homogenise them
 def pink():
     """
     In this method I create a big list of things where we have 
@@ -640,8 +640,8 @@ def duplicates_by_date(the_database="DATA_SILSO_HISTO"):
 
     return duplicates_dictionary_by_date
 
-### this method takes as it's argument the list created by the last one
-### and turns it into human readable format
+# this method takes as it's argument the list created by the last one
+# and turns it into human readable format
 def write_greater_duplicates_data_text(greater_duplicates_dictionary,
 filename="greater_duplicates.txt",descriptor=None):
     print("Writing to file",filename)
@@ -719,7 +719,7 @@ filename="greater_duplicates.txt",descriptor=None):
 
     f.close()
 
-### sorting the duplicates so that human can get better idea of what's going on
+# sorting the duplicates so that human can get better idea of what's going on
 def sorting_duplicates(greater_duplicates_dictionary):
     # non mutually exclusive
     entered_twice_duplicates={}
