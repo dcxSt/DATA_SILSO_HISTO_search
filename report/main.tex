@@ -68,7 +68,7 @@ The aim of this project is to do a quality control of the data in DATA\_SILSO\_H
 
 \subsection{What do the flags mean?}\label{flags section}
 \newpage% idk how to make tables behave!
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
         0 & 1 & 2 & 3 & 4 \\
@@ -81,6 +81,7 @@ The aim of this project is to do a quality control of the data in DATA\_SILSO\_H
     \caption{Flags key}
     \label{tab:flag}
 \end{table}
+
 \begin{enumerate}[start=0]
     \item The default for the flag is NULL, when is estimate that the datapoint is perfect and there is nothing wrong with it, I can put it to zero 0.
     \item If the data looks fishy but I'm not quite sure either what is wrong with it or how wrong it is this is flagged with a 1 - the default.
@@ -110,7 +111,7 @@ Since we have models where $\bar{x}$ is not the mean but a linear model
 
 \subsection{Python scripts - what they contain}
 
-See README.md
+See README.md - it is automatically generated based on what are in the scripts
 
 
 \section{Condensed Log}
@@ -202,7 +203,7 @@ I only started the log on the solstice so I forgot the details of what I was doi
         
 \subsubsection{Friday July 5}
 \begin{itemize}
-    \item Continued working on Carrington
+    \item Continued working on Carrington - Main event = did a least-squares regression fit to optimise the constant values in the equation that transforms `aire' into wolf number.
 \end{itemize}
 
 \subsubsection{Monday July 8}
@@ -216,6 +217,13 @@ I only started the log on the solstice so I forgot the details of what I was doi
     \item Derived Kew's misbehaving data
     \item Made a new `README.md' that auto-generates based on what is inside my python scripts
     \item Tidied the report and added some figures
+\end{itemize}
+
+\subsubsection{Wednesday July 10}
+\begin{itemize}
+    \item Sabrina gave Arnaud and I a tour of the Observatories facilities
+    \item Separated Carrington into two aliases
+    \item Figured out what to do with Secchi (now I just have to do it)
 \end{itemize}
 
 
@@ -414,97 +422,7 @@ This idea will probably never come to fluition - in the spirit of Herr Wolf who 
 \end{itemize}
 
 \subsection{Converting the $f$ (`aire')}\label{converting the `aire'}
-
-\subsubsection{rubrics 299, mitt 33, p 128 observer Secchi}\label{rubrics 299, secchi}\\
-
-\textbf{German}
-p128) Als Anhang ist ein ``[It] Registro della macchie solarie osservate alla specola del Collegio Romano durante l'anno 1871" gegeben, welches die an einer Reihe von Tagen von Rom. Remiddi gezahlten Gruppen, anstatt der Anzahlder Flecken aber Zahlen enthalt, welche die von ihnen eingenomene Flache in Quadrat-Millimeter angenommen. Ich gebe dieselben in der gewohnten Weise, d. h so, dass die erste Zahl wie immer der Anzahl der Gruppen, die zweite aber jener Flachenzahl entspricht, - die der letztern gleichgesetzte Zahl endlish eine aus ihr nach untenstehender Formel berechnete, der Fleckenzahl moglichst entsprechende Zahl.\\
-
-\textit{Secchi's Data from rubrics 299}\\
-
-p 130) Meine Relativzahlen basiren bekanntlich auf der Annahme, dass die Fleckenthatigkeit zunachst in der Anzahl der Gruppen, in untergeordneter Weise aber auch in der Grosse derselben ein Maass finde, und es wurde dieser Grosse von mir nur darum die Gesammtanzahl der Flecken substituirt, weil ich einerseits durch viele betreffend Vergleichungen gefunden hatte, das mit der Grosse der Hauptflecken meistens auch die Anzahl ihre Begleiter zunehem, also die Anzahl der Flecken annahernd jener Grosse proportional sei, - und es anderseits nicht nur zu zeitraubend fand diese Grosse fortwahrend zu messen, und (was bei den obigen Beobachtungen, welche nur die scheinbaren Flachen geben, wenigstens vorlaufig unterlassen wurde) auf ihr wahres Mass zu reduciren, sondern namentlich auch ein fur altere Beobachtungsreihen (denen sich gewohnlich die Anzahl der Flecken mit ziemlicher Sicherheit, die Grosse dagegen selten auch nur irgendwie annahernd entnehmen lasst) ebenfalls brauchbares Verfahren einfuhren musste. - Die in der obigen Reihe fur viele Tage, and welchen ich selbst Fleckenzahlungen gemacht, und daraus die Relativzahlen $r$ berechnet hatte, gegebenen Flachen haben mir nun die Moglichkeit verschafft die Richtigkeit meines Verfahrens neuerdings zu prufen, und zugleich eine bestimmte Regel aufzustellen, um zur Erganzung meiner Register fur einzeln Tage ause den bestimmten Flachen die fur mich nothigen Fleckenzahlen annahernd zu berchnen: Bezeichne ich namlich die Anzahl der in Rom gezahlten Gruppen mit $g$, die bestimmte Flache aber mit $f$, so muss unter Voraussetzung der Richtigkeit meiner Annahme annahernd fur jeden gemeinschaftlichen Beobachtungstag eine Gleichung
-$$r = a\cdot (10 g + b \cdot f) = 10 a \cdot g + c \cdot f$$
-bestehen, wo a, b und c constante Factoren sind. Ich bildete nun 120 solcher Gleichungen, ordnete dieselben nach r, nahm je aus 20 das Mittel, und erhielt so die 6 Normalgleichungen \\
-
-{\centering
-    \begin{tabular}{c|c|c|c}
-    
-         & $r = 10 a \cdot g + c\codt f$ & $r'$ & $r - r'$ \\
-         \hline
-         1 & $60 = a \cdot 37 + c \cdot 46$ & $62$ & $-2$ \\
-         2 & $80 = a\cdot 46 + c\cdot 61$ & $78$ & $+2$ \\
-         3 & $100 = a\cdot 60 + c\cdot 112$ & $109$ & $-9$ \\
-         4 & $120 = a\cdot 63 + c\cdot 117$ & $114$ & $+6$ \\
-         5 & $140 = a\cdot 78 + c\cdot 155$ & $143$ & $-3$ \\
-         6 & $160 = a\cdot 85 + c\cdot 187$ & $159$ & $+1$ \\
-         \hline
-         & Mittlere Abweichung && \pm{5}
-    \end{tabular}
-\par}
-aus welchen ich nach der Methode der kleinsten Quadrate 
-$$a=1.41 \quad c=0.21 \quad \text{sodann}\ b=0.15$$
-und somit fur die romischen Beobachtungen die Reductionsgleichung
-$$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
-fand. Setze man in die Normalgleichungen diese Werthe fur a und c ein, so erhalt man die ihnen beigeschriebenen r', deren Vergleichung mit den r eine unerwartet gute Uebereinstimmung zeigt. Es hat also diese kleine Untersuchung die Berechtigung des von mir fur die Berechnung der Relativzahlen aufgestellten Principes in schonster Weise bestatigt, und mich anderseits ermuthigt in der obigen Beobachtungsreihe jeder Flache die nach der eben aufgefuhrten Formel berechnete Fleckenzahl beizuschreiben, - wobei ich naturlich in den paar Fallen, wo eine ganz geringe Flache eine Fleckenzahl ergab, welche kleiner als die Gruppenzahl war fur sie diese Gruppenzahl substituirte.\\
-
-\textbf{English} (using \href{http://deepl.com/}{deepl translator})
-p128) As appendix is given a ``Register of sunspots observed in the mirror of the Roman College during the year 1871", which is the one on a series of days of Rome. Remiddi paid groups, instead of number spots but contains numbers which assume the area in square millimeters inscribed by them. I give them in the usual way, i.e. in such a way that the first number corresponds, as always, to the number of groups, the second, however, to that number of flats, - which endlessly calculates from the latter equated number a number which corresponds as closely as possible to the number of spots, according to the formula below.\\
-
-\textit{Secchi's Data from rubrics 299}\\
-
-p 130) As is well known, my relative numbers are based on the assumption that the number of spots finds a measure first of all in the number of groups, but in a subordinate way also in the size of the same, and this size was only substituted by me for the total number of spots, because on the one hand I had found by many comparisons that with the size of the main spots mostly also the number of their companions increases, so the number of spots is approximately proportional to that size, - and on the other hand not only too time-consuming was it found to measure these large ones continuously, and (what was at least temporarily omitted in the above observations, which only give the apparent flat ones) to reduce them to their true measure, but especially also to introduce a procedure useful for older series of observations (from which usually the number of spots is quite certain, but the large ones, on the other hand, can seldom be taken out even approximatively) likewise. - The surfaces given in the above series for many days, on which I had made spot payments myself, and had calculated the relative numbers $r$ from them, have now given me the possibility to check the correctness of my method recently, and at the same time to establish a certain rule in order to approximate the numbers of spots necessary for me to supplement my registers for individual days from the certain surfaces: If, for example, I designate the number of groups paid in Rome with $g$, but the certain area with $f$, then, assuming my assumption is correct, an approximate equation must be given for each common observation day
-$$r = a\cdot (10 g + b \cdot f) = 10 a \cdot g + c \cdot f$$
-where a, b and c are constant factors. I now formed 120 such equations, arranged them according to r, took the mean from each 20, and thus obtained the 6 normal equations \\
-
-{\centering
-    \begin{tabular}{c|c|c|c}
-    
-         & $r = 10 a \cdot g + c\cdot f$ & $r'$ & $r - r'$ \\
-         \hline
-         1 & $60 = a \cdot 37 + c \cdot 46$ & $62$ & $-2$ \\
-         2 & $80 = a\cdot 46 + c\cdot 61$ & $78$ & $+2$ \\
-         3 & $100 = a\cdot 60 + c\cdot 112$ & $109$ & $-9$ \\
-         4 & $120 = a\cdot 63 + c\cdot 117$ & $114$ & $+6$ \\
-         5 & $140 = a\cdot 78 + c\cdot 155$ & $143$ & $-3$ \\
-         6 & $160 = a\cdot 85 + c\cdot 187$ & $159$ & $+1$ \\
-         \hline
-         & Mittlere Abweichung && \pm{5}
-    \end{tabular}
-\par}
-
-from which I can draw the least squares 
-$$a=1.41 \quad c=0.21 \quad \text{sodann}\ b=0.15$$
-and therefore for the Roman observations the reduction equation
-$$r' = 1.41(g\cdot 10 + f\codt 0.15)$$
-found. If one enters this value for a and c in the normal equations, one obtains the r' attributed to them, whose comparison with the r shows an unexpectedly good agreement. So this small examination confirmed in the best way the validity of the principle I had established for the calculation of the relative numbers, and on the other hand it encouraged me in the above series of observations to attribute to each surface the number of spots calculated according to the just listed formula, - whereby I naturally substituted this group number in the few cases where a very small surface resulted in a number of spots which was smaller than the group number for it.
-
-\subsubsection{rubrics 303, mitt 35, p 241 observer Carrington}\label{rubrics 303, carrington}\\
-
-303) Warren De La Rue, Balfour Stewart and Benjamin Loewy, Researches on Solar Physics. Second Series: Area measurements of the Sun-Spots observed by Carrington during the seven Years from 1854 - 1860 inclusive, and deductions therefrom. London 1866 in 4.\\
-
-\textbf{German}
-Ich ziehe aus dieser Abhandlung unter fortwahrender Berucksichtigung der unter 199 besprochenen Werkes von Carrington und der unter 129 aufgeguhrten schriftlichen Mittheilung derselben folgende Beobachtungen in der altgebohnten Form, nur dass die der Gruppenzahl folgende Zahl (analog wie bei den unter 299 aufgeguhrten Beobachtungen Secchis) nicht die Anzahl der Flecken, sondern die in Millionsteln der sichtbaren Sonnenhemisphare ausgedruckte Flache derselben Bezeichnen:\\
-
-Durch Vergleichung der fur 1859 und 1860 gegebenen Flachenzahlen mit den in Nr. 199 von Carrington selbst fur dieselben Jahre und Tage mir mitgetheilten Fleckenzahlen, erhalt man, dass durchschnittlich 1000 Flacheneinheiten 24 Flecken entsprechen, und es darf dieses Verhaltniss ohne Anstand benutzt werden, um fur die wenigen Tage, wo das Fleckenregister durch Carrington'sche Beobachtungen erganzt werden kan, die Flachen in Flecken umzusetzen.\\
-
-\textbf{English}
-I deduce from this treatise, taking into account the work of Carrington discussed under 199 and the written communication of the same discussed under 129, the following observations in the old-bored form, only that the number following the group number (analogous as in the observations of Secchi examined under 299) does not denote the number of spots, but the area of the same printed out in millionths of the visible solar hemispheres:\\
-
-What follows is observations made by Carrington for the years specified with `aire' numbers instead of sunspots numbers. [it seems someone had the same idea as me]\\
-
-By comparing the surface numbers given for 1859 and 1860 with the spot numbers given in No. 199 by Carrington himself for the same years and days, one obtains that on average 1000 surface units correspond to 24 spots, and this relationship may be used without decency to convert the surfaces into spots for the few days when the spot register can be supplemented by Carrington's observations.
-
-\subsubsection{Rubrics 199, mitt 11-20, p224}
-
-Observations of the Spots on the Sun from 1853 XI 9 to 1861 III 24 made ad Redhill by R. Chr. Carrington. London 1863 (248 Pag., 166 Plat.) in 4.\\
-
-\textbf{German} 
-Dieses Ausgezeichnete, erst kurzlich nach Verdienen von der Pariser-Academie mit dem Lalande-Preise bedachte Werk meines verehrten Freundes erlaubt nach seiner Natur kaum einen Auszug, sondern ist zunachst als eine unerschopfliche Fundgrube zu betrachten, in der diejenigen Astronomen, welche sich speqiell mit der Vertheilung der Sonnenflecken, ihren Ortsveranderungen etc. Befassen, ein reiches Material an Zahlen unde Zeichnungen erheben konnen, - wie ja bereits oben eine darauf gegrundete Studie von Herrn Fritz mitgetheilt worden ist, wahrend eine die `Concluding Section' betreffende Arbeit von mir in einer der nachsten Mittheilungen folgen wird. Dagegen mogen hier anhangsweise zur Erganzung der Nr. 129 der Litteratur die Fleckenzahlungen in den Jahren 1859 und 1860 nachgetragen werden, welche mir Herr Carrington seiner Zeit mittheilte, und die ich in der letzten Zeit neuerdings bei Ermittlung der mehrfach erwahnten 5 taggigen Mittel benutzte. Es sind Folgende:\\
-
-\textbf{English}
-This excellent work of my esteemed friend, which was awarded the Lalande Prize by the Paris Academy only shortly after it had been earned, hardly permits an excerpt by its nature, but is first to be regarded as an inexhaustible treasure trove in which those astronomers who are particularly concerned with the distribution of sunspots, their changes of place, etc., can be found. As already above a study based on it has been shared by Mr. Fritz, while a work of mine concerning the 'Concluding Section' will follow in one of the next communications. On the other hand, to supplement the No. 129 of the Litteratur, the stain payments in the years 1859 and 1860, which Mr. Carrington informed me of his time and which I recently used in the determination of the repeatedly mentioned 5-day means, may be added here as an appendix. They are the following:
-
-
+This section has been moved to the log
 \end{document}
 
 
