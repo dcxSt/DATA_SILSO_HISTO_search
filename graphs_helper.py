@@ -106,6 +106,7 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None)
         plt.savefig(save_as)
     plt.show()
 
+# shows figure with 3 subfigures: groups, sunspots, wolf
 def display_seperate_flags_all(observer,interval=None):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags()
     if interval:

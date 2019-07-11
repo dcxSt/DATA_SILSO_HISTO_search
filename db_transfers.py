@@ -169,6 +169,7 @@ dont_delete=False):
         db_connection.close_database_connection(mydb=mydb2)
 
 
+
 # takes list of id numbers
 def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None,sender=None):
     if cursor and mydb and cursor2 and mydb2:
