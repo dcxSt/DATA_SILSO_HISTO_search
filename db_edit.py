@@ -82,8 +82,7 @@ def add_to_comment(id_number,comment,cursor=None,mydb=None,table_name="DATA"):
             new_comment = original_comment
     except:
         pass
-    if original_comment==" ; suspicious_sunspots" or original_comment==" ; suspicious_groups":
-        new_comment = comment
+    
     
     # update table_name and then show the update to user
     query="UPDATE "+table_name+" d SET COMMENT='%s' WHERE d.ID=%s"
