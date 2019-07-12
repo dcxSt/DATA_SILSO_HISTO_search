@@ -1,4 +1,5 @@
-# creates a description of all the methods in the python scripts
+# creates a description of all the methods in the python scripts 
+# It's the method that generated the file you are currently reading 
 
 # import statements
 from os import listdir
@@ -41,6 +42,28 @@ def get_method_description_dictionary(filenames):
         method_description_dictionary[name] = methods_descriptors
     return method_description_dictionary
 
+# returns dictionary key = script ; value = subheadding of script
+def get_subheaders_dictionary(filenames):
+    subheaders_dictionary = {}
+    for name in filenames:
+        f = open(name,"r")
+        contents = f.readlines()
+        f.close()
+        index = 0
+        subheader=""
+        i=0
+        nxt_line = contents[i]
+        while nxt_line[0]=="#":
+            if i==0:
+                subheader += "***"+nxt_line[2:]
+            else:
+                subheader = subheader[:-1]+", "+nxt_line[2:]
+            i+=1
+            nxt_line = contents[i]
+        subheader = subheader[:-1]+"***"
+        subheaders_dictionary[name]=subheader
+    return subheaders_dictionary
+
 # write the title
 def write_title(readme):
     title = open("readme/title.txt","r")
@@ -57,15 +80,19 @@ def write_preamble(readme):
         readme.write(line)
     readme.write("\n")
 
-# write the body
+# write the main body of the readme file
 def write_body(readme):
-    body_dictionary = get_method_description_dictionary(get_py_filenames())
+    py_filenames = get_py_filenames()
+    subhead_dic = get_subheaders_dictionary(py_filenames)
+    body_dictionary = get_method_description_dictionary(py_filenames)
     readme.write("## Python scripts, their methods and descriptors\n\n")
     for script in body_dictionary:
-        readme.write("### "+script+"\n\n")
+        readme.write("### "+script+"\n")
+        readme.write(subhead_dic[script]+"\n\n")
         for m in body_dictionary[script]:
             readme.write("**"+m[0]+"()**\t")
             readme.write(m[1]+"\n\n")
+        readme.write("***\n\n")
 
 # write the links section
 def write_links(readme):

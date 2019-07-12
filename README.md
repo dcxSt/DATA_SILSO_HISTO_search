@@ -7,6 +7,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ## Python scripts, their methods and descriptors
 
 ### db_edit.py
+***utility methods used to edit the DATA_SILSO_HISTO sql database, for now it's just comments and flags***
 
 **set_comment()**	 return boolean T if updated, F if there was already a comment
  if there is already a comment, does not replace comment unless specified
@@ -40,7 +41,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **insert_old_format()**	 inserts data into the database in the format of DATA_SILSO_HISTO
 
 
+***
+
 ### derived.py
+***script with method to deal with (in general terms) the data which is derived, from the umbra and the penumbra***
 
 **move_7_to_good()**	 method to move all the data-points flagged 7 into GOOD_DATA_SILSO
 
@@ -51,7 +55,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 **move_carrington_to_good()**	
 
+***
+
 ### searching_the_manuals.py
+***searching the manuals is work involving finding each comment,, figuring out what it means, and dealing with the data appropriately***
 
 **move_data_to_bin()**	 because it deals with more fundamental operations that just duplicates
  this method is from dealing_with_duplicates.py but i copied it here
@@ -98,9 +105,15 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **move_flag3_to_bin()**	 method moves everything flagged 3 into the bid
 
 
+***
+
 ### test_sound.py
+***est sound***
+
+***
 
 ### db_connection.py
+***utility methods used to access the DATA_SILSO_HISTO sql database***
 
 **database_connector()**	 this function connects you to the database
 
@@ -114,7 +127,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **header()**	 returns string with header of DATA
 
 
+***
+
 ### quality_control_tests.py
+***here is where my tests are, these search the database and comment and flag etc.***
 
 **incorrect_wolf_test()**	 returns list of ids where wolf is incorrectly calculated
  flags and comments the incorrect_wolf_indices (of which there is only one)
@@ -139,7 +155,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 **unreasonable_sn_flag()**	
 
+***
+
 ### db_search.py
+***utility methods used search the DATA_SILSO_HISTO sql database***
 
 **select_all_data()**	 selects all data in columns in DATA are returns it in list format
 
@@ -163,12 +182,18 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **missing_rubric()**	 finds all the data with missing rubrics
 
 
+***
+
 ### file_io.py
+***file io, does things like reading and writing to textfiles***
 
 **save_list_to_text_file()**	 save 1D list to text file (works for array too i think)
 
 
+***
+
 ### db_transfers.py
+***this script provides the functions needed for the good , and the bad databases to interact***
 
 **db_transfer()**	 method for transfering and copyting data from old format to new format
  cursor2,mydb2 is the recipient's cursor and mydb
@@ -200,7 +225,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **move_carrington303_good_to_rubbish()**	 move carrington's data to rubbish from good data silso
 
 
+***
+
 ### dealing_with_duplicates.py
+***dealing with the duplicates in every way possible***
 
 **move_data_to_bin()**	 BAD_DATA_SILSO if so it moves it removes it entirely from the database.
  GOOD_DATA_SILSO, if so it moves it into the bin. Then checks if the data is in 
@@ -235,7 +263,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **change_alias_to_brunner_assistent()**	 ALIAS to 'Brunner Assistent'
 
 
+***
+
 ### create_readme.py
+***creates a description of all the methods in the python scripts , It's the method that generated the file you are currently reading ***
 
 **get_py_filenames()**	 method for returning all the .py filenames in the directory
 
@@ -247,13 +278,16 @@ The aim of this little project is to do a quality control of the data in *DATA_S
  returns big dictionary of methods and descriptors in each file
 
 
+**get_subheaders_dictionary()**	 returns dictionary key = script ; value = subheadding of script
+
+
 **write_title()**	 write the title
 
 
 **write_preamble()**	 write the preamble
 
 
-**write_body()**	 write the body
+**write_body()**	 write the main body of the readme file
 
 
 **write_links()**	 write the links section
@@ -262,14 +296,20 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **write_readme()**	 writes the readme file
 
 
+***
+
 ### secchi_derived_fix.py
+***rectification des donnes mal rentre de Herr Professor Secchi***
 
 **find_comments_derived()**	 find all comments from secchi with the comment derived in it
 
 
 **secchi_derived_fix()**	
 
+***
+
 ### db_homogenise_comments.py
+***homogenise comments, when executed homogenises all comments to their 'group'***
 
 **homogenise_uncertain()**	 checked
 
@@ -282,12 +322,16 @@ The aim of this little project is to do a quality control of the data in *DATA_S
  for this one i make a list of '*' comments and their rubrics which 
 
 
+***
+
 ### graphs_helper.py
+***methods to help me display some information graphically***
 
 **data_by_obs_alias_good()**	 method that organises the data from good_database into dictionary searchable by observer alias
 
 
-**data_by_obs_alias_histo()**	
+**data_by_obs_alias_histo()**	 same as above but for different database format
+
 
 **get_data_by_obs_seperate_flags()**	 returns data by observer where each observer has a list of 10 sublists (1/flag)
 
@@ -295,7 +339,8 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **display_seperate_flags()**	 shows figure of some observer's observations seperated by flag
 
 
-**display_seperate_flags_all()**	
+**display_seperate_flags_all()**	 shows figure with 3 subfigures: groups, sunspots, wolf
+
 
 **get_full_carrington_dictionaries()**	 to help out with the Carrington investigation
 
@@ -314,7 +359,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **get_sunspots()**	 returns sunspots numbers, for derived carrington
 
 
+***
+
 ### red_uncertain.py
+***# red uncertain***
 
 **question_mark()**	
 
@@ -323,6 +371,8 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **duplicates()**	
 
 **find_duplicate_observers()**	
+
+***
 
 ## Links and Resources
 
