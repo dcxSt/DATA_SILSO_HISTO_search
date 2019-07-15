@@ -1,4 +1,4 @@
-# this script provides the functions needed for the good 
+# This script provides the functions needed for the good 
 # and the bad databases to interact
 
 import db_connection
@@ -556,6 +556,21 @@ def move_carrington303_good_to_rubbish():
         move_data_to_bin_only_good(id_number,cursor2,mydb2,close_databases=False)
     db_connection.close_database_connection(mydb2)
     
+# transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+def transfer_flag_2():
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    data = db_search.select_all_data()
+    for d in data:
+        idn = d[0]
+        flag = d[10]
+        if flag==2:
+            db_transfer(idn,cursor=cursor3,mydb=mydb3,cursor2=cursor2,mydb2=mydb2)
+
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
+
+
 
 
 
