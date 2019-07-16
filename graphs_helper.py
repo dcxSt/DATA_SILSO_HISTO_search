@@ -8,6 +8,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import spline
 from scipy.ndimage.filters import gaussian_filter1d
+from statsmodels.nonparametric.smoothers_lowess import lowess
+import datetime as dt
+
+# plotting converters
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+
 
 
 # method that organises the data from good_database into dictionary searchable by observer alias
@@ -262,7 +269,7 @@ def display_all_databases(observer,interval=None,yaxis="Sunspots",save_as=None,z
 
 # takes observerS aliasES and database and plots each observer on the same plot
 def display_compare_observers(observers,the_database="DATA_SILSO_HISTO",
-interval=None,save_as=None,figsize=(12,17)):
+interval=None,save_as=None,figsize=(12,17),online_sn=False,smoothness=50.0):
     if the_database=="GOOD_DATA_SILSO":
         obs_dic = data_by_obs_alias_good()
         gindex,sindex,windex = 2,3,4
@@ -274,11 +281,15 @@ interval=None,save_as=None,figsize=(12,17)):
         low = time.strftime(interval[0])
         high = time.strftime(interval[1])
 
-    cmap = plt.get_cmap("tab10")# colors
+    if len(observers)>10:
+        cmap = plt.get_cmap("tab20")# cmap = color map
+    else:
+        cmap = plt.get_cmap("tab10")# cmap = color map
 
     # plot the figures
     plt.figure(figsize=figsize)
 
+    # GROUPS
     plt.subplot(311)
     plt.title("comparing observers groups")
     count=0
@@ -298,6 +309,7 @@ interval=None,save_as=None,figsize=(12,17)):
     plt.xlabel("Date")
     plt.ylabel("Groups")
 
+    # SUNSPOTS
     plt.subplot(312)
     plt.title("comparing observers sunspots")
     count=0
@@ -317,9 +329,11 @@ interval=None,save_as=None,figsize=(12,17)):
     plt.xlabel("Date")
     plt.ylabel("Sunspots")
 
+    # WOLF
     plt.subplot(313)
     plt.title("comparing observers wolf")
     count=0
+    online_interval = None
     for observer in observers:
         try:
             if interval:
@@ -327,10 +341,21 @@ interval=None,save_as=None,figsize=(12,17)):
             else:
                 [x,y] = np.transpose([[i[1],i[windex]] for i in obs_dic[observer] if i[windex]!=None])
             plt.plot(x,y,"x",label=observer,color=cmap(count))
+            # find interval for the potential smooth
+            if online_interval==None:
+                online_interval = (min(x),max(x))
+            elif online_interval[0]>min(x): online_interval = (min(x),online_interval[1])
+            elif online_interval[1]<max(x): online_interval = (online_interval[0],max(x))
         except:
             print("no data for "+observer+" in wolf")#trace
             pass
         count+=1
+    
+    # plot the online smoothed sunspot value
+    if online_sn==True:
+        x,y_smooth = get_smoothed_sn(interval=online_interval,smoothness=smoothness)
+        plt.plot(x,y_smooth,"-",color=(0.0,0.0,0.0,0.5),label="smoothed official sn v2.0")
+    
     plt.legend()
     plt.xlabel("Date")
     plt.ylabel("Wolf")
@@ -339,6 +364,27 @@ interval=None,save_as=None,figsize=(12,17)):
     if save_as:
         plt.savefig(save_as)
     plt.show()
+
+
+# takes date interval and returns x,y arrays of smoothed data to plot from the online sunspots number
+# the higher the smoothness, the smoother the plot
+def get_smoothed_sn(interval=(dt.date(1880,1,1),dt.date(1920,1,1)),smoothness=20.0):
+    data = db_search.select_online_sn()
+    if interval==None:
+        x_date = [i[0] for i in data]
+        x = [i[1] for i in data]
+        y = [i[2] for i in data]
+    else:
+        x_date = [i[0] for i in data if i[0] > interval[0] and i[0] < interval[1]]
+        x = [i[1] for i in data if i[0] > interval[0] and i[0] < interval[1]]
+        y = [i[2] for i in data if i[0] > interval[0] and i[0] < interval[1]]
+
+    filtered = lowess(y,x,is_sorted=True,frac=float(smoothness)/len(x),it=0)
+    x_smooth = filtered[:,0]
+    y_smooth = filtered[:,1]
+    return x_date,y_smooth
+
+
 
 
 
@@ -407,7 +453,7 @@ def get_carringdon_dictionaries_59to60():
             new_199_dic[date] = carrington199_dic[date]
     return new_303_dic, new_199_dic
 
-
+# CARRINGTON
 # rounds each element in list to nearset int
 def round_to_int(wolf):# can be wolf or sunspots
     new_wolf=[]
@@ -415,6 +461,7 @@ def round_to_int(wolf):# can be wolf or sunspots
         new_wolf.append(int(i+0.5))
     return new_wolf
 
+# CARRINGTON
 # returns sunspots numbers, for derived carrington
 def get_sunspots(groups,wolf):
     sunspots=[]

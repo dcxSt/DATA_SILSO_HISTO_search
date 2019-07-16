@@ -4,6 +4,9 @@
 import db_connection
 import file_io
 import pickle
+import datetime as dt
+import scipy
+
 
 
 # selects all data in columns in DATA are returns it in list format
@@ -245,5 +248,26 @@ def missing_rubric():
     print("\nlen(missing_rubric)",len(missing_rubric))
     print("len(data)",len(data))
 
-# write a function to save observers and their aliases to text file 
-# for printing purposes
+# returns data from the online database that is saved in my folder 'online_sn'
+def select_online_sn():
+    f = open("online_sn/SN_d_tot_V2.0.txt","r")
+    data = [line.split() for line in f.read().split("\n")]
+    f.close()
+    new_data=[]
+    for i in data:
+        try:
+            if int(i[4])!= -1:
+                the_date = dt.date(int(i[0]),int(i[1]),int(i[2]))
+                decimal_date = float(i[3])
+                wolf = float(i[4])
+                if wolf == int(wolf):
+                    wolf = int(wolf)
+                new_data.append((the_date,decimal_date,wolf))
+        except:
+            pass
+    return new_data
+
+
+        
+
+

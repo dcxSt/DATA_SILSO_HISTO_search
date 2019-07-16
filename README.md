@@ -182,6 +182,9 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **missing_rubric()**	 finds all the data with missing rubrics
 
 
+**select_online_sn()**	 returns data from the online database that is saved in my folder 'online_sn'
+
+
 ***
 
 ### file_io.py
@@ -193,7 +196,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ***
 
 ### db_transfers.py
-***this script provides the functions needed for the good , and the bad databases to interact***
+***This script provides the functions needed for the good , and the bad databases to interact***
 
 **db_transfer()**	 method for transfering and copyting data from old format to new format
  cursor2,mydb2 is the recipient's cursor and mydb
@@ -223,6 +226,9 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 
 **move_carrington303_good_to_rubbish()**	 move carrington's data to rubbish from good data silso
+
+
+**transfer_flag_2()**	 transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
 ***
@@ -336,21 +342,31 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **get_data_by_obs_seperate_flags()**	 returns data by observer where each observer has a list of 10 sublists (1/flag)
 
 
-**display_seperate_flags()**	 shows figure of some observer's observations seperated by flag
+**display_seperate_flags()**	 shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
 
 
 **display_seperate_flags_all()**	 shows figure with 3 subfigures: groups, sunspots, wolf
 
 
+**display_all_databases()**	 plots nothing if there 
+ takes observer alias and g/s/r and plots different databases in different colors
+
+
+**display_compare_observers()**	 takes observerS aliasES and database and plots each observer on the same plot
+
+
 **get_full_carrington_dictionaries()**	 to help out with the Carrington investigation
+ CARRINGTON
 
 
 **blacklist_dates()**	 but now I allowed carrington303 to have data from before 1859 so it's to filter those too
  originally this was to figure out if there are discrepancies in date
  helper for get_carrington_dictionaries_59to60
+ CARRINGTON
 
 
 **get_carringdon_dictionaries_59to60()**	 makes searchable dictionary for carrington
+ CARRINGTON
 
 
 **round_to_int()**	 rounds each element in list to nearset int
@@ -362,15 +378,20 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ***
 
 ### red_uncertain.py
-***# red uncertain***
+***script that deals with the data marked 'red questionmark'***
 
-**question_mark()**	
+**get_question_marks()**	 (rubrics_id,rubrics_number,obs_id,obs_alias,comment)
+ defines a list of question marks:
 
-**non_visible()**	
 
-**duplicates()**	
+**flag_and_comment_question_marks()**	 flags the list of question marks
 
-**find_duplicate_observers()**	
+
+**get_adams_dates()**	 method for generating the list of dates where Adams has 'none observed'
+
+
+**add_adams()**	 method for INSERTing data to database for the missing 0.0 entries in rubrics 34
+
 
 ***
 
