@@ -352,7 +352,16 @@ The aim of this little project is to do a quality control of the data in *DATA_S
  takes observer alias and g/s/r and plots different databases in different colors
 
 
-**display_compare_observers()**	 takes observerS aliasES and database and plots each observer on the same plot
+**display_compare_observers()**	 exclude_these_rubrics is a list of rubrics number you don't want to plot, leave list empty if none
+ online_sn (boolean) if True plots a smoothed plot of the current sunspot number V2.0 with smoothing factor smoothness\n
+ figsize size of the figure also 2d-tuple\n
+ interval = 2d-tuple (date1,date2) with date1<date2\n
+ This function has alot of functionality, it's work listing it out.\n
+ takes observerS aliases and database and plots each observer on the same plot.
+
+
+**get_smoothed_sn()**	 the higher the smoothness, the smoother the plot
+ takes date interval and returns x,y arrays of smoothed data to plot from the online sunspots number
 
 
 **get_full_carrington_dictionaries()**	 to help out with the Carrington investigation
@@ -370,9 +379,11 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 
 **round_to_int()**	 rounds each element in list to nearset int
+ CARRINGTON
 
 
 **get_sunspots()**	 returns sunspots numbers, for derived carrington
+ CARRINGTON
 
 
 ***

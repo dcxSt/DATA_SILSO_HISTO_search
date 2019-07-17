@@ -267,21 +267,32 @@ def display_all_databases(observer,interval=None,yaxis="Sunspots",save_as=None,z
     plt.show()
     
 
-# takes observerS aliasES and database and plots each observer on the same plot
+# takes observerS aliases and database and plots each observer on the same plot.
+# This function has alot of functionality, it's work listing it out.\n
+# interval = 2d-tuple (date1,date2) with date1<date2\n
+# figsize size of the figure also 2d-tuple\n
+# online_sn (boolean) if True plots a smoothed plot of the current sunspot number V2.0 with smoothing factor smoothness\n
+# exclude_these_rubrics is a list of rubrics number you don't want to plot, leave list empty if none
 def display_compare_observers(observers,the_database="DATA_SILSO_HISTO",
-interval=None,save_as=None,figsize=(12,17),online_sn=False,smoothness=50.0):
+interval=None,save_as=None,figsize=(12,17),online_sn=False,smoothness=50.0,
+exclude_these_rubrics=[]):
     if the_database=="GOOD_DATA_SILSO":
         obs_dic = data_by_obs_alias_good()
         gindex,sindex,windex = 2,3,4
+        rubricsindex = 12
     else:
         obs_dic = data_by_obs_alias_histo(the_database=the_database)
         gindex,sindex,windex = 4,5,6
+        rubricsindex = 2
+        rubrics = db_search.select_all_rubrics()
+        exclude_these_rubrics = [i[0] for i in rubrics if i[1] in exclude_these_rubrics]# replace rubrics_number with fk_rubrics 
     
     if interval:
         low = time.strftime(interval[0])
         high = time.strftime(interval[1])
 
-    if len(observers)>10:
+    
+    if len(observers) > 10:
         cmap = plt.get_cmap("tab20")# cmap = color map
     else:
         cmap = plt.get_cmap("tab10")# cmap = color map
@@ -296,9 +307,9 @@ interval=None,save_as=None,figsize=(12,17),online_sn=False,smoothness=50.0):
     for observer in observers:
         try:
             if interval:
-                [x,y] =np.transpose([[i[1],i[gindex]] for i in obs_dic[observer] if time.strftime(str(i[1]))>= low and time.strftime(str(i[1]))<= high and i[gindex]!=None])
+                [x,y] =np.transpose([[i[1],i[gindex]] for i in obs_dic[observer] if time.strftime(str(i[1]))>= low and time.strftime(str(i[1]))<= high and i[gindex]!=None and i[rubricsindex] not in exclude_these_rubrics])
             else:
-                [x,y] = np.transpose([[i[1],i[gindex]] for i in obs_dic[observer] if i[gindex]!=None])
+                [x,y] = np.transpose([[i[1],i[gindex]] for i in obs_dic[observer] if i[gindex]!=None and i[rubricsindex] not in exclude_these_rubrics])
             plt.plot(x,y,"x",label=observer,color=cmap(count))
         except:
             print("no data for "+observer+" in groups")
