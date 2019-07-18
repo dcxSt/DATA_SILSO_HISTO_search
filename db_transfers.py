@@ -560,7 +560,7 @@ def move_carrington303_good_to_rubbish():
 def transfer_flag_2():
     cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
     cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
-    data = db_search.select_all_data()
+    data = db_search.select_all_data(the_database="BAD_DATA_SILSO")
     for d in data:
         idn = d[0]
         flag = d[10]
@@ -570,8 +570,21 @@ def transfer_flag_2():
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
+# transfer all those with flag=0 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+def transfer_flag_0():
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    data = db_search.select_all_data(the_database="BAD_DATA_SILSO")
+    for d in data:
+        idn = d[0]
+        flag = d[10]
+        if flag==0:
+            db_transfer(idn,cursor=cursor3,mydb=mydb3,cursor2=cursor2,mydb2=mydb2)
+
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
 
 
 
 
-
+transfer_flag_0()
