@@ -13,8 +13,9 @@
 
 
 -- Listage de la structure de la base pour DATA_SILSO_HISTO
-CREATE DATABASE IF NOT EXISTS `DATA_SILSO_HISTO` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `DATA_SILSO_HISTO`;
+
+CREATE DATABASE IF NOT EXISTS `ORIGINAL_DATA_SILSO_HISTO` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ORIGINAL_DATA_SILSO_HISTO`;
 
 -- Listage de la structure de la vue DATA_SILSO_HISTO. SuperView
 -- Création d'une table temporaire pour palier aux erreurs de dépendances de VIEW
