@@ -10,7 +10,7 @@ import scipy
 
 
 # selects all data in columns in DATA are returns it in list format
-def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
+def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO",close_connection=True):
     cursor,mydb=db_connection.get_cursor(cursor=cursor,mydb=mydb,the_database=the_database)
     query = "SELECT * FROM DATA"
     cursor.execute(query,params=())
@@ -18,7 +18,8 @@ def select_all_data(cursor=None,mydb=None,the_database="DATA_SILSO_HISTO"):
     print("data successfully retrieved")
 
     # close the connection
-    db_connection.close_database_connection(mydb)
+    if close_connection:
+        db_connection.close_database_connection(mydb)
     return data
 
 # selects all data in columns from any table from any database

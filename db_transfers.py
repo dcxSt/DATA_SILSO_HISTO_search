@@ -107,11 +107,12 @@ dont_delete=False):
     if rubrics_source==None:
         rubrics_source='NULL'
     if rubrics_source_date==None:
-        # FLAG IT, it must have a date
-        print("set a flag for where the rubrics source was missing")
-        db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
-        db_edit.set_comment(id_number=id_number,comment="missing rubrics source",cursor=cursor,mydb=mydb,replace=False)
-        return
+        # FLAG IT, it must have a date; later - I don't care about the rubrics source date
+        #print("set a flag for where the rubrics source was missing")
+        #db_edit.set_flag(id_number=id_number,cursor=cursor,mydb=mydb,close_connection=False)
+        #db_edit.set_comment(id_number=id_number,comment="missing rubrics source",cursor=cursor,mydb=mydb,replace=False)
+        #return
+        pass
     
 
     # write to the new database in it's own format
@@ -147,7 +148,8 @@ dont_delete=False):
         query+="MITT_NUMBER="+str(mitt_number)+","
         query+="PAGE_NUMBER="+str(page_number)+","
         query+="RUBRICS_SOURCE='"+str(rubrics_source)+"',"
-        query+="RUBRICS_SOURCE_DATE='"+str(rubrics_source_date)+"',"
+        if rubrics_source_date:
+            query+="RUBRICS_SOURCE_DATE='"+str(rubrics_source_date)+"',"
         query+="FLAG="+str(flag)
 
         cursor2.execute(query,())
@@ -574,7 +576,7 @@ def transfer_flag_2():
 def transfer_flag_0():
     cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
     cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
-    data = db_search.select_all_data(the_database="BAD_DATA_SILSO")
+    data = db_search.select_all_data(cursor=cursor3,mydb=mydb3,the_database="BAD_DATA_SILSO",close_connection=False)
     for d in data:
         idn = d[0]
         flag = d[10]
