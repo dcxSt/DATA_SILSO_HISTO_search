@@ -6,6 +6,7 @@ import db_search
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy
 from scipy.interpolate import spline
 from scipy.ndimage.filters import gaussian_filter1d
 from statsmodels.nonparametric.smoothers_lowess import lowess
@@ -396,8 +397,153 @@ def get_smoothed_sn(interval=(dt.date(1880,1,1),dt.date(1920,1,1)),smoothness=20
     return x_date,y_smooth
 
 
+# Plots the drift of an observer, uses wolf number V.2.0 as baseline
+# \n- interval takes string tuple of len 2
+# \n- squish_wolf is to squish the scaling factor of wolf number plotted
+# \n- cutoff is a factor that determines where you start cutting off outlier data
+# \nThe slope displayed is indicative of drift
+def display_wolf_drift(observer,the_database="DATA_SILSO_HISTO",
+interval=None,save_as=None,figsize=(15,11),squish_wolf=0.005,cutoff=4):
+    if the_database=="GOOD_DATA_SILSO":
+        obs_dic = data_by_obs_alias_good()
+        windex = 4
+    else:
+        obs_dic = data_by_obs_alias_histo(the_database=the_database)
+        windex = 6
+    if interval:
+        low = dt.date(int(interval[0][:4]),int(interval[0][5:7]),int(interval[0][8:10]))
+        high = dt.date(int(interval[1][:4]),int(interval[1][5:7]),int(interval[1][8:10]))
+
+    
+
+    # get the data
+    if interval:
+        [x,y] = np.transpose([[i[1],i[windex]] for i in obs_dic[observer] if i[1]>=low and i[1]<=high and i[windex]!=None])
+    else:
+        [x,y] = np.transpose([[i[1],i[windex]] for i in obs_dic[observer] if i[windex]!=None])
+    x,y=list(x),list(y)
+
+    # plot the figure
+    plt.figure(figsize=figsize)
+    plt.title("Wolf Drift "+str(observer))
+    plt.plot(x,[squish_wolf*i for i in y],"o",color=(0.2,0.2,1.0,0.05),label="scaled wolf "+observer)
+    x_smooth,y_smooth = get_smoothed_sn(interval=(np.array(x).min(),np.array(x).max()),smoothness=60)
+    plt.plot(x_smooth,[squish_wolf*i for i in y_smooth],"-",color=(0.0,0.0,0.0,0.3),label="scaled wolf official v2.0")
+
+    # get the data for the official sn
+    online_data = db_search.select_online_sn()
+    x_online,y_online = [],[]
+    for i in online_data:
+        if i[0] in x:
+            x_online.append(i[0])
+            y_online.append(i[2])
+
+    # the online data has holes in it so we need to get rid of those for the x
+    x_new,y_new=[],[]
+    for i in range(len(x_online)):
+        x_new.append(x_online[i])
+        y_new.append(y[x.index(x_online[i])])
+    x,y=x_new[:],y_new[:]
+    
+    print(list(x)==list(x_online))
+
+    y_plot = [(y[i]-y_online[i])/(y_online[i]+1) for i in range(len(x))]
+    
+    # plot the mean
+    y_mean = np.mean(y_plot)
+    plt.plot([np.array(x).min(),np.array(x).max()],[y_mean,y_mean],'-',color=(0.1,0.9,0.1,0.4),label="mean")# plot the mean
+
+    #plt.plot([np.array(x).min(),np.array(x).max()],[cutoff*y_mean,cutoff*y_mean],'-',label="cutoff1",color=(0.0,1.0,0.0,0.2))
+    #plt.plot([np.array(x).min(),np.array(x).max()],[-cutoff*y_mean,-cutoff*y_mean],'-',label="cutoff2",color=(0.0,1.0,0.0,0.2))
+    
+    # get rid of outliers
+    x_exclude_outliers,y_plot_exclude_outliers=[],[]
+    for i in range(len(x)):
+        if np.abs(y_mean)*cutoff>np.abs(y_plot[i]):
+            x_exclude_outliers.append(x[i])
+            y_plot_exclude_outliers.append(y_plot[i])
+    
+    plt.plot(x_exclude_outliers,y_plot_exclude_outliers,"rx",label="frac{obs - sn2.0}{sn2.0 + 10}")
+
+    # get rid of zeros to do line of best fit for the rest
+    x_exclude_zeros,y_plot_exclude_zeros=[],[]
+    for i in range(len(x_exclude_outliers)):
+        if y_plot_exclude_outliers[i]!=0:
+            x_exclude_zeros.append(x_exclude_outliers[i])
+            y_plot_exclude_zeros.append(y_plot_exclude_outliers[i])
+
+    y_mean_no0 = np.mean(y_plot_exclude_zeros)
+    plt.plot([np.array(x).min(),np.array(x).max()],[y_mean_no0,y_mean_no0],"-",color=(0.2,0.9,0.9,0.8),label="mean no zero")# plot the new mean
+
+    # line of best fit (2 variables)
+    x_exclude_zeros_decimal = dates_to_decimal(x_exclude_zeros)
+    popt,pcov = scipy.optimize.curve_fit(line,x_exclude_zeros_decimal,y_plot_exclude_zeros,p0=[0,0])
+    [a,b] = popt
+    yline = [line(i,a,b) for i in x_exclude_zeros_decimal]
+    plt.plot(x_exclude_zeros,yline,'b-',label="slope = "+str(a))
+
+    # now I want to plot a line of best fit
+    # we want to exclude all those points that are 0 because they don't really tell us anything
+    
+    plt.xlabel("Date")
+    plt.ylabel("frac{obs - v2.0}{v2.0}")
+    
+    plt.grid()
+    plt.legend()
+    if save_as:
+        plt.savefig(save_as)
+    plt.show()
+
+# converts an array of dates into an array of floats that represent dates
+def dates_to_decimal(dates):
+    decimal_dates=[]
+    for d in dates:
+        year = int(str(d)[:4])
+        month = int(str(d)[5:7])
+        day = int(str(d)[8:10])
+        days=day
+        for i in range(1,month+1):
+            if i in [2,4,6,8,9,11]:# 31 days
+                days+=31
+            elif i == 3 and year%4==0:# feb leapyear
+                days+=29
+            elif i==3:
+                days+=28
+            elif i in [5,7,10,12]:
+                days+=30
+        if year%4==0:
+            days_decimal=days/366.
+        else:
+            days_decimal=days/365.
+        decimal_date = year + days_decimal
+        decimal_dates.append(decimal_date)
+    return decimal_dates
+
+# converts an array of decimal_dates to array of dates
+def decimal_to_dates(dates):
+    real_dates=[]
+    mon_len = [31,28,31,30,31,30,31,31,30,31,30,31]
+    for d in dates:
+        year = int(d)
+        if year%4==0:# leap year
+            days = int((d-year)*366+0.5)
+            real_dates[1]=29
+        else:
+            days = int((d-year)*365+0.5)
+            real_dates[1]=28
+        m=0
+        while mon_len[m] < days:
+            days -= mon_len[m]
+            m+=1
+        month = m+1
+        day = days
+        real_dates.append(dt.date(year,month,day))
+    return real_dates
 
 
+# line of best fit 2 unknowns function
+def line(x,a,b):
+    return a*x + b
 
 # CARRINGTON
 # to help out with the Carrington investigation
@@ -485,10 +631,6 @@ def get_sunspots(groups,wolf):
             s=1
         sunspots.append(s)
     return sunspots
-
-
-
-
 
 
 
