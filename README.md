@@ -231,6 +231,9 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **transfer_flag_2()**	 transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
+**transfer_flag_0()**	 transfer all those with flag=0 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+
+
 ***
 
 ### dealing_with_duplicates.py
@@ -362,6 +365,22 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 **get_smoothed_sn()**	 the higher the smoothness, the smoother the plot
  takes date interval and returns x,y arrays of smoothed data to plot from the online sunspots number
+
+
+**display_wolf_drift()**	 \nThe slope displayed is indicative of drift
+ \n- cutoff is a factor that determines where you start cutting off outlier data
+ \n- squish_wolf is to squish the scaling factor of wolf number plotted
+ \n- interval takes string tuple of len 2
+ Plots the drift of an observer, uses wolf number V.2.0 as baseline
+
+
+**dates_to_decimal()**	 converts an array of dates into an array of floats that represent dates
+
+
+**decimal_to_dates()**	 converts an array of decimal_dates to array of dates
+
+
+**line()**	 line of best fit 2 unknowns function
 
 
 **get_full_carrington_dictionaries()**	 to help out with the Carrington investigation
