@@ -3,7 +3,7 @@
 # import statements
 import db_connection
 import db_search
-import time
+import datetime as dt
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy
@@ -11,6 +11,8 @@ from scipy.interpolate import spline
 from scipy.ndimage.filters import gaussian_filter1d
 from statsmodels.nonparametric.smoothers_lowess import lowess
 import datetime as dt
+import random
+import math
 
 # plotting converters
 from pandas.plotting import register_matplotlib_converters
@@ -540,6 +542,99 @@ def decimal_to_dates(dates):
         real_dates.append(dt.date(year,month,day))
     return real_dates
 
+# method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
+def size_data_by_observer_hist():
+    observers = db_search.select_all_observers()
+    data = db_search.select_all_data()
+    #obs_alias_dictionary = graphs_helper.data_by_obs_alias_histo()
+
+    #key = observer, value = data
+    dic = {}
+    for o in observers:
+        dic[o] = [d for d in data if d[3]==o[0]]# slow but short
+        print(len(dic[o]),end="\t")
+    print("\n")
+    print(len(dic))
+    
+    obs_sorted = [[len(dic[o]),o] for o in dic]
+    obs_sorted.sort(reverse=True)# biggest to smallest
+    obs_sorted = [i[1] for i in obs_sorted]
+    
+    
+    
+    
+    #### plot some nice figures
+
+    # plot a histogram of the number of data each observer has
+
+    # those with greater or equal to 2000 datapoints
+    x_2000 = [o[1] for o in obs_sorted if len(dic[o])>=2000]
+    bins_2000 = len(x_2000)
+    heights_2000 = [len(dic[o]) for o in obs_sorted if len(dic[o])>=2000]
+    colors_2000 = [(len(dic[o])/13000,0.3,2000/len(dic[o]),1.0) for o in obs_sorted if len(dic[o])>=2000]
+    
+    # those with x \in [800,2000)
+    x_800 = [o[1] for o in obs_sorted if len(dic[o])>=800 and len(dic[o])<2000]
+    bins_800 = len(x_800)
+    heights_800 = [len(dic[o]) for o in obs_sorted if len(dic[o])>=800 and len(dic[o])<2000]
+    colors_800 = [(len(dic[o])/2000,0.3,800/len(dic[o]),1.0) for o in obs_sorted if len(dic[o])>=800 and len(dic[o])<2000]
+    
+    # those with x \in [300,800)
+    x_300 = [o[1] for o in obs_sorted if len(dic[o])>=300 and len(dic[o])<800]
+    bins_300 = len(x_300)
+    heights_300 = [len(dic[o]) for o in obs_sorted if len(dic[o])>=300 and len(dic[o])<800]
+    colors_300 = [(len(dic[o])/1000,0.3,300/len(dic[o]),1.0) for o in obs_sorted if len(dic[o])>=300 and len(dic[o])<800]
+    
+    # those with x \in [70,300)
+    x_70 = [o[1] for o in obs_sorted if len(dic[o])>=70 and len(dic[o])<300]
+    bins_70 = len(x_70)
+    heights_70 = [len(dic[o]) for o in obs_sorted if len(dic[o])>=70 and len(dic[o])<300]
+    colors_70 = [(len(dic[o])/300,0.3,70/len(dic[o]),1.0) for o in obs_sorted if len(dic[o])>=70 and len(dic[o])<300]
+    
+    # those with x \in [0,70)
+    x_0 = [o[1] for o in obs_sorted if len(dic[o])<70]
+    bins_0 = len(x_0)
+    heights_0 = [len(dic[o]) for o in obs_sorted if len(dic[o])<70]
+    colors_0 = [(len(dic[o])/70,0.3,1/(len(dic[o])+1),1.0) for o in obs_sorted if len(dic[o])<70]
+    
+    
+    
+    
+    plt.figure(figsize=(14,20))
+    
+    plt.subplot(321)
+    plt.bar(x=[i for i in range(bins_2000)],height=heights_2000,align='center',tick_label=x_2000,color=colors_2000)
+    plt.xticks(rotation=90)
+    plt.title("Number of observations plot range [2000,13000)",color='green')
+    
+    plt.subplot(322)
+    plt.bar(x=[i for i in range(bins_800)],height=heights_800,align='center',tick_label=x_800,color=colors_800)
+    plt.xticks(rotation=90)
+    plt.title("Number of observations plot range [800,2000)",color='green')
+    
+    plt.subplot(323)
+    plt.bar(x=[i for i in range(bins_300)],height=heights_300,align='center',tick_label=x_300,color=colors_300)
+    plt.xticks(rotation=90)
+    plt.title("Number of observations plot range [300,800)",color='green')
+    
+    plt.subplot(324)
+    plt.bar(x=[i for i in range(bins_70)],height=heights_70,align='center',tick_label=x_70,color=colors_70)
+    plt.xticks(rotation=90)
+    plt.title("Number of observations plot range [70,300)",color='green')
+    
+    plt.subplot(325)
+    plt.bar(x=[i for i in range(bins_0)],height=heights_0,align='center',tick_label=x_0,color=colors_0)
+    plt.xticks(rotation=90)
+    plt.title("Number of observations plot range [0,70)",color="green")
+    
+    plt.subplot(326)
+    fancy_colors = [(random.random(),random.random(),random.random(),1.0) for o in obs_sorted]
+    plt.bar(x=[i for i in range(len(dic))],height=[len(dic[o]) for o in obs_sorted],color=fancy_colors)
+    plt.title("Number of observations plot",color="green")
+    
+    #plt.savefig("figures/histogram_number_data.png")
+    
+    plt.show()
 
 # line of best fit 2 unknowns function
 def line(x,a,b):
