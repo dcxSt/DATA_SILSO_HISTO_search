@@ -6,6 +6,9 @@ import db_connection
 import db_edit
 import db_search
 import pickle
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 # this method is from dealing_with_duplicates.py but i copied it here
 # because it deals with more fundamental operations that just duplicates
@@ -817,11 +820,35 @@ def move_flag3_to_bin():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
-
 #move_flag3_to_bin()
 
-# create and print the lists...
 
+# method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
+def size_data_by_observer():
+    observers = db_search.select_all_observers()
+    data = db_search.select_all_data()
+    #obs_alias_dictionary = graphs_helper.data_by_obs_alias_histo()
+    # i'm not gonna get into cyclicly importing modules
+
+    #key = observer, value = data
+    dic = {}
+    for o in observers:
+        dic[o] = [d for d in data if d[3]==o[0]]# slow but short
+        print(len(dic[o]),end="\t")
+    print("\n")
+    print(len(dic))
+    
+    # plot some nice figures
+
+    # plot a histogram of the number of data each observer has
+    plt.figure(figsize=(15,15))
+
+    plt.hist(x=[o[1] for o in dic],bins=len(dic),weights=[len(dic[o]) for o in dic])
+
+    plt.show()
+    #input()
+
+size_data_by_observer()
 """
 greater_duplicates_dictionary = greater_duplicates_data(the_database='DATA_SILSO_HISTO',force_recalculate=True)
 write_greater_duplicates_data_text(greater_duplicates_dictionary=greater_duplicates_dictionary)
