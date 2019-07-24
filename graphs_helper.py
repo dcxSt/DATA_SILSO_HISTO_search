@@ -642,18 +642,20 @@ def size_data_by_observer_hist():
     plt.show()
 
 # Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
-def event_plot(interval=None,observer_aliases=None,figsize=(13,13),fontsize=12,gridlines=False):
+def event_plot(interval=None,observer_aliases=None,
+figsize=(13,13),fontsize=12,gridlines=False,
+title=None,save_as=None):
     observers = db_search.select_all_observers()
     data = db_search.select_all_data(the_database='DATA_SILSO_HISTO')
     
     # make list of the observers you will be needing, and exclude extra dates
     if observer_aliases:
-        observers = [o for o in observers if o[1] in observer_alaises]
+        observers = [o for o in observers if o[1] in observer_aliases]
     # just in-case the user put in an alias that doesn't exist
     obs_aliases = [o[1] for o in observers]
     if observer_aliases:
         if len(obs_aliases)<len(observer_aliases):
-            for i in set(obserber_aliases) - set(obs_aliases):
+            for i in set(observer_aliases) - set(obs_aliases):
                 print("missing",i)
     # restrict data to only that that is observed by observers
     data = [d for d in data if d[3] in [o[0] for o in observers]]
@@ -694,6 +696,8 @@ def event_plot(interval=None,observer_aliases=None,figsize=(13,13),fontsize=12,g
     ax.set_yticklabels(aliases,rotation='horizontal',fontsize=fontsize)
     
     if gridlines: ax.grid()
+    if title: plt.title(title)
+    if save_as: plt.savefig(save_as)
     
     plt.show()
 
