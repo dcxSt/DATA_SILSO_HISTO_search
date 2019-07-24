@@ -77,6 +77,37 @@ def get_size_methods_dictionary(filenames):
             size_methods_dictionary[name][methodname] = count
     return size_methods_dictionary
 
+# get the ipynb number of blocks and descriptors dictionary
+def get_ipynb_descriptors_dic(filenames):
+    ipynb_descriptors_dic = {}
+    for name in filenames:
+        f=open(name,"r")
+        contents = f.readlines()
+        f.close()
+        index = 0
+        got_descriptor = False
+        while index < len(contents):
+            nextline = contents[index]
+            # get the descriptor of the file, the first lines with # in them
+            if not got_descriptor:
+                if '"source":' in nextline:
+                    i=1
+                    des_line = contents[index+i]
+                    descriptor = ""
+                    while "#" in des_line:
+                        indices_speech = [i for i,x in enumerate(des_line) if x =='"']
+                        descriptor+=des_line[indices_speech[0]+2:indices_speech[1]]
+                        i+=1
+                        des_line = contents[index+i]
+                    got_descriptor = True
+                    blocks=1
+            else:
+                if '"source":' in nextline:
+                    blocks+=1
+            index +=1
+        ipynb_descriptors_dic[name] = [blocks,descriptor]
+    return ipynb_descriptors_dic
+
 # returns dictionary key = script ; value = subheadding of script
 def get_subheaders_dictionary(filenames):
     subheaders_dictionary = {}
@@ -121,7 +152,7 @@ def write_body(readme):
     subhead_dic = get_subheaders_dictionary(py_filenames)
     body_dictionary = get_method_description_dictionary(py_filenames)
     size_methods_dictionary = get_size_methods_dictionary(py_filenames)
-    readme.write("## Python scripts, their methods and descriptors i am reading \n\n")
+    readme.write("## Python scripts, their methods and descriptors: \n\n")
     for script in body_dictionary:
         readme.write("### "+script+"\n")
         readme.write(subhead_dic[script]+"\n\n")
@@ -130,6 +161,20 @@ def write_body(readme):
             readme.write("["+str(size_methods_dictionary[script][m[0]])+"]\t")
             readme.write(m[1]+"\n\n")
         readme.write("***\n\n")
+    readme.write("\n\n")
+
+# write the jupiter-notebooks section
+def write_ipynb(readme):
+    ipynb_filenames = get_ipynb_filenames()
+    ipynb_descriptors_dic = get_ipynb_descriptors_dic(ipynb_filenames)
+    readme.write("## Jupyter notebooks:\n\n")
+    for script in ipynb_descriptors_dic:
+        readme.write("**"+script+"**  ")
+        try:
+            readme.write("[code blocks = "+str(ipynb_descriptors_dic[script][0])+"]  ")# no of blocks
+        except: pass
+        readme.write(ipynb_descriptors_dic[script][1])# descriptor
+        readme.write("\n\n")
 
 # write the links section
 def write_links(readme):
@@ -147,6 +192,7 @@ def write_readme():
     write_title(readme)
     write_preamble(readme)
     write_body(readme)
+    write_ipynb(readme)
     write_links(readme)
     readme.close()
 

@@ -4,7 +4,7 @@
 ## Preamble
 The aim of this little project is to do a quality control of the data in *DATA_SILSO_HISTO*. Once the data is fixed and cleaned up, it will be stored on a new database - temporarily named *GOOD_DATA_SILSO* in a more user-friendly format to what currently exists. I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be mad to keep a closer eye on the data that still needs to be examined with more scrutiny : *BAD_DATA_SILSO*. This database will act as intermediaire entre *DATA_SILSO_HISTO* et *GOOD_DATA_SILSO*. We will effectively be storing 2 databases-worth of information in 3 databases. The original *DATA_SILSO_HISTO* will have the old data and will be corrected in due course. The intermediary *BAD_DATA_SILSO* will start as a copy of *DATA_SILSO_HISTO* and end up empty as the corrected data is removed from it and placed, in the new format, into *GOOD_DATA_SILSO*
 
-## Python scripts, their methods and descriptors i am reading 
+## Python scripts, their methods and descriptors: 
 
 ### db_edit.py
 ***utility methods used to edit the DATA_SILSO_HISTO sql database, for now it's just comments and flags***
@@ -292,6 +292,9 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **get_size_methods_dictionary()**  [35]	 returns a dictionary key = filename ; value = dictionary with key = methodname, value = num lines
 
 
+**get_ipynb_descriptors_dic()**  [30]	 get the ipynb number of blocks and descriptors dictionary
+
+
 **get_subheaders_dictionary()**  [21]	 returns dictionary key = script ; value = subheadding of script
 
 
@@ -301,13 +304,16 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **write_preamble()**  [9]	 write the preamble
 
 
-**write_body()**  [15]	 write the main body of the readme file
+**write_body()**  [16]	 write the main body of the readme file
+
+
+**write_ipynb()**  [12]	 write the jupiter-notebooks section
 
 
 **write_links()**  [9]	 write the links section
 
 
-**write_readme()**  [8]	 writes the readme file
+**write_readme()**  [9]	 writes the readme file
 
 
 ***
@@ -441,6 +447,34 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 
 ***
+
+
+
+## Jupyter notebooks:
+
+**suspicious sunspots plots.ipynb**  [code blocks = 19]  
+
+**random_plots_and_graphs.ipynb**  [code blocks = 12]  
+
+**derived_plots.ipynb**  [code blocks = 6]  
+
+**Frequency and number of observation plots.ipynb**  [code blocks = 13]   import statements        \n
+
+**Schwabe.ipynb**  [code blocks = 5]   from the shop\n
+
+**MittDBPython.ipynb**  [code blocks = 16]  
+
+**carrington_investigation_wolf.ipynb**  [code blocks = 13]  
+
+**wolf_wolfer_investigation.ipynb**  [code blocks = 18]   from the shop\n
+
+**secchi_derivation.ipynb**  [code blocks = 15]  
+
+**carrington_investigation_groups.ipynb**  [code blocks = 7]  
+
+**executing_commands.ipynb**  [code blocks = 20]  
+
+**kew_derivation.ipynb**  [code blocks = 13]  
 
 ## Links and Resources
 
