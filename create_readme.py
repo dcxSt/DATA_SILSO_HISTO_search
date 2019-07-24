@@ -36,11 +36,46 @@ def get_method_description_dictionary(filenames):
                         i+=1
                         lastline= contents[index-i]
                     methods_descriptors.append((methodname,descriptor))
-            except:
-                pass
+            except: pass
             index+=1
         method_description_dictionary[name] = methods_descriptors
     return method_description_dictionary
+
+# returns a dictionary key = filename ; value = dictionary with key = methodname, value = num lines
+def get_size_methods_dictionary(filenames):
+    size_methods_dictionary = {}
+    for name in filenames:
+        size_methods_dictionary[name] = {}
+        f=open(name,"r")
+        contents = f.readlines()
+        f.close()
+        index = 0
+        inside_method=False# true if current line is inside a method
+        methodname=None;count=0#init
+        method_sizes = {}# yes a dictionary of dictionaries # delete this once working
+        while index < len(contents):
+            nextline = contents[index]
+            if inside_method:
+                try:
+                    if nextline[:4]!="    " and nextline!='\n':
+                        inside_method=False
+                        size_methods_dictionary[name][methodname] = count# yes a dictionary of dictionaries
+                        index-=1# want to reread the line
+                    else: count+=1
+                except: pass
+            else:
+                try:
+                    if nextline[:3]=="def":
+                        inside_method=True
+                        # if there is a method, add it to the list
+                        methodname = nextline[4:nextline.index("(")]
+                        count=1
+                except: pass
+            index+=1
+        # if the last method wasn't detected add it
+        if inside_method==True: 
+            size_methods_dictionary[name][methodname] = count
+    return size_methods_dictionary
 
 # returns dictionary key = script ; value = subheadding of script
 def get_subheaders_dictionary(filenames):
@@ -85,12 +120,14 @@ def write_body(readme):
     py_filenames = get_py_filenames()
     subhead_dic = get_subheaders_dictionary(py_filenames)
     body_dictionary = get_method_description_dictionary(py_filenames)
-    readme.write("## Python scripts, their methods and descriptors\n\n")
+    size_methods_dictionary = get_size_methods_dictionary(py_filenames)
+    readme.write("## Python scripts, their methods and descriptors i am reading \n\n")
     for script in body_dictionary:
         readme.write("### "+script+"\n")
         readme.write(subhead_dic[script]+"\n\n")
         for m in body_dictionary[script]:
-            readme.write("**"+m[0]+"()**\t")
+            readme.write("**"+m[0]+"()**  ")
+            readme.write("["+str(size_methods_dictionary[script][m[0]])+"]\t")
             readme.write(m[1]+"\n\n")
         readme.write("***\n\n")
 

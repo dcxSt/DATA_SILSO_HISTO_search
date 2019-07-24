@@ -52,10 +52,9 @@ def move_carrington_out_of_rubbish():
     db_connection.close_database_connection(mydb)
     db_connection.close_database_connection(mydb2)
 
-
+# try insert if it doesn't work just give up, it's already there...
+# get the ids that are in DATA_SILSO_HISTO and belong to rubrics 303, fk=175
 def move_carrington_to_good():
-    # try insert if it doesn't work just give up, it's already there...
-    # get the ids that are in DATA_SILSO_HISTO and belong to rubrics 303, fk=175
     cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
     query = "SELECT ID FROM DATA WHERE FK_RUBRICS=175 AND FK_OBSERVERS=36"
     cursor.execute(query,())
