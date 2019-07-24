@@ -542,6 +542,11 @@ def decimal_to_dates(dates):
         real_dates.append(dt.date(year,month,day))
     return real_dates
 
+# line of best fit 2 unknowns function
+# it's a helper function for those that are using scipy.optimize.curve_fit for a line of best fit
+def line(x,a,b):
+    return a*x + b
+
 # method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
 def size_data_by_observer_hist():
     observers = db_search.select_all_observers()
@@ -636,9 +641,63 @@ def size_data_by_observer_hist():
     
     plt.show()
 
-# line of best fit 2 unknowns function
-def line(x,a,b):
-    return a*x + b
+# Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
+def event_plot(interval=None,observer_aliases=None,figsize=(13,13),fontsize=12,gridlines=False):
+    observers = db_search.select_all_observers()
+    data = db_search.select_all_data(the_database='DATA_SILSO_HISTO')
+    
+    # make list of the observers you will be needing, and exclude extra dates
+    if observer_aliases:
+        observers = [o for o in observers if o[1] in observer_alaises]
+    # just in-case the user put in an alias that doesn't exist
+    obs_aliases = [o[1] for o in observers]
+    if observer_aliases:
+        if len(obs_aliases)<len(observer_aliases):
+            for i in set(obserber_aliases) - set(obs_aliases):
+                print("missing",i)
+    # restrict data to only that that is observed by observers
+    data = [d for d in data if d[3] in [o[0] for o in observers]]
+    data = [d for d in data if d[1]!=None]
+    if interval:
+        mini=dt.date(int(interval[0][:4]),int(interval[0][5:7]),int(interval[0][8:10]))
+        sup=dt.date(int(interval[1][:4]),int(interval[1][5:7]),int(interval[1][8:10]))
+        data = [d for d in data if d[1]>=mini and d[1]<=sup]
+    else: # if not interval find mini and sup
+        mini = min([d[1] for d in data])
+        sup = max([d[1] for d in data])
+
+    
+    # dictionary : key = observer alias , value = dates observed
+    dic = {}
+    for o in observers:
+        dic[o[1]] = [d[1] for d in data if d[3]==o[0]]# where fk_rubrics == rubrics_id
+        if len(dic[o[1]])==0: del dic[o[1]]# don't want empty observers
+    aliases = [o for o in dic]
+    
+    # format the dates, make them decimal form
+    dates=[dates_to_decimal([d for d in dic[o]]) for o in dic]
+
+    #print("Aliases\n",aliases)#trace
+        
+    # plot the eventplot
+    # ref : https://matplotlib.org/gallery/lines_bars_and_markers/eventplot_demo.html#sphx-glr-gallery-lines-bars-and-markers-eventplot-demo-py 
+    # ref : https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.eventplot.html 
+    # ref : https://stackoverflow.com/questions/26402130/matplotlib-string-xticks 
+    fig,ax = plt.subplots(figsize=figsize)
+    
+    colors = [(1,0,0,1),(0,1,0,1),(0,0,1,1),(1,0.7,0,1),(1,0,1,1),(0,1,1,1)]
+    colors = colors*(len(dates)//6+1)
+    
+    plt.eventplot(positions=dates,colors=colors[:len(dates)],linelengths=0.8)
+                     
+    ax.set_yticks([i for i in range(len(aliases))])
+    ax.set_yticklabels(aliases,rotation='horizontal',fontsize=fontsize)
+    
+    if gridlines: ax.grid()
+    
+    plt.show()
+
+
 
 # CARRINGTON
 # to help out with the Carrington investigation
