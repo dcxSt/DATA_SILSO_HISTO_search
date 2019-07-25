@@ -1,3 +1,5 @@
+#!/home/steve/anaconda3/bin/python3
+
 # creates a description of all the methods in the python scripts 
 # It's the method that generated the file you are currently reading 
 
@@ -90,17 +92,19 @@ def get_ipynb_descriptors_dic(filenames):
             nextline = contents[index]
             # get the descriptor of the file, the first lines with # in them
             if not got_descriptor:
-                if '"source":' in nextline:
-                    i=1
+                if '"markdown"' in nextline:
+                    i=3
                     des_line = contents[index+i]
                     descriptor = ""
-                    while "#" in des_line:
+                    while "]" not in des_line:
                         indices_speech = [i for i,x in enumerate(des_line) if x =='"']
-                        descriptor+=des_line[indices_speech[0]+2:indices_speech[1]]
+                        descriptor+=des_line[indices_speech[0]+1:indices_speech[1]]
                         i+=1
                         des_line = contents[index+i]
                     got_descriptor = True
                     blocks=1
+            elif not got_descriptor and '"code"' in nextline:
+                got_descriptor = True # there is no descriptor so stop looking for one
             else:
                 if '"source":' in nextline:
                     blocks+=1

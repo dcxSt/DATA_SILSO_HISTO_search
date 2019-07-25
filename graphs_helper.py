@@ -6,6 +6,7 @@ import db_search
 import datetime as dt
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 import scipy
 from scipy.interpolate import spline
 from scipy.ndimage.filters import gaussian_filter1d

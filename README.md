@@ -277,7 +277,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ***
 
 ### create_readme.py
-***creates a description of all the methods in the python scripts , It's the method that generated the file you are currently reading ***
+***/home/steve/anaconda3/bin/python3***
 
 **get_py_filenames()**  [3]	 method for returning all the .py filenames in the directory
 
@@ -292,7 +292,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **get_size_methods_dictionary()**  [35]	 returns a dictionary key = filename ; value = dictionary with key = methodname, value = num lines
 
 
-**get_ipynb_descriptors_dic()**  [30]	 get the ipynb number of blocks and descriptors dictionary
+**get_ipynb_descriptors_dic()**  [32]	 get the ipynb number of blocks and descriptors dictionary
 
 
 **get_subheaders_dictionary()**  [21]	 returns dictionary key = script ; value = subheadding of script
@@ -403,7 +403,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **size_data_by_observer_hist()**  [93]	 method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
 
 
-**event_plot()**  [57]	 Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
+**event_plot()**  [1]	 Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
 
 
 **get_full_carrington_dictionaries()**  [25]	 to help out with the Carrington investigation
@@ -452,29 +452,29 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 ## Jupyter notebooks:
 
-**suspicious sunspots plots.ipynb**  [code blocks = 19]  
+**suspicious sunspots plots.ipynb**  [code blocks = 21]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
 
-**random_plots_and_graphs.ipynb**  [code blocks = 12]  
+**random_plots_and_graphs.ipynb**  [code blocks = 14]  Here there are the plots where I discovered Carrington and Kew's anomalous data which turned out to be the area measurements
 
-**derived_plots.ipynb**  [code blocks = 6]  
+**derived_plots.ipynb**  [code blocks = 8]  Shitty notebook that isn't very useful, I think I made this one before the other two, it has some Secchi plots as well as Carrington plots
 
-**Frequency and number of observation plots.ipynb**  [code blocks = 13]   import statements        \n
+**Frequency and number of observation plots.ipynb**  [code blocks = 11]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
 
-**Schwabe.ipynb**  [code blocks = 5]   from the shop\n
+**Schwabe.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
 
-**MittDBPython.ipynb**  [code blocks = 16]  
+**MittDBPython.ipynb**  [code blocks = 18]  One of the first Jupiter notebooks created, it's pretty useless now
 
-**carrington_investigation_wolf.ipynb**  [code blocks = 13]  
+**carrington_investigation_wolf.ipynb**  [code blocks = 15]  Notebook devoted to carrington's converstion from total area of surface of sunspot number into the derived sunspots numbers
 
-**wolf_wolfer_investigation.ipynb**  [code blocks = 18]   from the shop\n
+**wolf_wolfer_investigation.ipynb**  [code blocks = 21]  This is the first notebook in which I test my display_wolf_drift() method in the hope of perhaps picking up on the drift of wolf.\nAs the title suggests there are also many plots of Wolf's and Wolfer's data as well as some people during their period of data collection.
 
-**secchi_derivation.ipynb**  [code blocks = 15]  
+**secchi_derivation.ipynb**  [code blocks = 17]  A bunch of methods were executed here to keep track of the derivation of Secchi's data when it was on-going. Because there are only to be executed once as they edit the databases, most of the content has been commented out with \
 
-**carrington_investigation_groups.ipynb**  [code blocks = 7]  
+**carrington_investigation_groups.ipynb**  [code blocks = 7]  This notebook is dedicated to Carrington's data, specifically for the derivation / estimation of the sunspots number based off of his area measurements.
 
-**executing_commands.ipynb**  [code blocks = 20]  
+**executing_commands.ipynb**  [code blocks = 22]  This is one of the first notebooks I made, it's purpose is to execute commands that I wrote in the .py files, but it's pretty useless now. It was a good peduncle that lead to the creation of a better system (to borrow Alan Watts' analogy).
 
-**kew_derivation.ipynb**  [code blocks = 13]  
+**kew_derivation.ipynb**  [code blocks = 15]  In this notebook there is the derivation of Kew's sunspots numbers from his area measurements. Since it's already been done I pickled the before and after and you can see the graphs without actually changing the data in the sql databases.
 
 ## Links and Resources
 
