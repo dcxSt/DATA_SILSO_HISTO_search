@@ -282,9 +282,34 @@ I only started the log on the solstice so I forgot the details of what I was doi
 
 \subsubsection{Monday July 22}
 \begin{itemize}
-    \item Wrote a cute little script to automate backing up the databases.
+    \item Wrote a cute little script to automate backing up the databases and committing with git (there will be more frequent backups now).
     \item Translated a big long rubrics
     \item Sorted all the data attached to fk\_observers IN (60,61,62) - all composite observers from these strange rubrics\_number = 0 in the mid to late 1800's - into their proper observers.
+\end{itemize}
+
+\subsubsection{Tuesday July 23}
+\begin{itemize}
+    \item Made some fancy plots and plotting tools : \texttt{size\_data\_by\_observers()} plots a bar chart of of all the observer aliases on the x axis and on the y axis it plots how many data-points are associated with them. \texttt{event\_plots()} shows you the observer aliases on the y axis this time, and the x axis is the dates, plotted is all the dates each one observed on.
+\end{itemize}
+
+\subsubsection{Wednesday July 24}
+\begin{itemize}
+    \item Updated the create\_readme file
+    \item Did some event plots and investigated `Ricco, Zona, Mascari'
+    \item Learned a whole lot of things from F. Clette about his work, the current state of solar physics and some interesting things about Burnner and other observers
+\end{itemize}
+
+\subsubsection{Thursday July 25}
+\begin{itemize}
+    \item Added a descriptor in markdown to the beginning of each jupiter notebook
+    \item Re-plotted some data from the Wolf - Wolfer transition period that has been modified since last time I plotted it and the change is magnificent! 
+    \item Finally abolished `Ricco, Zona, Mascari' and appropriately sorted the data
+    \item Launched an investigation of rubrics 684 which is very confusing. There are many problems with it.
+\end{itemize}
+
+\subsubsection{Friday July 26}
+\begin{itemize}
+    \item 
 \end{itemize}
 
 
@@ -472,6 +497,19 @@ I only started the log on the solstice so I forgot the details of what I was doi
     \label{fig:wolf and wolfer initial plots}
 \end{figure}
 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{histogram_number_data.png}
+    \caption{bar charts of each observer number of data}
+    \label{fig:bar chart number data}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\linewidth]{wolf_wolfer_event_plot.png}
+    \includegraphics[width=0.5\linewidth]{event_1880_1895.png}
+    \caption{Wolf and Wolfer + 1880 to 1895 event\_plots}
+    \label{fig:eventplot wolf and wolfer and 1880 to 1895}
+\end{figure}
+
 \section{Conclusions}
 
 \subsection{Before and After - outline of the modifications I made to the database}
@@ -488,7 +526,7 @@ This idea will probably never come to fluition - in the spirit of Herr Wolf who 
     \item for each day / month / year find the highest observation and the lowest observations and add it to the graph so that we have like an upper bound and a lower bound. 
     \item figure out how to smooth graphs with matplotlib and make something nice out off the big mess i currently have
     \item pie chart of observers with their number of observations
-    \item in the final sunspots number graph cut it into 3 or 4 sections that mark changes in the theory behind sunspots: before wolf ; time where plato's ideas of the sun being a perfect sphere still were around ; 1908 George Ellery Hale discovers the magnetic link (p14 of nature's 3rd cycle) ; 1955 eugene parker's theory (p19 of nature's 3rd cycle) ; Nasa send their probe to near the sun
+    \item in the final sunspots number graph cut it into 3 or 4 sections that mark changes in the theory behind sunspots: before wolf ; time where Plato's ideas of the sun being a perfect sphere were still alive and well ; 1908 George Ellery Hale discovers the magnetic link (p14 of nature's 3rd cycle) ; 1955 Eugene parker's theory (p19 of nature's 3rd cycle) ; Nasa send their probe to near the sun
 \end{itemize}
 
 \subsection{Converting the $f$ (`aire')}\label{converting the `aire'}
