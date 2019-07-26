@@ -586,4 +586,4 @@ def transfer_flag_0():
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
-
+#transfer_flag_0()
