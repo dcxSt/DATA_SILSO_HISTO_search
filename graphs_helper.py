@@ -11,7 +11,6 @@ import scipy
 from scipy.interpolate import spline
 from scipy.ndimage.filters import gaussian_filter1d
 from statsmodels.nonparametric.smoothers_lowess import lowess
-import datetime as dt
 import random
 import math
 
@@ -691,12 +690,13 @@ title=None,save_as=None):
     colors = [(1,0,0,1),(0,1,0,1),(0,0,1,1),(1,0.7,0,1),(1,0,1,1),(0,1,1,1)]
     colors = colors*(len(dates)//6+1)
     
-    plt.eventplot(positions=dates,colors=colors[:len(dates)],linelengths=0.8)
+    plt.eventplot(positions=dates,colors=colors[:len(dates)],linelengths=0.8,linewidths=0.1)
                      
     ax.set_yticks([i for i in range(len(aliases))])
     ax.set_yticklabels(aliases,rotation='horizontal',fontsize=fontsize)
     
     if gridlines: ax.grid()
+    #ax.grid(which="both",b=True)
     if title: plt.title(title)
     if save_as: plt.savefig(save_as)
     
