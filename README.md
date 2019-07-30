@@ -159,6 +159,42 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 ***
 
+### Lockwood-Lefevre-re-analysis-read_RGO_comp_yearly.py
+***ead_RGO_comp_yearly.py***
+
+**leapyr()**  [9]	===============================================================================
+
+
+**date_conv()**  [1]	===============================================================================
+===============================================================================
+print leapyr(1900)
+
+
+**num_days_in_month()**  [1]	===============================================================================
+
+
+**binbymonth()**  [1]	===============================================================================
+====================================BIN BY MONTH===============================
+===============================================================================
+
+
+**binbyyear()**  [1]	problem of edges with the function to take a look at !!!
+===============================================================================
+====================================BIN BY YEAR===============================
+===============================================================================
+
+
+**remove_edges()**  [1]	
+
+**comp_all()**  [1]	===============================================================================
+
+
+**comp_res()**  [1]	===============================================================================
+===============================================================================
+
+
+***
+
 ### db_search.py
 ***utility methods used search the DATA_SILSO_HISTO sql database***
 
@@ -233,7 +269,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **transfer_flag_2()**  [13]	 transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
-**transfer_flag_0()**  [14]	 transfer all those with flag=0 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+**transfer_flag_0()**  [13]	 transfer all those with flag=0 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
 ***
@@ -318,8 +354,14 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 ***
 
-### lefevre.py
-***ead_database_mitteilungen.py***
+### db_graphs_compare.py
+***this script is a bit like graphs helper, it contains methods to plot, things for use in a jupyter notebook. Specifically, plots and charts that bring into evidence the types of changes I , implemented; comparing the original with the new.***
+
+**fetch_all_data()**  [13]	 helper method for many functions to get data, observers and rubrics from each database
+
+
+**compare_pie_modify()**  [11]	 method to generate a pie chart that shows how much data was modified
+
 
 ***
 
@@ -458,7 +500,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 **derived_plots.ipynb**  [code blocks = 8]  Shitty notebook that isn't very useful, I think I made this one before the other two, it has some Secchi plots as well as Carrington plots
 
-**Frequency and number of observation plots.ipynb**  [code blocks = 11]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
+**Frequency and number of observation plots.ipynb**  [code blocks = 15]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
 
 **Schwabe.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
 

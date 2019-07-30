@@ -558,6 +558,33 @@ def move_carrington303_good_to_rubbish():
         move_data_to_bin_only_good(id_number,cursor2,mydb2,close_databases=False)
     db_connection.close_database_connection(mydb2)
     
+# gets rid of WOLF - S - M 's data from 1864 that doesn't belong to him; exec only once
+def move_wolf_1864_to_rubbish():
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    # first find the dates where there are already other observers
+    query = "SELECT DATE FROM DATA WHERE FK_OBSERVERS IN (17,32,3) AND DATE>='1864-01-01' AND DATE<'1865-01-01'"
+    cursor.execute(query,())
+    dates_not_wolf = cursor.fetchall()
+    query = "SELECT * FROM DATA WHERE FK_OBSERVERS=2 AND DATE>='1864-01-01' AND DATE<'1865-01-01'"
+    cursor.execute(query,())
+    wolfs_data = cursor.fetchall()
+    # ineficient but ez to write
+    not_wolf_ids = []
+    for i in wolfs_data:
+        really_wolf = True
+        for j in dates_not_wolf:
+            if j[0] in i: really_wolf = False
+        if False==really_wolf: not_wolf_ids.append(i[0])
+
+    db_connection.close_database_connection(mydb)
+
+    for i in not_wolf_ids:
+        move_data_to_bin(i)
+
+    print("DONE!")
+    
+    
+
 # transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 def transfer_flag_2():
     cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
