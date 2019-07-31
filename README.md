@@ -110,7 +110,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ***
 
 ### test_sound.py
-***est sound***
+***testing the sound***
 
 ***
 
@@ -162,36 +162,21 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 ### Lockwood-Lefevre-re-analysis-read_RGO_comp_yearly.py
 ***ead_RGO_comp_yearly.py***
 
-**leapyr()**  [9]	===============================================================================
+**leapyr()**  [9]	
 
+**date_conv()**  [1]	
 
-**date_conv()**  [1]	===============================================================================
-===============================================================================
-print leapyr(1900)
+**num_days_in_month()**  [1]	
 
+**binbymonth()**  [1]	
 
-**num_days_in_month()**  [1]	===============================================================================
-
-
-**binbymonth()**  [1]	===============================================================================
-====================================BIN BY MONTH===============================
-===============================================================================
-
-
-**binbyyear()**  [1]	problem of edges with the function to take a look at !!!
-===============================================================================
-====================================BIN BY YEAR===============================
-===============================================================================
-
+**binbyyear()**  [1]	
 
 **remove_edges()**  [1]	
 
-**comp_all()**  [1]	===============================================================================
+**comp_all()**  [1]	
 
-
-**comp_res()**  [1]	===============================================================================
-===============================================================================
-
+**comp_res()**  [1]	
 
 ***
 
@@ -264,6 +249,13 @@ print leapyr(1900)
 
 
 **move_carrington303_good_to_rubbish()**  [10]	 move carrington's data to rubbish from good data silso
+
+
+**move_wolf_1864_to_rubbish()**  [24]	 gets rid of WOLF - S - M 's data from 1864 that doesn't belong to him; exec only once
+
+
+**separate_1865_observers()**  [83]	 seperates out the data from wolf-s-m 1865 table into different observer
+ Execute once
 
 
 **transfer_flag_2()**  [13]	 transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
@@ -500,7 +492,7 @@ print leapyr(1900)
 
 **derived_plots.ipynb**  [code blocks = 8]  Shitty notebook that isn't very useful, I think I made this one before the other two, it has some Secchi plots as well as Carrington plots
 
-**Frequency and number of observation plots.ipynb**  [code blocks = 15]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
+**Frequency and number of observation plots.ipynb**  [code blocks = 16]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
 
 **Schwabe.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
 
