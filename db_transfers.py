@@ -670,7 +670,51 @@ def separate_1865_observers():
     
 # Execute once
 # separates out the data from wolf-s-m 1866 table into different observers
+def separate_1866_observers():
+    # dictionary of dates in string format without year, they're all 1866
+    dic = {}
+    dic["Schwabe"] = ["01-01","01-08","01-14","02-12","02-16","02-21",
+    "03-11","08-12","09-11","10-09","10-12","10-23","10-24","11-09","11-17",
+    "11-25","12-03","12-10","12-11","12-14","12-16","12-17","12-19","12-20",
+    "12-21","12-22","12-23","12-27"]
+    dic["WOLF - P - M"] = ["01-02","01-12","01-17","01-23","02-01","02-05",
+    "03-21","04-12","06-10","08-03","08-10","09-26","10-14","10-26","11-26"]
+    dic["Schmidt"] = ["01-11","11-02","11-27",""]
+    dic["Weber"] = ["01-05","01-06","01-07","01-15","02-06","02-13","02-19",
+    "02-20","02-22","02-24","03-03","03-05","03-06","03-09","03-14","03-24",
+    "04-01","04-02","04-06","04-20","05-02","05-05","06-14","08-13","08-15",
+    "10-15","10-18","10-22","10-25","10-28","10-29","11-19","11-28","11-30",
+    "12-28"]
 
+    fk_dic = {"Weber":32 , "Schmidt":23 , "Schwabe":17 , "WOLF - P - M":3}
+    meta = {"Weber":["XXX","Weber","XXX","(NULL)","(NULL)"],
+    "Schmidt":["Johan Friedrich Julius","Schmidt","DE","(NULL)","(NULL)"],
+    "Schwabe":["Heinrich","Schwabe","DE","(NULL)","(NULL)"],
+    "WOLF - P - M":["Rudolph","Wolf","CH","43 mm Portable","Alias = Wolf - Portable - Mittheilung"]}
+
+    for i in dic:
+        for j in dic[i]:
+            dic[i][dic[i].index(j)] = "1866-"+j
+    
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+
+    for i in dic:
+        for j in dic[i]:
+            fk_obs = fk_dic[i]
+            query1 = "UPDATE DATA SET FK_OBSERVERS="+str(fk_obs)+" WHERE DATE='"+j+"' AND FK_OBSERVERS=2"
+            cursor.execute(query1,())
+            mydb.commit()
+            cursor3.execute(query1,())
+            mydb3.commit()
+
+            query2 = "UPDATE DATA SET OBS_ALIAS="+i+""
+
+
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
 
 # transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 def transfer_flag_2():
