@@ -40,6 +40,7 @@ dirIn='/Users/Laure/sunspots/catalogs/'
 dirOut='/Users/Laure/Desktop/Lockwood/yearly/1920/'
 
 #===============================================================================
+
 def leapyr(n):
     if n % 400 == 0:
         return True
@@ -52,6 +53,7 @@ def leapyr(n):
 #print leapyr(1900)
 #===============================================================================
 #===============================================================================
+
 def date_conv(year, month, day, hour, minutes, seconds):
 	NUM_DAYS_IN_YR = 365. + leapyr(year)
 	if leapyr(year) > 0.:
@@ -74,6 +76,7 @@ def date_conv(year, month, day, hour, minutes, seconds):
 #===============================================================================
 
 #===============================================================================
+
 def num_days_in_month(year, month):
 	NUM_DAYS_IN_YR = 365. + leapyr(year)
 	if leapyr(year) > 0.:
@@ -88,6 +91,7 @@ def num_days_in_month(year, month):
 #===============================================================================
 #====================================BIN BY MONTH===============================
 #===============================================================================
+
 def binbymonth(time,data,year,month):
 	time=np.asarray(time)
 	data=np.asarray(data)
@@ -150,6 +154,7 @@ def binbymonth(time,data,year,month):
 #====================================BIN BY YEAR===============================
 #===============================================================================
 #problem of edges with the function to take a look at !!!
+
 def binbyyear(time,data,year):
 	time=np.asarray(time)
 	data=np.asarray(data)
@@ -224,6 +229,7 @@ def remove_edges(time, data, sigma, n):
 	return newtime, newdata, newsigma
 
 #===============================================================================
+
 def comp_all(fc0, time1,data1,time2,data2, lastyear):
 	mindiff=(1./365.25)*5. ; 	datac=[]  ; iok=0.
 	for j in range(0,len(time1)):
@@ -265,6 +271,7 @@ def comp_all(fc0, time1,data1,time2,data2, lastyear):
 
 #===============================================================================
 #===============================================================================
+
 def comp_res(fc, time1,data1,time2,data2,lastyear, err1=0., err2=0., mexp=0.871, type='area'):
 	if type == 'area' :
 		add=0.

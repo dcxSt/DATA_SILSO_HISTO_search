@@ -1,4 +1,4 @@
-#test sound
+# testing the sound
 import os
 
 #os.system("aplay star-wars-cantina-song.mp3")

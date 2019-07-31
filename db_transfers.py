@@ -582,8 +582,95 @@ def move_wolf_1864_to_rubbish():
         move_data_to_bin(i)
 
     print("DONE!")
+
+# Execute once
+# seperates out the data from wolf-s-m 1865 table into different observer
+def separate_1865_observers():
+    # dictionary of dates in string format without year, they're all 1865
+    dic = {}
+    dic["Schwabe"] = ["01-03","01-12","01-13","01-20","01-21","01-22",
+    "01-28","01-30","02-01","02-06","02-07","02-10","02-16","02-20","02-22",
+    "02-23","02-25","02-27","03-01","03-09","03-10","03-11","03-20","04-14",
+    "05-01","05-11","05-19","06-02","07-10","07-21","07-25","07-30","08-10",
+    "08-13","08-14","08-16","08-17","08-22","09-17","09-23","10-10","10-14",
+    "10-23","10-24","10-25","10-28","11-01","11-02","11-08","11-10","11-17",
+    "11-21","11-22","11-27","11-29","11-30","12-01","12-03","12-11","12-21",
+    "12-23","12-27","12-29","12-30"]
+    dic["WOLF - P - M"] = ["01-01","01-06","01-14","01-18","01-29","02-08",
+    "02-09","02-11","02-12","02-13","02-14","02-18","02-21","02-24","02-26",
+    "03-24","02-27","03-30","04-04","05-06","06-25","08-15","08-27","08-28",
+    "10-01","11-09","11-15","11-28","12-17","12-18","12-31"]
+    dic["Jenzer"] = ["01-07","02-15","12-22","12-26"]
+    dic["Weber"] = ["01-02","01-19","02-04","03-02","03-03","03-07","03-23",
+    "03-31","04-15","05-16","10-27","10-31","11-03","11-05","12-04","12-08",
+    "12-09","12-20","12-24","12-25"]
+
+    # add the years
+    for i in dic:
+        for j in dic[i]:
+            dic[i][dic[i].index(j)]="1865-"+j
+
+    cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")   
+
+    # move schwabe
+    for j in dic["Schwabe"]:
+        query1 =  "UPDATE DATA SET FK_OBSERVERS=17 WHERE DATE='"+j+"' AND FK_OBSERVERS=2"
+        cursor.execute(query1,())
+        cursor3.execute(query1,())
+        mydb.commit()
+        mydb3.commit()
+
+        query2 = "UPDATE DATA SET OBS_ALIAS='Schwabe',FIRST_NAME='Heinrich',LAST_NAME='Schwabe',COUNTRY='DE',INSTRUMENT='(NULL)',COMMENT='(NULL)' WHERE DATE='"+j+"' AND OBS_ALIAS='WOLF - S - M'"
+        cursor2.execute(query2,())
+        mydb2.commit()
+
+    # move wolf p
+    for j in dic["WOLF - P - M"]:
+        query1 = "UPDATE DATA SET FK_OBSERVERS=3 WHERE DATE='"+j+"' AND FK_OBSERVERS=2"
+        cursor.execute(query1,())
+        cursor3.execute(query1,())
+        mydb.commit()
+        mydb3.commit()
+
+        query2 = "UPDATE DATA SET OBS_ALIAS='WOLF - P - M',INSTRUMENT='43 mm Portable' WHERE DATE='"+j+"' AND OBS_ALIAS='WOLF - S - M'"
+        cursor2.execute(query2,())
+        mydb2.commit()
+
+    # move weber
+    for j in dic["Weber"]:
+        query1 = "UPDATE DATA SET FK_OBSERVERS=32 WHERE DATE='"+j+"' AND FK_OBSERVERS=2"
+        cursor.execute(query1,())
+        cursor3.execute(query1,())
+        mydb.commit()
+        mydb3.commit()
+
+        query2 = "UPDATE DATA SET OBS_ALIAS='Weber',FIRST_NAME='XXX',LAST_NAME='Weber',COUNTRY='XXX',INSTRUMENT='(NULL)',COMMENT='(NULL)' WHERE DATE='"+j+"' AND OBS_ALIAS='WOLF - S - M'"
+        cursor2.execute(query2,())
+        mydb2.commit()
+    print("done weber wolfp and schwabe")#trace
+
+    # bin Jenzer
+    for j in dic["Jenzer"]:
+        # find all the ids
+        query = "SELECT ID FROM DATA WHERE FK_OBSERVERS=2 AND DATE='"+j+"'"
+        cursor.execute(query,())
+        idn = cursor.fetchall()
+        if len(idn)>1:
+            raise Exception
+        idn = idn[0][0]
+        move_data_to_bin(idn,cursor=cursor,mydb=mydb,cursor2=cursor2,mydb2=mydb2,cursor3=cursor3,mydb3=mydb3,close_databases=False)
+        
     
+
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
     
+# Execute once
+# separates out the data from wolf-s-m 1866 table into different observers
+
 
 # transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 def transfer_flag_2():
@@ -614,3 +701,5 @@ def transfer_flag_0():
     db_connection.close_database_connection(mydb3)
 
 #transfer_flag_0()
+#separate_1865_observers()
+
