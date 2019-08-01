@@ -679,7 +679,7 @@ def separate_1866_observers():
     "12-21","12-22","12-23","12-27"]
     dic["WOLF - P - M"] = ["01-02","01-12","01-17","01-23","02-01","02-05",
     "03-21","04-12","06-10","08-03","08-10","09-26","10-14","10-26","11-26"]
-    dic["Schmidt"] = ["01-11","11-02","11-27",""]
+    dic["Schmidt"] = ["01-11","11-02","11-27"]
     dic["Weber"] = ["01-05","01-06","01-07","01-15","02-06","02-13","02-19",
     "02-20","02-22","02-24","03-03","03-05","03-06","03-09","03-14","03-24",
     "04-01","04-02","04-06","04-20","05-02","05-05","06-14","08-13","08-15",
@@ -690,7 +690,7 @@ def separate_1866_observers():
     meta = {"Weber":["XXX","Weber","XXX","(NULL)","(NULL)"],
     "Schmidt":["Johan Friedrich Julius","Schmidt","DE","(NULL)","(NULL)"],
     "Schwabe":["Heinrich","Schwabe","DE","(NULL)","(NULL)"],
-    "WOLF - P - M":["Rudolph","Wolf","CH","43 mm Portable","Alias = Wolf - Portable - Mittheilung"]}
+    "WOLF - P - M":["Rudolph","Wolf","CH","43 mm Portable","Alias= Wolf - Portable - Mittheilung"]}
 
     for i in dic:
         for j in dic[i]:
@@ -709,7 +709,13 @@ def separate_1866_observers():
             cursor3.execute(query1,())
             mydb3.commit()
 
-            query2 = "UPDATE DATA SET OBS_ALIAS="+i+""
+            query2 = "UPDATE DATA SET OBS_ALIAS='"+i+"',FIRST_NAME='"+meta[i][0]+"',"
+            query2 += "LAST_NAME='"+meta[i][1]+"',"
+            query2 += "COUNTRY='"+meta[i][2]+"',"
+            query2 += "INSTRUMENT='"+meta[i][3]+"',"
+            query2 += "COMMENT='"+meta[i][4]+"'"
+            cursor2.execute(query2,())
+            mydb2.commit()
 
 
     db_connection.close_database_connection(mydb)
@@ -745,5 +751,5 @@ def transfer_flag_0():
     db_connection.close_database_connection(mydb3)
 
 #transfer_flag_0()
-#separate_1865_observers()
+#separate_1866_observers()
 
