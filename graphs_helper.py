@@ -565,9 +565,6 @@ def size_data_by_observer_hist():
     obs_sorted.sort(reverse=True)# biggest to smallest
     obs_sorted = [i[1] for i in obs_sorted]
     
-    
-    
-    
     #### plot some nice figures
 
     # plot a histogram of the number of data each observer has
@@ -702,6 +699,85 @@ title=None,save_as=None):
     
     plt.show()
 
+# helper method for stacked_area_plot
+# generates dates of all days in specified interval (inclusive)
+def days_in(start,end):
+    curr = start
+    while curr <= end:
+        yield curr
+        curr += dt.timedelta(days=1)
+
+# Takes interval, and does a stacked area plot witht he observers in that interval
+def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,smoothness=50):
+    # process the interval if there is one
+    if interval:
+        low = dt.date(int(interval[0][:4]),int(interval[0][5:7]),int(interval[0][8:10]))
+        high = dt.date(int(interval[1][:4]),int(interval[1][5:7]),int(interval[1][8:10]))
+    else:
+        low = dt.date(1600,1,1)
+        high = dt.date(1949,12,31)
+
+    # make an x array with every day of every year in the interval
+    x = [d for d in days_in(low,high)]
+
+    # select data in interval, put into dictionary by observer
+    data = db_search.select_all_data()
+    data = [d for d in data if d[1]!=None]
+    data = [d for d in data if d[1]>=low and d[1]<=high]
+    observers = db_search.select_all_observers()
+    obs_fk_alias_dic = {}
+    for o in observers: obs_fk_alias_dic[o[0]]=o[1]
+    
+    dates_by_obs = {}
+    for d in data:
+        alias = obs_fk_alias_dic[d[3]]
+        try: dates_by_obs[alias].append(d[1])
+        except: dates_by_obs[alias] = [d[1]]
+
+    for i in dates_by_obs: dates_by_obs[i].sort()
+
+    # make array of 1s and zeros for each day in the interval for each observer
+    binary_obs_dic = {}# key = alias , value = array of 0s and 1s
+    for o in dates_by_obs:
+        binary_obs_dic[o]=[]
+        index = 0
+        for dte in x:
+            if index<len(dates_by_obs[o]):
+                if dte!=dates_by_obs[o][index]: binary_obs_dic[o].append(0)
+                else:
+                    binary_obs_dic[o].append(1)
+                    index +=1
+            else: binary_obs_dic[o].append(0)
+    
+    # make the histogram dictionary 
+    # key = number of observations ; value = number of days where this occurs
+    n_per_day_hist_dic = {}
+    for i in range(len(x)):
+        n=0
+        for o in binary_obs_dic: n+=binary_obs_dic[o][i]
+        try: n_per_day_hist_dic[n]+=1
+        except: n_per_day_hist_dic[n] = 1
+        
+
+    # make 1s and 0s array smooth with statsmodel lowess filter
+    x_decimal = dates_to_decimal(x)
+    smoothed_binary_obs_dic = {}
+    for o in binary_obs_dic:
+        filtered = lowess(binary_obs_dic[o],x_decimal,frac=float(smoothness)/len(x),is_sorted=True,it=0)
+        smoothed_binary_obs_dic[o] = filtered[:,1]
+
+    plt.figure(figsize=figsize)
+    # plot the historgram
+    #plt.subplot(211)
+
+    # plot the area plot
+    #plt.subplot(212)
+    
+    smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
+    
+    plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
+    #plt.legend()
+    plt.show()
 
 
 # CARRINGTON
