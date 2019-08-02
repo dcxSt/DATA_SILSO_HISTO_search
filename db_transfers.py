@@ -57,15 +57,22 @@ dont_delete=False):
     country = info[4]
     instrument = info[5]
     
-    # get the rubrics information
-    query="SELECT * FROM RUBRICS r WHERE r.RUBRICS_ID="+str(fk_rubrics)
-    cursor.execute(query,())
-    info = cursor.fetchall()[0]
-    rubrics_number = info[1]
-    mitt_number = info[2]
-    page_number = info[3]
-    rubrics_source = info[4]
-    rubrics_source_date = info[5]
+    # get the rubrics information iff there is a rubrics
+    if fk_rubrics:
+        query="SELECT * FROM RUBRICS r WHERE r.RUBRICS_ID="+str(fk_rubrics)
+        cursor.execute(query,())
+        info = cursor.fetchall()[0]
+        rubrics_number = info[1]
+        mitt_number = info[2]
+        page_number = info[3]
+        rubrics_source = info[4]
+        rubrics_source_date = info[5]
+    else:
+        rubrics_number = None
+        mitt_number = None
+        page_number = None
+        rubrics_source = None
+        rubrics_source_date = None
 
     print("successfully fetched data from",sender)#trace
 
