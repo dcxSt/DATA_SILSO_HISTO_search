@@ -444,6 +444,31 @@ def change_alias_to_brunner_assistent():
     db_connection.close_database_connection(mydb2)
 
 
+# takes out some of wolf's duplicates, run once
+def take_out_wolf_1862_duplicates():
+    cursor,mydb = db_connection.database_connector(the_database='DATA_SILSO_HISTO')
+
+    query = "SELECT ID FROM DATA d WHERE d.DATE>='1862-01-01'"
+    query += " AND d.DATE<'1863-01-01' AND d.FK_OBSERVERS=2 AND"
+    query += " d.DATE IN (SELECT DATE FROM DATA f WHERE "
+    query += "f.FK_OBSERVERS IN (3,17) AND f.GROUPS=d.GROUPS AND"
+    query += " f.SUNSPOTS=d.SUNSPOTS AND f.DATE=d.DATE)"
+
+    cursor.execute(query,())
+    ids = cursor.fetchall()
+    print(ids)
+    count=0
+    input()
+    for i in ids:
+        count+=1
+        query = "DELETE FROM DATA WHERE ID="+str(i[0])
+        cursor.execute(query,())
+        mydb.commit()
+        print(i[0])
+
+    print("\n"+str(count))
+    db_connection.close_database_connection(mydb)
+
 #flag_many_duplicates()
 
 """

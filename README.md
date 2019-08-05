@@ -258,6 +258,10 @@ The aim of this little project is to do a quality control of the data in *DATA_S
  Execute once
 
 
+**separate_1866_observers()**  [52]	 separates out the data from wolf-s-m 1866 table into different observers
+ Execute once
+
+
 **transfer_flag_2()**  [13]	 transfers all those with flag=2 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
@@ -300,6 +304,9 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 
 **change_alias_to_brunner_assistent()**  [25]	 ALIAS to 'Brunner Assistent'
+
+
+**take_out_wolf_1862_duplicates()**  [24]	 takes out some of wolf's duplicates, run once
 
 
 ***
@@ -434,10 +441,17 @@ The aim of this little project is to do a quality control of the data in *DATA_S
  line of best fit 2 unknowns function
 
 
-**size_data_by_observer_hist()**  [93]	 method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
+**size_data_by_observer_hist()**  [90]	 method to identify observers in DATA_SILSO_HISTO.OBSERVERS and how much data is associated with each one
 
 
 **event_plot()**  [1]	 Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
+
+
+**days_in()**  [6]	 generates dates of all days in specified interval (inclusive)
+ helper method for stacked_area_plot
+
+
+**stacked_area_plot()**  [1]	 Takes interval, and does a stacked area plot witht he observers in that interval
 
 
 **get_full_carrington_dictionaries()**  [25]	 to help out with the Carrington investigation
@@ -486,15 +500,19 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 ## Jupyter notebooks:
 
+**Schwabe Drawings data.ipynb**  [code blocks = 11]  
+
+**Stacked Area Charts.ipynb**  [code blocks = 9]  Some stacked area charts of the data, it's purpose is similar to the event-plot but allows us to see more clearely how the tables are constructed from 1860 to 1870. The stacked area charts also allows us to see where there are not many observations being made. Unfortunately the method is not optimally designed, it does the job but you may have to wait a while for it to load... For instance it takes about 1 minuet to load a 40 year time interval which is NOT GOOD :(, you shoulda taken comp 257 lol, if you wanna make inneficient algorithems at least do it in c or java or smt... The fluctuations you see in the drawings are seasonal.
+
 **suspicious sunspots plots.ipynb**  [code blocks = 21]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
 
 **random_plots_and_graphs.ipynb**  [code blocks = 14]  Here there are the plots where I discovered Carrington and Kew's anomalous data which turned out to be the area measurements
 
 **derived_plots.ipynb**  [code blocks = 8]  Shitty notebook that isn't very useful, I think I made this one before the other two, it has some Secchi plots as well as Carrington plots
 
-**Frequency and number of observation plots.ipynb**  [code blocks = 16]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
+**Schwabe early notebook.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
 
-**Schwabe.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
+**Frequency and number of observation plots.ipynb**  [code blocks = 21]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
 
 **MittDBPython.ipynb**  [code blocks = 18]  One of the first Jupiter notebooks created, it's pretty useless now
 

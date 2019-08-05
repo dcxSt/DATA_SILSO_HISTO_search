@@ -795,6 +795,7 @@ smoothness=50,observers_list=None,display_others=True):
         smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
         plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
     plt.legend()
+    if save_as: plt.savefig(save_as)
     plt.show()
 
 
