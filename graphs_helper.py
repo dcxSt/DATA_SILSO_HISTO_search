@@ -709,7 +709,7 @@ def days_in(start,end):
 
 # Takes interval, and does a stacked area plot witht he observers in that interval
 def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,
-smoothness=50,observers_list=None,display_others=True): 
+smoothness=50,observers_list=None,display_others=True,display_legend=True): 
     # process the interval if there is one
     if interval:
         low = dt.date(int(interval[0][:4]),int(interval[0][5:7]),int(interval[0][8:10]))
@@ -768,6 +768,10 @@ smoothness=50,observers_list=None,display_others=True):
         smoothed_binary_obs_dic[o] = filtered[:,1]
 
     plt.figure(figsize=figsize)
+
+    ### I never got round to doing the histogram above... :'(
+    # I can do this in seperate method...
+
     # plot the historgram
     #plt.subplot(211)
 
@@ -794,7 +798,7 @@ smoothness=50,observers_list=None,display_others=True):
     else:
         smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
         plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
-    plt.legend()
+    if display_legend: plt.legend()
     if save_as: plt.savefig(save_as)
     plt.show()
 
