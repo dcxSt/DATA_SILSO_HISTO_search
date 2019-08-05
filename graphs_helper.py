@@ -708,7 +708,8 @@ def days_in(start,end):
         curr += dt.timedelta(days=1)
 
 # Takes interval, and does a stacked area plot witht he observers in that interval
-def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,smoothness=50):
+def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,
+smoothness=50,observers_list=None,display_others=True): 
     # process the interval if there is one
     if interval:
         low = dt.date(int(interval[0][:4]),int(interval[0][5:7]),int(interval[0][8:10]))
@@ -773,10 +774,27 @@ def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,smoo
     # plot the area plot
     #plt.subplot(212)
     
-    smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
     
-    plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
-    #plt.legend()
+    
+    # if a list of observers if given, group everyone not on that list into one alias - other
+    smoothed_binary_obs_array=[]
+    others=[]
+    labels_array=[]
+    if observers_list:
+        for o in smoothed_binary_obs_dic:
+            if o in observers_list:
+                smoothed_binary_obs_array.append(np.array(smoothed_binary_obs_dic[o]))
+                labels_array.append(o)
+            else:
+                others.append(np.array(smoothed_binary_obs_dic[o]))
+        if others and display_others==True:
+            smoothed_binary_obs_array.append([sum(i) for i in np.transpose(others)])
+            labels_array.append("others")
+        plt.stackplot(x,smoothed_binary_obs_array,labels=labels_array)
+    else:
+        smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
+        plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
+    plt.legend()
     plt.show()
 
 
