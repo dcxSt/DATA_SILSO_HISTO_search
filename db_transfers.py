@@ -772,9 +772,26 @@ def transfer_flag_3():
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
+# transfers all those with flag=8 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+# the reason i'm writing methods for each of these flags rather than just a general one \
+# that takes input is because I don't wanna execute the wrong flag...
+def transfer_flag_8():
+    cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
+    cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
+    data = db_search.select_all_data(cursor=cursor3,mydb=mydb3,the_database="BAD_DATA_SILSO",close_connection=False)
+    for d in data:
+        idn = d[0]
+        flag = d[10]
+        if flag==8:
+            db_transfer(idn,cursor=cursor3,mydb=mydb3,cursor2=cursor2,mydb2=mydb2)
+
+    db_connection.close_database_connection(mydb2)
+    db_connection.close_database_connection(mydb3)
+
 
 #separate_1866_observers()
 
 #transfer_flag_0()
-
+#transfer_flag_3()
+#transfer_flag_8()
 
