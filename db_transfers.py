@@ -178,6 +178,7 @@ dont_delete=False):
         db_connection.close_database_connection(mydb=mydb2)
 
 
+#db_transfer(221618,sender="DATA_SILSO_HISTO",close_connections=True,dont_delete=True)
 
 # takes list of id numbers
 def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None,sender=None):
@@ -774,4 +775,6 @@ def transfer_flag_3():
 
 #separate_1866_observers()
 
-#transfer_flag_3()
+#transfer_flag_0()
+
+
