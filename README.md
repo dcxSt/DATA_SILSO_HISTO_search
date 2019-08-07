@@ -2,7 +2,12 @@
 
 
 ## Preamble
-The aim of this little project is to do a quality control of the data in *DATA_SILSO_HISTO*. Once the data is fixed and cleaned up, it will be stored on a new database - temporarily named *GOOD_DATA_SILSO* in a more user-friendly format to what currently exists. I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be mad to keep a closer eye on the data that still needs to be examined with more scrutiny : *BAD_DATA_SILSO*. This database will act as intermediaire entre *DATA_SILSO_HISTO* et *GOOD_DATA_SILSO*. We will effectively be storing 2 databases-worth of information in 3 databases. The original *DATA_SILSO_HISTO* will have the old data and will be corrected in due course. The intermediary *BAD_DATA_SILSO* will start as a copy of *DATA_SILSO_HISTO* and end up empty as the corrected data is removed from it and placed, in the new format, into *GOOD_DATA_SILSO*
+The aim of this little project is to do a quality control of the data in *DATA_SILSO_HISTO*. 
+
+I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be made to keep a closer eye on the data that still needs to be examined with more scrutiny : *BAD_DATA_SILSO*. This database will act as intermediaire entre *DATA_SILSO_HISTO* et *GOOD_DATA_SILSO*. We will effectively be storing 2 databases-worth of information in 3 databases. The original *DATA_SILSO_HISTO* will have the old data and will be corrected in due course. The intermediary *BAD_DATA_SILSO* will start as a copy of *DATA_SILSO_HISTO* and end up empty as the corrected data is removed from it and placed, in the new format, into *GOOD_DATA_SILSO*
+
+The readme lists first the names of and functions contained in each of my .py files, followed by the .ipynb with the first markdown code-block as a descriptor.
+
 
 ## Python scripts, their methods and descriptors: 
 
@@ -268,6 +273,14 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 **transfer_flag_0()**  [13]	 transfer all those with flag=0 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
+**transfer_flag_3()**  [13]	 transfers all those with flag=3 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+
+
+**transfer_flag_8()**  [14]	 that takes input is because I don't wanna execute the wrong flag...
+ the reason i'm writing methods for each of these flags rather than just a general one \
+ transfers all those with flag=8 from BAD_DATA_SILSO to GOOD_DATA_SILSO
+
+
 ***
 
 ### dealing_with_duplicates.py
@@ -500,9 +513,11 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 ## Jupyter notebooks:
 
+**Wolf Wolfer Eventplots.ipynb**  [code blocks = 13]  The Frequency and number of observations plots is getting over-crowded so I am opening this notebook enitrely for doing event-plot for the Wolf / Wolfer investigation
+
 **Schwabe Drawings data.ipynb**  [code blocks = 11]  
 
-**Stacked Area Charts.ipynb**  [code blocks = 9]  Some stacked area charts of the data, it's purpose is similar to the event-plot but allows us to see more clearely how the tables are constructed from 1860 to 1870. The stacked area charts also allows us to see where there are not many observations being made. Unfortunately the method is not optimally designed, it does the job but you may have to wait a while for it to load... For instance it takes about 1 minuet to load a 40 year time interval which is NOT GOOD :(, you shoulda taken comp 257 lol, if you wanna make inneficient algorithems at least do it in c or java or smt... The fluctuations you see in the drawings are seasonal.
+**Stacked Area Charts.ipynb**  [code blocks = 20]  Some stacked area charts of the data, it's purpose is similar to the event-plot but allows us to see more clearely how the tables are constructed from 1860 to 1870. The stacked area charts also allows us to see where there are not many observations being made. Unfortunately the method is not optimally designed, it does the job but you may have to wait a while for it to load... For instance it takes about 1 minuet to load a 40 year time interval which is NOT GOOD :(, you shoulda taken comp 257 lol, if you wanna make inneficient algorithems at least do it in c or java or smt... The fluctuations you see in the drawings are seasonal.
 
 **suspicious sunspots plots.ipynb**  [code blocks = 21]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
 
@@ -512,7 +527,7 @@ The aim of this little project is to do a quality control of the data in *DATA_S
 
 **Schwabe early notebook.ipynb**  [code blocks = 7]  Testing the home-made method: display_seperate_flags_all. There isn't very much content in this notebook.
 
-**Frequency and number of observation plots.ipynb**  [code blocks = 21]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
+**Frequency and number of observation plots.ipynb**  [code blocks = 20]  The following plots are to do with when and where who is recording what we have bar-charts that display the number of data-points associated with each observer and an event-plot that show for each observer, when they recorded the data they did
 
 **MittDBPython.ipynb**  [code blocks = 18]  One of the first Jupiter notebooks created, it's pretty useless now
 
