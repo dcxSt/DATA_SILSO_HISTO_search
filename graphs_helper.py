@@ -865,11 +865,11 @@ save_as=None,option="wolf",zero=True,bins=30,only_blue=False):
 # plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping interval
 # plot also a smoothed date / frequency plot with both observers (4)
 # below (5+6) plot the calibration factor that determines the relative k coefficient
-def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None):
+def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None,smoothness=100):
     gs00 = mpl.gridspec.GridSpec(3, 2)
     fig = plt.figure(figsize=figsize)
     axs = []
-    # plot the 3 histograms
+    ### plot the 3 histograms
     # fetch the data from the helper method
     groups_data,sunspots_data,wolf_data = get_hist_data(obs1,obs2)
 
@@ -879,6 +879,7 @@ def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None):
     [x_array1,weights1,x_array2,weights2] = groups_data
     ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
     ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
+    ax.legend()
 
     ax = fig.add_subplot(gs00[0,1])
     ax.set(title="Histogram Sunspots",ylabel="log freq sunspots",xlabel="sunspots number")
@@ -886,7 +887,7 @@ def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None):
     [x_array1,weights1,x_array2,weights2] = sunspots_data
     ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
     ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
-
+    ax.legend()
 
     ax = fig.add_subplot(gs00[1,0])
     ax.set(title="Histogram Wolf",ylabel="log freq wolf",xlabel="wolf number")
@@ -894,23 +895,107 @@ def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None):
     [x_array1,weights1,x_array2,weights2] = wolf_data
     ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
     ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
+    ax.legend()
 
-    # frequency observation plot
+    ### smoothed frequency observation plot
     ax = fig.add_subplot(gs00[1,1])
+    ax.set(title="Freq of observation",ylabel="observations / day",xlabel="year")
 
+    # get the data of each of the observers
+    fk1,fk2,data,observers = get2observers_data(obs1,obs2)
+    if not fk1 or not fk2:
+        print("\nI'm sorry I don't recognise one or more of the observers (it's case sensitive)")
+        if not fk1: print(obs1)
+        if not fk2: print(obs2)
+        return
+    data_o1,data_o2 = [d for d in data if d[3]==fk1],[d for d in data if d[3]==fk2]
+    dates1,dates2 = [d[1] for d in data_o1],[d[1] for d in data_o2]
+    dates1.sort()
+    dates2.sort()
+    low = min(dates1+dates2)
+    high = max(dates1+dates2)
+    x = [day for day in days_in(low,high)]
 
-    # k factor derivation plot # carrington derivation reloaded
-    ax = fig.add_subplot(gs00[2,:])
+    # get frequency array for both observers [0,0,1,1,1,1,0,0,1,...]
+    freq1,freq2,index1,index2=[],[],0,0
+    for day in x:
+        if index1<len(dates1):
+            if day!=dates1[index1]: freq1.append(0)
+            else: 
+                freq1.append(1)
+                index1+=1
+        else: freq1.append(0)
+        if index2<len(dates2):
+            if day!=dates2[index2]: freq2.append(0)
+            else:
+                freq2.append(1)
+                index2+=1
+        else: freq2.append(0)
     
+    # smooth with statsmodel lowess filter
+    x_decimal = dates_to_decimal(x)
+    filtered1 = lowess(freq1,x_decimal,frac=0.05,is_sorted=True,it=0)
+    smoothed1 = filtered1[:,1]
+    filtered2 = lowess(freq2,x_decimal,frac=0.05,is_sorted=True,it=0)
+    smoothed2 = filtered2[:,1]
+
+    # actully plot it
+    ax.plot(x,smoothed1,"b-",label=obs1)
+    ax.plot(x,smoothed2,"r-",label=obs2)
+    ax.legend()
 
 
+    ### k factor derivation plot # carrington derivation reloaded
+    ax = fig.add_subplot(gs00[2,:])
+    ax.set(title=obs1+" vs "+obs2,xlabel=obs1+" sunspots",ylabel=obs2+" sunspots")
+
+    # make array of dates they have in common
+    index1,index2,dates_in_common,groups,sunspots,wolfs = 0,0,[],[],[],[]
+    for date in x:
+        if index1>=len(dates1) or index2>=len(dates2): break
+        if date == dates1[index1]:
+            index1+=1
+            if date == dates2[index2]:
+                index2+=1
+                dates_in_common.append(date)
+        elif date == dates2[index2]:
+            index2+=1
+        
+    # okay this is kindof ineficient but right now that's not important
+    groups1,sunspots1,wolfs1,groups2,sunspots2,wolfs2=[],[],[],[],[],[]
+    for d in data_o1:
+        if d[1] in dates_in_common:
+            groups1.append(d[4])
+            sunspots1.append(d[5])
+            wolfs1.append(d[6])
+    for d in data_o2:
+        if d[1] in dates_in_common:
+            groups2.append(d[4])
+            sunspots2.append(d[5])
+            wolfs2.append(d[6])
+    if len(groups1)!=len(groups2): raise Exception
+
+    for i in range(len(groups1)):
+        if groups1[i] !=None and groups2[i] !=None:
+            groups.append([groups1[i],groups2[i]])
+        if sunspots1[i] != None and sunspots2[i] != None:
+            sunspots.append([sunspots1[i],sunspots2[i]])
+        if wolfs1[i] != None and wolfs2[i] != None:
+            wolfs.append([wolfs1[i],wolfs2[i]])
+    groups = np.transpose(groups)
+    sunspots = np.transpose(sunspots)
+    wolfs = np.transpose(wolfs)
+
+    # for now we will only look at the sunspots number
+    # get parameters for line of best fit
+
+    ax.plot(sunspots[0],sunspots[1],"rx")
+    
     if save_as:plt.save_fig(save_as)
     plt.show()
 
-
-# helper method for frequency_wolf_histogram, gets the histogram data
-def get_hist_data(obs1,obs2):
-    # copied from frequency_wolf_histogram
+# small helper method for the histograms method...
+def get2observers_data(obs1,obs2):
     # get the observers' data
     data = db_search.select_all_data()
     observers = db_search.select_all_observers()
@@ -919,6 +1004,12 @@ def get_hist_data(obs1,obs2):
         #print(o[1],end=", ")#trace
         if o[1]==obs1: fk1=o[0]
         elif o[1]==obs2: fk2=o[0]
+    return fk1,fk2,data,observers
+
+# helper method for frequency_wolf_histogram, gets the histogram data
+def get_hist_data(obs1,obs2):
+    # copied from frequency_wolf_histogram
+    fk1,fk2,data,observers = get2observers_data(obs1,obs2)
     if not fk1 or not fk2:
         print("\nI'm sorry I don't recognise one or more of the observers (it's case sensitive)")
         if not fk1: print(obs1)
