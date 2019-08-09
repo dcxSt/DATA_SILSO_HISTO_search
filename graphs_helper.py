@@ -5,6 +5,7 @@ import db_connection
 import db_search
 import datetime as dt
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import numpy as np
 import time
 import scipy
@@ -20,7 +21,9 @@ register_matplotlib_converters()
 
 
 
-# method that organises the data from good_database into dictionary searchable by observer alias
+# method that organises the data from good_database into dictionary 
+# searchable by observer alias ; 
+# key = obs_alias , value = data
 def data_by_obs_alias_good():
     data = db_search.select_all_data(the_database="GOOD_DATA_SILSO")
     obs_alias_dictionary = {}
@@ -33,6 +36,7 @@ def data_by_obs_alias_good():
     return obs_alias_dictionary
 
 # same as above but for different database format
+# really slow - avoid using
 def data_by_obs_alias_histo(the_database="DATA_SILSO_HISTO"):
     data = db_search.select_all_data(the_database=the_database)
     observers = db_search.select_all_observers()
@@ -710,7 +714,7 @@ def days_in(start,end):
         curr += dt.timedelta(days=1)
 
 # Takes interval, and does a stacked area plot witht he observers in that interval
-def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,
+def stacked_area_plot(interval=None,figsize=(18,14),save_as=None,
 smoothness=50,observers_list=None,display_others=True,display_legend=True,
 plot_title=None): 
     # process the interval if there is one
@@ -807,6 +811,174 @@ plot_title=None):
     if save_as: plt.savefig(save_as)
     plt.show()
 
+# takes observer - plots histogram frequency vs wolf
+# zero is boolean choses wether to include zero into the plot
+def frequency_wolf_histogram(observer,interval=None,figsize=(18,14),
+save_as=None,option="wolf",zero=True,bins=30,only_blue=False):
+    if not option: option="wolf"
+    elif option.lower() not in ("wolf","sunspots","groups"):
+        print("Error, you did not chose a valid option, it must be in ('wolf','sunspots','groups')")
+        return
+    option=option.lower()
+
+    # get the observer's data
+    data = db_search.select_all_data()
+    observers = db_search.select_all_observers()
+    fk=None
+    for o in observers:
+        if o[1]==observer:
+            fk=o[0]
+            continue
+    if not fk: 
+        print("\nI'm sorry I don't recognise that observer (it's case sensitive)")
+        return
+    data_o = [d for d in data if d[3]==fk]
+    
+
+    # make the wolf array with the frequencies = weights
+    if option=="wolf": x = [d[6] for d in data_o if d[6]!=None]
+    elif option=="sunspots": x = [d[5] for d in data_o if d[5]!=None]
+    else: x = [d[4] for d in data_o if d[4]!=None]
+    max_w = max(x)
+    weights = [0]*(max_w+1)
+    for w in x: weights[w]+=1
+
+    x_array = [i for i in range(0,max_w+1)]
+    if zero==False:
+        weights = weights[1:]# take out the zero measurements
+        x_array = x_array[1:]
+
+    # plot the histogram
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    ax.hist(x_array, weights=weights, bins=max_w, color='lightblue', alpha=0.9)
+    if option!="groups" and not only_blue:ax.hist(x_array, weights=weights, bins =bins, color='salmon', alpha=0.3)# alpha is transparency
+
+    ax.set(title='Histogram Frequency observations '+option, ylabel='frequency',xlabel=option)
+
+    ax.margins(0.05)
+    ax.set_ylim(bottom=0)
+    if save_as: plt.savefig(save_as)
+    plt.show()
+    return weights# Temporary - just for testing the poisson best fit...
+
+# plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping interval
+# plot also a smoothed date / frequency plot with both observers (4)
+# below (5+6) plot the calibration factor that determines the relative k coefficient
+def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None):
+    gs00 = mpl.gridspec.GridSpec(3, 2)
+    fig = plt.figure(figsize=figsize)
+    axs = []
+    # plot the 3 histograms
+    # fetch the data from the helper method
+    groups_data,sunspots_data,wolf_data = get_hist_data(obs1,obs2)
+
+    ax = fig.add_subplot(gs00[0,0])
+    ax.set(title="Histogram Groups",ylabel="frequency groups",xlabel="groups number")
+    
+    [x_array1,weights1,x_array2,weights2] = groups_data
+    ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
+    ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
+
+    ax = fig.add_subplot(gs00[0,1])
+    ax.set(title="Histogram Sunspots",ylabel="log freq sunspots",xlabel="sunspots number")
+
+    [x_array1,weights1,x_array2,weights2] = sunspots_data
+    ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
+    ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
+
+
+    ax = fig.add_subplot(gs00[1,0])
+    ax.set(title="Histogram Wolf",ylabel="log freq wolf",xlabel="wolf number")
+
+    [x_array1,weights1,x_array2,weights2] = wolf_data
+    ax.hist(x_array1,weights=weights1,bins=len(x_array1),color='lightblue',alpha=0.7,label=obs1)# obs1
+    ax.hist(x_array2,weights=weights2,bins=len(x_array2),color='salmon',alpha=0.3,label=obs2)# obs2
+
+    # frequency observation plot
+    ax = fig.add_subplot(gs00[1,1])
+
+
+    # k factor derivation plot # carrington derivation reloaded
+    ax = fig.add_subplot(gs00[2,:])
+    
+
+
+    if save_as:plt.save_fig(save_as)
+    plt.show()
+
+
+# helper method for frequency_wolf_histogram, gets the histogram data
+def get_hist_data(obs1,obs2):
+    # copied from frequency_wolf_histogram
+    # get the observers' data
+    data = db_search.select_all_data()
+    observers = db_search.select_all_observers()
+    fk1,fk2 = None,None
+    for o in observers:
+        #print(o[1],end=", ")#trace
+        if o[1]==obs1: fk1=o[0]
+        elif o[1]==obs2: fk2=o[0]
+    if not fk1 or not fk2:
+        print("\nI'm sorry I don't recognise one or more of the observers (it's case sensitive)")
+        if not fk1: print(obs1)
+        if not fk2: print(obs2)
+        return
+    data_o1 = [d for d in data if d[3]==fk1]
+    data_o2 = [d for d in data if d[3]==fk2]
+    dates1 = [d[1] for d in data if d[1]!=None]
+    dates2 = [d[1] for d in data if d[1]!=None]
+    inf = max(min(dates1),min(dates2))
+    sup = min(max(dates1),max(dates2))
+    if inf>sup:
+        print("These observers do not over-lap, I cannot compare them with this method")
+        return
+    # trim the data so that it only has the overlapping period
+    data_o1 = [d for d in data_o1 if d[1]<=sup and d[1]>=inf]
+    data_o2 = [d for d in data_o2 if d[1]<=sup and d[1]>=inf]
+
+    # groups first - doing them seperately for readability
+    xg1 = [d[4] for d in data_o1 if d[4]!=None]
+    xg2 = [d[4] for d in data_o2 if d[4]!=None]
+    max_w1,max_w2 = max(xg1),max(xg2)
+    weights1,weights2 = [0]*(max_w1+1),[0]*(max_w2+1)
+    for w in xg1: weights1[w]+=1
+    for w in xg2: weights2[w]+=1
+    x_array1 = [i for i in range(0,max_w1+1)]
+    x_array2 = [i for i in range(0,max_w2+1)]
+    groups_data = [x_array1[:],weights1[:],x_array2[:],weights2[:]]
+
+    # sunspots second
+    xs1 = [d[5] for d in data_o1 if d[5]!=None]
+    xs2 = [d[5] for d in data_o2 if d[5]!=None]
+    max_w1,max_w2 = max(xs1),max(xs2)
+    weights1,weights2 = [0]*(max_w1+1),[0]*(max_w2+1)
+    for w in xs1: weights1[w]+=1
+    for w in xs2: weights2[w]+=1
+    x_array1 = [i for i in range(0,max_w1+1)]
+    x_array2 = [i for i in range(0,max_w2+1)]
+    # calculate and plot the log of the frequency otherwise the histogram is kinda useless
+    weights1,weights2 = [np.log(w) for w in weights1],[np.log(w) for w in weights2]
+    sunspots_data = [x_array1[:],weights1[:],x_array2[:],weights2[:]]
+
+    # wolf third, and last
+    xw1 = [d[6] for d in data_o1 if d[6]!=None]
+    xw2 = [d[6] for d in data_o2 if d[6]!=None]
+    max_w1,max_w2 = max(xw1),max(xw2)
+    weights1,weights2 = [0]*(max_w1+1),[0]*(max_w2+1)
+    for w in xw1: weights1[w]+=1
+    for w in xw2: weights2[w]+=1
+    x_array1 = [i for i in range(0,max_w1+1)]
+    x_array2 = [i for i in range(0,max_w2+1)]
+    # calculate and plot the log of the frequency otherwise the histogram is kinda useless
+    weights1,weights2 = [np.log(w) for w in weights1],[np.log(w) for w in weights2]
+    wolf_data = [x_array1[:],weights1[:],x_array2[:],weights2[:]]
+
+    return groups_data,sunspots_data,wolf_data
+
+
+comparing_two_observers("WOLF - P - M","Wolfer")
+print()
 
 # CARRINGTON
 # to help out with the Carrington investigation
