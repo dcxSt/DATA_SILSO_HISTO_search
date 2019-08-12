@@ -1068,8 +1068,9 @@ def get_hist_data(obs1,obs2):
     return groups_data,sunspots_data,wolf_data
 
 
-comparing_two_observers("WOLF - P - M","Wolfer")
-print()
+#comparing_two_observers("WOLF - P - M","Wolfer")
+#print()
+
 
 # CARRINGTON
 # to help out with the Carrington investigation
