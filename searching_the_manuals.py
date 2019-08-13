@@ -274,11 +274,6 @@ def pink():
     db_connection.close_database_connection(mydb2)
 
 
-#def rubric_specific_corrections():
-    # has a list that resembles pink but operates differently:
-    # (rubric_number, correction, incorrect original comment)
-
-
 def find_duplicate_observers(cursor=None,mydb=None,
 the_database="DATA_SILSO_HISTO",close_connection=True):
     # returns a dictionary with key = alias -- value = list (obs_ids)

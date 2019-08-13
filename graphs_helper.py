@@ -41,24 +41,20 @@ def data_by_obs_alias_histo(the_database="DATA_SILSO_HISTO"):
     data = db_search.select_all_data(the_database=the_database)
     observers = db_search.select_all_observers()
     obs_alias_dictionary = {}
+    fk_obs_dic = {}
+
     for i in data:
-        fk_obs = i[3]
-        for j in observers:
-            if j[0] == fk_obs:
-                obs_alias = j[1]
-                if obs_alias in obs_alias_dictionary:
-                    obs_alias_dictionary[obs_alias].append(i)
-                else:
-                    obs_alias_dictionary[obs_alias]=[i]
-    #print([i for i in obs_alias_dictionary])#trace
+        try: fk_obs_dic[i[3]].append(i)
+        except KeyError: fk_obs_dic[i[3]] = [i]
+    for j in observers: 
+        try: obs_alias_dictionary[j[1]] = fk_obs_dic[j[0]][:]
+        except KeyError: pass
+
     return obs_alias_dictionary
 
 # returns data by observer where each observer has a list of 10 sublists (1/flag)
 def get_data_by_obs_seperate_flags(the_database="GOOD_DATA_SILSO"):
-    if the_database=="GOOD_DATA_SILSO":
-        data_by_obs = data_by_obs_alias_good()
-    else:
-        data_by_obs = data_by_obs_alias_histo(the_database)
+    data_by_obs = data_by_obs_alias_histo(the_database)
     data_by_obs_seperate_flags =  {}
     for observer in data_by_obs:
         data_by_obs_seperate_flags[observer]=[[],[],[],[],[],[],[],[],[],[]]
@@ -91,18 +87,24 @@ def get_data_by_obs_seperate_flags(the_database="GOOD_DATA_SILSO"):
     return data_by_obs_seperate_flags
 
 # shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
-def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None):
-    data_by_obs_seperate_flags = get_data_by_obs_seperate_flags()
-    if yaxis.lower()=="sunspots":
-        yindex=3
-    elif yaxis.lower()=="wolf":
-        yindex=4
-    elif yaxis.lower()=="groups":
-        yindex=2
+def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,the_database="GOOD_DATA_SILSO"):
+    data_by_obs_seperate_flags = get_data_by_obs_seperate_flags(the_database=the_database)
+    if the_database == "GOOD_DATA_SILSO":
+        if yaxis.lower()=="sunspots": yindex=3
+        elif yaxis.lower()=="wolf": yindex=4
+        elif yaxis.lower()=="groups": yindex=2
+        else:
+            print("No valid yaxis selected")
+            raise Exception
     else:
-        print("No valid yaxis selected")
-        raise Exception
-    
+        if yaxis.lower()=="sunspots": yindex=5
+        elif yaxis.lower()=="wolf": yindex=6
+        elif yaxis.lower()=="groups": yindex=4
+        else:
+            print("No valide yaxis selected")
+            raise Exception
+
+
     if interval:
         low=time.strftime(interval[0])
         high=time.strftime(interval[1])
@@ -140,8 +142,8 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None)
     plt.show()
 
 # shows figure with 3 subfigures: groups, sunspots, wolf
-def display_seperate_flags_all(observer,interval=None):
-    data_by_obs_seperate_flags = get_data_by_obs_seperate_flags()
+def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO"):
+    data_by_obs_seperate_flags = get_data_by_obs_seperate_flags(the_database=the_database)
     if interval:
         low=time.strftime(interval[0])
         high=time.strftime(interval[1])
@@ -160,14 +162,25 @@ def display_seperate_flags_all(observer,interval=None):
                 date=time.strftime(str(i[1]))
                 if date<=high and date>=low:
                     x[flag_section_index].append(i[1])
+                    if the_database=="GOOD_DATA_SILSO":
+                        ygroups[flag_section_index].append(i[2])
+                        ysunspots[flag_section_index].append(i[3])
+                        ywolf[flag_section_index].append(i[4])
+                    else:
+                        ygroups[flag_section_index].append(i[4])
+                        ysunspots[flag_section_index].append(i[5])
+                        ywolf[flag_section_index].append(i[6])
+
+            else:
+                x[flag_section_index].append(i[1])
+                if the_database=="GOOD_DATA_SILSO":
                     ygroups[flag_section_index].append(i[2])
                     ysunspots[flag_section_index].append(i[3])
                     ywolf[flag_section_index].append(i[4])
-            else:
-                x[flag_section_index].append(i[1])
-                ygroups[flag_section_index].append(i[2])
-                ysunspots[flag_section_index].append(i[3])
-                ywolf[flag_section_index].append(i[4])
+                else:
+                    ygroups[flag_section_index].append(i[4])
+                    ysunspots[flag_section_index].append(i[5])
+                    ywolf[flag_section_index].append(i[6])
 
     cmap = plt.get_cmap("tab10")
 
@@ -176,12 +189,12 @@ def display_seperate_flags_all(observer,interval=None):
     plt.xlabel("Date")
     plt.ylabel("Wolf Number")
     for flag_index in range(len(x)):
-        # only plot if flag section non-empty so that legend isnt too big
+        # only plot if flag section non-empty so that legend isn't too big
         if len(x[flag_index])>0:
             plt.plot(x[flag_index],ywolf[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
     plt.grid()
     plt.legend()
-       
+
     # plot sunpots
     plt.subplot(312)
     plt.xlabel("Date")
@@ -204,6 +217,8 @@ def display_seperate_flags_all(observer,interval=None):
     plt.legend()
 
     plt.show()
+
+
 
 # takes observer alias and g/s/r and plots different databases in different colors
 # plots nothing if there 
