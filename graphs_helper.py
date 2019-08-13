@@ -813,8 +813,12 @@ plot_title=None):
 
 # takes observer - plots histogram frequency vs wolf
 # zero is boolean choses wether to include zero into the plot
+# data interval is tuple with 2 integers
+# sup_freq is a positive integer
 def frequency_wolf_histogram(observer,interval=None,figsize=(18,14),
-save_as=None,option="wolf",zero=True,bins=30,only_blue=False):
+save_as=None,option="wolf",zero=True,binwidth=5,only_blue=False,
+sup_freq=None,data_interval=None):
+    # selects the options wolf / sunspots / groups - to plot
     if not option: option="wolf"
     elif option.lower() not in ("wolf","sunspots","groups"):
         print("Error, you did not chose a valid option, it must be in ('wolf','sunspots','groups')")
@@ -848,13 +852,34 @@ save_as=None,option="wolf",zero=True,bins=30,only_blue=False):
         weights = weights[1:]# take out the zero measurements
         x_array = x_array[1:]
 
+    # trim the data appropriately so we only display what the usr wants to see
+    # exclude anything outside of the interval specified by usr
+    if data_interval:
+        inf,sup = data_interval[0],data_interval[1]
+        if zero==False and inf>0:
+            weights = weights[inf-1:sup]
+            x_array = x_array[inf-1:sup]
+        else:
+            weights = weights[inf:sup]
+            x_array = x_array[inf:sup]
+            max_w = max(x_array)
+
+    # cut the heads off the tall ones (set a supremum for the number of observations)
+    # freq referst to the number of observations
+    if sup_freq:
+        for i in range(len(weights)):
+            if weights[i]>sup_freq: weights[i]=sup_freq
+
     # plot the histogram
     fig, ax = plt.subplots(figsize=figsize)
     
-    ax.hist(x_array, weights=weights, bins=max_w, color='lightblue', alpha=0.9)
-    if option!="groups" and not only_blue:ax.hist(x_array, weights=weights, bins =bins, color='salmon', alpha=0.3)# alpha is transparency
+    ax.hist(x_array, weights=weights, bins=max_w, color='lightblue', alpha=1.0)
+    if option!="groups" and not only_blue:
+        ax.hist(x_array, weights=weights,
+        bins=range(min(x_array),max(x_array)+binwidth,binwidth), color='salmon', alpha=0.3)# alpha is transparency
 
-    ax.set(title='Histogram Frequency observations '+option, ylabel='frequency',xlabel=option)
+    ax.set(title='Histogram Frequency observations '+option+" - "+observer,
+    ylabel='frequency',xlabel=option+" number")
 
     ax.margins(0.05)
     ax.set_ylim(bottom=0)
