@@ -118,37 +118,34 @@ def pie_charts_1():
     plt.pie(sizes,explode=explode,labels=labels,colors=colors,
     startangle=90,autopct='%1.1f%%',shadow=True)
 
-    # third subplot - deleted
-    plt.subplot(223)
-    x = [o for o in deleted_obs_dic]
-    pcnt = [100*deleted_obs_dic[o]/len(original_only) for o in deleted_obs_dic]
-    colors = plt.cm.rainbow(np.array([i-int(i) for i in np.linspace(0,4.13,len(x))]))
+    # third subplot - deleted bar chart
+    ax = plt.subplot(223)
+    sx = [[deleted_obs_dic[o],o] for o in deleted_obs_dic]
+    sx.sort(reverse=True)
+    xticks,sizes = [i[1] for i in sx],[i[0] for i in sx]
 
-    sizes = [deleted_obs_dic[o] for o in deleted_obs_dic]
-    plt.title("Deleted - by observer : "+str(len(original_only)))
+    # plot the bar chart
+    ax.bar(np.arange(len(xticks)),sizes,align="center",color='magenta',alpha=0.5)
+    plt.xticks(np.arange(len(xticks)),xticks,rotation=90,fontsize=7)
+    plt.title("Deleted data")
+    for counter,value in enumerate(sizes):
+        ax.text(counter - 0.45, value+10, str(value),color='red',fontsize=6)
+
+
+    # fourth subplot - inserted bar chart
+    ax = plt.subplot(224)
+    sx = [[inserted_obs_dic[o],o] for o in inserted_obs_dic]
+    sx.sort(reverse=True)
+    xticks,sizes = [i[1] for i in sx],[i[0] for i in sx]
+
+    # plot the bar chart
+    ax.bar(np.arange(len(xticks)),sizes,align="center",color='lightgreen',alpha=0.5)
+    plt.xticks(np.arange(len(xticks)),xticks,rotation=90,fontsize=7)
+    plt.title("Inserted data observers")
+    for counter, value in enumerate(sizes):
+        ax.text(counter - 0.25, value + 100, str(value), color='red', fontsize=8)
     
-    patches, texts = plt.pie(sizes,colors=colors)
-    labels = [x[i]+" "+str(np.round(pcnt[i],3))+"%" for i in range(len(x))]
-    plt.legend(patches, labels, loc='left center',bbox_to_anchor=(0.1,1.4),
-            fontsize=6)
-
-
-    # fourth subplot - inserted
-    plt.subplot(224)
-    x = [o for o in inserted_obs_dic]
-    pcnt = [100*inserted_obs_dic[o]/len(final_only) for o in inserted_obs_dic]
-    colors = plt.cm.rainbow(np.array([i-int(i) for i in np.linspace(0,2.13,len(x))]))
-    sizes = [inserted_obs_dic[i] for i in inserted_obs_dic]
-    plt.title("Inserted - by observers : "+str(len(final_only)))
-
-    patches,texts = plt.pie(sizes,colors=colors)
-    labels = [x[i]+" "+str(np.round(pcnt[i],3))+"% , n="+inserted_obs_dic[x[i]] for i in range(len(x))]
-    plt.legend(patches, labels, loc='left center', bbox_to_anchor=(0.0, 1.),
-           fontsize=8)
-
-    #for i in texts: i.set_fontsize(6)
-
-    plt.savefig("pie-charts-1.png")
+    plt.savefig("figures/pie-charts-1.png")
     plt.show(fig)
     
 # method to plot pie chart and bar chart to show how the data was modified
@@ -235,7 +232,7 @@ def pie_charts_2():
         ax.text(counter - 0.25, value + 200, str(value), color='red', fontweight='bold')
     plt.ylabel("number modified")
 
-    plt.savefig("pie-charts-2-modified-database.png")
+    plt.savefig("figures/pie-charts-2-modified-database.png")
     plt.show()
     
 
@@ -277,10 +274,10 @@ def pie_charts_3():
     plt.ylabel("number of dtapts flagged")
     plt.xlabel("type of flag")
     
-    plt.savefig("pie-charts-3-flags.png")
+    plt.savefig("figures/pie-charts-3-flags.png")
     plt.show()
     
-pie_charts_3()
+#pie_charts_3()
 
 
 

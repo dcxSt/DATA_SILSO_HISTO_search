@@ -219,7 +219,6 @@ def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SI
     plt.show()
 
 
-
 # takes observer alias and g/s/r and plots different databases in different colors
 # plots nothing if there 
 def display_all_databases(observer,interval=None,yaxis="Sunspots",save_as=None,zero_if_null=False):
