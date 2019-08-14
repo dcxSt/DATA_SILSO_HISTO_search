@@ -142,7 +142,7 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,
     plt.show()
 
 # shows figure with 3 subfigures: groups, sunspots, wolf
-def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO"):
+def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO",save_as=None):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags(the_database=the_database)
     if interval:
         low=time.strftime(interval[0])
@@ -215,7 +215,8 @@ def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SI
             plt.plot(x[flag_index],ygroups[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
     plt.grid()
     plt.legend()
-
+    
+    if save_as: plt.savefig(save_as)
     plt.show()
 
 
