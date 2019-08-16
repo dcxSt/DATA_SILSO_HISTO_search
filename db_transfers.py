@@ -556,14 +556,6 @@ close_databases=True):
         db_connection.close_database_connection(mydb)
         db_connection.close_database_connection(mydb2)
 
-cursor,mydb = db_connection.database_connector(the_database="DATA_SILSO_HISTO")
-query = "SELECT ID FROM RUBBISH_DATA WHERE FK_OBSERVERS=50"
-cursor.execute(query,())
-ids = cursor.fetchall()
-for i in ids:
-    move_data_out_of_bin(i[0],cursor=cursor,mydb=mydb,cursor2=cursor,mydb2=mydb,close_databases=False)
-db_connection.close_database_connection(mydb)
-
 
 # move carrington's data to rubbish from good data silso
 def move_carrington303_good_to_rubbish():

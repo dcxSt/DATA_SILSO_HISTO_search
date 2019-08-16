@@ -136,6 +136,20 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 ***
 
+### create_graphs_helper_readme.py
+***/home/steve/anaconda3/bin/python3***
+
+**get_contents()**  [6]	 returns the contents of the specified file, thows exception if no file found
+
+
+**write_body()**  [22]	 writes the main part of the file - the important stuff
+
+
+**main()**  [9]	 writes to the file 'GRAPHS_HELPER_README.md'
+
+
+***
+
 ### quality_control_tests.py
 ***here is where my tests are, these search the database and comment and flag etc.***
 
@@ -248,7 +262,7 @@ The readme lists first the names of and functions contained in each of my .py fi
 **transcribe_info_new()**  [50]	 helper method for move_data_to_bin()
 
 
-**move_data_out_of_bin()**  [95]	 in BAD_DATA_SILSO it does nothing
+**move_data_out_of_bin()**  [1]	 in BAD_DATA_SILSO it does nothing
  in GOOD_DATA_SILSO it does the same
  in DATA_SILSO_HISTO it moves data from RUBBISH_DATA to DATA
 
@@ -276,10 +290,12 @@ The readme lists first the names of and functions contained in each of my .py fi
 **transfer_flag_3()**  [13]	 transfers all those with flag=3 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
-**transfer_flag_8()**  [14]	 that takes input is because I don't wanna execute the wrong flag...
+**transfer_flag_8()**  [13]	 that takes input is because I don't wanna execute the wrong flag...
  the reason i'm writing methods for each of these flags rather than just a general one \
  transfers all those with flag=8 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
+
+**transfer_flag_9()**  [15]	
 
 ***
 
@@ -372,7 +388,16 @@ The readme lists first the names of and functions contained in each of my .py fi
 **fetch_all_data()**  [13]	 helper method for many functions to get data, observers and rubrics from each database
 
 
-**compare_pie_modify()**  [11]	 method to generate a pie chart that shows how much data was modified
+**find_overlap()**  [32]	 helper method, identifies id numbers that the databases have in common etc.
+
+
+**pie_charts_1()**  [82]	 method to plot a pie chart that shows how much data was deleted / input
+
+
+**pie_charts_2()**  [87]	 method to plot pie chart and bar chart to show how the data was modified
+
+
+**pie_charts_3()**  [40]	 method to plot pie chart and bar chart with the different flags
 
 
 ***
@@ -406,19 +431,22 @@ The readme lists first the names of and functions contained in each of my .py fi
 ### graphs_helper.py
 ***methods to help me display some information graphically***
 
-**data_by_obs_alias_good()**  [11]	 method that organises the data from good_database into dictionary searchable by observer alias
+**data_by_obs_alias_good()**  [11]	 key = obs_alias , value = data
+ searchable by observer alias ; 
+ method that organises the data from good_database into dictionary 
 
 
-**data_by_obs_alias_histo()**  [16]	 same as above but for different database format
+**data_by_obs_alias_histo()**  [15]	 really slow - avoid using
+ same as above but for different database format
 
 
-**get_data_by_obs_seperate_flags()**  [36]	 returns data by observer where each observer has a list of 10 sublists (1/flag)
+**get_data_by_obs_seperate_flags()**  [33]	 returns data by observer where each observer has a list of 10 sublists (1/flag)
 
 
-**display_seperate_flags()**  [48]	 shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
+**display_seperate_flags()**  [54]	 shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
 
 
-**display_seperate_flags_all()**  [65]	 shows figure with 3 subfigures: groups, sunspots, wolf
+**display_seperate_flags_all()**  [78]	 shows figure with 3 subfigures: groups, sunspots, wolf
 
 
 **display_all_databases()**  [67]	 plots nothing if there 
@@ -465,6 +493,23 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 
 **stacked_area_plot()**  [1]	 Takes interval, and does a stacked area plot witht he observers in that interval
+
+
+**frequency_wolf_histogram()**  [1]	 sup_freq is a positive integer
+ data interval is tuple with 2 integers
+ zero is boolean choses wether to include zero into the plot
+ takes observer - plots histogram frequency vs wolf
+
+
+**comparing_two_observers()**  [129]	 below (5+6) plot the calibration factor that determines the relative k coefficient
+ plot also a smoothed date / frequency plot with both observers (4)
+ plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping interval
+
+
+**get2observers_data()**  [11]	 small helper method for the histograms method...
+
+
+**get_hist_data()**  [61]	 helper method for frequency_wolf_histogram, gets the histogram data
 
 
 **get_full_carrington_dictionaries()**  [25]	 to help out with the Carrington investigation
@@ -515,11 +560,13 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 **Wolf Wolfer Eventplots.ipynb**  [code blocks = 13]  The Frequency and number of observations plots is getting over-crowded so I am opening this notebook enitrely for doing event-plot for the Wolf / Wolfer investigation
 
-**Schwabe Drawings data.ipynb**  [code blocks = 11]  
+**Histograms.ipynb**  [code blocks = 19]  Testing the histogram plotting function
+
+**Schwabe Drawings data.ipynb**  [code blocks = 9]  
 
 **Stacked Area Charts.ipynb**  [code blocks = 20]  Some stacked area charts of the data, it's purpose is similar to the event-plot but allows us to see more clearely how the tables are constructed from 1860 to 1870. The stacked area charts also allows us to see where there are not many observations being made. Unfortunately the method is not optimally designed, it does the job but you may have to wait a while for it to load... For instance it takes about 1 minuet to load a 40 year time interval which is NOT GOOD :(, you shoulda taken comp 257 lol, if you wanna make inneficient algorithems at least do it in c or java or smt... The fluctuations you see in the drawings are seasonal.
 
-**suspicious sunspots plots.ipynb**  [code blocks = 21]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
+**suspicious sunspots plots.ipynb**  [code blocks = 23]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
 
 **random_plots_and_graphs.ipynb**  [code blocks = 14]  Here there are the plots where I discovered Carrington and Kew's anomalous data which turned out to be the area measurements
 
@@ -535,7 +582,7 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 **wolf_wolfer_investigation.ipynb**  [code blocks = 21]  This is the first notebook in which I test my display_wolf_drift() method in the hope of perhaps picking up on the drift of wolf.\nAs the title suggests there are also many plots of Wolf's and Wolfer's data as well as some people during their period of data collection.
 
-**secchi_derivation.ipynb**  [code blocks = 17]  A bunch of methods were executed here to keep track of the derivation of Secchi's data when it was on-going. Because there are only to be executed once as they edit the databases, most of the content has been commented out with \
+**secchi_derivation.ipynb**  [code blocks = 22]  A bunch of methods were executed here to keep track of the derivation of Secchi's data when it was on-going. Because there are only to be executed once as they edit the databases, most of the content has been commented out with \\nThere are also some of Secchi's plots added after the derivation.
 
 **carrington_investigation_groups.ipynb**  [code blocks = 7]  This notebook is dedicated to Carrington's data, specifically for the derivation / estimation of the sunspots number based off of his area measurements.
 

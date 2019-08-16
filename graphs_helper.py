@@ -87,7 +87,8 @@ def get_data_by_obs_seperate_flags(the_database="GOOD_DATA_SILSO"):
     return data_by_obs_seperate_flags
 
 # shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
-def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,the_database="GOOD_DATA_SILSO"):
+def display_seperate_flags(observer,interval=None,yaxis="Sunspots",
+save_as=None,the_database="DATA_SILSO_HISTO",title=None,figsize=(15,8)):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags(the_database=the_database)
     if the_database == "GOOD_DATA_SILSO":
         if yaxis.lower()=="sunspots": yindex=3
@@ -109,7 +110,7 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,
         low=time.strftime(interval[0])
         high=time.strftime(interval[1])
         
-    plt.figure(figsize=(15,8))
+    plt.figure(figsize=figsize)
     plt.title(observer)
     plt.xlabel("Date")
     plt.ylabel(yaxis)
@@ -136,19 +137,21 @@ def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,
             plt.plot(x[flag_index],y[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
         
     plt.grid()
+    if title: plt.title(title)
     plt.legend()
     if save_as:
         plt.savefig(save_as)
     plt.show()
 
 # shows figure with 3 subfigures: groups, sunspots, wolf
-def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO",save_as=None):
+def display_seperate_flags_all(observer,interval=None,the_database="DATA_SILSO_HISTO",
+figsize=(12,12),title=None,save_as=None):
     data_by_obs_seperate_flags = get_data_by_obs_seperate_flags(the_database=the_database)
     if interval:
         low=time.strftime(interval[0])
         high=time.strftime(interval[1])
 
-    plt.figure(figsize=(12,12))
+    plt.figure(figsize=figsize)
     plt.title(observer)
     
     x=[[],[],[],[],[],[],[],[],[],[]]
@@ -186,6 +189,7 @@ def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SI
 
     # plot wolf
     plt.subplot(311)
+    if title: plt.title(title)
     plt.xlabel("Date")
     plt.ylabel("Wolf Number")
     for flag_index in range(len(x)):
@@ -215,7 +219,7 @@ def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SI
             plt.plot(x[flag_index],ygroups[flag_index],"x",label="flag = "+str(flag_index),color=cmap(flag_index))
     plt.grid()
     plt.legend()
-    
+
     if save_as: plt.savefig(save_as)
     plt.show()
 

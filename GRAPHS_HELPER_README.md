@@ -2,11 +2,11 @@
 
 ### This readme is bascially the documentation for the methods found in graphs_helper.py
 
-*method that organises the data from good_database into dictionary searchable by observer alias*
+*method that organises the data from good_database into dictionary searchable by observer alias ; key = obs_alias , value = data*
 
 def data_by_obs_alias_good():
 
-*same as above but for different database format*
+*same as above but for different database formatreally slow - avoid using*
 
 def data_by_obs_alias_histo(the_database="DATA_SILSO_HISTO"):
 
@@ -16,11 +16,11 @@ def get_data_by_obs_seperate_flags(the_database="GOOD_DATA_SILSO"):
 
 *shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO*
 
-def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None):
+def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,the_database="GOOD_DATA_SILSO"):
 
 *shows figure with 3 subfigures: groups, sunspots, wolf*
 
-def display_seperate_flags_all(observer,interval=None):
+def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO",save_as=None):
 
 *takes observer alias and g/s/r and plots different databases in different colorsplots nothing if there *
 
@@ -64,7 +64,23 @@ def days_in(start,end):
 
 *Takes interval, and does a stacked area plot witht he observers in that interval*
 
-def stacked_area_plot(interval=None,figsize=(18,14),title=None,save_as=None,smoothness=50,observers_list=None,display_others=True,display_legend=True,plot_title=None): 
+def stacked_area_plot(interval=None,figsize=(18,14),save_as=None,smoothness=50,observers_list=None,display_others=True,display_legend=True,plot_title=None): 
+
+*takes observer - plots histogram frequency vs wolfzero is boolean choses wether to include zero into the plotdata interval is tuple with 2 integerssup_freq is a positive integer*
+
+def frequency_wolf_histogram(observer,interval=None,figsize=(18,14),save_as=None,option="wolf",zero=True,binwidth=5,only_blue=False,sup_freq=None,data_interval=None):
+
+*plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping intervalplot also a smoothed date / frequency plot with both observers (4)below (5+6) plot the calibration factor that determines the relative k coefficient*
+
+def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None,smoothness=100):
+
+*small helper method for the histograms method...*
+
+def get2observers_data(obs1,obs2):
+
+*helper method for frequency_wolf_histogram, gets the histogram data*
+
+def get_hist_data(obs1,obs2):
 
 *CARRINGTONto help out with the Carrington investigation*
 
