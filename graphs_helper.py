@@ -909,6 +909,7 @@ sup_freq=None,data_interval=None):
 # plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping interval
 # plot also a smoothed date / frequency plot with both observers (4)
 # below (5+6) plot the calibration factor that determines the relative k coefficient
+# I never got around to actually finishing this one... sorry.
 def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None,smoothness=100):
     gs00 = mpl.gridspec.GridSpec(3, 2)
     fig = plt.figure(figsize=figsize)

@@ -1,6 +1,5 @@
-The aim of this little project is to do a quality control of the data in *DATA_SILSO_HISTO*. 
+The aim : to quality control the data in *DATA_SILSO_HISTO* - a database containing recently digitised wolf-sunspot number observations for the Sunspot Index and Long-term Solar Observations project (SILSO).
 
-I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be made to keep a closer eye on the data that still needs to be examined with more scrutiny : *BAD_DATA_SILSO*. This database will act as intermediaire entre *DATA_SILSO_HISTO* et *GOOD_DATA_SILSO*. We will effectively be storing 2 databases-worth of information in 3 databases. The original *DATA_SILSO_HISTO* will have the old data and will be corrected in due course. The intermediary *BAD_DATA_SILSO* will start as a copy of *DATA_SILSO_HISTO* and end up empty as the corrected data is removed from it and placed, in the new format, into *GOOD_DATA_SILSO*
+The readme names and describes functions contained in each of my .py files, followed by descriptions of what is in .ipynb files.
 
-The readme lists first the names of and functions contained in each of my .py files, followed by the .ipynb with the first markdown code-block as a descriptor.
 

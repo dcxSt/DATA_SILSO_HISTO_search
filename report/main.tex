@@ -430,6 +430,49 @@ Conclusions:
     \item Things look very good for WOLF - P - M, asides a handful of observations in 1870-72 all the data seems to have been entered in correctly. Everything after 1872 is almost definitely correct (ignoring the fact that there may be typos). Before 1870 it's slightly trickier, I still haven't excluded the possibility that Wolf may have been using the Pariser as far back as the 1850's but just failed to mention it. 
     \item As for WOLF - S - M things are not so good. From 1849 to 1860 we have no way of identifying which observations are Wolf's own, let alone what telescope he was using. The only information he provides us with from 1856 on-wards is how many days of the year he observed, and how many days he used other people observations, but not exactly when - actually he doesn't even tell us that, he says how many days he or his assistants observed though the quadruped $\times 64$ magnification telescope.
     \item There are 526 flag = 1 observations with WOLF (S-M \& P-M) as observer. 36 of these are because they are not his, I haven't moved them because I haven't yet found out whose they are (the observations are attributed to Wolf before 1849). Most of the others seem to have missing sunspots numbers, some of them are marked as having missing groups but I suspect the digitizer just typed the group number into the sunspots column because most of these are $x\leq 5$. These still have to be dealt with. This may involve deriving a formula that guesses a wolf number based purely on the group - perhaps it could also take as a parameter what the average sunspot index is (heavily smoothed) around that time, but I shouldn't get ahead of myself I still have alot to do and not much time.
+       \item List of key dates given by F. Clette 2019/08/06.
+    \begin{itemize}
+        \item[$\bold{1849}$:] Schwabe Wolf
+        \item[$\bold{1861}$:] introduction of $k$ factor and Wolf starts to use other observers' observations (alongside his own)
+        \item[$\bold{1864}$:] Opening of the Z\¨urich Observatory and hiring of his first assistant
+        \item[$\bold{1877 / 78}$:] Arrival of Wolfer
+    \end{itemize}
+
+\end{itemize}
+\subsection{Wolf log}
+\begin{itemize}
+     \item[\textbf{1856:}] One table entered into `WOLF - S - M' that has data gathered by Schwabe but it is uncertain as to which points exactly are his. \textit{The stars in the table are to indicate the appearance of new sunspot groups.}
+    
+     \item[\textbf{1857:}] Just like 1858 - Mitt 7?, Rub 0, page 125. \textit{Same as above.} 
+    \item[\textbf{1858:}] Mitt 1, Rub 0, page 67. There is only one table entered into `WOLF - S - M', it has in it some data gathered by Schwabe. There is no sign of there being any rubrics associated to Schwabe
+    
+ \item[\textbf{1859:}] There seem to be holes in WOLF - S - M where there is data in Schwabe, I think we only have Schwabe's data from when Wolf thought it was important.
+    \item Mitt XXX (= 30, see \ref{mitt:mitt 30 XXX intro}) and Mitt XXVIII (= 28, see \ref{mitt:mitt 28 XXVIII intro})
+    \item I'm checking now to see if there is any data from WOLF - S - M hiding in WOLF - P - M after the year 1870.
+    \item I fear Wolf uses 3 telescopes... `observations with enlargement 64 of my quadruped [...] enlargement 64 of my quadruped normal observations (1868) [...] with enlargement of 64 of my four-foot (1869)' ; `$1 \frac{1}{2}$ foot Parisian telescope at magnification 20 (1870 & 1871 - rub 274) [...] dafuer gebrauchten $2\frac{1}{2}$ fuessigen Pariser-Fernrohr (1872, 1873, 1874 - rub 289, 313, 326) [...] ' ; * = `a small pocket telescope' always. The years after 1874 I will take on trust that the observations are all made with the Parisien-fernhohre. The situation we face now is that Wolf suddenly changes his primary telescope at the start of 1870, and that none of the data after 1870 is sorted correctly into primary secondary. Before creating a new observer alias and re-sorting all the data we must first be sure of this. It seems suspicious to me that the change in telescope coincides perfectly with the new year...
+    \item There are some strange things going on with Mitt 28 and 30: In the table at the beginning of Mitt 28 there is data taken from the observatory with the big telescope - the quadruped with $\times 64$ magnification, but the majority of the observations in this table are marked with an asterix *, they are referred to as `Ein beigesetztes * bezeichnet Beobachtungen welche ich mit dem kleinern Instrumente machte und mit $\frac{3}{2}$ in Rechnung brachte' ; In Mitt 30 rubric 274) we find a table where the overwhelming majority of the measurements are made with the Parisian telescope `Die grosse Mehrzahl der Beobachtungen ist mit dem ofterwahnten $2\frac{1}{2}$ füssigen Pariser-Fernrohr'. If you compare the tables it is evident from the fact that the entire rubric 274 is contained int he Mitt XXVIII table where the * appears. 
+    \item The measurements in the Mitt XXVIII table without any markings were made by `von mir oder von Herrn Meyer' with the $\times 64$ quadruped telescope at the Zürich observatory. This seems to be a time where Wolf is retiring and isn't as mobile...
+    \item A complication has arrisen by the fact that he referes in the introduction of Mitt 30 to his Parisian telescope as `dem kleinern Instrumente machte und mit $\frac{3}{2}$ in Rechnung brachte'. This means we have not only to separate out Wolf's post 1870 data into `Parisian' and `portable' telescopes, but we also have to check all of Wolf's pre-1870s data to see if the secondary telescope mentioned is the portable one or the Parisian. [We know he's talking about the Parisian in the quote because the observations coincide with those of rubric 274, and because the Parisian also has a correction factor of $\frac{3}{2}$ -- `Vergleichnung $1\frac{1}{2}$' - Mitt XXX, he then uses 1.5 as the correction factor (k factor) for the Parisian in his derivation of the correction factor of his pocket-telescope, and his pocket telescope has a correction factor of 0.56]
+    \item[\textbf{1864:}] This year is a big mess:
+    \begin{itemize}[$\longrightarrow$]
+        \item In the digital database, all data belonging to either WOLF - S - M or WOLF - P - M allegedly comes from rubrics 0. In Mitt 11 to 20 there is a table with WOLF entries, I think this is where it comes from as this table is \textit{not} under any specific rubrics number; it features on the second page of a Mitteilungen journal, before the numbered rubrics start.
+        \item The digital database counts 493 WOLF observations for that year, 140 WOLF - P - M (which seems about what you would expect from the table) and 353 WOLF - S - M, which is not only pretty much impossible (the weather isn't that good in Zurich that you have a clear sky 353 days in a year) and doesn't make any sense. What appears to have happened is that the entire table was entered twice into the database, once correctly and once attributing every observation to WOLF - S - M. 
+        \item I verified that all the other observers had been entered in correctly (Weber, Jenzer & Schwabe): Jenzer has his own rubric (`Litt. 211') ; Wolf tells us in the text that Weber's data is in rubrics 210 (`Litt. 210') but this time he is wrong, in rubrics 210 there is Heis' data from Münster, not `Weber in Peckeloh', the digital data contains 16 data-points from Weber in this year which matches what is in wolf's table ; the same goes for Schwabe (seemingly entered correctly) only here Wolf doesn't even mention a Schwabe rubrics, he only provides his name in the key to indicated that the observations marked with a \dag\ are from him.
+        \item As for WOLF - S - M's data, all the data-points that do not belong to him should be gotten rid of. I tried to do this through the terminal but ran into some problems, so I moved them into the bin using my method \texttt{db\_transfers.move\_wolf\_1864\_to\_rubbish()} and then manually get rid of Jenzer's stuff data-point by data-point, (there were only 4)
+   \end{itemize}
+    \item The reason I haven't yet deleted R. Wolf's before 1847 data is because I want to find where it comes from... it is already flagged (flag = 1).
+       \item[\textbf{1865:}] There is 0 data from either Wolf p or Schwabe. The data for WOLF - S - M is in rubrics 0 -- The data comes from a data-table on page 18 of Mitt 21-30 which features 5 observers: WOLF - S - M (all of his data is here) ; WOLF - P - M (all of his data is here) ; Weber (wolf claims the rest of his data is in Nr. 225 der Litt. but this is false, this is where Heis' data is) ; Jenzer (the rest of his data is in rub 226) ; Schwabe (who doesn't seem to have any data appart from what is on this table). The only thing I can do really is separate them one by one. 
+    \item Schwabe's data is mostly missing, all the Schwabe data we have in 63,65,66 etc. are not in the Mitteilungen, there is only a small fraction of Schwabe's data that Wolf included in the introductory tables to fill the gaps where his data was missing. 
+    \item Laure showed me of Schwabe's drawing which you can find \href{https://www.aip.de/Members/rarlt/sunspots/schwabe/paper-schwabe-data}{here} and \href{https://www.aip.de/Members/rarlt/sunspots/schwabe}{here} which have been digitised, the number of times that each group is logged in a day is how many sunspots there are in it and the it has everything I need to fix / add some Schwabe data to the Sn!
+    
+    
+
+     \item[\textbf{1866:}] in 1866 there are very few of these *,  I suppose the use of the Parisian telescope. `kleinen Instrument [...] mit $\frac{3}{2}$ [...]'.
+     \textit{All} the data in the introductory table is input under WOLF - S - M when 4 other observers feature in it too : \textbf{*} WOLF - P - M ; \textbf{s} Schmidt ; \textbf{\dag} Schwabe ; \textbf{w} Weber. Separated them using v. similar method as for 1865 also found in \texttt{db\_transfers.py}. 
+  \item[\textbf{1867:}] there are a lot of * in the table : I suppose the use of the Parisian telescope. There are 556 WOLF - S - M entries for the year... And there are also duplicates for others such as Weber. The reason is there are several rubrics. The main table was entered twice into wolf, once with commented observers who's observer alias were changed after having deleted duplicates (fk rubrics = 218), and once without leaving any comments and it's all under WOLF - S - M (fk rubrics = 0). I deleted those from fk rubrics = 0. Crap! I deleted the wrong one, I'll have to reload it... Done
+   \item[\textbf{1868:}] same as in 1869 `Ein beigesetztes * bezeichnet Beobachtungen, welche ich mit dem kleinen Instrumente machre und mit $\frac{3}{2}$ in Rechnung brachte'. Though here there are alot less parisian measurements than before
+\item[\textbf{1869:}] there are a lot of * in the table and he referes again to his `kleineren Instrument machte, und mit $\frac{3}{2}$ in Rechnung brachte' - I think this is the Parisian
+    
 \end{itemize}
 
 \subsection{Wolfer}
@@ -477,6 +520,7 @@ Some of Schwabe and R. Wolf's data appears in the database before they started o
 
 
 \section{Visual data - guide to the plotting methods}\label{section:plots and graphs explain}
+I wrote a variety of methods to display the contents of the database visually. The idea was that these could be used to detect errors as well as to clearly show what changes that have been effectuated. The methods are written to interact with my local server but they can be adapted very easily to interact with data on the actual ORB server. All the plotting methods make use of \texttt{db\_connection.database\_connector} to connect to the SQL server and to create the connection and cursor objects, so this is the only method that needs to be modified for my methods to interact directly with the actual database(s). 
 
 \subsection{Scatter plots}
 
@@ -488,18 +532,39 @@ This method displays a scatter plot. The only required argument is an observer's
 
 \subsubsection{\texttt{display\_seperate\_flags}}
 This is the sister method of \texttt{display\_separate\_flags\_all} which takes an extra argument \textit{yaxis} either `sunspots', `wolf' or `groups'.  using \texttt{display\_seperate\_flags\_all}.
+
 {\centering
-\includegraphics[width=\linewidth]{Tacchini patches.png}
+\caption{Tacchini 1876-83}
+\includegraphics[width=\linewidth]{Tacchini_patches.png}
 \par}
 
 \subsubsection{\texttt{display\_compare\_observers}}
 This method displays a scatter plot. It is very similar to \texttt{display\_seperate\_flags} but the colours represent observers rather than flags. It requires a list of observer aliases. Optionally it takes a database name \textit{the\_database} ; an \textit{interval} ; a \textit{save\_as} argument ; a \textif{figsize} argument = 2 int tuple ; an \textit{include\_flags} argument - a list of flags to display, default value is (None,0,1,2,3,4,5,6,7,8,9) ; 
 
+\subsubsection{\texttt{display\_wolf\_drift}}
+
 
 
 \subsection{Histogram}
+\subsubsection{\texttt{frequency\_wolf\_histogram}}
+Takes a single observer alias : String - \textit{observer} and plots a histogram wolf/sunspots/groups number (x-axis) vs number of times each value was observed (y-axis). Optionally it takes : \\
+2 String tuples - an \textit{interval} - (`yyyy-mm-dd',`yyyy-mm-dd') ;\\
+2 int tuple - \textit{figsize} - (18,14) ; \\
+String - \textit{save\_as} if specified saves the figure as image - `Tacchini\_histogram.png' ; \\
+String - \textit{option} - `wolf'/`sunspots'/`groups' ; \\
+boolean - \textit{zero} - if False the zero measurements are left out ; \\
+int \textit{binwidth} ; \\
+boolean - \textit{only\_blue} - if True only displays histogram with binwidth=1 ; \\
+float - \textit{sup\_freq} - if specified, it will set a maximum for the number of observations displayed on the histogram ;\\
+2 String tuple - \textit{data\_interval} - (`yyyy-mm-dd',`yyyy-mm-dd')
 
 \subsection{Bar charts and pie charts}
+
+\subsection{Other plots}
+\subsubsection{\texttt{event\_plot}}
+
+\subsubsection{\texttt{stacked\_area\_plot}}
+
 
 
 \section{Condensed Log}
