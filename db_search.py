@@ -48,8 +48,8 @@ def select_all_rubrics():
     return rubrics
 
 # selects all columns in OBSERVERS
-def select_all_observers():
-    cursor,mydb=db_connection.database_connector()
+def select_all_observers(the_database="DATA_SILSO_HISTO"):
+    cursor,mydb=db_connection.database_connector(the_database=the_database)
     query = "SELECT * FROM OBSERVERS"
     cursor.execute(query,())
     observers = cursor.fetchall()

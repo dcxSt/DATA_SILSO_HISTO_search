@@ -39,7 +39,7 @@ def data_by_obs_alias_good():
 # really slow - avoid using
 def data_by_obs_alias_histo(the_database="DATA_SILSO_HISTO"):
     data = db_search.select_all_data(the_database=the_database)
-    observers = db_search.select_all_observers()
+    observers = db_search.select_all_observers(the_database)
     obs_alias_dictionary = {}
     fk_obs_dic = {}
 
@@ -666,9 +666,9 @@ def size_data_by_observer_hist():
 # Takes interval and list of observer aliases and does an event plot to show you when they recorded what data
 def event_plot(interval=None,observer_aliases=None,
 figsize=(13,13),fontsize=12,gridlines=False,
-title=None,save_as=None):
-    observers = db_search.select_all_observers()
-    data = db_search.select_all_data(the_database='DATA_SILSO_HISTO')
+title=None,save_as=None,the_database="DATA_SILSO_HISTO"):
+    observers = db_search.select_all_observers(the_database=the_database)
+    data = db_search.select_all_data(the_database=the_database)
     
     # make list of the observers you will be needing, and exclude extra dates
     if observer_aliases:
@@ -825,7 +825,7 @@ plot_title=None):
         smoothed_binary_obs_array = [np.array(smoothed_binary_obs_dic[o]) for o in smoothed_binary_obs_dic]
         plt.stackplot(x,smoothed_binary_obs_array,labels=[o for o in smoothed_binary_obs_dic])
     if display_legend: plt.legend()
-    if title: plt.title(plot_title)
+    if plot_title: plt.title(plot_title)
 
     if save_as: plt.savefig(save_as)
     plt.show()
