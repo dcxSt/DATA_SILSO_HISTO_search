@@ -4,6 +4,8 @@
 import db_connection
 import db_search
 import db_edit
+import os
+from pygame import mixer
 
 """
 pseudocode for db_transfer
@@ -108,9 +110,9 @@ dont_delete=False):
         rubrics_number='NULL'
     if flag==None:
         flag='NULL'
-    if flag==1:
-        print("this data is flagged what are you doing!")
-        raise Exception
+    #if flag==1:
+     #   print("this data is flagged what are you doing!")
+      #  raise Exception
     if rubrics_source==None:
         rubrics_source='NULL'
     if rubrics_source_date==None:
@@ -140,7 +142,7 @@ dont_delete=False):
         # insert the data into the new database GOOD_DATA_SILSO
         query="INSERT INTO DATA SET "
         query+="ID="+str(id_number)+","
-        query+="DATE='"+str(date)+"',"
+        if date!='NULL': query+="DATE='"+str(date)+"',"
         query+="GROUPS="+str(groups)+","
         query+="SUNSPOTS="+str(sunspots)+","
         query+="WOLF="+str(wolf)+","
@@ -178,7 +180,7 @@ dont_delete=False):
         db_connection.close_database_connection(mydb=mydb2)
 
 
-#db_transfer(221618,sender="DATA_SILSO_HISTO",close_connections=True,dont_delete=True)
+#db_transfer(221618,sender="DATA_SILSO_HISTO",close_connections=True,dont_delete=True)  
 
 # takes list of id numbers
 def transfer_multiple(id_numbers,cursor=None,mydb=None,cursor2=None,mydb2=None,sender=None):
@@ -790,6 +792,7 @@ def transfer_flag_8():
     db_connection.close_database_connection(mydb2)
     db_connection.close_database_connection(mydb3)
 
+# same as above but with flag=9
 def transfer_flag_9():
     cursor3,mydb3 = db_connection.database_connector(the_database="BAD_DATA_SILSO")
     cursor2,mydb2 = db_connection.database_connector(the_database="GOOD_DATA_SILSO")
@@ -813,4 +816,31 @@ def transfer_flag_9():
 #transfer_flag_9()
 
 
+# Transfer everything from DATA SILSO HISTO to GOOD DATA SILSO
+def transfer_everything():
+    cursor,mydb = db_connection.database_connector(the_database='DATA_SILSO_HISTO')
+    cursor2,mydb2 = db_connection.database_connector(the_database='GOOD_DATA_SILSO')
+
+    data = db_search.select_all_data()
+
+    for i in data[124500:]:
+        try:
+            db_transfer(i[0],sender="DATA_SILSO_HISTO",recipient="GOOD_DATA_SILSO",cursor=cursor,
+            mydb=mydb,cursor2=cursor2,mydb2=mydb2,close_connections=False,dont_delete=True)
+        except:
+            mixer.init()
+            mixer.music.load('sound_fx/plane.mp3')
+            mixer.music.play()
+            input()
+
+    mydb2.commit()
+
+    db_connection.close_database_connection(mydb)
+    db_connection.close_database_connection(mydb2)
+
+    mixer.init()
+    mixer.music.load('sound_fx/star-wars-cantina-song.mp3')
+    mixer.music.play()
+    input()
+    print()
 

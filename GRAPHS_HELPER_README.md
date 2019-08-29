@@ -16,11 +16,11 @@ def get_data_by_obs_seperate_flags(the_database="GOOD_DATA_SILSO"):
 
 *shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO*
 
-def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,the_database="GOOD_DATA_SILSO"):
+def display_seperate_flags(observer,interval=None,yaxis="Sunspots",save_as=None,the_database="DATA_SILSO_HISTO",title=None,figsize=(15,8)):
 
 *shows figure with 3 subfigures: groups, sunspots, wolf*
 
-def display_seperate_flags_all(observer,interval=None,the_database="GOOD_DATA_SILSO",save_as=None):
+def display_seperate_flags_all(observer,interval=None,the_database="DATA_SILSO_HISTO",figsize=(12,12),title=None,save_as=None):
 
 *takes observer alias and g/s/r and plots different databases in different colorsplots nothing if there *
 
@@ -56,7 +56,7 @@ def size_data_by_observer_hist():
 
 *Takes interval and list of observer aliases and does an event plot to show you when they recorded what data*
 
-def event_plot(interval=None,observer_aliases=None,figsize=(13,13),fontsize=12,gridlines=False,title=None,save_as=None):
+def event_plot(interval=None,observer_aliases=None,figsize=(13,13),fontsize=12,gridlines=False,title=None,save_as=None,the_database="DATA_SILSO_HISTO"):
 
 *helper method for stacked_area_plotgenerates dates of all days in specified interval (inclusive)*
 
@@ -70,7 +70,7 @@ def stacked_area_plot(interval=None,figsize=(18,14),save_as=None,smoothness=50,o
 
 def frequency_wolf_histogram(observer,interval=None,figsize=(18,14),save_as=None,option="wolf",zero=True,binwidth=5,only_blue=False,sup_freq=None,data_interval=None):
 
-*plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping intervalplot also a smoothed date / frequency plot with both observers (4)below (5+6) plot the calibration factor that determines the relative k coefficient*
+*plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping intervalplot also a smoothed date / frequency plot with both observers (4)below (5+6) plot the calibration factor that determines the relative k coefficientI never got around to actually finishing this one... sorry.*
 
 def comparing_two_observers(obs1,obs2,figsize=(10,15),save_as=None,smoothness=100):
 

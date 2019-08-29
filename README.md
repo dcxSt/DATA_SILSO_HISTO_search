@@ -2,11 +2,10 @@
 
 
 ## Preamble
-The aim of this little project is to do a quality control of the data in *DATA_SILSO_HISTO*. 
+The aim : to quality control the data in *DATA_SILSO_HISTO* - a database containing recently digitised wolf-sunspot number observations for the Sunspot Index and Long-term Solar Observations project (SILSO).
 
-I will also get rid of any useless or redundant columns (such as the observers comment column - there are no comments )': ). A third, temporary database will be made to keep a closer eye on the data that still needs to be examined with more scrutiny : *BAD_DATA_SILSO*. This database will act as intermediaire entre *DATA_SILSO_HISTO* et *GOOD_DATA_SILSO*. We will effectively be storing 2 databases-worth of information in 3 databases. The original *DATA_SILSO_HISTO* will have the old data and will be corrected in due course. The intermediary *BAD_DATA_SILSO* will start as a copy of *DATA_SILSO_HISTO* and end up empty as the corrected data is removed from it and placed, in the new format, into *GOOD_DATA_SILSO*
+The readme names and describes functions contained in each of my .py files, followed by descriptions of what is in .ipynb files.
 
-The readme lists first the names of and functions contained in each of my .py files, followed by the .ipynb with the first markdown code-block as a descriptor.
 
 
 ## Python scripts, their methods and descriptors: 
@@ -273,7 +272,7 @@ The readme lists first the names of and functions contained in each of my .py fi
 **move_wolf_1864_to_rubbish()**  [24]	 gets rid of WOLF - S - M 's data from 1864 that doesn't belong to him; exec only once
 
 
-**separate_1865_observers()**  [83]	 seperates out the data from wolf-s-m 1865 table into different observer
+**separate_1865_observers()**  [83]	 separates out the data from wolf-s-m 1865 table into different observer
  Execute once
 
 
@@ -295,7 +294,11 @@ The readme lists first the names of and functions contained in each of my .py fi
  transfers all those with flag=8 from BAD_DATA_SILSO to GOOD_DATA_SILSO
 
 
-**transfer_flag_9()**  [15]	
+**transfer_flag_9()**  [15]	 same as above but with flag=9
+
+
+**transfer_everything()**  [27]	 Transfer everything from DATA SILSO HISTO to GOOD DATA SILSO
+
 
 ***
 
@@ -443,10 +446,10 @@ The readme lists first the names of and functions contained in each of my .py fi
 **get_data_by_obs_seperate_flags()**  [33]	 returns data by observer where each observer has a list of 10 sublists (1/flag)
 
 
-**display_seperate_flags()**  [54]	 shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
+**display_seperate_flags()**  [1]	 shows figure of some observer's observations seperated by flag only for GOOD_DATA_SILSO
 
 
-**display_seperate_flags_all()**  [78]	 shows figure with 3 subfigures: groups, sunspots, wolf
+**display_seperate_flags_all()**  [1]	 shows figure with 3 subfigures: groups, sunspots, wolf
 
 
 **display_all_databases()**  [67]	 plots nothing if there 
@@ -501,7 +504,8 @@ The readme lists first the names of and functions contained in each of my .py fi
  takes observer - plots histogram frequency vs wolf
 
 
-**comparing_two_observers()**  [129]	 below (5+6) plot the calibration factor that determines the relative k coefficient
+**comparing_two_observers()**  [129]	 I never got around to actually finishing this one... sorry.
+ below (5+6) plot the calibration factor that determines the relative k coefficient
  plot also a smoothed date / frequency plot with both observers (4)
  plot two histograms comparing the observers' sunspots, group and wolf (1,2,3) for their over-lapping interval
 
@@ -558,7 +562,7 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 ## Jupyter notebooks:
 
-**Wolf Wolfer Eventplots.ipynb**  [code blocks = 13]  The Frequency and number of observations plots is getting over-crowded so I am opening this notebook enitrely for doing event-plot for the Wolf / Wolfer investigation
+**Wolf Wolfer Eventplots.ipynb**  [code blocks = 14]  The Frequency and number of observations plots is getting over-crowded so I am opening this notebook enitrely for doing event-plot for the Wolf / Wolfer investigation
 
 **Histograms.ipynb**  [code blocks = 19]  Testing the histogram plotting function
 
@@ -566,9 +570,11 @@ The readme lists first the names of and functions contained in each of my .py fi
 
 **Stacked Area Charts.ipynb**  [code blocks = 20]  Some stacked area charts of the data, it's purpose is similar to the event-plot but allows us to see more clearely how the tables are constructed from 1860 to 1870. The stacked area charts also allows us to see where there are not many observations being made. Unfortunately the method is not optimally designed, it does the job but you may have to wait a while for it to load... For instance it takes about 1 minuet to load a 40 year time interval which is NOT GOOD :(, you shoulda taken comp 257 lol, if you wanna make inneficient algorithems at least do it in c or java or smt... The fluctuations you see in the drawings are seasonal.
 
-**suspicious sunspots plots.ipynb**  [code blocks = 23]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
+**suspicious sunspots plots.ipynb**  [code blocks = 22]  This notebook displays sunspot numbers which are unusually big. Here is also where the graphs that show the edits I made to Tacchini's data is stored.
 
 **random_plots_and_graphs.ipynb**  [code blocks = 14]  Here there are the plots where I discovered Carrington and Kew's anomalous data which turned out to be the area measurements
+
+**kremsmunster.ipynb**  [code blocks = 9]  This is a jupyter notebook to plot the mysterious kremsmunster activity.
 
 **derived_plots.ipynb**  [code blocks = 8]  Shitty notebook that isn't very useful, I think I made this one before the other two, it has some Secchi plots as well as Carrington plots
 
