@@ -594,7 +594,7 @@ def move_wolf_1864_to_rubbish():
     print("DONE!")
 
 # Execute once
-# seperates out the data from wolf-s-m 1865 table into different observer
+# separates out the data from wolf-s-m 1865 table into different observer
 def separate_1865_observers():
     # dictionary of dates in string format without year, they're all 1865
     dic = {}
